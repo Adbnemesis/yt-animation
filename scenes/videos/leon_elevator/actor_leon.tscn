@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/actor_leon.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/leon.tscn" id="2_side"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="3_front"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_back.tscn" id="4_back"]
+
+[node name="ActorLeon" type="Node2D"]
+script = ExtResource("1_actor")
+
+[node name="SideView" parent="." instance=ExtResource("2_side")]
+
+[node name="FrontView" parent="." instance=ExtResource("3_front")]
+visible = false
+
+[node name="BackView" parent="." instance=ExtResource("4_back")]
+visible = false

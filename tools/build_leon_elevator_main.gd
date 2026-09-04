@@ -78,7 +78,7 @@ func _init() -> void:
 	root.add_child(chars)
 	chars.owner = root
 
-	var leon_scn = load("res://scenes/leon.tscn")
+	var leon_scn = load("res://scenes/videos/leon_elevator/actor_leon.tscn")
 	if leon_scn:
 		# Leon 1 (Hero)
 		var l1 = leon_scn.instantiate()

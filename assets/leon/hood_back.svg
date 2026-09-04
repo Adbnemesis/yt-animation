@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="0 0 128 120">
+  <!-- Leon Chameleon Hood (Back View - Paper Cutout Style) -->
+  <!-- Chameleon Ear Bumps (Left & Right) -->
+  <circle cx="24" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="104" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+
+  <!-- Main Hood Outer Silhouette -->
+  <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z"
+        fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Hood Yellow Center Crest Stripe (extending full length down back) -->
+  <path d="M54,6 C58,6 58,60 56,114 L72,114 C70,60 70,6 74,6 Z"
+        fill="#ffd166" stroke="#1e1e2c" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Profile Button Eyes visible from back side edges -->
+  <path d="M14,32 C20,32 22,48 14,48 Z" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.5"/>
+  <path d="M114,32 C108,32 106,48 114,48 Z" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.5"/>
+</svg>

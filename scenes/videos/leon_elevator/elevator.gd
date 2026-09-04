@@ -38,6 +38,11 @@ func _ready() -> void:
 	if ceiling_light:
 		ceiling_light.color = Color.WHITE
 
+func set_doors_visible(is_vis: bool) -> void:
+	var doors_node = get_node_or_null("Doors")
+	if doors_node:
+		doors_node.visible = is_vis
+
 func open_doors(duration: float = 1.0) -> void:
 	if sfx_door_open:
 		sfx_door_open.play()

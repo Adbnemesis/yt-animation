@@ -83,6 +83,7 @@ color = Color(0.35, 0.4, 0.5, 1)
 polygon = PackedVector2Array(-6, 24, 6, 24, 6, 36, -6, 36)
 
 [node name="Doors" type="Node2D" parent="." unique_id=1613487226]
+z_index = 10
 
 [node name="DoorL" type="Node2D" parent="Doors" unique_id=889459812]
 position = Vector2(-75, 0)
@@ -109,6 +110,7 @@ width = 2.0
 default_color = Color(0.4, 0.48, 0.6, 0.9)
 
 [node name="Frame" type="Node2D" parent="." unique_id=781213306]
+z_index = 11
 
 [node name="ArchitraveL" type="Polygon2D" parent="Frame" unique_id=678295695]
 color = Color(0.18, 0.22, 0.28, 1)

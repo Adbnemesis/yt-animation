@@ -154,6 +154,7 @@ START_TIME=$(date +%s)
 CMD_ARGS=(
     "--write-movie" "$INTERMEDIATE_FILE"
     "--fixed-fps" "$FPS"
+    "--always-on-top"
     "--path" "."
     "$SCENE"
     "--auto-quit=$DURATION"

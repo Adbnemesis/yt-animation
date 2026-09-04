@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="60" viewBox="0 0 76 60">
+  <!-- Leon Torso Back: Solid Green Hoodie with Center Vertical Seam (No front pocket/zipper) -->
+  <path d="M12,4 C8,4 6,14 6,28 C6,46 12,54 20,54 L56,54 C64,54 70,46 70,28 C70,14 68,4 64,4 Z"
+        fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Center Vertical Back Seam -->
+  <line x1="38" y1="4" x2="38" y2="54" stroke="#288000" stroke-width="2.5"/>
+</svg>

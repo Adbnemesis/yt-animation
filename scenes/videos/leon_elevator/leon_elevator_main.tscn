@@ -5,27 +5,27 @@
 [ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/hallway.tscn" id="3_otos0"]
 [ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/elevator.tscn" id="4_mbbgd"]
 [ext_resource type="Script" path="res://scenes/videos/leon_elevator/elevator.gd" id="5_3aavu"]
-[ext_resource type="PackedScene" path="res://scenes/leon.tscn" id="6_gtp70"]
-[ext_resource type="Script" path="res://scripts/character_controller.gd" id="7_na5r7"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/actor_leon.tscn" id="6_gtp70"]
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/actor_leon.gd" id="7_na5r7"]
 [ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/phone_notification.tscn" id="8_2o3cb"]
 [ext_resource type="Script" path="res://scenes/videos/leon_elevator/phone_notification.gd" id="9_0uovh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0pg2"]
 size = Vector2(2400, 80)
 
-[node name="LeonElevatorMain" type="Node2D" unique_id=633458297]
+[node name="LeonElevatorMain" type="Node2D" unique_id=1338146759]
 script = ExtResource("1_b31xe")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=577061067]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1890930605]
 position = Vector2(0, 420)
 
-[node name="Ground" type="StaticBody2D" parent="." unique_id=834607597]
+[node name="Ground" type="StaticBody2D" parent="." unique_id=294071885]
 position = Vector2(400, 560)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1575358260]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=257159696]
 shape = SubResource("RectangleShape2D_x0pg2")
 
-[node name="Environments" type="Node2D" parent="." unique_id=249772873]
+[node name="Environments" type="Node2D" parent="." unique_id=2051706773]
 
 [node name="NormalLobby" type="Node2D" parent="Environments" unique_id=1549136204 instance=ExtResource("2_5yfl5")]
 position = Vector2(0, 520)
@@ -38,31 +38,31 @@ position = Vector2(0, 520)
 position = Vector2(0, 520)
 script = ExtResource("5_3aavu")
 
-[node name="Elevator2" type="Node2D" parent="Environments" unique_id=53040565 instance=ExtResource("4_mbbgd")]
+[node name="Elevator2" type="Node2D" parent="Environments" unique_id=1009556117 instance=ExtResource("4_mbbgd")]
 position = Vector2(800, 520)
 script = ExtResource("5_3aavu")
 
-[node name="Characters" type="Node2D" parent="." unique_id=542773905]
+[node name="Characters" type="Node2D" parent="." unique_id=382752125]
 
-[node name="Leon1" type="CharacterBody2D" parent="Characters" unique_id=362457594 instance=ExtResource("6_gtp70")]
+[node name="Leon1" type="Node2D" parent="Characters" unique_id=1732383906 instance=ExtResource("6_gtp70")]
 position = Vector2(-280, 520)
 script = ExtResource("7_na5r7")
 
-[node name="Leon2" type="CharacterBody2D" parent="Characters" unique_id=1447054319 instance=ExtResource("6_gtp70")]
+[node name="Leon2" type="Node2D" parent="Characters" unique_id=1659765305 instance=ExtResource("6_gtp70")]
 visible = false
 position = Vector2(800, 520)
 script = ExtResource("7_na5r7")
 
-[node name="UI" type="Node2D" parent="." unique_id=1151251550]
+[node name="UI" type="Node2D" parent="." unique_id=592879883]
 
-[node name="PhoneNotification" type="CanvasLayer" parent="UI" unique_id=1760117343 instance=ExtResource("8_2o3cb")]
+[node name="PhoneNotification" type="CanvasLayer" parent="UI" unique_id=1822851458 instance=ExtResource("8_2o3cb")]
 layer = 20
 script = ExtResource("9_0uovh")
 
-[node name="BlackoutOverlay" type="CanvasLayer" parent="UI" unique_id=916248538]
+[node name="BlackoutOverlay" type="CanvasLayer" parent="UI" unique_id=70154835]
 layer = 50
 
-[node name="ColorRect" type="ColorRect" parent="UI/BlackoutOverlay" unique_id=379620291]
+[node name="ColorRect" type="ColorRect" parent="UI/BlackoutOverlay" unique_id=674517643]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,8 +71,8 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
-[node name="Audio" type="Node2D" parent="." unique_id=1319490155]
+[node name="Audio" type="Node2D" parent="." unique_id=71411128]
 
-[node name="VoicePlayer" type="AudioStreamPlayer" parent="Audio" unique_id=1605758102]
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="Audio" unique_id=163381334]
 
-[node name="DoorCreak" type="AudioStreamPlayer" parent="Audio" unique_id=1786802546]
+[node name="DoorCreak" type="AudioStreamPlayer" parent="Audio" unique_id=1086891044]
