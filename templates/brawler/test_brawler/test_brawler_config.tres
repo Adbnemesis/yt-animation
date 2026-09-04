@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BrawlerConfig" format=3]
+
+[ext_resource type="PackedScene" path="res://templates/brawler/test_brawler/test_projectile.tscn" id="1_7425g"]
+[ext_resource type="Script" path="res://templates/brawler/brawler_config.gd" id="2_uans7"]
+
+[resource]
+script = ExtResource("2_uans7")
+character_name = "TestBot"
+character_id = "brawler_testbot"
+walk_speed = 150.0
+run_speed = 280.0
+jump_velocity = -440.0
+acceleration = 1600.0
+friction = 1800.0
+max_health = 800.0
+attack_duration = 0.3
+projectile_scene = ExtResource("1_7425g")
+super_duration = 3.0

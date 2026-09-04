@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://templates/brawler/brawler_base.gd" id="1_base"]
+[ext_resource type="Script" path="res://templates/brawler/movement_controller.gd" id="2_move"]
+[ext_resource type="Script" path="res://templates/brawler/animation_controller.gd" id="3_anim"]
+[ext_resource type="Script" path="res://templates/brawler/ability_controller.gd" id="4_abil"]
+[ext_resource type="Script" path="res://templates/brawler/hit_receiver.gd" id="5_hit"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_brawler"]
+radius = 20.0
+height = 90.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hurtbox"]
+radius = 22.0
+height = 92.0
+
+[node name="BrawlerBase" type="CharacterBody2D"]
+script = ExtResource("1_base")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_brawler")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="SkeletonSlot" type="Node2D" parent="Visuals"]
+
+[node name="VFXAttachmentPoints" type="Node2D" parent="."]
+
+[node name="HitPoint" type="Marker2D" parent="VFXAttachmentPoints"]
+position = Vector2(0, -45)
+
+[node name="HeadPoint" type="Marker2D" parent="VFXAttachmentPoints"]
+position = Vector2(0, -90)
+
+[node name="ProjectileSpawn" type="Marker2D" parent="VFXAttachmentPoints"]
+position = Vector2(24, -45)
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+
+[node name="MovementController" type="Node" parent="."]
+script = ExtResource("2_move")
+
+[node name="AnimationController" type="Node" parent="."]
+script = ExtResource("3_anim")
+
+[node name="AbilityController" type="Node" parent="."]
+script = ExtResource("4_abil")
+
+[node name="HitReceiver" type="Area2D" parent="."]
+script = ExtResource("5_hit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitReceiver"]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_hurtbox")
+debug_color = Color(0.9, 0.2, 0.2, 0.42)

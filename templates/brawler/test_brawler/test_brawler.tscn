@@ -1,0 +1,193 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://templates/brawler/brawler_base.gd" id="1_k3c1e"]
+[ext_resource type="Resource" path="res://templates/brawler/test_brawler/test_brawler_config.tres" id="2_8582e"]
+[ext_resource type="Script" path="res://templates/brawler/face_controller_base.gd" id="3_oubkr"]
+[ext_resource type="Script" path="res://templates/brawler/movement_controller.gd" id="4_36gbh"]
+[ext_resource type="Script" path="res://templates/brawler/animation_controller.gd" id="5_1jaqj"]
+[ext_resource type="Script" path="res://templates/brawler/ability_controller.gd" id="6_3gblp"]
+[ext_resource type="Script" path="res://templates/brawler/hit_receiver.gd" id="7_xhior"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_brawler"]
+radius = 20.0
+height = 90.0
+
+[sub_resource type="Animation" id="Animation_y57cg"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(8, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rw6m3"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gxedc"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_24uo0"]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.9, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yg57o"]
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.15, 0.15, -0.15]
+}
+
+[sub_resource type="Animation" id="Animation_nrnwq"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.05, 0.05, -0.05]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_813x1"]
+_data = {
+&"attack": SubResource("Animation_y57cg"),
+&"death": SubResource("Animation_rw6m3"),
+&"fall": SubResource("Animation_gxedc"),
+&"hit": SubResource("Animation_rw6m3"),
+&"idle": SubResource("Animation_gxedc"),
+&"jump": SubResource("Animation_24uo0"),
+&"jump_airborne": SubResource("Animation_24uo0"),
+&"jump_land": SubResource("Animation_gxedc"),
+&"knockback": SubResource("Animation_rw6m3"),
+&"run": SubResource("Animation_yg57o"),
+&"stop": SubResource("Animation_gxedc"),
+&"turn": SubResource("Animation_gxedc"),
+&"walk": SubResource("Animation_nrnwq")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hurtbox"]
+radius = 22.0
+height = 92.0
+
+[node name="TestBrawler" type="CharacterBody2D" unique_id=9063423]
+script = ExtResource("1_k3c1e")
+config = ExtResource("2_8582e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1930125654]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_brawler")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=20746549]
+
+[node name="SkeletonSlot" type="Node2D" parent="Visuals" unique_id=1275426052]
+
+[node name="TorsoPlaceholder" type="Polygon2D" parent="Visuals/SkeletonSlot" unique_id=1134405019]
+position = Vector2(0, -35)
+color = Color(0.2, 0.6, 0.8, 1)
+polygon = PackedVector2Array(-16, -20, 16, -20, 16, 20, -16, 20)
+
+[node name="HeadPlaceholder" type="Polygon2D" parent="Visuals/SkeletonSlot" unique_id=34953743]
+position = Vector2(0, -70)
+color = Color(0.3, 0.7, 0.9, 1)
+polygon = PackedVector2Array(-14, -14, 14, -14, 14, 14, -14, 14)
+
+[node name="Face" type="Node2D" parent="Visuals/SkeletonSlot" unique_id=939332411]
+position = Vector2(0, -70)
+script = ExtResource("3_oubkr")
+
+[node name="EyeL" type="Polygon2D" parent="Visuals/SkeletonSlot/Face" unique_id=845274835]
+polygon = PackedVector2Array(-8, -4, -4, -4, -4, 0, -8, 0)
+
+[node name="EyeR" type="Polygon2D" parent="Visuals/SkeletonSlot/Face" unique_id=514339157]
+polygon = PackedVector2Array(4, -4, 8, -4, 8, 0, 4, 0)
+
+[node name="Mouth" type="Polygon2D" parent="Visuals/SkeletonSlot/Face" unique_id=2029140173]
+color = Color(0.1, 0.1, 0.1, 1)
+polygon = PackedVector2Array(-4, 4, 4, 4, 4, 6, -4, 6)
+
+[node name="VFXAttachmentPoints" type="Node2D" parent="." unique_id=471496853]
+
+[node name="HitPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=388974613]
+position = Vector2(0, -45)
+
+[node name="HeadPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=614624668]
+position = Vector2(0, -90)
+
+[node name="ProjectileSpawn" type="Marker2D" parent="VFXAttachmentPoints" unique_id=2071044029]
+position = Vector2(24, -45)
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1910468928]
+libraries/ = SubResource("AnimationLibrary_813x1")
+
+[node name="MovementController" type="Node" parent="." unique_id=1742612938]
+script = ExtResource("4_36gbh")
+
+[node name="AnimationController" type="Node" parent="." unique_id=985757816]
+script = ExtResource("5_1jaqj")
+
+[node name="AbilityController" type="Node" parent="." unique_id=768970298]
+script = ExtResource("6_3gblp")
+
+[node name="HitReceiver" type="Area2D" parent="." unique_id=1648329388]
+script = ExtResource("7_xhior")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitReceiver" unique_id=307392695]
+position = Vector2(0, -45)
+shape = SubResource("CapsuleShape2D_hurtbox")
+debug_color = Color(0.9, 0.2, 0.2, 0.42)
