@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[node name="NormalLobby" type="Node2D" unique_id=1549136204]
+
+[node name="Wall" type="Polygon2D" parent="." unique_id=1004298639]
+color = Color(0.88, 0.86, 0.82, 1)
+polygon = PackedVector2Array(-600, -360, 600, -360, 600, 0, -600, 0)
+
+[node name="Wainscot" type="Polygon2D" parent="." unique_id=363446751]
+color = Color(0.55, 0.4, 0.3, 1)
+polygon = PackedVector2Array(-600, -110, 600, -110, 600, 0, -600, 0)
+
+[node name="WainscotTrim" type="Line2D" parent="." unique_id=395053867]
+points = PackedVector2Array(-600, -110, 600, -110)
+width = 4.0
+default_color = Color(0.4, 0.28, 0.2, 1)
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=1390492801]
+color = Color(0.75, 0.72, 0.68, 1)
+polygon = PackedVector2Array(-600, 0, 600, 0, 600, 200, -600, 200)
+
+[node name="FloorBaseboard" type="Line2D" parent="." unique_id=1160122180]
+points = PackedVector2Array(-600, 0, 600, 0)
+width = 6.0
+default_color = Color(0.35, 0.25, 0.18, 1)
+
+[node name="PottedPlant" type="Node2D" parent="." unique_id=1965496369]
+position = Vector2(-280, 0)
+
+[node name="Pot" type="Polygon2D" parent="PottedPlant" unique_id=2281194]
+color = Color(0.8, 0.45, 0.3, 1)
+polygon = PackedVector2Array(-20, -50, 20, -50, 14, 0, -14, 0)
+
+[node name="Leaf1" type="Polygon2D" parent="PottedPlant" unique_id=1671347670]
+color = Color(0.22, 0.65, 0.32, 1)
+polygon = PackedVector2Array(0, -50, -35, -95, -15, -125, 0, -80)
+
+[node name="Leaf2" type="Polygon2D" parent="PottedPlant" unique_id=2048113642]
+color = Color(0.28, 0.72, 0.38, 1)
+polygon = PackedVector2Array(0, -50, 35, -90, 20, -130, 0, -80)
+
+[node name="Leaf3" type="Polygon2D" parent="PottedPlant" unique_id=848296822]
+color = Color(0.18, 0.58, 0.28, 1)
+polygon = PackedVector2Array(0, -50, -10, -110, 0, -145, 10, -110)
+
+[node name="FramedArt" type="Node2D" parent="." unique_id=1598939555]
+position = Vector2(280, -160)
+
+[node name="Frame" type="Polygon2D" parent="FramedArt" unique_id=1428162827]
+color = Color(0.35, 0.25, 0.18, 1)
+polygon = PackedVector2Array(-45, -55, 45, -55, 45, 55, -45, 55)
+
+[node name="Canvas" type="Polygon2D" parent="FramedArt" unique_id=386023554]
+color = Color(0.95, 0.9, 0.75, 1)
+polygon = PackedVector2Array(-38, -48, 38, -48, 38, 48, -38, 48)
+
+[node name="Graphic" type="Polygon2D" parent="FramedArt" unique_id=1713760179]
+color = Color(0.95, 0.55, 0.25, 1)
+polygon = PackedVector2Array(-20, 20, 0, -25, 25, 20)

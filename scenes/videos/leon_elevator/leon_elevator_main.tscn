@@ -1,0 +1,78 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/story_director.gd" id="1_b31xe"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/normal_lobby.tscn" id="2_5yfl5"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/hallway.tscn" id="3_otos0"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/elevator.tscn" id="4_mbbgd"]
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/elevator.gd" id="5_3aavu"]
+[ext_resource type="PackedScene" path="res://scenes/leon.tscn" id="6_gtp70"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="7_na5r7"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/phone_notification.tscn" id="8_2o3cb"]
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/phone_notification.gd" id="9_0uovh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0pg2"]
+size = Vector2(2400, 80)
+
+[node name="LeonElevatorMain" type="Node2D" unique_id=633458297]
+script = ExtResource("1_b31xe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=577061067]
+position = Vector2(0, 420)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=834607597]
+position = Vector2(400, 560)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1575358260]
+shape = SubResource("RectangleShape2D_x0pg2")
+
+[node name="Environments" type="Node2D" parent="." unique_id=249772873]
+
+[node name="NormalLobby" type="Node2D" parent="Environments" unique_id=1549136204 instance=ExtResource("2_5yfl5")]
+position = Vector2(0, 520)
+
+[node name="StrangeHallway" type="Node2D" parent="Environments" unique_id=1500540189 instance=ExtResource("3_otos0")]
+visible = false
+position = Vector2(0, 520)
+
+[node name="Elevator1" type="Node2D" parent="Environments" unique_id=354841958 instance=ExtResource("4_mbbgd")]
+position = Vector2(0, 520)
+script = ExtResource("5_3aavu")
+
+[node name="Elevator2" type="Node2D" parent="Environments" unique_id=53040565 instance=ExtResource("4_mbbgd")]
+position = Vector2(800, 520)
+script = ExtResource("5_3aavu")
+
+[node name="Characters" type="Node2D" parent="." unique_id=542773905]
+
+[node name="Leon1" type="CharacterBody2D" parent="Characters" unique_id=362457594 instance=ExtResource("6_gtp70")]
+position = Vector2(-280, 520)
+script = ExtResource("7_na5r7")
+
+[node name="Leon2" type="CharacterBody2D" parent="Characters" unique_id=1447054319 instance=ExtResource("6_gtp70")]
+visible = false
+position = Vector2(800, 520)
+script = ExtResource("7_na5r7")
+
+[node name="UI" type="Node2D" parent="." unique_id=1151251550]
+
+[node name="PhoneNotification" type="CanvasLayer" parent="UI" unique_id=1760117343 instance=ExtResource("8_2o3cb")]
+layer = 20
+script = ExtResource("9_0uovh")
+
+[node name="BlackoutOverlay" type="CanvasLayer" parent="UI" unique_id=916248538]
+layer = 50
+
+[node name="ColorRect" type="ColorRect" parent="UI/BlackoutOverlay" unique_id=379620291]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Audio" type="Node2D" parent="." unique_id=1319490155]
+
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="Audio" unique_id=1605758102]
+
+[node name="DoorCreak" type="AudioStreamPlayer" parent="Audio" unique_id=1786802546]

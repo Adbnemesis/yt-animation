@@ -1,0 +1,68 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/phone_notification.gd" id="1_phone"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/phone_buzz.wav" id="2_buzz"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+content_margin_left = 18.0
+content_margin_top = 14.0
+content_margin_right = 18.0
+content_margin_bottom = 14.0
+bg_color = Color(0.10, 0.13, 0.18, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.35, 0.50, 0.8)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.5)
+shadow_size = 12
+shadow_offset = Vector2(0, 6)
+
+[node name="PhoneNotification" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_phone")
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 30.0
+offset_right = 240.0
+offset_bottom = 120.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="VBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Header" type="HBoxContainer" parent="Panel/VBox"]
+layout_mode = 2
+
+[node name="AppIcon" type="ColorRect" parent="Panel/VBox/Header"]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+color = Color(0.95, 0.75, 0.2, 1)
+
+[node name="TitleLabel" type="Label" parent="Panel/VBox/Header"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.9, 0.98, 1)
+theme_override_font_size = 13
+text = "Elevator Express • Just now"
+
+[node name="MessageLabel" type="Label" parent="Panel/VBox"]
+name = "MessageLabel"
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_size = 15
+text = "Your elevator ride has been rated ⭐⭐⭐⭐⭐."
+autowrap_mode = 2
+
+[node name="BuzzAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_buzz")
+volume_db = -2.0

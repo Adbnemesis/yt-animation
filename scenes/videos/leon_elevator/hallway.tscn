@@ -1,0 +1,83 @@
+[gd_scene format=3]
+
+[node name="StrangeHallway" type="Node2D" unique_id=1500540189]
+
+[node name="Wall" type="Polygon2D" parent="." unique_id=1067129894]
+color = Color(0.13, 0.1, 0.18, 1)
+polygon = PackedVector2Array(-400, -360, 1400, -360, 1400, 0, -400, 0)
+
+[node name="Wainscot" type="Polygon2D" parent="." unique_id=417329083]
+color = Color(0.08, 0.06, 0.11, 1)
+polygon = PackedVector2Array(-400, -110, 1400, -110, 1400, 0, -400, 0)
+
+[node name="GoldTrim" type="Line2D" parent="." unique_id=1966476317]
+points = PackedVector2Array(-400, -110, 1400, -110)
+width = 3.0
+default_color = Color(0.65, 0.52, 0.25, 0.8)
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=222506701]
+color = Color(0.07, 0.05, 0.09, 1)
+polygon = PackedVector2Array(-400, 0, 1400, 0, 1400, 200, -400, 200)
+
+[node name="CarpetRunner" type="Polygon2D" parent="." unique_id=1110657649]
+color = Color(0.42, 0.1, 0.16, 1)
+polygon = PackedVector2Array(-400, 0, 1400, 0, 1400, 160, -400, 160)
+
+[node name="CarpetBorder" type="Line2D" parent="." unique_id=1656138410]
+points = PackedVector2Array(-400, 0, 1400, 0)
+width = 4.0
+default_color = Color(0.75, 0.6, 0.2, 0.9)
+
+[node name="DisappearedElevatorWall" type="Node2D" parent="." unique_id=807343771]
+
+[node name="SolidWall" type="Polygon2D" parent="DisappearedElevatorWall" unique_id=587789865]
+color = Color(0.15, 0.11, 0.2, 1)
+polygon = PackedVector2Array(-160, -240, 160, -240, 160, 0, -160, 0)
+
+[node name="WeirdFrame" type="Polygon2D" parent="DisappearedElevatorWall" unique_id=1485725248]
+color = Color(0.65, 0.52, 0.25, 0.9)
+polygon = PackedVector2Array(-50, -180, 50, -180, 50, -60, -50, -60)
+
+[node name="WeirdArt" type="Polygon2D" parent="DisappearedElevatorWall" unique_id=781743185]
+color = Color(0.05, 0.04, 0.08, 1)
+polygon = PackedVector2Array(-44, -174, 44, -174, 44, -66, -44, -66)
+
+[node name="WeirdGraphic" type="Polygon2D" parent="DisappearedElevatorWall" unique_id=1868661131]
+color = Color(0.9, 0.7, 0.15, 1)
+polygon = PackedVector2Array(-30, -120, 0, -145, 30, -120, 0, -95)
+
+[node name="Sconce_220" type="Node2D" parent="." unique_id=803893365]
+position = Vector2(220, -150)
+
+[node name="@Polygon2D@2" type="Polygon2D" parent="Sconce_220" unique_id=580489678]
+color = Color(0.65, 0.52, 0.25, 1)
+polygon = PackedVector2Array(-6, 0, 6, 0, 4, 25, -4, 25)
+
+[node name="@Polygon2D@3" type="Polygon2D" parent="Sconce_220" unique_id=1996815776]
+color = Color(1, 0.85, 0.45, 0.95)
+polygon = PackedVector2Array(-10, -20, 10, -20, 6, 0, -6, 0)
+
+[node name="Sconce_480" type="Node2D" parent="." unique_id=605943360]
+position = Vector2(480, -150)
+
+[node name="@Polygon2D@4" type="Polygon2D" parent="Sconce_480" unique_id=1636945317]
+color = Color(0.65, 0.52, 0.25, 1)
+polygon = PackedVector2Array(-6, 0, 6, 0, 4, 25, -4, 25)
+
+[node name="@Polygon2D@5" type="Polygon2D" parent="Sconce_480" unique_id=828528025]
+color = Color(1, 0.85, 0.45, 0.95)
+polygon = PackedVector2Array(-10, -20, 10, -20, 6, 0, -6, 0)
+
+[node name="Sconce_740" type="Node2D" parent="." unique_id=298026871]
+position = Vector2(740, -150)
+
+[node name="@Polygon2D@6" type="Polygon2D" parent="Sconce_740" unique_id=277724791]
+color = Color(0.65, 0.52, 0.25, 1)
+polygon = PackedVector2Array(-6, 0, 6, 0, 4, 25, -4, 25)
+
+[node name="@Polygon2D@7" type="Polygon2D" parent="Sconce_740" unique_id=347220942]
+color = Color(1, 0.85, 0.45, 0.95)
+polygon = PackedVector2Array(-10, -20, 10, -20, 6, 0, -6, 0)
+
+[node name="HallwayAmbiance" type="CanvasModulate" parent="." unique_id=1341293152]
+color = Color(0.85, 0.82, 0.92, 1)

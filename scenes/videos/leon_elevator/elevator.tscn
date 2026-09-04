@@ -1,0 +1,166 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/elevator.gd" id="1_6meus"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_ding.wav" id="2_4a2mg"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_door_open.wav" id="3_fv4yd"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_door_close.wav" id="4_wsacw"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/button_click.wav" id="5_wjv0y"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_hum.wav" id="6_1004a"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_jolt.wav" id="7_1ecve"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/light_flicker.wav" id="8_oax22"]
+
+[node name="Elevator" type="Node2D" unique_id=354841958]
+script = ExtResource("1_6meus")
+
+[node name="Interior" type="Node2D" parent="." unique_id=788914858]
+
+[node name="BackWall" type="Polygon2D" parent="Interior" unique_id=1320491825]
+color = Color(0.12, 0.15, 0.2, 1)
+polygon = PackedVector2Array(-160, -220, 160, -220, 160, 0, -160, 0)
+
+[node name="PanelL" type="Polygon2D" parent="Interior" unique_id=935071652]
+color = Color(0.15, 0.19, 0.26, 1)
+polygon = PackedVector2Array(-140, -210, -60, -210, -60, -10, -140, -10)
+
+[node name="PanelR" type="Polygon2D" parent="Interior" unique_id=1525614298]
+color = Color(0.15, 0.19, 0.26, 1)
+polygon = PackedVector2Array(60, -210, 140, -210, 140, -10, 60, -10)
+
+[node name="Mirror" type="Polygon2D" parent="Interior" unique_id=212751414]
+color = Color(0.18, 0.24, 0.32, 0.85)
+polygon = PackedVector2Array(-45, -195, 45, -195, 45, -40, -45, -40)
+
+[node name="MirrorGlare" type="Line2D" parent="Interior" unique_id=544241657]
+points = PackedVector2Array(-35, -185, 35, -50)
+width = 3.0
+default_color = Color(1, 1, 1, 0.15)
+
+[node name="Handrail" type="Line2D" parent="Interior" unique_id=673446935]
+points = PackedVector2Array(-155, -45, 155, -45)
+width = 6.0
+default_color = Color(0.45, 0.52, 0.62, 1)
+
+[node name="Floor" type="Polygon2D" parent="Interior" unique_id=736743853]
+color = Color(0.09, 0.11, 0.15, 1)
+polygon = PackedVector2Array(-170, 0, 170, 0, 170, 20, -170, 20)
+
+[node name="FloorEdge" type="Line2D" parent="Interior" unique_id=492562230]
+points = PackedVector2Array(-170, 0, 170, 0)
+width = 3.0
+default_color = Color(0.6, 0.7, 0.8, 0.8)
+
+[node name="Ceiling" type="Polygon2D" parent="Interior" unique_id=1797913041]
+color = Color(0.08, 0.1, 0.13, 1)
+polygon = PackedVector2Array(-170, -240, 170, -240, 170, -220, -170, -220)
+
+[node name="LightFixture" type="Polygon2D" parent="Interior" unique_id=857488170]
+color = Color(0.95, 0.98, 1, 0.9)
+polygon = PackedVector2Array(-60, -222, 60, -222, 60, -218, -60, -218)
+
+[node name="ButtonPanel" type="Node2D" parent="Interior" unique_id=1564702960]
+position = Vector2(115, -75)
+
+[node name="Plate" type="Polygon2D" parent="Interior/ButtonPanel" unique_id=1682817922]
+color = Color(0.22, 0.27, 0.35, 1)
+polygon = PackedVector2Array(-12, -45, 12, -45, 12, 45, -12, 45)
+
+[node name="Buttons" type="Node2D" parent="Interior/ButtonPanel" unique_id=1514343350]
+
+[node name="Btn1" type="Polygon2D" parent="Interior/ButtonPanel/Buttons" unique_id=1646999184]
+color = Color(0.35, 0.4, 0.5, 1)
+polygon = PackedVector2Array(-6, -36, 6, -36, 6, -24, -6, -24)
+
+[node name="Btn2" type="Polygon2D" parent="Interior/ButtonPanel/Buttons" unique_id=706020567]
+color = Color(0.35, 0.4, 0.5, 1)
+polygon = PackedVector2Array(-6, -16, 6, -16, 6, -4, -6, -4)
+
+[node name="Btn3" type="Polygon2D" parent="Interior/ButtonPanel/Buttons" unique_id=558251510]
+color = Color(0.35, 0.4, 0.5, 1)
+polygon = PackedVector2Array(-6, 4, 6, 4, 6, 16, -6, 16)
+
+[node name="Btn4" type="Polygon2D" parent="Interior/ButtonPanel/Buttons" unique_id=1658784575]
+color = Color(0.35, 0.4, 0.5, 1)
+polygon = PackedVector2Array(-6, 24, 6, 24, 6, 36, -6, 36)
+
+[node name="Doors" type="Node2D" parent="." unique_id=1613487226]
+
+[node name="DoorL" type="Node2D" parent="Doors" unique_id=889459812]
+position = Vector2(-75, 0)
+
+[node name="Visual" type="Polygon2D" parent="Doors/DoorL" unique_id=287710883]
+color = Color(0.28, 0.33, 0.42, 1)
+polygon = PackedVector2Array(-75, -220, 75, -220, 75, 0, -75, 0)
+
+[node name="Trim" type="Line2D" parent="Doors/DoorL" unique_id=404299351]
+points = PackedVector2Array(73, -220, 73, 0)
+width = 2.0
+default_color = Color(0.4, 0.48, 0.6, 0.9)
+
+[node name="DoorR" type="Node2D" parent="Doors" unique_id=834841094]
+position = Vector2(75, 0)
+
+[node name="Visual" type="Polygon2D" parent="Doors/DoorR" unique_id=1649306969]
+color = Color(0.28, 0.33, 0.42, 1)
+polygon = PackedVector2Array(-75, -220, 75, -220, 75, 0, -75, 0)
+
+[node name="Trim" type="Line2D" parent="Doors/DoorR" unique_id=1863295778]
+points = PackedVector2Array(-73, -220, -73, 0)
+width = 2.0
+default_color = Color(0.4, 0.48, 0.6, 0.9)
+
+[node name="Frame" type="Node2D" parent="." unique_id=781213306]
+
+[node name="ArchitraveL" type="Polygon2D" parent="Frame" unique_id=678295695]
+color = Color(0.18, 0.22, 0.28, 1)
+polygon = PackedVector2Array(-170, -240, -150, -240, -150, 0, -170, 0)
+
+[node name="ArchitraveR" type="Polygon2D" parent="Frame" unique_id=909143026]
+color = Color(0.18, 0.22, 0.28, 1)
+polygon = PackedVector2Array(150, -240, 170, -240, 170, 0, 150, 0)
+
+[node name="ArchitraveTop" type="Polygon2D" parent="Frame" unique_id=1476506286]
+color = Color(0.18, 0.22, 0.28, 1)
+polygon = PackedVector2Array(-170, -255, 170, -255, 170, -220, -170, -220)
+
+[node name="Display" type="Node2D" parent="Frame" unique_id=438122306]
+position = Vector2(0, -238)
+
+[node name="Background" type="Polygon2D" parent="Frame/Display" unique_id=1020499092]
+color = Color(0.05, 0.07, 0.1, 1)
+polygon = PackedVector2Array(-35, -12, 35, -12, 35, 12, -35, 12)
+
+[node name="Label" type="Label" parent="Frame/Display" unique_id=1576853500]
+offset_left = -35.0
+offset_top = -13.0
+offset_right = 35.0
+offset_bottom = 13.0
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 0.75, 0.2, 1)
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CeilingLight" type="CanvasModulate" parent="." unique_id=796375516]
+
+[node name="Audio" type="Node2D" parent="." unique_id=493513133]
+
+[node name="Ding" type="AudioStreamPlayer2D" parent="Audio" unique_id=1425829790]
+stream = ExtResource("2_4a2mg")
+
+[node name="DoorOpen" type="AudioStreamPlayer2D" parent="Audio" unique_id=922458512]
+stream = ExtResource("3_fv4yd")
+
+[node name="DoorClose" type="AudioStreamPlayer2D" parent="Audio" unique_id=624272180]
+stream = ExtResource("4_wsacw")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="Audio" unique_id=1833331246]
+stream = ExtResource("5_wjv0y")
+
+[node name="Hum" type="AudioStreamPlayer2D" parent="Audio" unique_id=1437205672]
+stream = ExtResource("6_1004a")
+
+[node name="Jolt" type="AudioStreamPlayer2D" parent="Audio" unique_id=702672735]
+stream = ExtResource("7_1ecve")
+
+[node name="Flicker" type="AudioStreamPlayer2D" parent="Audio" unique_id=1911065608]
+stream = ExtResource("8_oax22")
