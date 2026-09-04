@@ -41,6 +41,9 @@ func take_hit(hit_data: RefCounted) -> void:
 	recoil_offset = dir * (force * 0.05)
 
 	hit_received.emit(hit_data)
+	if current_hp <= 0.0:
+		if is_inside_tree() and get_tree().root.has_node("AudioManager"):
+			get_tree().root.get_node("AudioManager").trigger_event("DEATH")
 	_update_ui()
 
 func _physics_process(delta: float) -> void:

@@ -25,40 +25,40 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="WalkTestHarness" type="Node2D" unique_id=887340437]
+[node name="WalkTestHarness" type="Node2D" unique_id=304395157]
 script = ExtResource("1_1t7l8")
 
-[node name="Background" type="ColorRect" parent="." unique_id=721680152]
+[node name="Background" type="ColorRect" parent="." unique_id=115095091]
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0.09, 0.11, 0.15, 1)
 
-[node name="Horizon" type="Line2D" parent="." unique_id=616584154]
+[node name="Horizon" type="Line2D" parent="." unique_id=891335226]
 points = PackedVector2Array(0, 360, 1152, 360)
 width = 1.5
 default_color = Color(0.14, 0.17, 0.22, 1)
 
-[node name="Ground" type="StaticBody2D" parent="." unique_id=2074799834]
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1744793111]
 position = Vector2(576, 560)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=120338415]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1761929623]
 shape = SubResource("RectangleShape2D_pbdx7")
 
-[node name="GroundVisual" type="ColorRect" parent="Ground" unique_id=501276418]
+[node name="GroundVisual" type="ColorRect" parent="Ground" unique_id=1881187206]
 offset_left = -700.0
 offset_top = -40.0
 offset_right = 700.0
 offset_bottom = 160.0
 color = Color(0.14, 0.17, 0.22, 1)
 
-[node name="GroundTopStrip" type="ColorRect" parent="Ground" unique_id=444665440]
+[node name="GroundTopStrip" type="ColorRect" parent="Ground" unique_id=1374245098]
 offset_left = -700.0
 offset_top = -40.0
 offset_right = 700.0
 offset_bottom = -36.0
 color = Color(0.2, 0.55, 0.85, 1)
 
-[node name="GroundLine" type="Line2D" parent="." unique_id=1764023705]
+[node name="GroundLine" type="Line2D" parent="." unique_id=905541921]
 z_index = 5
 points = PackedVector2Array(0, 520, 1152, 520)
 width = 2.0
@@ -74,9 +74,9 @@ collision_layer = 4
 collision_mask = 8
 script = ExtResource("5_ni7fp")
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=102720768]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1697471556]
 
-[node name="@Label@2" type="Label" parent="UI" unique_id=1615145895]
+[node name="@Label@2" type="Label" parent="UI" unique_id=1240151905]
 modulate = Color(0.45, 0.85, 1, 1)
 offset_left = 24.0
 offset_top = 16.0
@@ -85,7 +85,7 @@ offset_bottom = 16.0
 theme_override_font_sizes/font_size = 18
 text = "LEON 2D PUPPET — PRODUCTION COMBAT STAGE 4 (SUPER INVISIBILITY)"
 
-[node name="@Label@3" type="Label" parent="UI" unique_id=377164980]
+[node name="@Label@3" type="Label" parent="UI" unique_id=378734009]
 modulate = Color(0.7, 0.75, 0.85, 1)
 offset_left = 24.0
 offset_top = 42.0
@@ -94,91 +94,101 @@ offset_bottom = 42.0
 theme_override_font_sizes/font_size = 12
 text = "Walk • Run • Jump • 4-Blade Spinner Burst • Super Invisibility (5s Ghost Fade) • Ground y=520"
 
-[node name="@HBoxContainer@4" type="HBoxContainer" parent="UI" unique_id=1883867532]
+[node name="@HBoxContainer@4" type="HBoxContainer" parent="UI" unique_id=1862743556]
 offset_left = 24.0
 offset_top = 70.0
 offset_right = 24.0
 offset_bottom = 70.0
 theme_override_constants/separation = 6
 
-[node name="@Button@5" type="Button" parent="UI/@HBoxContainer@4" unique_id=1286632711]
+[node name="@Button@5" type="Button" parent="UI/@HBoxContainer@4" unique_id=411177275]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "1. Walk In Place"
 
-[node name="@Button@6" type="Button" parent="UI/@HBoxContainer@4" unique_id=187606143]
+[node name="@Button@6" type="Button" parent="UI/@HBoxContainer@4" unique_id=1359758956]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "2. Run In Place"
 
-[node name="@Button@7" type="Button" parent="UI/@HBoxContainer@4" unique_id=1654606836]
+[node name="@Button@7" type="Button" parent="UI/@HBoxContainer@4" unique_id=1470677589]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "3. Locomotion Demo"
 
-[node name="@Button@8" type="Button" parent="UI/@HBoxContainer@4" unique_id=1562306191]
+[node name="@Button@8" type="Button" parent="UI/@HBoxContainer@4" unique_id=2114165893]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "4. Jump Demo"
 
-[node name="@Button@9" type="Button" parent="UI/@HBoxContainer@4" unique_id=559758678]
+[node name="@Button@9" type="Button" parent="UI/@HBoxContainer@4" unique_id=1802796517]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "5. Projectile Demo"
 
-[node name="@Button@10" type="Button" parent="UI/@HBoxContainer@4" unique_id=944034919]
+[node name="@Button@10" type="Button" parent="UI/@HBoxContainer@4" unique_id=602780296]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "6. Super Demo"
 
-[node name="@Button@11" type="Button" parent="UI/@HBoxContainer@4" unique_id=345064943]
+[node name="@Button@11" type="Button" parent="UI/@HBoxContainer@4" unique_id=193886400]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "7. Interactive Keys"
+text = "7. Audio Preview"
 
-[node name="@Button@12" type="Button" parent="UI/@HBoxContainer@4" unique_id=680924435]
+[node name="@Button@12" type="Button" parent="UI/@HBoxContainer@4" unique_id=1207501214]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "8. Interactive Keys"
+
+[node name="@Button@13" type="Button" parent="UI/@HBoxContainer@4" unique_id=899965463]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Attack (J)"
 
-[node name="@Button@13" type="Button" parent="UI/@HBoxContainer@4" unique_id=1870268908]
+[node name="@Button@14" type="Button" parent="UI/@HBoxContainer@4" unique_id=1332847384]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Super (L)"
 
-[node name="@Button@14" type="Button" parent="UI/@HBoxContainer@4" unique_id=1291538233]
+[node name="@Button@15" type="Button" parent="UI/@HBoxContainer@4" unique_id=2093315609]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Jump (Space)"
 
-[node name="@Button@15" type="Button" parent="UI/@HBoxContainer@4" unique_id=618160537]
+[node name="@Button@16" type="Button" parent="UI/@HBoxContainer@4" unique_id=615573456]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Mute (M)"
+
+[node name="@Button@17" type="Button" parent="UI/@HBoxContainer@4" unique_id=127509846]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Reset Dummy"
 
-[node name="@Button@16" type="Button" parent="UI/@HBoxContainer@4" unique_id=1404026134]
+[node name="@Button@18" type="Button" parent="UI/@HBoxContainer@4" unique_id=953420131]
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Toggle Line"
 
-[node name="InfoPanel" type="PanelContainer" parent="UI" unique_id=1733046344]
+[node name="InfoPanel" type="PanelContainer" parent="UI" unique_id=630740739]
 offset_left = 24.0
 offset_top = 115.0
-offset_right = 604.0
-offset_bottom = 210.0
+offset_right = 644.0
+offset_bottom = 225.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lku3e")
 
-[node name="VBox" type="VBoxContainer" parent="UI/InfoPanel" unique_id=546393210]
+[node name="VBox" type="VBoxContainer" parent="UI/InfoPanel" unique_id=1304635040]
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="LblMode" type="Label" parent="UI/InfoPanel/VBox" unique_id=243263650]
+[node name="LblMode" type="Label" parent="UI/InfoPanel/VBox" unique_id=193770996]
 modulate = Color(0.3, 0.85, 1, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "MODE: Walk In Place (Stationary Stride)"
 
-[node name="LblStats" type="Label" parent="UI/InfoPanel/VBox" unique_id=1486996789]
+[node name="LblStats" type="Label" parent="UI/InfoPanel/VBox" unique_id=1764996035]
 modulate = Color(0.8, 0.85, 0.92, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 11

@@ -4140,233 +4140,233 @@ _data = {
 &"walk_stop": SubResource("Animation_kdjy5")
 }
 
-[node name="LeonSide" type="CharacterBody2D" unique_id=818078939]
+[node name="LeonSide" type="CharacterBody2D" unique_id=362457594]
 script = ExtResource("1_pfyx0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1156478984]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1217057843]
 position = Vector2(0, -48)
 shape = SubResource("CapsuleShape2D_vap35")
 
-[node name="Visuals" type="Node2D" parent="." unique_id=918095530]
+[node name="Visuals" type="Node2D" parent="." unique_id=686168807]
 z_index = 5
 z_as_relative = false
 
-[node name="Skeleton" type="Skeleton2D" parent="Visuals" unique_id=1501876634]
+[node name="Skeleton" type="Skeleton2D" parent="Visuals" unique_id=2095942687]
 
-[node name="root" type="Bone2D" parent="Visuals/Skeleton" unique_id=938652812]
+[node name="root" type="Bone2D" parent="Visuals/Skeleton" unique_id=288425148]
 position = Vector2(0, -38)
 rest = Transform2D(1, 0, 0, 1, 0, -38)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="tail" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=633020253]
+[node name="tail" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=1622044187]
 position = Vector2(-16, 12)
 rest = Transform2D(1, 0, 0, 1, -16, 12)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="TailSprite" type="Sprite2D" parent="Visuals/Skeleton/root/tail" unique_id=2002773266]
+[node name="TailSprite" type="Sprite2D" parent="Visuals/Skeleton/root/tail" unique_id=574328529]
 z_index = -2
 texture = ExtResource("2_jhivx")
 offset = Vector2(-8, 10)
 
-[node name="leg_L_upper" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=576093220]
+[node name="leg_L_upper" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=1722101287]
 position = Vector2(-4, 10)
 rest = Transform2D(1, 0, 0, 1, -4, 10)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="LegSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper" unique_id=185060321]
+[node name="LegSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper" unique_id=2062228119]
 z_index = -1
 texture = ExtResource("3_qemwq")
 offset = Vector2(0, 8)
 
-[node name="leg_L_lower" type="Bone2D" parent="Visuals/Skeleton/root/leg_L_upper" unique_id=1266855000]
+[node name="leg_L_lower" type="Bone2D" parent="Visuals/Skeleton/root/leg_L_upper" unique_id=1740674570]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="LegLowerSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower" unique_id=1111940280]
+[node name="LegLowerSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower" unique_id=745583367]
 z_index = -1
 texture = ExtResource("4_s4rj4")
 offset = Vector2(0, 6)
 
-[node name="foot_L" type="Bone2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower" unique_id=1324734581]
+[node name="foot_L" type="Bone2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower" unique_id=1105216302]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="FootSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower/foot_L" unique_id=203718417]
+[node name="FootSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/leg_L_upper/leg_L_lower/foot_L" unique_id=884657184]
 z_index = -1
 texture = ExtResource("5_ph8od")
 offset = Vector2(4, 2)
 
-[node name="torso" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=774726233]
+[node name="torso" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=758667771]
 position = Vector2(0, -6)
 rest = Transform2D(1, 0, 0, 1, 0, -6)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="TorsoSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso" unique_id=206208817]
+[node name="TorsoSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso" unique_id=1596402796]
 texture = ExtResource("6_ja5gy")
 offset = Vector2(0, -16)
 
-[node name="arm_L_upper" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=1024986351]
+[node name="arm_L_upper" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=1309376185]
 position = Vector2(-6, -20)
 rest = Transform2D(1, 0, 0, 1, -6, -20)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="ArmSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper" unique_id=1597157905]
+[node name="ArmSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper" unique_id=152892497]
 z_index = -1
 texture = ExtResource("7_lcsaa")
 offset = Vector2(0, 8)
 
-[node name="arm_L_lower" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_L_upper" unique_id=883197185]
+[node name="arm_L_lower" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_L_upper" unique_id=1203916226]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="ArmLowerSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower" unique_id=999354231]
+[node name="ArmLowerSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower" unique_id=1301449593]
 z_index = -1
 texture = ExtResource("8_byur4")
 offset = Vector2(0, 6)
 
-[node name="hand_L" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower" unique_id=720855742]
+[node name="hand_L" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower" unique_id=374219251]
 position = Vector2(0, 12)
 rest = Transform2D(1, 0, 0, 1, 0, 12)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="HandSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower/hand_L" unique_id=96710264]
+[node name="HandSpriteL" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower/hand_L" unique_id=17750278]
 z_index = -1
 texture = ExtResource("9_ugqas")
 offset = Vector2(0, 4)
 
-[node name="arm_R_upper" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=1458943417]
+[node name="arm_R_upper" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=1632157359]
 position = Vector2(6, -20)
 rest = Transform2D(1, 0, 0, 1, 6, -20)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="ArmSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper" unique_id=1757210832]
+[node name="ArmSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper" unique_id=1423928908]
 z_index = 3
 texture = ExtResource("7_lcsaa")
 offset = Vector2(0, 8)
 
-[node name="arm_R_lower" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_R_upper" unique_id=227579225]
+[node name="arm_R_lower" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_R_upper" unique_id=665070690]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="ArmLowerSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower" unique_id=502519841]
+[node name="ArmLowerSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower" unique_id=989356530]
 z_index = 3
 texture = ExtResource("8_byur4")
 offset = Vector2(0, 6)
 
-[node name="hand_R" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower" unique_id=1764222619]
+[node name="hand_R" type="Bone2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower" unique_id=553813488]
 position = Vector2(0, 12)
 rest = Transform2D(1, 0, 0, 1, 0, 12)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="HandSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R" unique_id=666946515]
+[node name="HandSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R" unique_id=1904860682]
 z_index = 3
 texture = ExtResource("9_ugqas")
 offset = Vector2(0, 4)
 
-[node name="ProjectileSpawnPoint" type="Marker2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R" unique_id=437692452]
+[node name="ProjectileSpawnPoint" type="Marker2D" parent="Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R" unique_id=1862730205]
 position = Vector2(10, 2)
 
-[node name="neck" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=955973678]
+[node name="neck" type="Bone2D" parent="Visuals/Skeleton/root/torso" unique_id=1643539749]
 position = Vector2(0, -26)
 rest = Transform2D(1, 0, 0, 1, 0, -26)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="head" type="Bone2D" parent="Visuals/Skeleton/root/torso/neck" unique_id=1664018472]
+[node name="head" type="Bone2D" parent="Visuals/Skeleton/root/torso/neck" unique_id=1113155335]
 position = Vector2(0, -8)
 rest = Transform2D(1, 0, 0, 1, 0, -8)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="HoodSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso/neck/head" unique_id=287224019]
+[node name="HoodSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso/neck/head" unique_id=731957441]
 z_index = 2
 texture = ExtResource("10_11rim")
 offset = Vector2(-4, -34)
 
-[node name="FaceSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso/neck/head" unique_id=1403428279]
+[node name="FaceSprite" type="Sprite2D" parent="Visuals/Skeleton/root/torso/neck/head" unique_id=1953766561]
 z_index = 2
 texture = ExtResource("11_4sx1r")
 offset = Vector2(10, -20)
 
-[node name="leg_R_upper" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=1861881800]
+[node name="leg_R_upper" type="Bone2D" parent="Visuals/Skeleton/root" unique_id=112662246]
 position = Vector2(4, 10)
 rest = Transform2D(1, 0, 0, 1, 4, 10)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="LegSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper" unique_id=238079680]
+[node name="LegSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper" unique_id=1120105137]
 z_index = 1
 texture = ExtResource("3_qemwq")
 offset = Vector2(0, 8)
 
-[node name="leg_R_lower" type="Bone2D" parent="Visuals/Skeleton/root/leg_R_upper" unique_id=1933459771]
+[node name="leg_R_lower" type="Bone2D" parent="Visuals/Skeleton/root/leg_R_upper" unique_id=1371141182]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 16.0
 bone_angle = 0.0
 
-[node name="LegLowerSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower" unique_id=1858753329]
+[node name="LegLowerSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower" unique_id=164455088]
 z_index = 1
 texture = ExtResource("4_s4rj4")
 offset = Vector2(0, 6)
 
-[node name="foot_R" type="Bone2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower" unique_id=1648320808]
+[node name="foot_R" type="Bone2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower" unique_id=2012360699]
 position = Vector2(0, 14)
 rest = Transform2D(1, 0, 0, 1, 0, 14)
 auto_calculate_length_and_angle = false
 length = 14.0
 bone_angle = 0.0
 
-[node name="FootSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower/foot_R" unique_id=52541750]
+[node name="FootSpriteR" type="Sprite2D" parent="Visuals/Skeleton/root/leg_R_upper/leg_R_lower/foot_R" unique_id=22619678]
 z_index = 1
 texture = ExtResource("5_ph8od")
 offset = Vector2(4, 2)
 
-[node name="VFXAttachmentPoints" type="Node2D" parent="." unique_id=155014998]
+[node name="VFXAttachmentPoints" type="Node2D" parent="." unique_id=741549478]
 
-[node name="HitPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=1015216867]
+[node name="HitPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=2104993695]
 position = Vector2(0, -48)
 
-[node name="HeadPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=1990453994]
+[node name="HeadPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=2015397219]
 position = Vector2(0, -114)
 
-[node name="CandyPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=382329085]
+[node name="CandyPoint" type="Marker2D" parent="VFXAttachmentPoints" unique_id=1976593983]
 position = Vector2(28, -56)
 
-[node name="ProjectileSpawn" type="Marker2D" parent="VFXAttachmentPoints" unique_id=1663608605]
+[node name="ProjectileSpawn" type="Marker2D" parent="VFXAttachmentPoints" unique_id=875638850]
 position = Vector2(28, -48)
 
-[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1253993884]
+[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=608154093]
 libraries/ = SubResource("AnimationLibrary_f0353")

@@ -134,10 +134,12 @@ func _pressed() -> void:
 	create_btn.call("4. Jump Demo", "harness.set_mode(harness.Mode.JUMP_DEMO)")
 	create_btn.call("5. Projectile Demo", "harness.set_mode(harness.Mode.PROJECTILE_DEMO)")
 	create_btn.call("6. Super Demo", "harness.set_mode(harness.Mode.SUPER_DEMO)")
-	create_btn.call("7. Interactive Keys", "harness.set_mode(harness.Mode.INTERACTIVE)")
+	create_btn.call("7. Audio Preview", "harness.set_mode(harness.Mode.AUDIO_PREVIEW)")
+	create_btn.call("8. Interactive Keys", "harness.set_mode(harness.Mode.INTERACTIVE)")
 	create_btn.call("Attack (J)", "harness.trigger_attack()")
 	create_btn.call("Super (L)", "harness.trigger_super()")
 	create_btn.call("Jump (Space)", "harness.trigger_jump()")
+	create_btn.call("Mute (M)", "harness.toggle_audio_mute()")
 	create_btn.call("Reset Dummy", "harness.reset_target_dummy()")
 	create_btn.call("Toggle Line", "harness.toggle_ground_line()")
 
@@ -145,7 +147,7 @@ func _pressed() -> void:
 	var info_panel = PanelContainer.new()
 	info_panel.name = "InfoPanel"
 	info_panel.position = Vector2(24, 115)
-	info_panel.size = Vector2(580, 95)
+	info_panel.size = Vector2(620, 110)
 	var sb = StyleBoxFlat.new()
 	sb.bg_color = Color(0.12, 0.15, 0.20, 0.90)
 	sb.border_width_left = 1; sb.border_width_right = 1; sb.border_width_top = 1; sb.border_width_bottom = 1

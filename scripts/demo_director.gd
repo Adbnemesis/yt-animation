@@ -16,6 +16,7 @@ enum AutoStep {
 	JUMP_WAIT_LAND,
 	POST_LAND,
 	ATTACK,
+	SUPER_INVIS,
 	HIT,
 	KNOCKBACK,
 	IDLE_FINISH
@@ -30,8 +31,9 @@ const STEP_NAMES := {
 	AutoStep.JUMP_START: "JUMP (START)",
 	AutoStep.JUMP_WAIT_LAND: "JUMP (WAIT LAND)",
 	AutoStep.POST_LAND: "POST LAND",
-	AutoStep.ATTACK: "ATTACK",
-	AutoStep.HIT: "HIT",
+	AutoStep.ATTACK: "ATTACK (THROW SFX)",
+	AutoStep.SUPER_INVIS: "SUPER (INVISIBILITY SFX & VO)",
+	AutoStep.HIT: "HIT (VO)",
 	AutoStep.KNOCKBACK: "KNOCKBACK",
 	AutoStep.IDLE_FINISH: "IDLE (FINISH)"
 }
@@ -127,18 +129,25 @@ func _unhandled_input(event: InputEvent) -> void:
 			character.wants_jump = true
 		elif event.keycode == KEY_J:
 			character.wants_attack = true
+		elif event.keycode in [KEY_U, KEY_E]:
+			character.wants_super = true
 		elif event.keycode == KEY_K:
 			character.wants_hit = true
 		elif event.keycode == KEY_L:
 			character.wants_knockback = true
+		elif event.keycode == KEY_M:
+			if has_node("/root/AudioManager"):
+				get_node("/root/AudioManager").toggle_mute()
 	else:
-		if event.keycode in [KEY_J, KEY_K, KEY_L, KEY_SPACE, KEY_A, KEY_D]:
+		if event.keycode in [KEY_J, KEY_K, KEY_L, KEY_U, KEY_E, KEY_SPACE, KEY_A, KEY_D]:
 			auto_mode = false
 			inspect_anim_name = ""
 			if event.keycode == KEY_SPACE:
 				character.wants_jump = true
 			elif event.keycode == KEY_J:
 				character.wants_attack = true
+			elif event.keycode in [KEY_U, KEY_E]:
+				character.wants_super = true
 			elif event.keycode == KEY_K:
 				character.wants_hit = true
 			elif event.keycode == KEY_L:
@@ -257,6 +266,18 @@ func _process_auto_demo(delta: float) -> void:
 			if step_timer < 0.05:
 				character.wants_attack = true
 			elif character.current_state == CharacterControllerClass.State.IDLE and step_timer >= 0.58:
+				_advance_step(AutoStep.SUPER_INVIS)
+
+		AutoStep.SUPER_INVIS:
+			if step_timer < 0.05:
+				character.wants_super = true # Triggers invisibility vanish SFX & VO
+			elif step_timer >= 0.25 and step_timer < 1.4:
+				character.input_dir = 1.0 # Walk invisibly across stage
+			elif step_timer >= 1.4 and step_timer < 1.8:
+				character.input_dir = 0.0
+			elif step_timer >= 1.8:
+				# Attack while invisible to demonstrate uncloak SFX + combat break
+				character.wants_attack = true
 				_advance_step(AutoStep.HIT)
 
 		AutoStep.HIT:

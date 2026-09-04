@@ -923,5 +923,9 @@ func _init() -> void:
 		quit(1)
 		return
 
-	print("[BUILD] Successfully generated res://scenes/leon_side.tscn!")
+	# Also save to scenes/character.tscn and scenes/leon.tscn so all scenes have full animation sets
+	ResourceSaver.save(scene, "res://scenes/character.tscn")
+	ResourceSaver.save(scene, "res://scenes/leon.tscn")
+
+	print("[BUILD] Successfully generated res://scenes/leon_side.tscn, res://scenes/character.tscn, and res://scenes/leon.tscn!")
 	quit(0)

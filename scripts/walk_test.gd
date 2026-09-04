@@ -10,6 +10,7 @@ enum Mode {
 	ATTACK_DEMO,
 	PROJECTILE_DEMO,
 	SUPER_DEMO,
+	AUDIO_PREVIEW,
 	INTERACTIVE
 }
 
@@ -37,6 +38,8 @@ var projectile_demo_timer: float = 0.0
 var projectile_demo_duration: float = 8.5
 var super_demo_timer: float = 0.0
 var super_demo_duration: float = 10.0
+var audio_preview_timer: float = 0.0
+var audio_preview_step: int = 0
 
 # Combat & projectile telemetry
 var last_attack_event: String = "None"
@@ -46,6 +49,9 @@ var last_hit_time: float = -1.0
 var last_hit_damage: float = 0.0
 var last_super_event: String = "None"
 var super_event_timer: float = 0.0
+
+var auto_quit_timer: float = 0.0
+var auto_quit_duration: float = -1.0
 
 func _ready() -> void:
 	if puppet:
@@ -83,8 +89,12 @@ func _ready() -> void:
 			set_mode(Mode.PROJECTILE_DEMO)
 		elif arg == "--super-demo":
 			set_mode(Mode.SUPER_DEMO)
+		elif arg == "--audio-preview":
+			set_mode(Mode.AUDIO_PREVIEW)
 		elif arg == "--interactive":
 			set_mode(Mode.INTERACTIVE)
+		elif arg.begins_with("--auto-quit="):
+			auto_quit_duration = arg.trim_prefix("--auto-quit=").to_float()
 
 func _on_super_event(event_name: String, _data: Dictionary) -> void:
 	last_super_event = event_name
@@ -103,6 +113,12 @@ func _on_dummy_hit_received(hit_data: RefCounted) -> void:
 
 func _physics_process(delta: float) -> void:
 	time_elapsed += delta
+	if auto_quit_duration > 0.0:
+		auto_quit_timer += delta
+		if auto_quit_timer >= auto_quit_duration:
+			get_tree().quit(0)
+			return
+
 	if attack_event_timer > 0.0:
 		attack_event_timer -= delta
 		if attack_event_timer <= 0.0:
@@ -171,6 +187,9 @@ func _physics_process(delta: float) -> void:
 
 		Mode.SUPER_DEMO:
 			_process_super_demo(delta)
+
+		Mode.AUDIO_PREVIEW:
+			_process_audio_preview_mode(delta)
 
 		Mode.INTERACTIVE:
 			_process_interactive_input()
@@ -541,7 +560,7 @@ func _process_super_demo(delta: float) -> void:
 
 func set_mode(m: Mode) -> void:
 	current_mode = m
-	if m == Mode.INTERACTIVE or m == Mode.LOCOMOTION_DEMO or m == Mode.JUMP_DEMO or m == Mode.ATTACK_DEMO or m == Mode.PROJECTILE_DEMO or m == Mode.SUPER_DEMO:
+	if m in [Mode.INTERACTIVE, Mode.LOCOMOTION_DEMO, Mode.JUMP_DEMO, Mode.ATTACK_DEMO, Mode.PROJECTILE_DEMO, Mode.SUPER_DEMO, Mode.AUDIO_PREVIEW]:
 		if puppet and puppet.has_method("set_physics_process"):
 			puppet.set_physics_process(true)
 	else:
@@ -561,7 +580,111 @@ func set_mode(m: Mode) -> void:
 	elif m == Mode.SUPER_DEMO:
 		puppet.position = Vector2(280, base_ground_y)
 		reset_target_dummy()
+	elif m == Mode.AUDIO_PREVIEW:
+		puppet.position = Vector2(360, base_ground_y)
+		audio_preview_timer = 0.0
+		audio_preview_step = 0
+		reset_target_dummy()
+		if puppet.has_method("change_state"):
+			puppet.change_state(puppet.State.IDLE)
 	_update_ui()
+
+# Synchronized Audio-Visual Presentation Sequence
+# Every sound is triggered strictly via the character's animation frames and state transitions!
+func _process_audio_preview_mode(delta: float) -> void:
+	audio_preview_timer += delta
+	var cycle_len = 9.6
+	var t = fmod(audio_preview_timer, cycle_len)
+
+	var inp = 0.0
+	var run = false
+	var atk = false
+	var jmp = false
+	var sup = false
+
+	# Phase 1 (0.0s - 1.6s): Attack with authentic throwing SFX & reload
+	if t >= 0.50 and t < 0.55:
+		atk = true
+	# Phase 2 (1.6s - 3.2s): Jump & Land with authentic common SFX
+	elif t >= 2.0 and t < 2.05:
+		jmp = true
+	# Phase 3 (3.2s - 5.8s): Super Invisibility with authentic invisibility vanish SFX & VO
+	elif t >= 3.4 and t < 3.45:
+		sup = true
+	elif t >= 3.6 and t < 4.8:
+		inp = 1.0 # Walk invisibly across stage
+	elif t >= 4.8 and t < 5.2:
+		inp = 0.0
+	elif t >= 5.2 and t < 5.25:
+		# Attack while invisible to demonstrate uncloak SFX + combat break!
+		atk = true
+	# Phase 4 (5.8s - 7.2s): Super Invisibility Natural Expiry & Decloak SFX
+	elif t >= 6.2 and t < 6.25:
+		sup = true # Second Super activation
+	elif t >= 6.8 and t < 6.85:
+		if puppet and "super_timer" in puppet:
+			puppet.super_timer = 0.01 # Fast-forward to natural uncloak SFX
+	# Phase 5 (7.2s - 8.4s): Hit Recoil and Hurt VO
+	elif t >= 7.6 and t < 7.65:
+		if puppet and puppet.has_method("trigger_hit"):
+			puppet.trigger_hit()
+	# Phase 6 (8.4s - 9.6s): Authentic Start / Leading VO Line
+	elif t >= 8.6 and t < 8.65:
+		if has_node("/root/AudioManager"):
+			get_node("/root/AudioManager").trigger_event("START")
+
+	if "input_dir" in puppet:
+		puppet.input_dir = inp
+	if "wants_run" in puppet:
+		puppet.wants_run = run
+	if "wants_attack" in puppet and atk:
+		puppet.wants_attack = true
+	if "wants_jump" in puppet and jmp:
+		puppet.wants_jump = true
+	if "wants_super" in puppet and sup:
+		puppet.wants_super = true
+
+	# Keep puppet in good view
+	if puppet.position.x < 180:
+		puppet.position.x = 180
+	elif puppet.position.x > 750:
+		puppet.position.x = 750
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		match event.keycode:
+			KEY_1:
+				set_mode(Mode.IN_PLACE_WALK)
+			KEY_2:
+				set_mode(Mode.IN_PLACE_RUN)
+			KEY_3:
+				set_mode(Mode.LOCOMOTION_DEMO)
+			KEY_4:
+				set_mode(Mode.JUMP_DEMO)
+			KEY_5:
+				set_mode(Mode.PROJECTILE_DEMO)
+			KEY_6:
+				set_mode(Mode.SUPER_DEMO)
+			KEY_7:
+				set_mode(Mode.AUDIO_PREVIEW)
+			KEY_8:
+				set_mode(Mode.INTERACTIVE)
+			KEY_J:
+				trigger_attack()
+			KEY_L, KEY_U:
+				trigger_super()
+			KEY_SPACE:
+				trigger_jump()
+			KEY_K:
+				trigger_hit()
+			KEY_M:
+				toggle_audio_mute()
+
+func toggle_audio_mute() -> void:
+	if has_node("/root/AudioManager"):
+		var am = get_node("/root/AudioManager")
+		am.toggle_mute()
+		_update_stats()
 
 func reset_target_dummy() -> void:
 	if dummy and dummy.has_method("reset_dummy"):
@@ -625,8 +748,11 @@ func _update_ui() -> void:
 		Mode.SUPER_DEMO:
 			mode_label.text = "MODE: Super Demo (Invisibility • Full Locomotion • Expiry • Attack Interrupt)"
 			mode_label.modulate = Color(0.65, 0.45, 1.0)
+		Mode.AUDIO_PREVIEW:
+			mode_label.text = "MODE: Synchronized Audio Showcase (Authentic Attack SFX • Super Invisibility SFX & VO • Jump/Land SFX • Reload)"
+			mode_label.modulate = Color(1.0, 0.45, 0.85)
 		Mode.INTERACTIVE:
-			mode_label.text = "MODE: Interactive (A/D = Move, Shift = Run, Space = Jump, J = Attack, L = Super)"
+			mode_label.text = "MODE: Interactive (A/D = Move, Shift = Run, Space = Jump, J = Attack, L = Super, M = Mute)"
 			mode_label.modulate = Color(1.0, 0.85, 0.4)
 
 func _update_stats() -> void:
@@ -663,9 +789,19 @@ func _update_stats() -> void:
 	var hit_str = "%.2fs (DMG: %.0f)" % [last_hit_time, last_hit_damage] if last_hit_time >= 0.0 else "None"
 	var dummy_hp_str = "%d / %d" % [int(dummy.current_hp), int(dummy.max_hp)] if dummy else "N/A"
 
-	stats_label.text = "STATE: %s | SUPER: %s (%.2fs) | VISIBILITY: %s | FACING: %s | GROUNDED: %s\nANIM: %s (%.2fs/%.2fs) | PROJS: %d | LAST SPAWN: %s | LAST HIT: %s | TARGET HP: %s\nSUPER EVENT: %s | BURST RATE: 33 Hz | RANGE: 550 px | VEL: (%+.1f, %+.1f) px/s" % [
+	var last_audio_ev = "None"
+	var last_audio_fl = "None"
+	var is_muted_str = "ACTIVE"
+	if has_node("/root/AudioManager"):
+		var am = get_node("/root/AudioManager")
+		last_audio_ev = am.last_audio_event
+		last_audio_fl = am.last_audio_file
+		is_muted_str = "MUTED" if am.is_muted else "ACTIVE"
+
+	stats_label.text = "STATE: %s | SUPER: %s (%.2fs) | VISIBILITY: %s | FACING: %s | GROUNDED: %s\nANIM: %s (%.2fs/%.2fs) | PROJS: %d | LAST SPAWN: %s | LAST HIT: %s | TARGET HP: %s\nLAST AUDIO EVENT: %s | LAST AUDIO FILE: %s | SFX: %s\nSUPER EVENT: %s | BURST RATE: 33 Hz | RANGE: 550 px | VEL: (%+.1f, %+.1f) px/s" % [
 		state_str, super_str, super_time_left, is_vis_str, facing_str, "TRUE" if puppet.is_grounded() else "FALSE",
 		a_name, a_pos, a_len, active_projs, spawn_str, hit_str, dummy_hp_str,
+		last_audio_ev, last_audio_fl, is_muted_str,
 		last_super_event,
 		vel_x, vel_y
 	]

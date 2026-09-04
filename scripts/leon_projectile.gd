@@ -97,6 +97,8 @@ func _handle_collision(collider: Node) -> void:
 		if collider.has_method("take_hit"):
 			collider.take_hit(hit)
 		hit_target.emit(collider, hit)
+		if is_inside_tree() and get_tree().root.has_node("AudioManager"):
+			get_tree().root.get_node("AudioManager").trigger_event("HIT", {"position": global_position})
 		queue_free()
 
 func expire() -> void:

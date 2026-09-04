@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "project": "cutenemi",
+    "research_date": "2026-09-04",
+    "godot_version": "4.7",
+    "renderer": "gl_compatibility",
+    "addons_installed_prior": [],
+    "methodology": "Evaluated per use case (Godot 4.x compat, stability, maintenance, docs, coexistence, reusability, 2D fit, programmatic control, no forced rebuild, AI-agent practicality, video-pipeline license safety). Sources: official Godot docs, Asset Library, official GitHub repos via GitHub API, reputable third parties (kenney.nl).",
+    "decision_values": ["ESSENTIAL", "USEFUL", "OPTIONAL", "DO_NOT_USE"]
+  },
+  "candidates": [
+    {
+      "name": "Phantom Camera",
+      "id": "phantom_camera",
+      "category": "E_camera",
+      "url": "https://github.com/ramokz/phantom-camera",
+      "docs": "https://phantom-camera.dev",
+      "godot_version": "4.x (v0.11.0.3 explicitly supports Godot 4.7.1)",
+      "license": "MIT",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "keep LICENSE file",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "very_active",
+        "stars": 3500,
+        "last_release": "v0.11.0.3 (2026-07-19)"
+      },
+      "what_it_does": "Cinemachine-style Camera2D layering: PhantomCameraHost + PhantomCamera2D nodes; follow modes (Glued/Simple/Group/Path/Framed), zoom, limits, tweened transitions, noise shake.",
+      "why_it_helps": "Project has no camera at all; videos need framing, follow, impact shake, zoom, shot cuts - all programmatically controllable.",
+      "integration": "Additive addon + nodes in video scenes; director switches shots via priority/make_current. Leon scenes untouched.",
+      "risks": "Adds plugin autoload (PhantomCameraManager); pin stable release (upstream 4.7 quirk pending engine PR); shake/damping not frame-deterministic - use Glued + tweens for determinism.",
+      "recommendation": "ESSENTIAL"
+    },
+    {
+      "name": "GdUnit4",
+      "id": "gdunit4",
+      "category": "H_testing_debug",
+      "url": "https://github.com/godot-gdunit-labs/gdUnit4",
+      "docs": "https://godot-gdunit-labs.github.io/gdUnit4/",
+      "godot_version": "4.x (v6.2.1 targets 4.5+; verify 4.7 row in compat table at install)",
+      "license": "MIT",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "keep LICENSE file",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "very_active",
+        "stars": 1200,
+        "last_release": "v6.2.1 (2026-08-20)"
+      },
+      "what_it_does": "Embedded GDScript/C# unit + scene test framework: fluent asserts, scene runner, signal awaiting, mocks/spies, orphan-node detection, HTML/JUnit reports, headless CLI runner.",
+      "why_it_helps": "Converts ad-hoc verify_*.gd scripts into repeatable headless regression tests; makes AI-agent edits verifiable deterministically.",
+      "integration": "Addon + new tests/ directory; existing verify scripts unaffected; run headless before renders.",
+      "risks": "Editor UI weight (CLI-only usage fine); mocking learning curve; verify 4.7 compat row at install.",
+      "recommendation": "ESSENTIAL"
+    },
+    {
+      "name": "Kenney Particle Pack (+ built-in GPUParticles2D/CPUParticles2D)",
+      "id": "kenney_particle_pack",
+      "category": "D_vfx",
+      "url": "https://kenney.nl/assets/particle-pack",
+      "godot_version": "engine-independent textures; particle nodes are built-in",
+      "license": "CC0-1.0",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": false,
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "static_assets_no_maintenance_risk",
+        "pack_version": "1.0 (2018)",
+        "files": 80,
+        "tile_size": "512x512"
+      },
+      "what_it_does": "80 CC0 smoke/glow/spark/flash sprites used as textures for reusable built-in particle emitter scenes (hit impacts, dust, flashes, smoke).",
+      "why_it_helps": "Project has zero VFX today; reusable emitters > one-off effect packs.",
+      "integration": "assets/vfx/kenney_particles/ + scenes/vfx/*.tscn emitters triggered from attack_impact / state_changed via VFXAttachmentPoints markers.",
+      "risks": "GL Compatibility limits advanced particle materials (use standard blend modes); prefer CPUParticles2D for deterministic capture.",
+      "recommendation": "ESSENTIAL"
+    },
+    {
+      "name": "Dialogic 2",
+      "id": "dialogic_2",
+      "category": "C_sequencing_dialogue",
+      "url": "https://github.com/dialogic-godot/dialogic",
+      "docs": "https://docs.dialogic.pro",
+      "godot_version": "4.2.2+ (compatible with 4.7)",
+      "license": "MIT (Roboto font under Apache-2.0)",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "keep LICENSE file",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "very_active",
+        "stars": 5983,
+        "last_verified_push": "2026-08-30"
+      },
+      "what_it_does": "Timeline-based event editor and runtime: characters, dialogue, signals, waits, conditions, custom events; timelines are reusable .dtl resources.",
+      "why_it_helps": "Video scripts as sequences of actions; timeline events can drive character.wants_* flags, AudioManager.trigger_event(), and camera shot switches through a thin adapter.",
+      "integration": "Authoring layer only; state machine and audio remain authoritative. Defer until a video is dialogue-driven.",
+      "risks": "Large editor-heavy plugin; dialogue-flow oriented, not frame-precise choreography.",
+      "recommendation": "USEFUL",
+      "alternatives_considered": [
+        {
+          "name": "Dialogue Manager 4 (Nathan Hoad)",
+          "url": "https://github.com/nathanhoad/godot_dialogue_manager",
+          "license": "MIT",
+          "godot_version": "4.6+",
+          "note": "Equally viable; install only ONE dialogue tool if needed."
+        }
+      ]
+    },
+    {
+      "name": "Godot State Charts",
+      "id": "godot_statecharts",
+      "category": "H_state_machines",
+      "url": "https://github.com/derkork/godot-statecharts",
+      "docs": "https://derkork.github.io/godot-statecharts/",
+      "godot_version": "4.x (compatible with 4.7)",
+      "license": "MIT",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "keep LICENSE file",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "active",
+        "stars": 1609,
+        "last_verified_push": "2026-06-26"
+      },
+      "what_it_does": "UML state-chart nodes (StateChart, Atomic/Compound/Parallel states, signal/property/timeout transitions) with an in-editor transition debugger.",
+      "why_it_helps": "Only if future characters outgrow enum state machines; visual state debugging.",
+      "integration": "Would wrap/replace character_controller.gd change_state() - a rewrite of working code.",
+      "risks": "Conflicts with do-not-redesign-Leon rule; current enum SM with deterministic guards is simpler.",
+      "recommendation": "OPTIONAL"
+    },
+    {
+      "name": "gdtoolkit (gdformat/gdlint/gdparse)",
+      "id": "gdtoolkit",
+      "category": "H_production_hygiene_cli",
+      "url": "https://github.com/Scony/godot-gdscript-toolkit",
+      "godot_version": "engine-independent (supports Godot 4 syntax)",
+      "license": "MIT",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "not shipped in project (dev tool)",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "active",
+        "stars": 1600,
+        "last_verified_push": "2025-10-09"
+      },
+      "what_it_does": "GDScript formatter (gdformat), linter (gdlint), and syntax validator (gdparse) as CLI tools.",
+      "why_it_helps": "Keeps 9k+ lines of scripts consistent across AI-agent edits; fast syntax validation without opening the editor.",
+      "integration": "pip install gdtoolkit; run pre-commit/pre-render. One-time repo-wide format on a dedicated commit.",
+      "risks": "Whole-repo gdformat creates a large one-time diff.",
+      "recommendation": "USEFUL"
+    },
+    {
+      "name": "Godot built-in 2D skeleton IK modifiers (LookAtModifier2D, TwoBoneIKModifier2D)",
+      "id": "builtin_2d_ik_modifiers",
+      "category": "A_2d_ik",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/animation/2d_skeletons/index.html",
+      "godot_version": "shipped in Godot 4.4+ (2D skeleton modifier system); present in 4.7 (confirm exact class availability in editor)",
+      "license": "Godot Engine license (MIT, core feature)",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "Godot credits screen recommended",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "core_engine"
+      },
+      "what_it_does": "Runtime 2D bone modifiers on Skeleton2D: look-at rotation targeting (head/eyes/aim) and two-bone IK chain solving.",
+      "why_it_helps": "Head look-at and hand-aim polish on the existing FK cutout rig without rebuilding it; no plugin dependency.",
+      "integration": "Modifier nodes as children of relevant Bone2D chains; gated per state via character_controller signals; authored FK animations stay authoritative.",
+      "risks": "Modifiers run every frame - gate per state to avoid fighting keyframes; confirm class availability in the 4.7 editor before designing around them.",
+      "recommendation": "USEFUL"
+    },
+    "__CONTINUE_CANDIDATES__"
+  ]
+}

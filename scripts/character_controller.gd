@@ -138,6 +138,10 @@ func _ready() -> void:
 	change_state(State.IDLE)
 	if anim_player and not anim_player.animation_finished.is_connected(_on_animation_finished):
 		anim_player.animation_finished.connect(_on_animation_finished)
+	if is_inside_tree() and get_tree().root.has_node("AudioManager"):
+		var am = get_tree().root.get_node("AudioManager")
+		if am.has_method("bind_character"):
+			am.bind_character(self)
 
 func has_valid_physics_space() -> bool:
 	if not is_inside_tree():
