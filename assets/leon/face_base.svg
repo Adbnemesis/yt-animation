@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="68" viewBox="0 0 76 68">
+  <!-- Leon Face Base: Warm Tanned Cut-Paper Disc with Deep Hood Brow Shadow -->
+  <!-- Tanned Face Base -->
+  <ellipse cx="38" cy="34" rx="34" ry="30" fill="#c47d48" stroke="#1e1e2c" stroke-width="3.5"/>
+  <!-- Dark Hood Shadow Arch Covering Upper Face Cavity -->
+  <path d="M4,34 C4,12 18,4 38,4 C58,4 72,12 72,34 C64,24 50,18 38,18 C26,18 12,24 4,34 Z" fill="#1a2512"/>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="380" viewBox="0 0 440 380">
+  <!-- 13. LEON FALLING POSE (AIR DRAG) — Cutenemi Reference Panel 07 -->
+  <rect width="440" height="380" fill="#1b1e24"/>
+  <ellipse cx="220" cy="340" rx="80" ry="12" fill="#101216"/>
+
+  <text x="220" y="34" fill="#ffd166" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">LEON — FALLING POSE (AIR DRAG)</text>
+  <text x="220" y="54" fill="#a0a8b4" font-family="sans-serif" font-size="11" text-anchor="middle">Airborne Tumble • Limbs Trailing in Air Drag • Shocked Face</text>
+
+  <!-- Horizontal Air-Drop Tumble (Rotated 75 degrees) -->
+  <g transform="translate(220, 190) scale(1.6) rotate(-75)">
+    <!-- Chameleon Tail Flopping -->
+    <path d="M-26,14 C-36,10 -44,16 -42,24 C-40,30 -34,32 -28,28" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- Trailing Legs -->
+    <g transform="rotate(30, -10, 36)">
+      <rect x="-16" y="36" width="16" height="20" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.8"/>
+      <path d="M-18,54 L0,54 C2,54 2,64 -2,64 L-16,64 C-20,64 -20,54 -18,54 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+    <g transform="rotate(45, 10, 36)">
+      <rect x="0" y="36" width="16" height="20" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.8"/>
+      <path d="M-2,54 L16,54 C18,54 18,64 14,64 L0,64 C-4,64 -4,54 -2,54 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+
+    <!-- Torso -->
+    <path d="M-22,-2 C-26,-2 -28,8 -28,20 C-28,34 -22,40 -16,40 L16,40 C22,40 28,34 28,20 C28,8 26,-2 22,-2 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- Trailing Arms Flailing Back -->
+    <g transform="rotate(70, -16, 4)">
+      <path d="M-20,0 C-24,2 -28,12 -26,20 C-24,24 -20,26 -16,24 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="2.6"/>
+      <circle cx="-16" cy="24" r="6.5" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.5"/>
+    </g>
+    <g transform="rotate(80, 16, 4)">
+      <path d="M16,0 C12,2 8,12 10,20 C12,24 16,26 20,24 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="2.6"/>
+      <circle cx="16" cy="24" r="6.5" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.5"/>
+    </g>
+
+    <!-- Head & Hood -->
+    <circle cx="-30" cy="-56" r="12" fill="#38b000" stroke="#1e1e2c" stroke-width="2.8"/>
+    <path d="M-4,-82 C-32,-82 -46,-62 -46,-28 C-46,0 -26,18 2,18 C30,18 48,0 48,-28 C48,-62 26,-82 -4,-82 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <circle cx="28" cy="-52" r="12" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+
+    <ellipse cx="-2" cy="-22" rx="28" ry="24" fill="#1a2512" stroke="#1e1e2c" stroke-width="2.8"/>
+    <ellipse cx="0" cy="-18" rx="25" ry="21" fill="#c47d48"/>
+    <!-- Shocked Big Wide Eyes -->
+    <circle cx="-7" cy="-20" r="6" fill="#ffffff" stroke="#1e1e2c" stroke-width="1.8"/>
+    <circle cx="-7" cy="-20" r="1.8" fill="#1e1e2c"/>
+    <circle cx="7" cy="-20" r="6" fill="#ffffff" stroke="#1e1e2c" stroke-width="1.8"/>
+    <circle cx="7" cy="-20" r="1.8" fill="#1e1e2c"/>
+    <!-- Tall 'O' Shocked Mouth -->
+    <ellipse cx="0" cy="-10" rx="4" ry="5.5" fill="#1e1e2c"/>
+    <ellipse cx="0" cy="-9.5" rx="2.5" ry="3.5" fill="#eb4d4b"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22">
+  <!-- Leon Mouth Laughing: Wide Open Laughing Wedge with Tongue -->
+  <path d="M4,4 L30,4 Q17,22 4,4 Z" fill="#1e1e2c" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+  <!-- Top Tooth Bar -->
+  <path d="M6,4 L28,4 L26,8 L8,8 Z" fill="#ffffff"/>
+  <!-- Tongue -->
+  <path d="M10,13 Q17,9 24,13 Q21,19 17,20 Q13,19 10,13 Z" fill="#eb4d4b"/>
+</svg>

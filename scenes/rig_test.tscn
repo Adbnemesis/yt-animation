@@ -1,0 +1,437 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/rig_test.gd" id="1_m4wcs"]
+[ext_resource type="PackedScene" path="res://scenes/leon.tscn" id="2_qnepa"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_wdfrl"]
+[ext_resource type="Script" path="res://scripts/pivot_overlay.gd" id="4_obk3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76mh7"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.12, 0.15, 0.2, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.35, 0.5, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okwxk"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.12, 0.15, 0.2, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.35, 0.5, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="RigTestHarness" type="Node2D" unique_id=1527081440]
+script = ExtResource("1_m4wcs")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1092075885]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.08, 0.1, 0.13, 1)
+
+[node name="FloorShadow" type="Polygon2D" parent="." unique_id=694958764]
+color = Color(0.04, 0.05, 0.07, 0.9)
+polygon = PackedVector2Array(690, 535, 687.88635, 539.292, 681.6268, 543.419, 671.4617, 547.22253, 657.78174, 550.55634, 641.11273, 553.29236, 622.09515, 555.3254, 601.45996, 556.5773, 580, 557, 558.54004, 556.5773, 537.90485, 555.3254, 518.88727, 553.29236, 502.21826, 550.55634, 488.53833, 547.22253, 478.37326, 543.419, 472.11362, 539.292, 470, 535, 472.11362, 530.708, 478.37326, 526.581, 488.53833, 522.77747, 502.21826, 519.44366, 518.88727, 516.70764, 537.90485, 514.6746, 558.54004, 513.4227, 580, 513, 601.45996, 513.4227, 622.09515, 514.6746, 641.11273, 516.70764, 657.78174, 519.44366, 671.4617, 522.77747, 681.6268, 526.581, 687.88635, 530.708)
+
+[node name="Puppet" type="CharacterBody2D" parent="." unique_id=151623637 instance=ExtResource("2_qnepa")]
+position = Vector2(580, 520)
+scale = Vector2(2.5, 2.5)
+script = ExtResource("3_wdfrl")
+
+[node name="PivotOverlay" type="Node2D" parent="." unique_id=769948667]
+z_index = 10
+script = ExtResource("4_obk3y")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1645356250]
+
+[node name="@Label@2" type="Label" parent="UI" unique_id=933257671]
+modulate = Color(0.45, 0.85, 1, 1)
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 18
+text = "LEON 2D PUPPET RIG — PRODUCTION TEST HARNESS"
+
+[node name="@Label@3" type="Label" parent="UI" unique_id=1817040018]
+modulate = Color(0.7, 0.75, 0.85, 1)
+offset_left = 24.0
+offset_top = 42.0
+offset_right = 24.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 12
+text = "17 Bones • Neck/Shoulders/Elbows/Wrists/Hips/Knees/Ankles • Decoupled Face System"
+
+[node name="@HBoxContainer@4" type="HBoxContainer" parent="UI" unique_id=24713912]
+offset_left = 24.0
+offset_top = 70.0
+offset_right = 24.0
+offset_bottom = 70.0
+theme_override_constants/separation = 10
+
+[node name="@Button@5" type="Button" parent="UI/@HBoxContainer@4" unique_id=906385403]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Rest Pose"
+
+[node name="@Button@6" type="Button" parent="UI/@HBoxContainer@4" unique_id=518477715]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Elbows / Knees Flex"
+
+[node name="@Button@7" type="Button" parent="UI/@HBoxContainer@4" unique_id=517906044]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Arms Across Torso"
+
+[node name="@Button@8" type="Button" parent="UI/@HBoxContainer@4" unique_id=361829892]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Extreme Joint Stress"
+
+[node name="@Button@9" type="Button" parent="UI/@HBoxContainer@4" unique_id=574403140]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Toggle Pivot Rings"
+
+[node name="@Button@10" type="Button" parent="UI/@HBoxContainer@4" unique_id=522866743]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "▶ Auto Demo Loop"
+
+[node name="@PanelContainer@11" type="PanelContainer" parent="UI" unique_id=1319196518]
+offset_left = 24.0
+offset_top = 110.0
+offset_right = 294.0
+offset_bottom = 690.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_76mh7")
+
+[node name="@ScrollContainer@14" type="ScrollContainer" parent="UI/@PanelContainer@11" unique_id=1436403658]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="@VBoxContainer@15" type="VBoxContainer" parent="UI/@PanelContainer@11/@ScrollContainer@14" unique_id=1492125039]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="@Label@16" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1187830782]
+modulate = Color(1, 0.82, 0.4, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "JOINT ROTATION CONTROLS"
+
+[node name="@Label@17" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1188703634]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Head (-60° to +60°)"
+
+[node name="@HSlider@18" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1259702982]
+layout_mode = 2
+min_value = -60.0
+max_value = 60.0
+
+[node name="@Label@19" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=2136477462]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Neck (-30° to +30°)"
+
+[node name="@HSlider@20" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1144518041]
+layout_mode = 2
+min_value = -30.0
+max_value = 30.0
+
+[node name="@Label@21" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1808723076]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Torso (-45° to +45°)"
+
+[node name="@HSlider@22" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=98795745]
+layout_mode = 2
+min_value = -45.0
+max_value = 45.0
+
+[node name="@Label@23" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1926548250]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Shoulder (-180° to 180°)"
+
+[node name="@HSlider@24" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1036283343]
+layout_mode = 2
+min_value = -180.0
+max_value = 180.0
+
+[node name="@Label@25" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1352507832]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Elbow (0° to 120°)"
+
+[node name="@HSlider@26" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1483521875]
+layout_mode = 2
+max_value = 120.0
+
+[node name="@Label@27" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1127367293]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Wrist (-90° to +90°)"
+
+[node name="@HSlider@28" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=467502269]
+layout_mode = 2
+min_value = -90.0
+max_value = 90.0
+
+[node name="@Label@29" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1185611362]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Shoulder (-180° to 180°)"
+
+[node name="@HSlider@30" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=2018662847]
+layout_mode = 2
+min_value = -180.0
+max_value = 180.0
+
+[node name="@Label@31" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1381402203]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Elbow (0° to 120°)"
+
+[node name="@HSlider@32" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=721958523]
+layout_mode = 2
+max_value = 120.0
+
+[node name="@Label@33" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1939212839]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Wrist (-90° to +90°)"
+
+[node name="@HSlider@34" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=87351660]
+layout_mode = 2
+min_value = -90.0
+max_value = 90.0
+
+[node name="@Label@35" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=772928687]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Hip (-90° to +90°)"
+
+[node name="@HSlider@36" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1241533683]
+layout_mode = 2
+min_value = -90.0
+max_value = 90.0
+
+[node name="@Label@37" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=603549096]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Knee (0° to 110°)"
+
+[node name="@HSlider@38" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1389666549]
+layout_mode = 2
+max_value = 110.0
+
+[node name="@Label@39" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1984297193]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "L Ankle (-60° to +60°)"
+
+[node name="@HSlider@40" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=85600727]
+layout_mode = 2
+min_value = -60.0
+max_value = 60.0
+
+[node name="@Label@41" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1237557592]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Hip (-90° to +90°)"
+
+[node name="@HSlider@42" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1514679425]
+layout_mode = 2
+min_value = -90.0
+max_value = 90.0
+
+[node name="@Label@43" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=380961368]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Knee (0° to 110°)"
+
+[node name="@HSlider@44" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1211258334]
+layout_mode = 2
+max_value = 110.0
+
+[node name="@Label@45" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=1567237955]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "R Ankle (-60° to +60°)"
+
+[node name="@HSlider@46" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=2115067109]
+layout_mode = 2
+min_value = -60.0
+max_value = 60.0
+
+[node name="@Label@47" type="Label" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=562037443]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Tail (-60° to +60°)"
+
+[node name="@HSlider@48" type="HSlider" parent="UI/@PanelContainer@11/@ScrollContainer@14/@VBoxContainer@15" unique_id=796812007]
+layout_mode = 2
+min_value = -60.0
+max_value = 60.0
+
+[node name="@PanelContainer@49" type="PanelContainer" parent="UI" unique_id=1867712164]
+offset_left = 980.0
+offset_top = 110.0
+offset_right = 1255.0
+offset_bottom = 690.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_okwxk")
+
+[node name="@VBoxContainer@50" type="VBoxContainer" parent="UI/@PanelContainer@49" unique_id=570428111]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="@Label@51" type="Label" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=1433275472]
+modulate = Color(0.35, 0.9, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "FACE SYSTEM (DECOUPLED)"
+
+[node name="@Label@52" type="Label" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=1847485281]
+modulate = Color(0.8, 0.85, 0.9, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Expressions:"
+
+[node name="@GridContainer@53" type="GridContainer" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=771366344]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="@Button@54" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=1668350296]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Neutral"
+
+[node name="@Button@55" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=62458285]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Happy"
+
+[node name="@Button@56" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=505815772]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Angry"
+
+[node name="@Button@57" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=806410405]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Sad"
+
+[node name="@Button@58" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=93389001]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Shocked"
+
+[node name="@Button@59" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=1200583757]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Scared"
+
+[node name="@Button@60" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=783308091]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Hurt"
+
+[node name="@Button@61" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=1456036359]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Confused"
+
+[node name="@Button@62" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=96501511]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Smug"
+
+[node name="@Button@63" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@53" unique_id=433114190]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Laughing"
+
+[node name="@Label@64" type="Label" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=1229754408]
+modulate = Color(0.8, 0.85, 0.9, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Eye States:"
+
+[node name="@GridContainer@65" type="GridContainer" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=1616974480]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="@Button@66" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@65" unique_id=2102489104]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Open"
+
+[node name="@Button@67" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@65" unique_id=40393297]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Blink"
+
+[node name="@Button@68" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@65" unique_id=1769506462]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Wide"
+
+[node name="@Button@69" type="Button" parent="UI/@PanelContainer@49/@VBoxContainer@50/@GridContainer@65" unique_id=1413964071]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Closed"
+
+[node name="@Label@70" type="Label" parent="UI/@PanelContainer@49/@VBoxContainer@50" unique_id=886365005]
+modulate = Color(0.65, 0.72, 0.82, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "
+Bone Hierarchy:
+• root (Pelvis)
+  ├── tail (Z=-2)
+  ├── leg_L_upper -> lower -> foot (Z=-1)
+  ├── leg_R_upper -> lower -> foot (Z=1)
+  └── torso (Z=0)
+      ├── arm_L_upper -> lower -> hand (Z=-1)
+      ├── arm_R_upper -> lower -> hand (Z=1)
+      └── neck -> head (Z=2)
+          └── Face (Controller)"

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <!-- 02. LEON 3/4 VIEW — Cutenemi 2D Paper-Cutout Model Sheet -->
+  <rect width="400" height="500" fill="#1b1e24"/>
+  <ellipse cx="200" cy="455" rx="80" ry="16" fill="#101216"/>
+
+  <text x="200" y="36" fill="#ffd166" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">LEON — 3/4 VIEW</text>
+  <text x="200" y="58" fill="#a0a8b4" font-family="sans-serif" font-size="12" text-anchor="middle">Paper-Cutout Profile Depth • Tail &amp; Button Details</text>
+
+  <g transform="translate(200, 260) scale(2.0)">
+    <!-- 1. CHAMELEON TAIL (Z = -2) -->
+    <path d="M-26,26 C-34,24 -44,30 -44,40 C-44,48 -36,52 -30,48 C-24,44 -26,36 -32,36"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <circle cx="-31" cy="41" r="2.8" fill="#ffd166"/>
+
+    <!-- 2. LEGS & FEET (Z = -1) -->
+    <rect x="-18" y="38" width="18" height="22" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.0"/>
+    <rect x="6" y="38" width="18" height="22" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.0"/>
+    <path d="M-22,58 L0,58 C2,58 2,68 -2,68 L-20,68 C-24,68 -24,58 -22,58 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="3.0"/>
+    <path d="M4,58 L28,58 C30,58 30,68 26,68 L6,68 C2,68 2,58 4,58 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- 3. TORSO (Z = 0) -->
+    <path d="M-24,-2 C-30,-2 -32,8 -32,22 C-32,36 -26,42 -16,42 L24,42 C30,42 34,36 34,22 C34,8 30,-2 24,-2 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <line x1="4" y1="-2" x2="4" y2="42" stroke="#1e1e2c" stroke-width="2.2"/>
+    <!-- Blue Kangaroo Pocket -->
+    <path d="M-8,24 L20,24 L22,42 L-12,42 Z" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+    <rect x="1.5" y="10" width="5" height="10" rx="1.5" fill="#ced4da" stroke="#1e1e2c" stroke-width="1.8"/>
+
+    <!-- 4. FRONT ARMS & MITTENS -->
+    <path d="M18,2 C26,4 32,16 28,28 C26,32 20,34 16,32 C12,30 14,20 12,12 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+    <circle cx="16" cy="32" r="7" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+
+    <!-- 5. HEAD & HOOD (Z = 1) -->
+    <!-- Rear Ear Crest -->
+    <circle cx="-34" cy="-58" r="14" fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+
+    <!-- Hood 3/4 Shell -->
+    <path d="M-6,-88 C-36,-88 -52,-64 -52,-30 C-52,0 -30,20 2,20 C34,20 52,0 52,-30 C52,-64 30,-88 -6,-88 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+
+    <!-- Curved Yellow Stripe -->
+    <path d="M-14,-88 C-8,-58 -6,-30 -4,-2 L10,-2 C8,-30 6,-58 2,-88 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2"/>
+
+    <!-- Prominent Right Button Eye -->
+    <circle cx="32" cy="-56" r="13" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.0"/>
+    <circle cx="32" cy="-56" r="9" fill="#0077b6"/>
+    <line x1="26" y1="-62" x2="38" y2="-50" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="38" y1="-62" x2="26" y2="-50" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- Hood Face Cavity -->
+    <ellipse cx="-4" cy="-24" rx="32" ry="29" fill="#1a2512" stroke="#1e1e2c" stroke-width="3.2"/>
+
+    <!-- Face Base -->
+    <ellipse cx="-2" cy="-20" rx="28" ry="25" fill="#c47d48"/>
+
+    <!-- 3/4 Smirk & Lollipop -->
+    <path d="M-6,-8 Q2,-4 8,-8" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <line x1="6" y1="-7" x2="16" y2="2" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="7" cy="-6" r="3.2" fill="#e63946" stroke="#1e1e2c" stroke-width="1.6"/>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="60" viewBox="0 0 76 60">
+  <!-- Leon Torso: Green Hoodie Jacket with Blue Front Pocket & Zipper -->
+  <!-- Base Hoodie Silhouette -->
+  <path d="M12,4 C8,4 6,14 6,28 C6,46 12,54 20,54 L56,54 C64,54 70,46 70,28 C70,14 68,4 64,4 Z"
+        fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Center Zipper Line -->
+  <line x1="38" y1="4" x2="38" y2="54" stroke="#1e1e2c" stroke-width="2.5"/>
+
+  <!-- Blue Kangaroo Front Pocket Pouch -->
+  <path d="M22,32 L54,32 L58,54 L18,54 Z"
+        fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+  <!-- Pocket Left & Right Slit Openings -->
+  <line x1="22" y1="32" x2="18" y2="54" stroke="#1e1e2c" stroke-width="2.5"/>
+  <line x1="54" y1="32" x2="58" y2="54" stroke="#1e1e2c" stroke-width="2.5"/>
+
+  <!-- Light Grey Zipper Pull Tab -->
+  <rect x="35" y="16" width="6" height="12" rx="2" fill="#ced4da" stroke="#1e1e2c" stroke-width="2.0"/>
+  <circle cx="38" cy="24" r="1.5" fill="#1e1e2c"/>
+</svg>

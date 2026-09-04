@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="40" viewBox="0 0 48 40">
+  <!-- Leon Chameleon Tail (Z = -2) -->
+  <path d="M4,12 C10,12 18,18 24,14 C32,8 38,12 40,20 C42,28 34,36 26,34 C18,32 18,22 24,20 C28,18 32,24 28,26"
+        fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Yellow Tip Stripe -->
+  <circle cx="27" cy="23" r="3.5" fill="#ffd166"/>
+</svg>

@@ -1,0 +1,76 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/target_dummy.gd" id="1_y5ib8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0vb36"]
+radius = 22.0
+height = 74.0
+
+[node name="TargetDummy" type="Area2D" unique_id=264445835 groups=["hit_receiver"]]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("1_y5ib8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2028143250]
+position = Vector2(0, -42)
+shape = SubResource("CapsuleShape2D_0vb36")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=2063898623]
+
+[node name="GroundShadow" type="Line2D" parent="Visuals" unique_id=1777391727]
+points = PackedVector2Array(-20, 0, 20, 0)
+width = 6.0
+default_color = Color(0.05, 0.07, 0.1, 0.5)
+
+[node name="Post" type="Line2D" parent="Visuals" unique_id=2120962812]
+points = PackedVector2Array(0, 0, 0, -35)
+width = 8.0
+default_color = Color(0.45, 0.28, 0.18, 1)
+
+[node name="DummyBody" type="Polygon2D" parent="Visuals" unique_id=1506257092]
+color = Color(0.82, 0.68, 0.52, 1)
+polygon = PackedVector2Array(-18, -25, -22, -45, -16, -65, 16, -65, 22, -45, 18, -25)
+
+[node name="BullseyeOuter" type="Line2D" parent="Visuals" unique_id=1037440463]
+points = PackedVector2Array(14, -45, 12.934314, -39.642433, 9.899495, -35.100506, 5.3575683, -32.065685, 8.5725277e-16, -31, -5.3575683, -32.065685, -9.899495, -35.100506, -12.934314, -39.642433, -14, -45, -12.934314, -50.357567, -9.899495, -54.899494, -5.3575683, -57.934315, -2.5717583e-15, -59, 5.3575683, -57.934315, 9.899495, -54.899494, 12.934314, -50.357567, 14, -45)
+width = 2.5
+default_color = Color(0.9, 0.2, 0.2, 1)
+
+[node name="BullseyeCenter" type="Line2D" parent="Visuals" unique_id=452165091]
+points = PackedVector2Array(5, -45, 4.6193976, -43.086582, 3.535534, -41.464466, 1.9134172, -40.380604, 3.061617e-16, -40, -1.9134172, -40.380604, -3.535534, -41.464466, -4.6193976, -43.086582, -5, -45, -4.6193976, -46.913418, -3.535534, -48.535534, -1.9134172, -49.619396, -9.18485e-16, -50, 1.9134172, -49.619396, 3.535534, -48.535534, 4.6193976, -46.913418, 5, -45)
+width = 3.0
+default_color = Color(0.9, 0.2, 0.2, 1)
+
+[node name="Head" type="Polygon2D" parent="Visuals" unique_id=1863320559]
+color = Color(0.75, 0.62, 0.46, 1)
+polygon = PackedVector2Array(-10, -66, -12, -78, 0, -84, 12, -78, 10, -66)
+
+[node name="UI" type="Node2D" parent="." unique_id=730839741]
+position = Vector2(0, -96)
+
+[node name="LblName" type="Label" parent="UI" unique_id=774744330]
+modulate = Color(0.8, 0.85, 0.95, 1)
+offset_left = -45.0
+offset_top = -28.0
+offset_right = -45.0
+offset_bottom = -28.0
+theme_override_font_sizes/font_size = 9
+text = "TARGET DUMMY"
+
+[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=770226249]
+offset_left = -36.0
+offset_top = -14.0
+offset_right = 36.0
+offset_bottom = 13.0
+max_value = 1000.0
+value = 1000.0
+show_percentage = false
+
+[node name="LblHP" type="Label" parent="UI" unique_id=1015938127]
+modulate = Color(0.4, 0.95, 0.5, 1)
+offset_left = -38.0
+offset_top = -6.0
+offset_right = -38.0
+offset_bottom = -6.0
+theme_override_font_sizes/font_size = 9
+text = "HP: 1000 / 1000"

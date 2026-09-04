@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <!-- 03. LEON SIDE VIEW — Cutenemi 2D Paper-Cutout Model Sheet -->
+  <rect width="400" height="500" fill="#1b1e24"/>
+  <ellipse cx="200" cy="455" rx="80" ry="16" fill="#101216"/>
+
+  <text x="200" y="36" fill="#ffd166" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">LEON — SIDE VIEW</text>
+  <text x="200" y="58" fill="#a0a8b4" font-family="sans-serif" font-size="12" text-anchor="middle">Pure Silhouette Profile • Button Eye &amp; Tail Projection</text>
+
+  <g transform="translate(200, 260) scale(2.0)">
+    <!-- 1. CHAMELEON TAIL (Z = -2) -->
+    <path d="M-18,24 C-28,22 -38,28 -38,38 C-38,46 -30,50 -24,46 C-18,42 -20,34 -26,34"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <circle cx="-25" cy="39" r="2.8" fill="#ffd166"/>
+
+    <!-- 2. LEGS & FOOT (Side Profile) -->
+    <rect x="-10" y="38" width="20" height="22" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.0"/>
+    <path d="M-14,58 L14,58 C16,58 16,68 12,68 L-8,68 C-14,68 -14,58 -14,58 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- 3. TORSO (Side Profile) -->
+    <path d="M-16,-2 C-22,-2 -24,8 -24,22 C-24,36 -18,42 -10,42 L18,42 C24,42 28,36 28,22 C28,8 24,-2 18,-2 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <!-- Kangaroo Pocket Ridge -->
+    <path d="M4,24 L18,24 L20,42 L2,42 Z" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+
+    <!-- 4. ARM & MITTEN (Side Profile) -->
+    <path d="M-4,4 C4,4 12,14 10,26 C8,30 2,32 -2,30 C-6,28 -4,18 -8,12 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+    <circle cx="0" cy="30" r="7" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+
+    <!-- 5. HOOD (Side Silhouette) -->
+    <path d="M-12,-88 C-42,-88 -54,-64 -54,-30 C-54,2 -36,20 -4,20 C26,20 44,0 44,-30 C44,-64 20,-88 -12,-88 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+
+    <!-- Yellow Crest Spine -->
+    <path d="M-52,-40 C-52,-70 -38,-88 -12,-88 C-4,-88 0,-84 -4,-78 C-24,-74 -38,-60 -38,-40 Z"
+          fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2"/>
+
+    <!-- Centered Blue Button Eye -->
+    <circle cx="-8" cy="-50" r="14" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.0"/>
+    <circle cx="-8" cy="-50" r="10" fill="#0077b6"/>
+    <line x1="-14" y1="-56" x2="-2" y2="-44" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="-2" y1="-56" x2="-14" y2="-44" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- Hood Face Cavity Notch -->
+    <path d="M6,-50 C18,-50 30,-38 30,-18 L16,-10 Z" fill="#1a2512" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- Face Profile Contour -->
+    <ellipse cx="14" cy="-22" rx="14" ry="18" fill="#c47d48"/>
+
+    <!-- Side Lollipop Stick & Tongue -->
+    <line x1="18" y1="-12" x2="28" y2="-4" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="19" cy="-11" r="3.2" fill="#e63946" stroke="#1e1e2c" stroke-width="1.6"/>
+  </g>
+</svg>

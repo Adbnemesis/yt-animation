@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20">
+  <!-- Leon Mouth Smile: Happy Open Smile with Lollipop -->
+  <path d="M6,6 Q16,20 26,6 Z" fill="#eb4d4b" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+  <!-- Top Teeth -->
+  <path d="M8,6 Q16,10 24,6 Z" fill="#ffffff"/>
+  <!-- Lollipop Stick -->
+  <line x1="22" y1="8" x2="30" y2="16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="23" cy="9" r="3.2" fill="#e63946"/>
+</svg>

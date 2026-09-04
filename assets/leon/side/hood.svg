@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="124" viewBox="0 0 116 124">
+  <!-- Leon Side Hood: Profile Chameleon Cowl with Button Eye and Yellow Spine -->
+  <g transform="translate(62, 98)">
+    <!-- Main Hood Silhouette -->
+    <path d="M-12,-88 C-42,-88 -54,-64 -54,-30 C-54,2 -36,20 -4,20 C26,20 44,0 44,-30 C44,-64 20,-88 -12,-88 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Yellow Dorsal Spine Crest -->
+    <path d="M-52,-40 C-52,-70 -38,-88 -12,-88 C-4,-88 0,-84 -4,-78 C-24,-74 -38,-60 -38,-40 Z"
+          fill="#ffd166" stroke="#1e1e2c" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Prominent Blue Button Eye -->
+    <circle cx="-8" cy="-50" r="15" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.2"/>
+    <circle cx="-8" cy="-50" r="11" fill="#0077b6"/>
+    <!-- Black Cross Stitch -->
+    <line x1="-15" y1="-57" x2="-1" y2="-43" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="-1" y1="-57" x2="-15" y2="-43" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+
+    <!-- Hood Face Cavity Notch (Cutout for Face) -->
+    <path d="M6,-50 C18,-50 30,-38 30,-18 L16,-10 Z" fill="#1a2512" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+  </g>
+</svg>

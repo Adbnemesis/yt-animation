@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="0 0 128 120">
+  <!-- Leon Chameleon Hood (Front View - Paper Cutout Style) -->
+  <!-- Chameleon Ear Bumps (Left & Right) -->
+  <circle cx="24" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="104" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+
+  <!-- Main Hood Outer Silhouette -->
+  <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z"
+        fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Hood Yellow Center Crest Stripe -->
+  <path d="M54,6 C58,6 59,32 58,52 L70,52 C69,32 70,6 74,6 Z"
+        fill="#ffd166" stroke="#1e1e2c" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Left Blue Button Eye -->
+  <circle cx="28" cy="40" r="14" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="28" cy="40" r="10" fill="#0077b6"/>
+  <!-- Stitched Black 'X' -->
+  <line x1="22" y1="34" x2="34" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+  <line x1="34" y1="34" x2="22" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Right Blue Button Eye -->
+  <circle cx="100" cy="40" r="14" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="100" cy="40" r="10" fill="#0077b6"/>
+  <!-- Stitched Black 'X' -->
+  <line x1="94" y1="34" x2="106" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+  <line x1="106" y1="34" x2="94" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- Face Cavity Cutout Hole (Reveals dark recess & face) -->
+  <ellipse cx="64" cy="74" rx="36" ry="32" fill="#1a2512" stroke="#1e1e2c" stroke-width="3.5"/>
+</svg>

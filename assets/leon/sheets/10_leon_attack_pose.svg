@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="460" viewBox="0 0 380 460">
+  <!-- 10. LEON ATTACK POSE (STRIKE FRAME) — Cutenemi Reference Panel 07 -->
+  <rect width="380" height="460" fill="#1b1e24"/>
+  <ellipse cx="180" cy="420" rx="85" ry="14" fill="#101216"/>
+
+  <text x="190" y="34" fill="#ffd166" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">LEON — ATTACK POSE (STRIKE)</text>
+  <text x="190" y="54" fill="#a0a8b4" font-family="sans-serif" font-size="11" text-anchor="middle">Full Arm Thrust • Forward Combat Stride • Shuriken Spinner Release</text>
+
+  <g transform="translate(160, 240) scale(1.7) rotate(6)">
+    <!-- Chameleon Tail Pointing Back -->
+    <path d="M-26,16 C-36,12 -44,18 -42,26 C-40,32 -34,34 -28,30" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- Wide Combat Stride Legs -->
+    <g transform="rotate(-35, -10, 36)">
+      <rect x="-16" y="36" width="16" height="22" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.8"/>
+      <path d="M-18,56 L0,56 C2,56 2,66 -2,66 L-16,66 C-20,66 -20,56 -18,56 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+    <g transform="rotate(40, 10, 36)">
+      <rect x="0" y="36" width="16" height="22" rx="2" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.8"/>
+      <path d="M-2,56 L16,56 C18,56 18,66 14,66 L0,66 C-4,66 -4,56 -2,56 Z" fill="#c47d48" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+
+    <!-- Torso -->
+    <path d="M-22,-2 C-26,-2 -28,8 -28,20 C-28,34 -22,40 -16,40 L16,40 C22,40 28,34 28,20 C28,8 26,-2 22,-2 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- Left Arm Guarding Chest -->
+    <g transform="rotate(20, -16, 4)">
+      <path d="M-20,0 C-24,2 -28,12 -26,20 C-24,24 -20,26 -16,24 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="2.6"/>
+      <circle cx="-16" cy="24" r="6.5" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.5"/>
+    </g>
+
+    <!-- Right Arm Fully Extended Forward (Attack Thrust!) -->
+    <g transform="translate(18, 10) rotate(80)">
+      <path d="M-8,-4 C-4,-4 14,-2 26,-2 C28,4 28,8 26,14 C14,14 -4,16 -8,16 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="2.8"/>
+      <circle cx="34" cy="6" r="7.5" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.6"/>
+      <!-- Flying Shuriken Spinner Blade -->
+      <g transform="translate(56, 6)">
+        <polygon points="0,-8 8,0 0,8 -8,0" fill="#ced4da" stroke="#1e1e2c" stroke-width="2.0"/>
+        <circle cx="0" cy="0" r="2.5" fill="#0077b6"/>
+        <!-- Motion lines -->
+        <line x1="-16" y1="-4" x2="-26" y2="-4" stroke="#ffd166" stroke-width="2.0" stroke-linecap="round"/>
+        <line x1="-16" y1="4" x2="-26" y2="4" stroke="#ffd166" stroke-width="2.0" stroke-linecap="round"/>
+      </g>
+    </g>
+
+    <!-- Head & Hood -->
+    <circle cx="-30" cy="-56" r="12" fill="#38b000" stroke="#1e1e2c" stroke-width="2.8"/>
+    <path d="M-4,-82 C-32,-82 -46,-62 -46,-28 C-46,0 -26,18 2,18 C30,18 48,0 48,-28 C48,-62 26,-82 -4,-82 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+    <path d="M-10,-82 C-6,-56 -4,-28 -2,-2 L10,-2 C8,-28 6,-56 2,-82 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="28" cy="-52" r="12" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+
+    <ellipse cx="-2" cy="-22" rx="28" ry="24" fill="#1a2512" stroke="#1e1e2c" stroke-width="2.8"/>
+    <ellipse cx="0" cy="-18" rx="25" ry="21" fill="#c47d48"/>
+
+    <!-- Determined Attack Grin -->
+    <rect x="-6" y="-8" width="14" height="6" rx="2" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <line x1="-6" y1="-5" x2="8" y2="-5" stroke="#1e1e2c" stroke-width="1.5"/>
+  </g>
+</svg>

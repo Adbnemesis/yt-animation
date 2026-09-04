@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="68" height="58" viewBox="0 0 68 58">
+  <!-- Leon Side Torso: Profile Green Hoodie Jacket with Front Pocket Pouch -->
+  <g transform="translate(30, 10)">
+    <!-- Base Green Hoodie in Profile -->
+    <path d="M-16,-2 C-22,-2 -24,8 -24,22 C-24,36 -18,42 -10,42 L18,42 C24,42 28,36 28,22 C28,8 24,-2 18,-2 Z"
+          fill="#38b000" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+
+    <!-- Blue Kangaroo Pocket Profile on Front Edge -->
+    <path d="M4,22 L20,22 L22,42 L2,42 Z"
+          fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+
+    <!-- Pocket Seam Line -->
+    <line x1="4" y1="22" x2="2" y2="42" stroke="#1e1e2c" stroke-width="2.2"/>
+  </g>
+</svg>

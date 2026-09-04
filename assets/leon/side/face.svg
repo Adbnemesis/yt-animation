@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="54" viewBox="0 0 56 54">
+  <!-- Leon Side Face: Tanned Profile with Deep Hood Brow Shadow & Lollipop (Eyes hidden under shadow) -->
+  <g transform="translate(18, 36)">
+    <!-- Dark Hood Shadow Arch (Concealing eyes completely in neutral/walk) -->
+    <path d="M-8,-26 C4,-30 20,-24 24,-10 C26,-4 22,2 14,4 C6,4 -4,0 -8,-10 Z" fill="#1a2512" stroke="#1e1e2c" stroke-width="2.5"/>
+
+    <!-- Tanned Skin Profile Cheek -->
+    <ellipse cx="6" cy="-2" rx="14" ry="16" fill="#c47d48" stroke="#1e1e2c" stroke-width="2.5"/>
+
+    <!-- Cheeky Mouth Smirk -->
+    <path d="M2,2 Q8,6 14,1" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+    <!-- Lollipop Stick & Red Candy -->
+    <line x1="10" y1="4" x2="26" y2="12" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="11" cy="4.5" r="4.0" fill="#e63946" stroke="#1e1e2c" stroke-width="1.8"/>
+  </g>
+</svg>

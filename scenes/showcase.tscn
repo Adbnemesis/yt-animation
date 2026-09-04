@@ -1,0 +1,177 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/sample_brawler.tscn" id="1_uwtp6"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="2_bcga6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pu2yj"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.1, 0.12, 0.16, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.45, 0.65, 0.7)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o36fe"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.1, 0.12, 0.16, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.45, 0.65, 0.7)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Showcase" type="Node2D" unique_id=59548536]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1587753598]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.16, 0.18, 0.23, 1)
+
+[node name="CenterGlow" type="Polygon2D" parent="." unique_id=1861292972]
+color = Color(0.22, 0.25, 0.32, 0.85)
+polygon = PackedVector2Array(1000, 410, 993.0827, 460.72348, 972.5966, 509.49768, 939.32904, 554.44824, 894.5585, 593.8478, 840.0053, 626.1821, 777.76605, 650.2087, 710.23254, 665.00415, 640, 670, 569.76746, 665.00415, 502.23398, 650.2087, 439.99472, 626.1821, 385.44156, 593.8478, 340.67093, 554.44824, 307.40338, 509.49768, 286.9173, 460.72348, 280, 410, 286.9173, 359.27652, 307.40338, 310.50232, 340.67093, 265.55173, 385.44156, 226.15224, 439.99472, 193.8179, 502.23398, 169.79132, 569.76746, 154.99583, 640, 150, 710.23254, 154.99583, 777.76605, 169.79132, 840.0053, 193.8179, 894.5585, 226.15224, 939.32904, 265.55173, 972.5966, 310.50232, 993.0827, 359.27652)
+
+[node name="GroundPedestal" type="Polygon2D" parent="." unique_id=2049972859]
+color = Color(0.09, 0.11, 0.14, 0.9)
+polygon = PackedVector2Array(800, 580, 796.92566, 586.2429, 787.82074, 592.24585, 773.03516, 597.77826, 753.1371, 602.62744, 728.89124, 606.60706, 701.2294, 609.56415, 671.2145, 611.38513, 640, 612, 608.7855, 611.38513, 578.7706, 609.56415, 551.10876, 606.60706, 526.8629, 602.62744, 506.96487, 597.77826, 492.17926, 592.24585, 483.07434, 586.2429, 480, 580, 483.07434, 573.7571, 492.17926, 567.75415, 506.96487, 562.22174, 526.8629, 557.37256, 551.10876, 553.39294, 578.7706, 550.43585, 608.7855, 548.61487, 640, 548, 671.2145, 548.61487, 701.2294, 550.43585, 728.89124, 553.39294, 753.1371, 557.37256, 773.03516, 562.22174, 787.82074, 567.75415, 796.92566, 573.7571)
+
+[node name="SampleBrawlerMain" type="CharacterBody2D" parent="." unique_id=2015556991 instance=ExtResource("1_uwtp6")]
+position = Vector2(640, 570)
+scale = Vector2(2.2, 2.2)
+script = ExtResource("2_bcga6")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=958319395]
+
+[node name="@Label@2" type="Label" parent="UI" unique_id=248528649]
+modulate = Color(0.45, 0.85, 1, 1)
+offset_left = 40.0
+offset_top = 24.0
+offset_right = 40.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 22
+text = "CUTENEMI 2D BRAWLER — FULL FIGURE MODEL SHEET"
+
+[node name="@Label@3" type="Label" parent="UI" unique_id=2084422103]
+modulate = Color(0.75, 0.8, 0.88, 1)
+offset_left = 40.0
+offset_top = 56.0
+offset_right = 40.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 13
+text = "Visual Standard: 45% Head Ratio • 3.5px Ink Outlines • 2-Tone Cel Shading • Modular Cutout Skeleton"
+
+[node name="@PanelContainer@4" type="PanelContainer" parent="UI" unique_id=601243106]
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 320.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pu2yj")
+
+[node name="@VBoxContainer@5" type="VBoxContainer" parent="UI/@PanelContainer@4" unique_id=1341852438]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="@Label@6" type="Label" parent="UI/@PanelContainer@4/@VBoxContainer@5" unique_id=1075821194]
+modulate = Color(0.3, 0.9, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "PROPORTIONS (220px)"
+
+[node name="@Label@7" type="Label" parent="UI/@PanelContainer@4/@VBoxContainer@5" unique_id=762717309]
+modulate = Color(0.92, 0.92, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "• Head: 45% (Chunky/Cute)
+• Torso: 22% (Compact Slate Coat)
+• Limbs: 18% (Short Ball-Socket)
+• Boots: 15% (Oversized Grip Sole)
+• Fists: 28px Cartoon Mitts"
+
+[node name="@HSeparator@8" type="HSeparator" parent="UI/@PanelContainer@4/@VBoxContainer@5" unique_id=1888393100]
+layout_mode = 2
+
+[node name="@Label@9" type="Label" parent="UI/@PanelContainer@4/@VBoxContainer@5" unique_id=1354527247]
+modulate = Color(0.3, 0.9, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "COLOR PALETTE"
+
+[node name="@Label@10" type="Label" parent="UI/@PanelContainer@4/@VBoxContainer@5" unique_id=1539585080]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "■ #1e1e2c (3.5px Ink Outline)
+■ #34495e (Primary Slate Coat)
+■ #2c3e50 (Dark Charcoal Vest)
+■ #f8d79b (Warm Skin Surface)
+■ #ff4757 (Vibrant Crimson Scarf)
+■ #1e272e (Obsidian Hair)
+■ #747d8c (Chunky Sole Trim)
+■ #232f3e (2-Tone Cel Shadow)"
+
+[node name="@PanelContainer@11" type="PanelContainer" parent="UI" unique_id=915073134]
+offset_left = 960.0
+offset_top = 100.0
+offset_right = 1240.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o36fe")
+
+[node name="@VBoxContainer@12" type="VBoxContainer" parent="UI/@PanelContainer@11" unique_id=1236149360]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="@Label@13" type="Label" parent="UI/@PanelContainer@11/@VBoxContainer@12" unique_id=1989070963]
+modulate = Color(0.3, 0.9, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "FACE SYSTEM"
+
+[node name="@Label@14" type="Label" parent="UI/@PanelContainer@11/@VBoxContainer@12" unique_id=470772323]
+modulate = Color(0.92, 0.92, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "• Decoupled from Body Rig
+• Eye Sclera: Clean white beans
+• Pupils: Dark ellipses + catchlight
+• Brows: Expressive floating wedges
+• Auto-Blink: Every 3.0s (0.12s)
+• Gaze Tracking Supported"
+
+[node name="@HSeparator@15" type="HSeparator" parent="UI/@PanelContainer@11/@VBoxContainer@12" unique_id=955235113]
+layout_mode = 2
+
+[node name="@Label@16" type="Label" parent="UI/@PanelContainer@11/@VBoxContainer@12" unique_id=384910017]
+modulate = Color(0.3, 0.9, 0.6, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "10 EXPRESSION LIBRARY"
+
+[node name="@Label@17" type="Label" parent="UI/@PanelContainer@11/@VBoxContainer@12" unique_id=354268047]
+modulate = Color(0.85, 0.88, 0.92, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "1. neutral (Default Confident)
+2. happy (Wide Smile)
+3. angry (Clenched Teeth)
+4. sad (Drooping Frown)
+5. shocked (Tall 'O')
+6. scared (Chattering Teeth)
+7. hurt (Zigzag Grimace)
+8. confused (Asymmetrical)
+9. smug (Sideways Smirk)
+10. laughing (Open Arcs)"
