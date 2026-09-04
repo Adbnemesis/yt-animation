@@ -189,6 +189,173 @@
       "risks": "Modifiers run every frame - gate per state to avoid fighting keyframes; confirm class availability in the 4.7 editor before designing around them.",
       "recommendation": "USEFUL"
     },
-    "__CONTINUE_CANDIDATES__"
+    {
+      "name": "Godot Movie Maker mode + ffmpeg encode step",
+      "id": "builtin_movie_maker_ffmpeg",
+      "category": "video_export_deterministic",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/output/movie_writer.html",
+      "godot_version": "core since 4.0 (present in 4.7)",
+      "license": "Godot engine (MIT); ffmpeg LGPL/GPL build used as an external CLI process (no linking/redistribution - does not affect project licensing)",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "n/a",
+        "redistribution": "do not redistribute ffmpeg binary",
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "core_engine"
+      },
+      "what_it_does": "godot --write-movie out.avi --fixed-fps 60 renders deterministic frame-locked AVI (MJPEG+PCM) or PNG sequence + WAV; ffmpeg encodes H.264/AAC MP4 for YouTube.",
+      "why_it_helps": "Formalizes the existing .avi demo workflow into a deterministic, sync-locked, repeatable video pipeline.",
+      "integration": "tools/render_video.sh: fixed-fps render then ffmpeg -crf 18 -preset slow encode; pairs with 2D physics interpolation for smooth capture.",
+      "risks": "MJPEG AVI files are large (use PNG sequence for max quality); real-time-timed scenes behave slightly differently in Movie Maker (desirable for determinism).",
+      "recommendation": "ESSENTIAL"
+    },
+    {
+      "name": "Godot built-in nodes (Parallax2D, Tween, DampedSpringJoint2D, Line2D, PointLight2D, AnimationTree, audio buses, physics interpolation)",
+      "id": "builtin_engine_nodes",
+      "category": "multiple (B, G, 5, D, F)",
+      "url": "https://docs.godotengine.org/en/stable/",
+      "godot_version": "4.7 built-ins (Parallax2D and 2D physics interpolation since 4.3)",
+      "license": "Godot Engine license (MIT, core)",
+      "license_flags": {
+        "commercial_use": true,
+        "attribution": "Godot credits screen recommended",
+        "redistribution": true,
+        "youtube_safe": true
+      },
+      "maintenance": {
+        "status": "core_engine"
+      },
+      "what_it_does": "Parallax2D (backgrounds), Tween (deterministic programmatic easing), DampedSpringJoint2D (springs/bounce), Line2D (trails - already used), PointLight2D/CanvasModulate (2D lighting), AnimationTree (blending, only if needed), audio buses (mixing), 2D physics interpolation (smooth fixed-fps capture).",
+      "why_it_helps": "Covers categories B, D-trails, F-mixing, G-environment and 5-tweening with zero third-party dependency.",
+      "integration": "Use per-need in video scenes; no install.",
+      "risks": "None beyond normal engine learning curve.",
+      "recommendation": "ESSENTIAL"
+    },
+    {
+      "name": "Spine runtime for Godot",
+      "id": "spine",
+      "category": "A_2d_skeletal_animation",
+      "url": "http://esotericsoftware.com/spine-godot",
+      "godot_version": "4.x (official runtime)",
+      "license": "Proprietary - Spine Editor/Runtime license required for commercial use",
+      "license_flags": {
+        "commercial_use": "paid_license_required",
+        "attribution": "per Spine license",
+        "redistribution": "restricted per Spine license",
+        "youtube_safe": "only with valid paid license"
+      },
+      "maintenance": {
+        "status": "active_commercial"
+      },
+      "what_it_does": "Professional 2D skeletal animation authoring + runtime with mesh deformation.",
+      "why_it_helps": "Would only matter if we needed mesh-deform-level animation beyond Skeleton2D.",
+      "integration": "Forces a foreign rig format over the approved Skeleton2D pipeline.",
+      "risks": "License cost; vendor lock-in; conflicts with existing working rig.",
+      "recommendation": "DO_NOT_USE"
+    },
+    {
+      "name": "DragonBones + Godot exporters",
+      "id": "dragonbones",
+      "category": "A_2d_skeletal_animation",
+      "url": "https://github.com/search?q=dragonbones+godot",
+      "godot_version": "Godot 3.x era",
+      "license": "various (GPL for editor)",
+      "license_flags": {
+        "commercial_use": "unclear",
+        "attribution": "unclear",
+        "redistribution": "unclear",
+        "youtube_safe": "unclear"
+      },
+      "maintenance": {
+        "status": "abandoned"
+      },
+      "what_it_does": "Legacy 2D skeletal animation tool with community Godot exporters.",
+      "why_it_helps": "None - superseded by Skeleton2D and Spine-class tools.",
+      "integration": "N/A.",
+      "risks": "Abandoned; Godot 3 only; unclear licensing.",
+      "recommendation": "DO_NOT_USE"
+    },
+    {
+      "name": "davcri/godot4-springs",
+      "id": "godot4_springs",
+      "category": "B_spring_secondary_motion",
+      "url": "https://github.com/davcri/godot4-springs",
+      "godot_version": "4.x (2022)",
+      "license": "NONE FOUND (no license file)",
+      "license_flags": {
+        "commercial_use": false,
+        "attribution": "n/a",
+        "redistribution": "not permitted without license",
+        "youtube_safe": false
+      },
+      "maintenance": {
+        "status": "abandoned (last push 2022, 4 stars)"
+      },
+      "what_it_does": "Tiny GDScript spring helpers.",
+      "why_it_helps": "None - we will build a small spring helper or use DampedSpringJoint2D instead.",
+      "integration": "N/A - do not install.",
+      "risks": "No license = legally unusable; abandoned.",
+      "recommendation": "DO_NOT_USE"
+    },
+    {
+      "name": "AnidemDex/Sequence (cutscene sequencer)",
+      "id": "anidem_sequence",
+      "category": "C_cutscenes",
+      "url": "https://github.com/AnidemDex/Sequence",
+      "godot_version": "unverifiable",
+      "license": "unverifiable (repo returned 404 at research time)",
+      "license_flags": {
+        "commercial_use": "unknown",
+        "attribution": "unknown",
+        "redistribution": "unknown",
+        "youtube_safe": "unknown"
+      },
+      "maintenance": {
+        "status": "unverifiable_or_abandoned"
+      },
+      "what_it_does": "Timeline/cutscene sequencing plugin (historically).",
+      "why_it_helps": "None verified - repository could not be located via GitHub API at research time.",
+      "integration": "N/A.",
+      "risks": "Unverifiable origin, license, and maintenance.",
+      "recommendation": "DO_NOT_USE"
+    }
+  ],
+  "toolkit_plan": {
+    "core": ["phantom_camera", "gdunit4", "kenney_particle_pack", "builtin_movie_maker_ffmpeg", "builtin_engine_nodes"],
+    "optional": ["dialogic_2", "builtin_2d_ik_modifiers", "godot_statecharts", "gdtoolkit"],
+    "do_not_use": ["spine", "dragonbones", "godot4_springs", "anidem_sequence"],
+    "build_ourselves": [
+      "scripts/scene_director.gd - data-driven Array[Dictionary] step sequencer generalizing DemoDirector (category C)",
+      "small damped-spring secondary-motion helper for hood/cloth overlap (category B) - no viable plugin exists"
+    ],
+    "keep_current": [
+      "character_controller.gd enum state machine + deterministic event guards",
+      "audio_manager.gd event-driven autoload",
+      "demo_director.gd (fallback sequencer)",
+      "face_controller.gd expression system",
+      "leon_projectile.gd Line2D trail",
+      "Skeleton2D/Bone2D cutout rig + AnimationPlayer pipeline",
+      "CharacterBody2D movement/knockback"
+    ]
+  },
+  "install_order": ["gdunit4", "phantom_camera", "kenney_particle_pack", "builtin_movie_maker_ffmpeg", "build:scene_director"],
+  "final_decisions": {
+    "A_character_animation_ik": "KEEP_CURRENT + built-in SkeletonModifier2D",
+    "B_physics_knockback": "KEEP_CURRENT",
+    "C_sequencing_cutscenes": "BUILD_OURSELVES now, Dialogic 2 later",
+    "D_vfx": "INSTALL_NOW (Kenney CC0 + built-in particles)",
+    "E_camera": "INSTALL_NOW (Phantom Camera)",
+    "F_audio": "KEEP_CURRENT",
+    "G_environment": "USE_BUILT_IN (Parallax2D)",
+    "H_production_debug": "INSTALL_NOW (gdUnit4 + gdtoolkit)",
+    "video_export": "USE_BUILT_IN (Movie Maker + ffmpeg)"
+  },
+  "ip_flags": [
+    {
+      "severity": "high",
+      "note": "assets/audio contains authentic Supercell 'Brawl Stars' SFX/voice lines (per docs/brawler_audio_and_assets_guide.md). Copyrighted material: YouTube use requires Supercell Fan Content Policy compliance (non-commercial, mandatory unofficial-disclaimer, no implied endorsement). Recommend docs/ASSET_LICENSES.md inventory + disclaimer template + plan CC0/original replacement audio for monetized content."
+    }
   ]
 }

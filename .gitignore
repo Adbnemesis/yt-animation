@@ -7,7 +7,12 @@ export_presets.cfg
 *.mp4
 *.avi
 *.mkv
+/renders/
+/tools/.venv/
 
 # Demo screenshots and generated images in root
 /*.png
 /*.png.import
+
+# Test reports
+/reports/

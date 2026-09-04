@@ -1,0 +1,180 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/camera_test.gd" id="1_lahmr"]
+[ext_resource type="PackedScene" path="res://scenes/leon_side.tscn" id="2_16sdf"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_mmtaj"]
+[ext_resource type="PackedScene" path="res://scenes/target_dummy.tscn" id="4_063i4"]
+[ext_resource type="Script" path="res://scripts/target_dummy.gd" id="5_6dgdw"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_44n42"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="7_3fxv6"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="8_sxgyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78q2d"]
+size = Vector2(3000, 80)
+
+[sub_resource type="Resource" id="Resource_0bm7i"]
+script = ExtResource("8_sxgyh")
+
+[sub_resource type="Resource" id="Resource_wwdbf"]
+script = ExtResource("8_sxgyh")
+
+[sub_resource type="Resource" id="Resource_te1pq"]
+script = ExtResource("8_sxgyh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dk4f7"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.1, 0.12, 0.16, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.45, 0.75, 0.9)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="CameraTestScene" type="Node2D" unique_id=258231663]
+script = ExtResource("1_lahmr")
+
+[node name="Background" type="ColorRect" parent="." unique_id=409042635]
+offset_left = -1000.0
+offset_top = -500.0
+offset_right = 2200.0
+offset_bottom = 1300.0
+color = Color(0.08, 0.1, 0.14, 1)
+
+[node name="Horizon" type="Line2D" parent="." unique_id=800050030]
+points = PackedVector2Array(-1000, 360, 2200, 360)
+width = 2.0
+default_color = Color(0.15, 0.18, 0.24, 1)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=920634101]
+position = Vector2(576, 560)
+
+[node name="@CollisionShape2D@2" type="CollisionShape2D" parent="Ground" unique_id=1437437970]
+shape = SubResource("RectangleShape2D_78q2d")
+
+[node name="GroundVisual" type="ColorRect" parent="Ground" unique_id=1003978114]
+offset_left = -1500.0
+offset_top = -40.0
+offset_right = 1500.0
+offset_bottom = 160.0
+color = Color(0.12, 0.15, 0.2, 1)
+
+[node name="GroundTopStrip" type="ColorRect" parent="Ground" unique_id=1260090234]
+offset_left = -1500.0
+offset_top = -40.0
+offset_right = 1500.0
+offset_bottom = -36.0
+color = Color(0.2, 0.55, 0.85, 1)
+
+[node name="Pillar_-2" type="ColorRect" parent="." unique_id=399397975]
+offset_left = -500.0
+offset_top = 260.0
+offset_right = -460.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_-1" type="ColorRect" parent="." unique_id=346271608]
+offset_left = -150.0
+offset_top = 260.0
+offset_right = -110.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_0" type="ColorRect" parent="." unique_id=342326472]
+offset_left = 200.0
+offset_top = 260.0
+offset_right = 240.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_1" type="ColorRect" parent="." unique_id=431660155]
+offset_left = 550.0
+offset_top = 260.0
+offset_right = 590.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_2" type="ColorRect" parent="." unique_id=5631327]
+offset_left = 900.0
+offset_top = 260.0
+offset_right = 940.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_3" type="ColorRect" parent="." unique_id=657753085]
+offset_left = 1250.0
+offset_top = 260.0
+offset_right = 1290.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Pillar_4" type="ColorRect" parent="." unique_id=418460914]
+offset_left = 1600.0
+offset_top = 260.0
+offset_right = 1640.0
+offset_bottom = 520.0
+color = Color(0.14, 0.18, 0.24, 0.6)
+
+[node name="Leon" type="CharacterBody2D" parent="." unique_id=362457594 instance=ExtResource("2_16sdf")]
+position = Vector2(576, 520)
+script = ExtResource("3_mmtaj")
+
+[node name="TargetDummy" type="Area2D" parent="." unique_id=264445835 groups=["hit_receiver"] instance=ExtResource("4_063i4")]
+position = Vector2(900, 520)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("5_6dgdw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=149209828]
+position = Vector2(576, 400)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D" unique_id=1976083050]
+script = ExtResource("6_44n42")
+
+[node name="PCamFollow" type="Node2D" parent="." unique_id=1009803631]
+top_level = true
+position = Vector2(576, 460)
+script = ExtResource("7_3fxv6")
+priority = 20
+follow_mode = 2
+tween_resource = SubResource("Resource_0bm7i")
+follow_damping = true
+follow_damping_value = Vector2(0.25, 0.25)
+
+[node name="PCamWide" type="Node2D" parent="." unique_id=1732534729]
+position = Vector2(576, 380)
+script = ExtResource("7_3fxv6")
+priority = 10
+zoom = Vector2(0.65, 0.65)
+tween_resource = SubResource("Resource_wwdbf")
+
+[node name="PCamCloseUp" type="Node2D" parent="." unique_id=59115826]
+top_level = true
+position = Vector2(576, 460)
+script = ExtResource("7_3fxv6")
+priority = 10
+follow_mode = 2
+zoom = Vector2(1.6, 1.6)
+tween_resource = SubResource("Resource_te1pq")
+follow_offset = Vector2(0, -35)
+follow_damping = true
+follow_damping_value = Vector2(0.15, 0.15)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1770163039]
+
+[node name="Panel" type="PanelContainer" parent="UI" unique_id=1171319584]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dk4f7")
+
+[node name="StatsLabel" type="Label" parent="UI/Panel" unique_id=936796907]
+layout_mode = 2
+text = "Initializing Phantom Camera 2D..."

@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[sub_resource type="Gradient" id="Gradient_7igc2"]
+offsets = PackedFloat32Array(0, 0.6, 1)
+colors = PackedColorArray(0.2, 0.85, 1, 1, 0.1, 0.5, 0.9, 0.5, 0, 0.2, 0.6, 0)
+
+[node name="VFXSpawnFlash" type="CPUParticles2D" unique_id=743414630]
+emitting = false
+amount = 4
+lifetime = 0.2
+one_shot = true
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 90.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+color_ramp = SubResource("Gradient_7igc2")

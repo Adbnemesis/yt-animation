@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[sub_resource type="Gradient" id="Gradient_emsfs"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.85, 0.82, 0.75, 0.8, 0.7, 0.68, 0.62, 0.4, 0.5, 0.48, 0.45, 0)
+
+[node name="VFXDustPuff" type="CPUParticles2D" unique_id=424319511]
+emitting = false
+amount = 6
+lifetime = 0.35
+one_shot = true
+explosiveness = 0.9
+direction = Vector2(0, -0.4)
+spread = 70.0
+gravity = Vector2(0, 20)
+initial_velocity_min = 60.0
+initial_velocity_max = 140.0
+scale_amount_min = 0.1
+scale_amount_max = 0.22
+color_ramp = SubResource("Gradient_emsfs")
