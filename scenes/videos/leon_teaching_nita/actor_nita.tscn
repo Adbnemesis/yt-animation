@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_teaching_nita/actor_nita.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_side"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_ctrl"]
+[ext_resource type="PackedScene" path="res://scenes/nita_projectile.tscn" id="4_proj"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="5_front"]
+
+[node name="ActorNita" type="Node2D"]
+script = ExtResource("1_actor")
+
+[node name="SideView" parent="." instance=ExtResource("2_side")]
+script = ExtResource("3_ctrl")
+projectile_scene = ExtResource("4_proj")
+projectiles_per_attack = 1
+projectile_burst_interval = 0.0
+projectile_spread_angles = Array[float]([0.0])
+
+[node name="FrontView" parent="." instance=ExtResource("5_front")]
+visible = false

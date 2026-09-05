@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/leon_teaching_nita/story_director.gd" id="1_director"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_teaching_nita/training_ground.tscn" id="2_env"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_teaching_nita/actor_leon.tscn" id="3_leon"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_teaching_nita/actor_nita.tscn" id="4_nita"]
+[ext_resource type="AudioStream" path="res://assets/audio/bgm/monkeys_spinning_monkeys.mp3" id="5_bgm"]
+
+[node name="LeonTeachingNitaMain" type="Node2D"]
+script = ExtResource("1_director")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(500, 420)
+
+[node name="Environment" parent="." instance=ExtResource("2_env")]
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Leon" parent="Characters" instance=ExtResource("3_leon")]
+position = Vector2(400, 520)
+
+[node name="Nita" parent="Characters" instance=ExtResource("4_nita")]
+position = Vector2(-120, 520)
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="BlackoutOverlay" type="CanvasLayer" parent="UI"]
+layer = 50
+
+[node name="ColorRect" type="ColorRect" parent="UI/BlackoutOverlay"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("5_bgm")
+volume_db = -12.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="VoiceLeon" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="VoiceNita" type="AudioStreamPlayer" parent="Audio"]
