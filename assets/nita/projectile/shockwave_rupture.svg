@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="42" viewBox="0 0 56 42">
+  <!-- Nita Canonical Shockwave Rupture Projectile (Brawl Stars Style) -->
+  <defs>
+    <filter id="nita-shockwave-glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.0" flood-color="#00e5ff" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+  <g transform="translate(28, 21)">
+    <!-- 1. Outer Soft Energy Burst Glow -->
+    <ellipse cx="2" cy="0" rx="24" ry="17" fill="#00e5ff" opacity="0.22"/>
+    
+    <!-- 2. Trailing Energy Wisps / Fissure Particles -->
+    <polygon points="-22,-6 -14,-4 -18,-9" fill="#0284c7" opacity="0.75"/>
+    <polygon points="-24,4 -15,3 -19,8" fill="#0284c7" opacity="0.75"/>
+    <polygon points="-16,-1 -10,0 -14,2" fill="#38bdf8" opacity="0.85"/>
+
+    <!-- 3. Base Shockwave Crest (Back Outer Layer) -->
+    <path d="M -16,-16 
+             L -4,-18 
+             L 6,-15 
+             L 16,-10 
+             L 24,-2 
+             L 26,0 
+             L 24,2 
+             L 16,10 
+             L 6,15 
+             L -4,18 
+             L -16,16 
+             L -8,11 
+             L -2,7 
+             L 2,0 
+             L -2,-7 
+             L -8,-11 
+             Z" 
+          fill="#0369a1" stroke="#0f172a" stroke-width="2.0" stroke-linejoin="round"/>
+
+    <!-- 4. Jagged Shockwave Front Teeth (Cyan Body Layer) -->
+    <path d="M -12,-14 
+             L -1,-15 
+             L 3,-18 
+             L 8,-12 
+             L 15,-13 
+             L 18,-7 
+             L 25,-4 
+             L 21,0 
+             L 25,4 
+             L 18,7 
+             L 15,13 
+             L 8,12 
+             L 3,18 
+             L -1,15 
+             L -12,14 
+             L -5,9 
+             L 1,5 
+             L 5,0 
+             L 1,-5 
+             L -5,-9 
+             Z" 
+          fill="#00e5ff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/>
+
+    <!-- 5. Mid-Tone Energy Layer (Bright Sky Blue) -->
+    <path d="M -8,-11 
+             L 2,-12 
+             L 6,-14 
+             L 9,-9 
+             L 14,-9 
+             L 16,-5 
+             L 21,-2 
+             L 18,0 
+             L 21,2 
+             L 16,5 
+             L 14,9 
+             L 9,9 
+             L 6,14 
+             L 2,12 
+             L -8,11 
+             L -2,7 
+             L 3,3 
+             L 6,0 
+             L 3,-3 
+             L -2,-7 
+             Z" 
+          fill="#38bdf8"/>
+
+    <!-- 6. Intense White-Hot Energy Core -->
+    <path d="M -4,-6 
+             L 3,-7 
+             L 6,-9 
+             L 8,-5 
+             L 12,-4 
+             L 13,-2 
+             L 16,0 
+             L 13,2 
+             L 12,4 
+             L 8,5 
+             L 6,9 
+             L 3,7 
+             L -4,6 
+             L 0,3 
+             L 4,0 
+             L 0,-3 
+             Z" 
+          fill="#ffffff"/>
+
+    <!-- 7. Forward Energy Sparks -->
+    <circle cx="21" cy="-6" r="1.4" fill="#ffffff"/>
+    <circle cx="24" cy="0" r="1.8" fill="#ffffff"/>
+    <circle cx="21" cy="6" r="1.4" fill="#ffffff"/>
+    <circle cx="12" cy="-12" r="1.0" fill="#e0f2fe"/>
+    <circle cx="12" cy="12" r="1.0" fill="#e0f2fe"/>
+  </g>
+</svg>

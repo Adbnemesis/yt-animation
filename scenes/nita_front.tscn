@@ -21,99 +21,99 @@
 [ext_resource type="Texture2D" path="res://assets/nita/face/eyebrow_R.svg" id="19_ajqi8"]
 [ext_resource type="Texture2D" path="res://assets/nita/face/mouth_grin.svg" id="20_312ax"]
 
-[node name="NitaFront" type="Node2D" unique_id=1563938124]
+[node name="NitaFront" type="Node2D" unique_id=1074979157]
 
-[node name="Feet" type="Node2D" parent="." unique_id=958702894]
+[node name="Feet" type="Node2D" parent="." unique_id=838785245]
 
-[node name="FootL" type="Sprite2D" parent="Feet" unique_id=1072071167]
+[node name="FootL" type="Sprite2D" parent="Feet" unique_id=1526329108]
 position = Vector2(-14, -10)
 texture = ExtResource("1_s824y")
 
-[node name="FootR" type="Sprite2D" parent="Feet" unique_id=394661008]
+[node name="FootR" type="Sprite2D" parent="Feet" unique_id=1883972663]
 position = Vector2(14, -10)
 texture = ExtResource("2_bd65k")
 
-[node name="Legs" type="Node2D" parent="." unique_id=1128244105]
+[node name="Legs" type="Node2D" parent="." unique_id=1288260317]
 
-[node name="LegL" type="Sprite2D" parent="Legs" unique_id=915213982]
+[node name="LegL" type="Sprite2D" parent="Legs" unique_id=852310157]
 position = Vector2(-14, -30)
 texture = ExtResource("3_lw05k")
 
-[node name="LegR" type="Sprite2D" parent="Legs" unique_id=1185480432]
+[node name="LegR" type="Sprite2D" parent="Legs" unique_id=104731532]
 position = Vector2(14, -30)
 texture = ExtResource("4_kvdos")
 
-[node name="Skirt" type="Sprite2D" parent="." unique_id=1058414546]
+[node name="Skirt" type="Sprite2D" parent="." unique_id=103356785]
 z_index = 1
 position = Vector2(0, -42)
 texture = ExtResource("5_fbtsp")
 
-[node name="Torso" type="Sprite2D" parent="." unique_id=1529046679]
+[node name="Torso" type="Sprite2D" parent="." unique_id=559265252]
 z_index = 2
 position = Vector2(0, -68)
 texture = ExtResource("6_5m86n")
 
-[node name="ArmL" type="Node2D" parent="." unique_id=23419256]
+[node name="ArmL" type="Node2D" parent="." unique_id=1682065686]
 z_index = 2
 position = Vector2(-28, -72)
 
-[node name="Arm" type="Sprite2D" parent="ArmL" unique_id=1400589749]
+[node name="Arm" type="Sprite2D" parent="ArmL" unique_id=1495575182]
 position = Vector2(0, 16)
 texture = ExtResource("7_30y4l")
 
-[node name="Hand" type="Sprite2D" parent="ArmL" unique_id=2065644159]
+[node name="Hand" type="Sprite2D" parent="ArmL" unique_id=1877194785]
 position = Vector2(0, 36)
 texture = ExtResource("8_hmfau")
 
-[node name="ArmR" type="Node2D" parent="." unique_id=618182832]
+[node name="ArmR" type="Node2D" parent="." unique_id=884835653]
 z_index = 3
 position = Vector2(28, -72)
 
-[node name="Arm" type="Sprite2D" parent="ArmR" unique_id=298019953]
+[node name="Arm" type="Sprite2D" parent="ArmR" unique_id=533127697]
 position = Vector2(0, 16)
 texture = ExtResource("9_yhwrm")
 
-[node name="Hand" type="Sprite2D" parent="ArmR" unique_id=177611977]
+[node name="Hand" type="Sprite2D" parent="ArmR" unique_id=1626790780]
 position = Vector2(0, 36)
 texture = ExtResource("10_m42fl")
 
-[node name="Head" type="Node2D" parent="." unique_id=1989129779]
+[node name="Head" type="Node2D" parent="." unique_id=150905418]
 z_index = 3
 position = Vector2(0, -114)
 
-[node name="Hood" type="Sprite2D" parent="Head" unique_id=1765695181]
+[node name="Hood" type="Sprite2D" parent="Head" unique_id=982696649]
 texture = ExtResource("11_xst4d")
 
-[node name="Face" type="Node2D" parent="Head" unique_id=1894618879]
+[node name="Face" type="Node2D" parent="Head" unique_id=409579898]
 position = Vector2(0, 14)
 script = ExtResource("12_37uf5")
 
-[node name="FaceBase" type="Sprite2D" parent="Head/Face" unique_id=498191451]
+[node name="FaceBase" type="Sprite2D" parent="Head/Face" unique_id=1191530371]
 texture = ExtResource("13_7yrte")
 
-[node name="EyeL" type="Sprite2D" parent="Head/Face" unique_id=1231972242]
+[node name="EyeL" type="Sprite2D" parent="Head/Face" unique_id=782795644]
 position = Vector2(-14, -4)
 texture = ExtResource("14_kkmkn")
 
-[node name="PupilL" type="Sprite2D" parent="Head/Face/EyeL" unique_id=2006307819]
+[node name="PupilL" type="Sprite2D" parent="Head/Face/EyeL" unique_id=680000189]
 texture = ExtResource("15_t5rpe")
 
-[node name="EyeR" type="Sprite2D" parent="Head/Face" unique_id=1815775702]
+[node name="EyeR" type="Sprite2D" parent="Head/Face" unique_id=1745802828]
 position = Vector2(14, -4)
 texture = ExtResource("16_y78s8")
 
-[node name="PupilR" type="Sprite2D" parent="Head/Face/EyeR" unique_id=725120967]
+[node name="PupilR" type="Sprite2D" parent="Head/Face/EyeR" unique_id=1465865468]
 texture = ExtResource("17_k3lde")
 
-[node name="BrowL" type="Sprite2D" parent="Head/Face" unique_id=622601804]
+[node name="BrowL" type="Sprite2D" parent="Head/Face" unique_id=1231196723]
 position = Vector2(-14, -14)
 texture = ExtResource("18_flukl")
 
-[node name="BrowR" type="Sprite2D" parent="Head/Face" unique_id=1291624825]
+[node name="BrowR" type="Sprite2D" parent="Head/Face" unique_id=191411754]
 position = Vector2(14, -14)
 texture = ExtResource("19_ajqi8")
 
-[node name="Mouth" type="Sprite2D" parent="Head/Face" unique_id=2117368964]
+[node name="Mouth" type="Sprite2D" parent="Head/Face" unique_id=493659428]
 z_index = 2
 position = Vector2(0, 14)
 texture = ExtResource("20_312ax")

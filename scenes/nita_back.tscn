@@ -12,63 +12,63 @@
 [ext_resource type="Texture2D" path="res://assets/nita/body/arm_R.svg" id="10_7xns0"]
 [ext_resource type="Texture2D" path="res://assets/nita/body/hand_R.svg" id="11_xcv4l"]
 
-[node name="NitaBack" type="Node2D" unique_id=367198804]
+[node name="NitaBack" type="Node2D" unique_id=65081939]
 
-[node name="Feet" type="Node2D" parent="." unique_id=1255075887]
+[node name="Feet" type="Node2D" parent="." unique_id=839184299]
 
-[node name="FootL" type="Sprite2D" parent="Feet" unique_id=231087226]
+[node name="FootL" type="Sprite2D" parent="Feet" unique_id=772723820]
 position = Vector2(-14, -10)
 texture = ExtResource("1_net7v")
 
-[node name="FootR" type="Sprite2D" parent="Feet" unique_id=642604798]
+[node name="FootR" type="Sprite2D" parent="Feet" unique_id=581890051]
 position = Vector2(14, -10)
 texture = ExtResource("2_42g5x")
 
-[node name="Legs" type="Node2D" parent="." unique_id=1899205584]
+[node name="Legs" type="Node2D" parent="." unique_id=1922028966]
 
-[node name="LegL" type="Sprite2D" parent="Legs" unique_id=850883838]
+[node name="LegL" type="Sprite2D" parent="Legs" unique_id=1603021290]
 position = Vector2(-14, -30)
 texture = ExtResource("3_44f77")
 
-[node name="LegR" type="Sprite2D" parent="Legs" unique_id=1902699293]
+[node name="LegR" type="Sprite2D" parent="Legs" unique_id=1110548911]
 position = Vector2(14, -30)
 texture = ExtResource("4_43mqg")
 
-[node name="Skirt" type="Sprite2D" parent="." unique_id=1510928380]
+[node name="Skirt" type="Sprite2D" parent="." unique_id=2137025347]
 z_index = 1
 position = Vector2(0, -42)
 texture = ExtResource("5_romp2")
 
-[node name="Torso" type="Sprite2D" parent="." unique_id=1279206797]
+[node name="Torso" type="Sprite2D" parent="." unique_id=1875375464]
 z_index = 2
 position = Vector2(0, -68)
 texture = ExtResource("6_sd80v")
 
-[node name="Head" type="Sprite2D" parent="." unique_id=1601060769]
+[node name="Head" type="Sprite2D" parent="." unique_id=1178321238]
 z_index = 3
 position = Vector2(0, -114)
 texture = ExtResource("7_h7u2w")
 
-[node name="ArmL" type="Node2D" parent="." unique_id=1097894997]
+[node name="ArmL" type="Node2D" parent="." unique_id=923331702]
 z_index = 2
 position = Vector2(-28, -72)
 
-[node name="Arm" type="Sprite2D" parent="ArmL" unique_id=487807353]
+[node name="Arm" type="Sprite2D" parent="ArmL" unique_id=833432942]
 position = Vector2(0, 16)
 texture = ExtResource("8_q17xf")
 
-[node name="Hand" type="Sprite2D" parent="ArmL" unique_id=2053888857]
+[node name="Hand" type="Sprite2D" parent="ArmL" unique_id=35285572]
 position = Vector2(0, 36)
 texture = ExtResource("9_tw1l0")
 
-[node name="ArmR" type="Node2D" parent="." unique_id=1378113817]
+[node name="ArmR" type="Node2D" parent="." unique_id=1741569227]
 z_index = 3
 position = Vector2(28, -72)
 
-[node name="Arm" type="Sprite2D" parent="ArmR" unique_id=1947985824]
+[node name="Arm" type="Sprite2D" parent="ArmR" unique_id=97108426]
 position = Vector2(0, 16)
 texture = ExtResource("10_7xns0")
 
-[node name="Hand" type="Sprite2D" parent="ArmR" unique_id=1467558812]
+[node name="Hand" type="Sprite2D" parent="ArmR" unique_id=104415595]
 position = Vector2(0, 36)
 texture = ExtResource("11_xcv4l")

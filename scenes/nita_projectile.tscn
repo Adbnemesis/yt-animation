@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/nita_projectile.gd" id="1_oukix"]
+[ext_resource type="Texture2D" path="res://assets/nita/projectile/shockwave_rupture.svg" id="2_nqytq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mmrs8"]
+radius = 16.0
+
+[sub_resource type="Gradient" id="Gradient_7ouli"]
+colors = PackedColorArray(0, 0.9, 1, 0.7, 0, 0.7, 1, 0)
+
+[node name="NitaProjectile" type="Area2D" unique_id=29477451 groups=["projectiles"]]
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_oukix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1467157921]
+shape = SubResource("CircleShape2D_mmrs8")
+
+[node name="Trail" type="Line2D" parent="." unique_id=741180862]
+width = 6.0
+default_color = Color(0, 0.9, 1, 0.6)
+gradient = SubResource("Gradient_7ouli")
+
+[node name="Visuals" type="Node2D" parent="." unique_id=697786608]
+
+[node name="ShockwaveSprite" type="Sprite2D" parent="Visuals" unique_id=884313584]
+texture = ExtResource("2_nqytq")

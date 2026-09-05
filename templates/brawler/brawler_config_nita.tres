@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="BrawlerConfig" format=3]
 
 [ext_resource type="Script" path="res://templates/brawler/brawler_config.gd" id="1_cfg"]
+[ext_resource type="PackedScene" path="res://scenes/nita_projectile.tscn" id="2_proj"]
 
 [resource]
 script = ExtResource("1_cfg")
@@ -14,14 +15,14 @@ acceleration = 1600.0
 friction = 1800.0
 max_health = 1200.0
 knockback_resistance = 0.85
-attack_duration = 0.40
+attack_duration = 0.36
 projectiles_per_burst = 1
 burst_interval = 0.0
 spread_angles = Array[float]([0.0])
-projectile_scene = null
+projectile_scene = ExtResource("2_proj")
 damage_per_projectile = 80.0
-projectile_speed = 500.0
-projectile_range = 400.0
+projectile_speed = 600.0
+projectile_range = 480.0
 super_duration = 0.0
 super_type = "bear_summon"
 audio_event_map = {

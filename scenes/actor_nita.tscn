@@ -1,19 +1,24 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://scenes/actor_nita.gd" id="1_6y7qy"]
-[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_boabv"]
-[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_xsiyl"]
-[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="4_gypdw"]
-[ext_resource type="PackedScene" path="res://scenes/nita_back.tscn" id="5_mvmdj"]
+[ext_resource type="Script" path="res://scenes/actor_nita.gd" id="1_boabv"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_xsiyl"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_gypdw"]
+[ext_resource type="PackedScene" path="res://scenes/nita_projectile.tscn" id="4_mvmdj"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="5_kkhor"]
+[ext_resource type="PackedScene" path="res://scenes/nita_back.tscn" id="6_onenr"]
 
-[node name="ActorNita" type="Node2D" unique_id=1559611991]
-script = ExtResource("1_6y7qy")
+[node name="ActorNita" type="Node2D" unique_id=2072747024]
+script = ExtResource("1_boabv")
 
-[node name="SideView" type="CharacterBody2D" parent="." unique_id=322699583 instance=ExtResource("2_boabv")]
-script = ExtResource("3_xsiyl")
+[node name="SideView" type="CharacterBody2D" parent="." unique_id=744673507 instance=ExtResource("2_xsiyl")]
+script = ExtResource("3_gypdw")
+projectile_scene = ExtResource("4_mvmdj")
+projectiles_per_attack = 1
+projectile_burst_interval = 0.0
+projectile_spread_angles = Array[float]([0.0])
 
-[node name="FrontView" type="Node2D" parent="." unique_id=1563938124 instance=ExtResource("4_gypdw")]
+[node name="FrontView" type="Node2D" parent="." unique_id=1074979157 instance=ExtResource("5_kkhor")]
 visible = false
 
-[node name="BackView" type="Node2D" parent="." unique_id=367198804 instance=ExtResource("5_mvmdj")]
+[node name="BackView" type="Node2D" parent="." unique_id=65081939 instance=ExtResource("6_onenr")]
 visible = false

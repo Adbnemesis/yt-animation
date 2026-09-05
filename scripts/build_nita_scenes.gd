@@ -433,12 +433,18 @@ func build_nita_side() -> void:
 	var b_hand_r = create_bone.call("hand_R", Vector2(0, 12), b_arm_r_lower, true)
 	create_sprite.call("HandSpriteR", tex_hand, Vector2(0, 4), 3, b_hand_r)
 
-	# Attack / Swipe Spawn Point
+	# Attack / Projectile Spawn Point on right hand
 	var p_spawn = Marker2D.new()
-	p_spawn.name = "AttackSpawnPoint"
+	p_spawn.name = "ProjectileSpawnPoint"
 	p_spawn.position = Vector2(12, 2)
 	b_hand_r.add_child(p_spawn)
 	p_spawn.owner = root
+
+	var p_spawn_legacy = Marker2D.new()
+	p_spawn_legacy.name = "AttackSpawnPoint"
+	p_spawn_legacy.position = Vector2(12, 2)
+	b_hand_r.add_child(p_spawn_legacy)
+	p_spawn_legacy.owner = root
 
 	# Neck & Head (Z = 2)
 	var b_neck = create_bone.call("neck", Vector2(0, -26), b_torso)
@@ -463,6 +469,19 @@ func build_nita_side() -> void:
 	head_point.position = Vector2(0, -114)
 	vfx.add_child(head_point)
 	head_point.owner = root
+
+	var vfx_proj_spawn = Marker2D.new()
+	vfx_proj_spawn.name = "ProjectileSpawn"
+	vfx_proj_spawn.position = Vector2(24, -48)
+	vfx.add_child(vfx_proj_spawn)
+	vfx_proj_spawn.owner = root
+
+	# Configure CharacterController Projectile System for Nita
+	root.projectile_scene = load("res://scenes/nita_projectile.tscn")
+	root.projectiles_per_attack = 1
+	root.projectile_burst_interval = 0.0
+	var spread_arr: Array[float] = [0.0]
+	root.projectile_spread_angles = spread_arr
 
 	# ANIMATIONS
 	var anim_player = AnimationPlayer.new()
@@ -587,14 +606,67 @@ func build_nita_side() -> void:
 	])
 	anim_lib.add_animation("walk", a_walk)
 
-	# ATTACK Animation (Fierce Bear Spirit Swipe)
+	# ATTACK Animation (Fierce Rupture Shockwave — 5-Phase Biomechanics)
 	var a_attack = Animation.new()
-	a_attack.length = 0.45
-	var atk_times = [0.0, 0.10, 0.22, 0.45]
-	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso:rotation", atk_times, [0.0, -0.18, 0.22, 0.0])
-	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper:rotation", atk_times, [0.0, -0.90, 0.85, 0.0])
-	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower:rotation", atk_times, [0.2, 0.75, 0.10, 0.2])
+	a_attack.length = 0.36
+	a_attack.loop_mode = Animation.LOOP_NONE
+	var atk_times = [0.0, 0.08, 0.14, 0.22, 0.36]
+
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root:position", atk_times, [
+		Vector2(0, -38), Vector2(-3, -35), Vector2(5, -37), Vector2(6, -38), Vector2(0, -38)
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root:rotation", atk_times, [
+		0.0, -0.06, 0.06, 0.03, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso:rotation", atk_times, [
+		0.0, -0.24, 0.34, 0.38, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/neck:rotation", atk_times, [
+		0.0, -0.04, 0.04, 0.02, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/neck/head:rotation", atk_times, [
+		0.0, -0.05, 0.06, 0.04, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper:rotation", atk_times, [
+		0.0, 0.85, -1.40, -1.25, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower:rotation", atk_times, [
+		0.20, 0.90, -0.05, 0.10, 0.20
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R:rotation", atk_times, [
+		0.0, 0.40, -0.20, 0.15, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_L_upper:rotation", atk_times, [
+		0.0, -0.55, 0.60, 0.45, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower:rotation", atk_times, [
+		0.20, 0.40, 0.65, 0.40, 0.20
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_R_upper:rotation", atk_times, [
+		0.0, 0.16, 0.30, 0.25, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_R_upper/leg_R_lower:rotation", atk_times, [
+		0.0, 0.22, 0.12, 0.06, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_L_upper:rotation", atk_times, [
+		0.0, -0.14, -0.26, -0.20, 0.0
+	])
+	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_L_upper/leg_L_lower:rotation", atk_times, [
+		0.0, 0.30, 0.42, 0.28, 0.0
+	])
+
+	# Method call track for deterministic event dispatch
+	var method_track_idx = a_attack.add_track(Animation.TYPE_METHOD)
+	a_attack.track_set_path(method_track_idx, NodePath("."))
+	a_attack.track_insert_key(method_track_idx, 0.00, {"method": "_on_anim_attack_start", "args": []})
+	a_attack.track_insert_key(method_track_idx, 0.14, {"method": "_on_anim_attack_release", "args": []})
+	a_attack.track_insert_key(method_track_idx, 0.14, {"method": "_on_anim_projectile_spawn", "args": []})
+	a_attack.track_insert_key(method_track_idx, 0.22, {"method": "_on_anim_attack_follow_through", "args": []})
+	a_attack.track_insert_key(method_track_idx, 0.36, {"method": "_on_anim_attack_end", "args": []})
+
 	anim_lib.add_animation("attack", a_attack)
+	anim_lib.add_animation("NITA_BASIC_ATTACK", a_attack.duplicate(true))
+	anim_lib.add_animation("NITA_ATTACK", a_attack.duplicate(true))
 
 	# HURT Animation (Recoil)
 	var a_hurt = Animation.new()

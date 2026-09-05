@@ -1,0 +1,129 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/nita_combat_test.gd" id="1_vr7ae"]
+[ext_resource type="PackedScene" path="res://scenes/target_dummy.tscn" id="2_lynsy"]
+[ext_resource type="Script" path="res://scripts/target_dummy.gd" id="3_8shs3"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="4_ey1d1"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="5_o4lll"]
+[ext_resource type="PackedScene" path="res://scenes/nita_projectile.tscn" id="6_4tjg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_po1op"]
+size = Vector2(1400, 80)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmim2"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.06, 0.08, 0.12, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.24, 0.35, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="NitaCombatTestHarness" type="Node2D" unique_id=1831309346]
+script = ExtResource("1_vr7ae")
+
+[node name="Background" type="ColorRect" parent="." unique_id=573801819]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.09, 0.11, 0.15, 1)
+
+[node name="Horizon" type="Line2D" parent="." unique_id=1631445154]
+points = PackedVector2Array(0, 360, 1152, 360)
+width = 1.5
+default_color = Color(0.14, 0.17, 0.22, 1)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1015168493]
+position = Vector2(576, 560)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1025593841]
+shape = SubResource("RectangleShape2D_po1op")
+
+[node name="GroundVisual" type="ColorRect" parent="Ground" unique_id=1472503278]
+offset_left = -700.0
+offset_top = -40.0
+offset_right = 700.0
+offset_bottom = 160.0
+color = Color(0.14, 0.17, 0.22, 1)
+
+[node name="GroundTopStrip" type="ColorRect" parent="Ground" unique_id=895056551]
+offset_left = -700.0
+offset_top = -40.0
+offset_right = 700.0
+offset_bottom = -36.0
+color = Color(0.15, 0.65, 0.85, 1)
+
+[node name="GroundLine" type="Line2D" parent="." unique_id=28389902]
+points = PackedVector2Array(0, 520, 1152, 520)
+width = 1.0
+default_color = Color(0, 0.9, 1, 0.6)
+
+[node name="TargetDummy" type="Area2D" parent="." unique_id=264445835 groups=["hit_receiver"] instance=ExtResource("2_lynsy")]
+position = Vector2(760, 520)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("3_8shs3")
+
+[node name="Puppet" type="CharacterBody2D" parent="." unique_id=744673507 instance=ExtResource("4_ey1d1")]
+position = Vector2(380, 520)
+script = ExtResource("5_o4lll")
+projectile_scene = ExtResource("6_4tjg2")
+projectiles_per_attack = 1
+projectile_burst_interval = 0.0
+projectile_spread_angles = Array[float]([0.0])
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1819330694]
+
+[node name="Header" type="VBoxContainer" parent="UI" unique_id=1519467703]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 16.0
+
+[node name="LblTitle" type="Label" parent="UI/Header" unique_id=1093056432]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
+text = "NITA 2D PUPPET — PRODUCTION COMBAT STAGE 1 (BASIC ATTACK & RUPTURE)"
+
+[node name="LblSubtitle" type="Label" parent="UI/Header" unique_id=1535796263]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.6, 0.68, 0.78, 1)
+text = "Walk • Run • Jump • Basic Attack • Rupture Shockwave • Target Dummy Collision • Ground y=520"
+
+[node name="LblInstructions" type="Label" parent="UI/Header" unique_id=1978191828]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.75, 0.82, 0.9, 1)
+text = "1. Projectile Demo  2. Walk Attack Demo  3. Run Attack Demo  4. Directional Demo  5. Interactive Keys   Attack (J)  Jump (Space)  Reset Dummy (R)  Toggle Line (T)"
+
+[node name="InfoPanel" type="PanelContainer" parent="UI" unique_id=1819062498]
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 564.0
+offset_bottom = 186.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hmim2")
+
+[node name="VBox" type="VBoxContainer" parent="UI/InfoPanel" unique_id=1513593209]
+layout_mode = 2
+
+[node name="LblMode" type="Label" parent="UI/InfoPanel/VBox" unique_id=1789589623]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+text = "MODE: Projectile Demo (Single Shockwave • Collision • Despawn)"
+
+[node name="LblStats" type="Label" parent="UI/InfoPanel/VBox" unique_id=668304354]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.85, 0.88, 0.95, 1)
+text = "STATE: IDLE | ANIM: idle (0.00s/2.00s) | FACING: +1 (RIGHT) | GROUNDED: TRUE
+PROJECTILES ACTIVE: 0 | LAST EVENT: None | LAST HIT: None | TARGET HP: 1000 / 1000
+SPEED: 600 px/s | BURST: 1 Shockwave | RANGE: 480 px | VEL: (0.0, 0.0) px/s"
