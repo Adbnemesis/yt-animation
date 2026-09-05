@@ -606,53 +606,58 @@ func build_nita_side() -> void:
 	])
 	anim_lib.add_animation("walk", a_walk)
 
-	# ATTACK Animation (Fierce Rupture Shockwave — 5-Phase Biomechanics)
+	# ATTACK Animation (Authentic Brawl Stars Rupture — Downward Feral Ground Strike)
 	var a_attack = Animation.new()
 	a_attack.length = 0.36
 	a_attack.loop_mode = Animation.LOOP_NONE
 	var atk_times = [0.0, 0.08, 0.14, 0.22, 0.36]
 
+	# Root: low combat squat coil -> explosive forward/low ground lunge -> recoil settle -> recover
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root:position", atk_times, [
-		Vector2(0, -38), Vector2(-3, -35), Vector2(5, -37), Vector2(6, -38), Vector2(0, -38)
+		Vector2(0, -38), Vector2(-4, -34), Vector2(8, -34), Vector2(10, -36), Vector2(0, -38)
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root:rotation", atk_times, [
-		0.0, -0.06, 0.06, 0.03, 0.0
+		0.0, -0.06, 0.08, 0.05, 0.0
 	])
+	# Torso: coils back -> drives aggressively downward and forward into earth
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso:rotation", atk_times, [
-		0.0, -0.24, 0.34, 0.38, 0.0
+		0.0, -0.22, 0.38, 0.30, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/neck:rotation", atk_times, [
-		0.0, -0.04, 0.04, 0.02, 0.0
+		0.0, 0.06, -0.10, -0.06, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/neck/head:rotation", atk_times, [
-		0.0, -0.05, 0.06, 0.04, 0.0
+		0.0, 0.10, -0.12, -0.08, 0.0
 	])
+	# Striking Arm (Right): raised bear-claw coil -> downward claw strike into the ground -> follow-through -> recover
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper:rotation", atk_times, [
-		0.0, 0.85, -1.40, -1.25, 0.0
+		0.0, 0.95, -0.40, -0.28, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower:rotation", atk_times, [
-		0.20, 0.90, -0.05, 0.10, 0.20
+		0.20, 1.10, 0.15, 0.20, 0.20
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_R_upper/arm_R_lower/hand_R:rotation", atk_times, [
-		0.0, 0.40, -0.20, 0.15, 0.0
+		0.0, 0.30, -0.15, 0.05, 0.0
 	])
+	# Balancing Arm (Left): steady forward -> recoil back and up -> settle -> recover
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_L_upper:rotation", atk_times, [
-		0.0, -0.55, 0.60, 0.45, 0.0
+		0.0, -0.55, 0.70, 0.45, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/torso/arm_L_upper/arm_L_lower:rotation", atk_times, [
-		0.20, 0.40, 0.65, 0.40, 0.20
+		0.20, 0.40, 0.50, 0.35, 0.20
 	])
+	# Legs: deep crouch coil -> lunging ground brace stance
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_R_upper:rotation", atk_times, [
-		0.0, 0.16, 0.30, 0.25, 0.0
+		0.0, 0.22, 0.38, 0.30, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_R_upper/leg_R_lower:rotation", atk_times, [
-		0.0, 0.22, 0.12, 0.06, 0.0
+		0.0, 0.30, 0.12, 0.08, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_L_upper:rotation", atk_times, [
-		0.0, -0.14, -0.26, -0.20, 0.0
+		0.0, -0.18, -0.32, -0.24, 0.0
 	])
 	add_track_keys.call(a_attack, "Visuals/Skeleton/root/leg_L_upper/leg_L_lower:rotation", atk_times, [
-		0.0, 0.30, 0.42, 0.28, 0.0
+		0.0, 0.38, 0.46, 0.32, 0.0
 	])
 
 	# Method call track for deterministic event dispatch

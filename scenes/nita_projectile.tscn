@@ -4,25 +4,27 @@
 [ext_resource type="Texture2D" path="res://assets/nita/projectile/shockwave_rupture.svg" id="2_nqytq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmrs8"]
-radius = 16.0
+radius = 28.0
 
 [sub_resource type="Gradient" id="Gradient_7ouli"]
-colors = PackedColorArray(0, 0.9, 1, 0.7, 0, 0.7, 1, 0)
+colors = PackedColorArray(0, 0.94, 1, 0.8, 0.12, 0.12, 0.17, 0)
 
-[node name="NitaProjectile" type="Area2D" unique_id=29477451 groups=["projectiles"]]
+[node name="NitaProjectile" type="Area2D" unique_id=1776738297 groups=["projectiles"]]
 collision_layer = 8
 collision_mask = 6
 script = ExtResource("1_oukix")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1467157921]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=44727090]
+position = Vector2(0, -36)
 shape = SubResource("CircleShape2D_mmrs8")
 
-[node name="Trail" type="Line2D" parent="." unique_id=741180862]
-width = 6.0
-default_color = Color(0, 0.9, 1, 0.6)
+[node name="Trail" type="Line2D" parent="." unique_id=426665186]
+width = 5.0
+default_color = Color(0, 0.94, 1, 0.7)
 gradient = SubResource("Gradient_7ouli")
 
-[node name="Visuals" type="Node2D" parent="." unique_id=697786608]
+[node name="Visuals" type="Node2D" parent="." unique_id=2085869071]
 
-[node name="ShockwaveSprite" type="Sprite2D" parent="Visuals" unique_id=884313584]
+[node name="ShockwaveSprite" type="Sprite2D" parent="Visuals" unique_id=184933520]
+position = Vector2(0, -36)
 texture = ExtResource("2_nqytq")

@@ -1,112 +1,131 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="56" height="42" viewBox="0 0 56 42">
-  <!-- Nita Canonical Shockwave Rupture Projectile (Brawl Stars Style) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88">
+  <!-- Nita Canonical Ground-Piercing Shockwave Rupture (Brawl Stars Style) -->
   <defs>
-    <filter id="nita-shockwave-glow" x="-25%" y="-25%" width="150%" height="150%">
-      <feDropShadow dx="0" dy="0" stdDeviation="2.0" flood-color="#00e5ff" flood-opacity="0.85"/>
+    <filter id="shockwave-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.0" flood-color="#00f0ff" flood-opacity="0.85"/>
     </filter>
   </defs>
-  <g transform="translate(28, 21)">
-    <!-- 1. Outer Soft Energy Burst Glow -->
-    <ellipse cx="2" cy="0" rx="24" ry="17" fill="#00e5ff" opacity="0.22"/>
-    
-    <!-- 2. Trailing Energy Wisps / Fissure Particles -->
-    <polygon points="-22,-6 -14,-4 -18,-9" fill="#0284c7" opacity="0.75"/>
-    <polygon points="-24,4 -15,3 -19,8" fill="#0284c7" opacity="0.75"/>
-    <polygon points="-16,-1 -10,0 -14,2" fill="#38bdf8" opacity="0.85"/>
 
-    <!-- 3. Base Shockwave Crest (Back Outer Layer) -->
-    <path d="M -16,-16 
-             L -4,-18 
-             L 6,-15 
-             L 16,-10 
-             L 24,-2 
-             L 26,0 
-             L 24,2 
-             L 16,10 
-             L 6,15 
-             L -4,18 
-             L -16,16 
-             L -8,11 
-             L -2,7 
-             L 2,0 
-             L -2,-7 
-             L -8,-11 
-             Z" 
-          fill="#0369a1" stroke="#0f172a" stroke-width="2.0" stroke-linejoin="round"/>
+  <!-- 1. Ambient Energy Blast Aura -->
+  <ellipse cx="44" cy="46" rx="38" ry="34" fill="#00f0ff" opacity="0.18"/>
+  <ellipse cx="48" cy="44" rx="28" ry="24" fill="#67e8f9" opacity="0.22"/>
 
-    <!-- 4. Jagged Shockwave Front Teeth (Cyan Body Layer) -->
-    <path d="M -12,-14 
-             L -1,-15 
-             L 3,-18 
-             L 8,-12 
-             L 15,-13 
-             L 18,-7 
-             L 25,-4 
-             L 21,0 
-             L 25,4 
-             L 18,7 
-             L 15,13 
-             L 8,12 
-             L 3,18 
-             L -1,15 
-             L -12,14 
-             L -5,9 
-             L 1,5 
-             L 5,0 
-             L 1,-5 
-             L -5,-9 
-             Z" 
-          fill="#00e5ff" stroke="#0f172a" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- 2. Ground Fissure & Piercing Cracks (Seated at Ground Plane y=80) -->
+  <!-- Dark jagged fracture line piercing into earth -->
+  <path d="M 4,80 L 14,84 L 26,79 L 38,85 L 50,80 L 62,86 L 74,80 L 84,83" 
+        fill="none" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 18,80 L 22,86 L 25,83" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 42,80 L 46,87 L 52,82" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M 64,80 L 68,86 L 72,81" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
 
-    <!-- 5. Mid-Tone Energy Layer (Bright Sky Blue) -->
-    <path d="M -8,-11 
-             L 2,-12 
-             L 6,-14 
-             L 9,-9 
-             L 14,-9 
-             L 16,-5 
-             L 21,-2 
-             L 18,0 
-             L 21,2 
-             L 16,5 
-             L 14,9 
-             L 9,9 
-             L 6,14 
-             L 2,12 
-             L -8,11 
-             L -2,7 
-             L 3,3 
-             L 6,0 
-             L 3,-3 
-             L -2,-7 
-             Z" 
-          fill="#38bdf8"/>
+  <!-- Kicked-Up Earth Debris & Stones -->
+  <polygon points="12,77 16,73 19,76 17,80 13,80" fill="#7c3a34" stroke="#1e1e2c" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="34,76 39,71 43,74 41,79 36,79" fill="#57302b" stroke="#1e1e2c" stroke-width="1.8" stroke-linejoin="round"/>
+  <polygon points="68,76 73,72 77,75 75,80 70,80" fill="#7c3a34" stroke="#1e1e2c" stroke-width="1.8" stroke-linejoin="round"/>
+  <circle cx="28" cy="74" r="2.2" fill="#1e1e2c"/>
+  <circle cx="58" cy="73" r="2.5" fill="#1e1e2c"/>
+  <circle cx="80" cy="76" r="1.8" fill="#1e1e2c"/>
 
-    <!-- 6. Intense White-Hot Energy Core -->
-    <path d="M -4,-6 
-             L 3,-7 
-             L 6,-9 
-             L 8,-5 
-             L 12,-4 
-             L 13,-2 
-             L 16,0 
-             L 13,2 
-             L 12,4 
-             L 8,5 
-             L 6,9 
-             L 3,7 
-             L -4,6 
-             L 0,3 
-             L 4,0 
-             L 0,-3 
-             Z" 
-          fill="#ffffff"/>
+  <!-- 3. Outer Dark Base Contour of Shockwave Body -->
+  <path d="M 12,80
+           L 10,64
+           L 18,52
+           L 12,38
+           L 24,24
+           L 38,14
+           L 48,6
+           L 52,18
+           L 62,12
+           L 66,24
+           L 78,22
+           L 84,38
+           L 72,46
+           L 80,56
+           L 68,66
+           L 74,76
+           L 64,80
+           Z"
+        fill="#0369a1" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
 
-    <!-- 7. Forward Energy Sparks -->
-    <circle cx="21" cy="-6" r="1.4" fill="#ffffff"/>
-    <circle cx="24" cy="0" r="1.8" fill="#ffffff"/>
-    <circle cx="21" cy="6" r="1.4" fill="#ffffff"/>
-    <circle cx="12" cy="-12" r="1.0" fill="#e0f2fe"/>
-    <circle cx="12" cy="12" r="1.0" fill="#e0f2fe"/>
-  </g>
+  <!-- 4. Main Cyan Crystalline Rupture Spire Body -->
+  <path d="M 14,79
+           L 13,62
+           L 20,51
+           L 15,38
+           L 26,26
+           L 39,17
+           L 47,9
+           L 51,20
+           L 60,15
+           L 64,26
+           L 75,24
+           L 82,38
+           L 70,45
+           L 77,55
+           L 66,64
+           L 71,75
+           L 62,79
+           Z"
+        fill="#00f0ff" stroke="#0c4a6e" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- 5. Secondary Facet / Cyan Highlight Body -->
+  <path d="M 22,78
+           L 20,58
+           L 28,46
+           L 24,34
+           L 34,25
+           L 44,19
+           L 46,13
+           L 50,22
+           L 58,19
+           L 61,28
+           L 71,27
+           L 77,38
+           L 67,44
+           L 72,54
+           L 63,62
+           L 67,73
+           L 58,78
+           Z"
+        fill="#38bdf8"/>
+
+  <!-- 6. Radiant White-Hot Crystalline Core (Piercing Apex) -->
+  <path d="M 32,74
+           L 30,54
+           L 38,44
+           L 34,35
+           L 44,28
+           L 46,21
+           L 49,27
+           L 55,25
+           L 57,32
+           L 66,32
+           L 72,38
+           L 62,43
+           L 66,51
+           L 58,58
+           L 61,68
+           L 52,74
+           Z"
+        fill="#ffffff" stroke="#e0f7fa" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- 7. Swirling Energy Shock Arcs (Curving Wind / Pressure Waves) -->
+  <path d="M 22,12 C 36,4 58,4 72,14" 
+        fill="none" stroke="#67e8f9" stroke-width="3.0" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 68,14 C 80,24 88,38 86,52" 
+        fill="none" stroke="#67e8f9" stroke-width="2.8" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 76,58 C 84,68 78,76 70,80" 
+        fill="none" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+  <path d="M 12,28 C 6,42 6,60 14,74" 
+        fill="none" stroke="#22d3ee" stroke-width="2.6" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- 8. Burst Energy Sparks & Flying Crystalline Shards -->
+  <polygon points="82,28 85,25 87,29 84,31" fill="#ffffff"/>
+  <polygon points="86,48 90,45 88,51" fill="#67e8f9"/>
+  <polygon points="54,6 57,3 59,7 56,9" fill="#ffffff"/>
+  <circle cx="74" cy="20" r="1.8" fill="#ffffff"/>
+  <circle cx="85" cy="40" r="2.2" fill="#ffffff"/>
+  <circle cx="78" cy="62" r="1.8" fill="#ffffff"/>
+  <circle cx="48" cy="11" r="2.0" fill="#ffffff"/>
+  <circle cx="36" cy="16" r="1.5" fill="#e0f7fa"/>
 </svg>

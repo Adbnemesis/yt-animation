@@ -1,8 +1,8 @@
 extends Area2D
 class_name NitaProjectile
 
-# Nita Shockwave Rupture Projectile
-# Authentic 2D Paper-Cutout Piercing Energy Shockwave
+# Nita Shockwave Rupture Projectile (Brawl Stars Style)
+# Ground-Piercing Electric Cyan Crystalline Shockwave
 # Configurable, deterministic, detached from character, and idempotent.
 
 const HitDataClass = preload("res://scripts/hit_data.gd")
@@ -27,7 +27,7 @@ var is_active: bool = true
 @onready var trail: Line2D = get_node_or_null("Trail")
 
 var trail_points: Array[Vector2] = []
-const MAX_TRAIL_POINTS := 6
+const MAX_TRAIL_POINTS := 8
 
 func _ready() -> void:
 	add_to_group("projectiles")
@@ -44,6 +44,10 @@ func _ensure_nodes() -> void:
 func initialize(origin_pos: Vector2, aim_dir: Vector2, p_source: Node = null) -> void:
 	global_position = origin_pos
 	direction = aim_dir.normalized() if aim_dir != Vector2.ZERO else Vector2.RIGHT
+	# Ground-piercing shockwave travels horizontally along the ground plane
+	if abs(direction.y) < 0.2:
+		direction.y = 0.0
+		direction = direction.normalized()
 	source = p_source
 	distance_traveled = 0.0
 	lifetime = 0.0
@@ -51,8 +55,10 @@ func initialize(origin_pos: Vector2, aim_dir: Vector2, p_source: Node = null) ->
 
 	_ensure_nodes()
 	if visual:
-		visual.rotation = direction.angle()
-		visual.scale = Vector2.ONE
+		# Keep ground-piercing shockwave upright (do not invert upside-down)
+		visual.rotation = 0.0
+		var h_dir = -1.0 if direction.x < 0 else 1.0
+		visual.scale = Vector2(h_dir, 1.0)
 
 	trail_points.clear()
 	if trail:
@@ -67,12 +73,13 @@ func _physics_process(delta: float) -> void:
 	distance_traveled += step
 	lifetime += delta
 
-	# Subtle energetic shockwave pulse vibration
+	# Energetic shockwave pulse vibration while piercing ground
 	if visual:
-		var pulse = 1.0 + sin(lifetime * 24.0) * 0.04
-		visual.scale = Vector2(pulse, pulse)
+		var pulse = 1.0 + sin(lifetime * 26.0) * 0.04
+		var h_dir = -1.0 if direction.x < 0 else 1.0
+		visual.scale = Vector2(h_dir * pulse, pulse)
 
-	# Update trailing ribbon
+	# Update trailing ground fissure ribbon
 	if trail:
 		_update_trail()
 
