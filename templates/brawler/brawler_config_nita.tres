@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="BrawlerConfig" format=3]
+
+[ext_resource type="Script" path="res://templates/brawler/brawler_config.gd" id="1_cfg"]
+
+[resource]
+script = ExtResource("1_cfg")
+character_name = "Nita"
+character_id = "brawler_nita"
+walk_speed = 140.0
+run_speed = 260.0
+jump_velocity = -420.0
+gravity = 1200.0
+acceleration = 1600.0
+friction = 1800.0
+max_health = 1200.0
+knockback_resistance = 0.85
+attack_duration = 0.40
+projectiles_per_burst = 1
+burst_interval = 0.0
+spread_angles = Array[float]([0.0])
+projectile_scene = null
+damage_per_projectile = 80.0
+projectile_speed = 500.0
+projectile_range = 400.0
+super_duration = 0.0
+super_type = "bear_summon"
+audio_event_map = {
+"ATTACK_RELEASE": "nita_atk_01",
+"CHARACTER_HIT": "nita_hurt_vo_01",
+"DEATH": "nita_die_vo_01",
+"JUMP": "springboard_jump_01",
+"LAND": "princess_land_01",
+"PROJECTILE_SPAWN": "nita_atk_01",
+"SUPER_END": "nita_bear_end_01",
+"SUPER_START": "nita_bear_summon_01"
+}
+vfx_event_map = {
+"HIT": "HIT_IMPACT",
+"LAND": "DUST_PUFF",
+"PROJECTILE_SPAWN": "SHOCKWAVE_BURST",
+"SUPER_END": "BEAR_DESPAWN",
+"SUPER_START": "BEAR_SUMMON"
+}
