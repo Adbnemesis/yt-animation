@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_hum.wav" id="6_1004a"]
 [ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_jolt.wav" id="7_1ecve"]
 [ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/light_flicker.wav" id="8_oax22"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/elevator/elevator_whoosh.wav" id="9_whoosh"]
 
 [node name="Elevator" type="Node2D" unique_id=354841958]
 script = ExtResource("1_6meus")
@@ -82,6 +83,10 @@ polygon = PackedVector2Array(-6, 4, 6, 4, 6, 16, -6, 16)
 color = Color(0.35, 0.4, 0.5, 1)
 polygon = PackedVector2Array(-6, 24, 6, 24, 6, 36, -6, 36)
 
+[node name="MotionStreaks" type="Node2D" parent="Interior"]
+visible = false
+z_index = 1
+
 [node name="Doors" type="Node2D" parent="." unique_id=1613487226]
 z_index = 10
 
@@ -90,10 +95,10 @@ position = Vector2(-75, 0)
 
 [node name="Visual" type="Polygon2D" parent="Doors/DoorL" unique_id=287710883]
 color = Color(0.28, 0.33, 0.42, 1)
-polygon = PackedVector2Array(-75, -220, 75, -220, 75, 0, -75, 0)
+polygon = PackedVector2Array(-75, -220, 75, -220, 75, 12, -75, 12)
 
 [node name="Trim" type="Line2D" parent="Doors/DoorL" unique_id=404299351]
-points = PackedVector2Array(73, -220, 73, 0)
+points = PackedVector2Array(73, -220, 73, 12)
 width = 2.0
 default_color = Color(0.4, 0.48, 0.6, 0.9)
 
@@ -102,10 +107,10 @@ position = Vector2(75, 0)
 
 [node name="Visual" type="Polygon2D" parent="Doors/DoorR" unique_id=1649306969]
 color = Color(0.28, 0.33, 0.42, 1)
-polygon = PackedVector2Array(-75, -220, 75, -220, 75, 0, -75, 0)
+polygon = PackedVector2Array(-75, -220, 75, -220, 75, 12, -75, 12)
 
 [node name="Trim" type="Line2D" parent="Doors/DoorR" unique_id=1863295778]
-points = PackedVector2Array(-73, -220, -73, 0)
+points = PackedVector2Array(-73, -220, -73, 12)
 width = 2.0
 default_color = Color(0.4, 0.48, 0.6, 0.9)
 
@@ -114,11 +119,15 @@ z_index = 11
 
 [node name="ArchitraveL" type="Polygon2D" parent="Frame" unique_id=678295695]
 color = Color(0.18, 0.22, 0.28, 1)
-polygon = PackedVector2Array(-170, -240, -150, -240, -150, 0, -170, 0)
+polygon = PackedVector2Array(-170, -240, -150, -240, -150, 12, -170, 12)
 
 [node name="ArchitraveR" type="Polygon2D" parent="Frame" unique_id=909143026]
 color = Color(0.18, 0.22, 0.28, 1)
-polygon = PackedVector2Array(150, -240, 170, -240, 170, 0, 150, 0)
+polygon = PackedVector2Array(150, -240, 170, -240, 170, 12, 150, 12)
+
+[node name="Threshold" type="Polygon2D" parent="Frame" unique_id=118942358]
+color = Color(0.15, 0.18, 0.24, 1)
+polygon = PackedVector2Array(-170, 0, 170, 0, 170, 12, -170, 12)
 
 [node name="ArchitraveTop" type="Polygon2D" parent="Frame" unique_id=1476506286]
 color = Color(0.18, 0.22, 0.28, 1)
@@ -166,3 +175,7 @@ stream = ExtResource("7_1ecve")
 
 [node name="Flicker" type="AudioStreamPlayer2D" parent="Audio" unique_id=1911065608]
 stream = ExtResource("8_oax22")
+
+[node name="Whoosh" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("9_whoosh")
+volume_db = -3.0

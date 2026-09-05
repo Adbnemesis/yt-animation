@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24">
+  <!-- Nita Hand Left v2: SMALL brown mitten + thin navy wrist band -->
+  <rect x="8" y="1" width="6" height="4" rx="1.5" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.2"/>
+  <path d="M11,4 C7,4 4,7 4,12 C4,17 7,20 11,20 C15,20 18,17 18,12 C18,10 17,8 14,6 C14,8 13,9 12,9 C11.5,9 11,8.5 11,7 Z"
+        fill="#a5683f" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+</svg>

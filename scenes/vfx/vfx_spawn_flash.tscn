@@ -1,19 +1,23 @@
-[gd_scene format=3]
+[gd_scene load_steps=3 format=3]
 
-[sub_resource type="Gradient" id="Gradient_7igc2"]
-offsets = PackedFloat32Array(0, 0.6, 1)
-colors = PackedColorArray(0.2, 0.85, 1, 1, 0.1, 0.5, 0.9, 0.5, 0, 0.2, 0.6, 0)
+[ext_resource type="Texture2D" path="res://assets/vfx/vfx_flash_star_02.png" id="1_tex"]
 
-[node name="VFXSpawnFlash" type="CPUParticles2D" unique_id=743414630]
+[sub_resource type="Gradient" id="Gradient_spawn"]
+offsets = PackedFloat32Array(0.0, 0.6, 1.0)
+colors = PackedColorArray(0.85, 0.98, 1.0, 1.0, 0.4, 0.85, 1.0, 0.7, 0.1, 0.4, 0.9, 0.0)
+
+[node name="VFXSpawnFlash" type="CPUParticles2D"]
 emitting = false
-amount = 4
-lifetime = 0.2
+amount = 3
+lifetime = 0.22
 one_shot = true
 explosiveness = 1.0
+texture = ExtResource("1_tex")
 spread = 180.0
 gravity = Vector2(0, 0)
-initial_velocity_min = 40.0
-initial_velocity_max = 90.0
-scale_amount_min = 0.1
-scale_amount_max = 0.2
-color_ramp = SubResource("Gradient_7igc2")
+initial_velocity_min = 0.0
+initial_velocity_max = 20.0
+scale_amount_min = 0.14
+scale_amount_max = 0.26
+color_ramp = SubResource("Gradient_spawn")
+

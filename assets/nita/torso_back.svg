@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="60" viewBox="0 0 76 60">
+  <!-- Nita Torso (Back View): Emerald Tribal Tunic with Leather Belt & Hair Strand -->
+  <!-- Base Emerald Tunic Silhouette -->
+  <path d="M14,4 C10,4 8,14 8,28 C8,46 14,54 20,54 L56,54 C62,54 68,46 68,28 C68,14 66,4 62,4 Z"
+        fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Dark Auburn Hair Drape over Upper Back -->
+  <path d="M26,4 C32,16 44,16 50,4 Z" fill="#3a2015" stroke="#1e1e2c" stroke-width="2.4"/>
+
+  <!-- Dark Leather Tribal Belt -->
+  <rect x="14" y="44" width="48" height="10" rx="2" fill="#4a2e1b" stroke="#1e1e2c" stroke-width="3.0"/>
+</svg>

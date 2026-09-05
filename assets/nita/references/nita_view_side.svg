@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <!-- 03. NITA SIDE VIEW — Cutenemi 2D Paper-Cutout Model Sheet -->
+  <rect width="400" height="500" fill="#1b1e24"/>
+  <ellipse cx="200" cy="458" rx="80" ry="15" fill="#101216"/>
+  <text x="200" y="36" fill="#ffd166" font-family="sans-serif" font-size="20" font-weight="bold" text-anchor="middle">NITA — SIDE VIEW</text>
+  <text x="200" y="58" fill="#a0a8b4" font-family="sans-serif" font-size="12" text-anchor="middle">Profile Facing Right • Proportions Locked to Front View</text>
+
+  <g transform="translate(190, 282) scale(1.8)">
+    <!-- Back Hair (large mass behind hood) -->
+    <g transform="translate(-84,-80)">
+      <path d="M6,20 C6,8 16,2 32,2 C48,2 58,8 58,20 C58,32 50,40 44,42 L20,42 C14,40 6,32 6,20 Z"
+            fill="#74403a" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    </g>
+
+    <!-- HOOD PROFILE -->
+    <!-- Far ear hint -->
+    <circle cx="-14" cy="-88" r="12" fill="#e04646" stroke="#1e1e2c" stroke-width="3.5"/>
+    <!-- Near ear with X-stitch -->
+    <circle cx="12" cy="-92" r="15" fill="#e04646" stroke="#1e1e2c" stroke-width="3.5"/>
+    <!-- Hood main silhouette with snout bump -->
+    <path d="M0,-96 C-32,-96 -52,-70 -52,-34 C-52,0 -30,18 0,18 C30,18 50,2 52,-28 C53,-42 48,-56 36,-62 C28,-88 16,-96 0,-96 Z"
+          fill="#e04646" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Bear muzzle nub (profile of the mask patch) -->
+    <ellipse cx="42" cy="-46" rx="12" ry="11" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.0"/>
+    <ellipse cx="50" cy="-48" rx="3.5" ry="2.8" fill="#0e1730"/>
+
+    <!-- FACE (front of profile) -->
+    <ellipse cx="24" cy="-6" rx="19" ry="22" fill="#6e2323" stroke="#1e1e2c" stroke-width="3.2"/>
+    <ellipse cx="26" cy="-4" rx="16" ry="19" fill="#a5683f"/>
+    <!-- Eye + brow + mouth -->
+    <ellipse cx="31" cy="-12" rx="7" ry="8.5" fill="#ffffff" stroke="#1e1e2c" stroke-width="3.0"/>
+    <circle cx="32" cy="-11" r="3.4" fill="#1e1e2c"/>
+    <circle cx="33.4" cy="-12.4" r="1.2" fill="#ffffff"/>
+    <path d="M24,-22 Q30,-25 37,-22" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <path d="M22,2 Q28,6 34,2" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+    <!-- Hair strand at back -->
+    <path d="M-56,-10 C-49,-10 -45,-5 -45,2 C-45,9 -49,14 -54,16 C-52,11 -52,6 -54,1 C-55,-3 -57,-6 -59,-8 C-58,-9 -57,-10 -56,-10 Z"
+          fill="#74403a" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+
+    <!-- TORSO (profile slab) -->
+    <path d="M-14,14 C-18,14 -20,24 -20,34 C-20,48 -14,54 -4,54 L10,54 C18,54 22,46 22,34 C22,22 20,14 14,14 Z"
+          fill="#2eb872" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Neckline hint at front -->
+    <path d="M12,14 Q16,20 20,15" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+
+    <!-- NECKLACE (pendant hangs front) -->
+    <circle cx="18" cy="30" r="8" fill="#6ec6ff" stroke="#1e1e2c" stroke-width="3.0"/>
+    <ellipse cx="18" cy="32.5" rx="3.4" ry="2.6" fill="#ffffff"/>
+    <circle cx="14.5" cy="28" r="1.5" fill="#ffffff"/>
+    <circle cx="21.5" cy="28" r="1.5" fill="#ffffff"/>
+    <!-- LEGS (back leg behind front leg) -->
+    <rect x="-16" y="58" width="16" height="18" rx="2" fill="#7c3a34" stroke="#1e1e2c" stroke-width="3.0"/>
+    <rect x="0" y="58" width="16" height="20" rx="2" fill="#7c3a34" stroke="#1e1e2c" stroke-width="3.0"/>
+    <!-- Feet (both pointing right) -->
+    <path d="M-18,94 L-4,94 C2,94 6,98 6,102 L6,104 L-18,104 C-18,98 -18,94 -18,94 Z" fill="#a5683f" stroke="#1e1e2c" stroke-width="3.0"/>
+    <path d="M-2,96 L12,96 C18,96 22,100 22,104 L22,106 L-2,106 C-2,100 -2,96 -2,96 Z" fill="#a5683f" stroke="#1e1e2c" stroke-width="3.0"/>
+
+    <!-- SKIRT (profile wedge) -->
+    <path d="M-18,50 L20,50 L26,76 L2,84 L-20,72 Z"
+          fill="#6ec9e0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="0" y1="52" x2="6" y2="80" stroke="#1e1e2c" stroke-width="2.2"/>
+
+    <!-- ARM (single visible, hanging slightly forward) -->
+    <g transform="translate(4,22) rotate(10) translate(-17,-4)">
+      <path d="M17,4 C9,4 5,10 5,18 L6,30 C6,34 10,36 17,36 C24,36 28,34 28,30 L29,18 C29,10 25,4 17,4 Z"
+            fill="#e04646" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(9,52) rotate(16) translate(-15,-4)">
+      <path d="M15,4 C8,4 4,9 4,17 L5,29 C5,33 9,35 15,35 C21,35 25,33 25,29 L26,17 C26,9 22,4 15,4 Z"
+            fill="#a5683f" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(17,80) rotate(16) translate(-15,-2)">
+      <rect x="4" y="2" width="22" height="8" rx="3" fill="#1f3160" stroke="#1e1e2c" stroke-width="2.5"/>
+      <path d="M14,11 C8,11 5,15 5,20 C5,25 9,29 15,29 C21,29 25,25 25,20 C25,17 23,14 20,12 C20,14 18,16 16,16 C15,16 14,14 14,11 Z"
+            fill="#a5683f" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

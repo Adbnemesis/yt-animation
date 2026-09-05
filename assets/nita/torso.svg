@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="60" viewBox="0 0 76 60">
+  <!-- Nita Torso: Emerald Tribal Tunic with Cyan Bear Paw Pendant & Leather Belt -->
+  <!-- Base Emerald Tunic Silhouette -->
+  <path d="M14,4 C10,4 8,14 8,28 C8,46 14,54 20,54 L56,54 C62,54 68,46 68,28 C68,14 66,4 62,4 Z"
+        fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Neck Skin Opening -->
+  <path d="M29,4 C33,14 43,14 47,4 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="2.4"/>
+
+  <!-- Bear Hood Shoulder Scarf Drapes (Red with claws) -->
+  <path d="M10,4 C8,12 12,18 20,16 C22,12 18,4 10,4 Z" fill="#d93848" stroke="#1e1e2c" stroke-width="2.6"/>
+  <path d="M66,4 C68,12 64,18 56,16 C54,12 58,4 66,4 Z" fill="#d93848" stroke="#1e1e2c" stroke-width="2.6"/>
+
+  <!-- Cyan Necklace Cord -->
+  <path d="M31,8 C34,22 42,22 45,8" stroke="#00b4d8" stroke-width="2.5" fill="none"/>
+
+  <!-- Chunky Cyan Bear Paw Pendant -->
+  <!-- Toe Pads -->
+  <circle cx="32" cy="19" r="2.5" fill="#48cae4" stroke="#1e1e2c" stroke-width="1.8"/>
+  <circle cx="38" cy="17" r="2.8" fill="#48cae4" stroke="#1e1e2c" stroke-width="1.8"/>
+  <circle cx="44" cy="19" r="2.5" fill="#48cae4" stroke="#1e1e2c" stroke-width="1.8"/>
+  <!-- Main Paw Pad -->
+  <ellipse cx="38" cy="27" rx="8" ry="7" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.5"/>
+  <ellipse cx="38" cy="27" rx="4.5" ry="3.5" fill="#00b4d8"/>
+
+  <!-- Dark Leather Tribal Belt -->
+  <rect x="14" y="44" width="48" height="10" rx="2" fill="#4a2e1b" stroke="#1e1e2c" stroke-width="3.0"/>
+  <!-- Belt Loop -->
+  <rect x="35" y="43" width="6" height="12" rx="1.5" fill="#6a4328" stroke="#1e1e2c" stroke-width="2.0"/>
+</svg>

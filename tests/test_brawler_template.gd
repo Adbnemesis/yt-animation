@@ -38,8 +38,8 @@ func test_brawler_locomotion_states() -> void:
 	var brawler = arena.get_node("Brawler") as BrawlerBase
 	assert_that(brawler).is_not_null()
 
-	# Settle onto floor
-	await runner.simulate_frames(10)
+	# Settle onto floor so landing squash finishes into IDLE
+	await runner.simulate_frames(18)
 
 	# 1. Starts in IDLE
 	var state_idle = BrawlerMovementController.State.IDLE

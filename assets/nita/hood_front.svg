@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="0 0 128 120">
+  <!-- Nita Bear Hood (Front View - Authentic Brawl Stars Paper Cutout Style) -->
+  <!-- Bear Ears (Left & Right) -->
+  <circle cx="26" cy="34" r="16" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="27" cy="35" r="9" fill="#a82332"/>
+  <circle cx="102" cy="34" r="16" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="101" cy="35" r="9" fill="#a82332"/>
+
+  <!-- Main Bear Hood Outer Silhouette -->
+  <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- Center Forehead Seam & Horizontal Stitches -->
+  <line x1="64" y1="8" x2="64" y2="34" stroke="#a82332" stroke-width="2.2"/>
+  <line x1="58" y1="12" x2="70" y2="12" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  <line x1="57" y1="20" x2="71" y2="20" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  <line x1="58" y1="28" x2="70" y2="28" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+
+  <!-- Left Bear Eye (Bold Black 'X' Stitch) -->
+  <line x1="26" y1="24" x2="42" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+  <line x1="42" y1="24" x2="26" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+
+  <!-- Right Bear Eye (Bold Black 'X' Stitch) -->
+  <line x1="86" y1="24" x2="102" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+  <line x1="102" y1="24" x2="86" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+
+  <!-- Bear Muzzle / Snout Pad -->
+  <ellipse cx="64" cy="48" rx="25" ry="15" fill="#eb5e6d" stroke="#1e1e2c" stroke-width="3.2"/>
+
+  <!-- Bear Nose (Dark Charcoal with nostrils) -->
+  <path d="M55,43 C55,38 60,36 64,36 C68,36 73,38 73,43 C73,49 68,52 64,52 C60,52 55,49 55,43 Z"
+        fill="#1e1e2c"/>
+  <circle cx="61" cy="46" r="1.3" fill="#3a3f47"/>
+  <circle cx="67" cy="46" r="1.3" fill="#3a3f47"/>
+
+  <!-- Face Cavity Cutout Hole (Reveals deep maroon recess & face) -->
+  <ellipse cx="64" cy="78" rx="36" ry="30" fill="#6e1f28" stroke="#1e1e2c" stroke-width="3.5"/>
+
+  <!-- Bear Fangs (Pointing down over Nita's brow) -->
+  <path d="M47,56 L54,56 L50.5,66 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M74,56 L81,56 L77.5,66 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+
+  <!-- Left Shoulder Bear Paw (Framing shoulder, leaving center chest open for necklace) -->
+  <path d="M12,82 C6,88 8,98 16,102 C24,106 30,100 30,92 C30,84 20,80 12,82 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+  <polygon points="12,94 7,98 13,99" fill="#1e1e2c"/>
+  <polygon points="17,99 14,104 20,103" fill="#1e1e2c"/>
+  <polygon points="23,101 23,106 27,103" fill="#1e1e2c"/>
+
+  <!-- Right Shoulder Bear Paw (Framing shoulder) -->
+  <path d="M116,82 C122,88 120,98 112,102 C104,106 98,100 98,92 C98,84 108,80 116,82 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+  <polygon points="116,94 121,98 115,99" fill="#1e1e2c"/>
+  <polygon points="111,99 114,104 108,103" fill="#1e1e2c"/>
+  <polygon points="105,101 105,106 101,103" fill="#1e1e2c"/>
+</svg>

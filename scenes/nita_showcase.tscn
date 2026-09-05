@@ -1,0 +1,101 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/nita_showcase.gd" id="1_f0wob"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="2_tngbl"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="3_fh7nr"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="4_phm86"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="5_e6jtw"]
+[ext_resource type="PackedScene" path="res://scenes/nita_back.tscn" id="6_qych2"]
+
+[node name="NitaShowcase" type="Node2D" unique_id=457741429]
+script = ExtResource("1_f0wob")
+
+[node name="Background" type="ColorRect" parent="." unique_id=586334644]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.08, 0.09, 0.12, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1266655191]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "BRAWL STARS — NITA LITTLEFOOT (AUTHENTIC PRODUCTION RIG)"
+
+[node name="Subtitle" type="Label" parent="." unique_id=1923243614]
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 40.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.68, 0.73, 0.82, 1)
+text = "Bear Cowl ('X' Eyes, Snout, Fangs) • War Paint Mask • Bare Chibi Hands • Exact 1:1 Leon Parity"
+
+[node name="GroundLine" type="Line2D" parent="." unique_id=802434552]
+points = PackedVector2Array(40, 520, 1240, 520)
+width = 3.0
+default_color = Color(0.2, 0.22, 0.28, 1)
+
+[node name="LeonReference" type="Node2D" parent="." unique_id=2134583325 instance=ExtResource("2_tngbl")]
+position = Vector2(180, 520)
+
+[node name="LeonLabel" type="Label" parent="." unique_id=530625592]
+offset_left = 110.0
+offset_top = 540.0
+offset_right = 250.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+text = "Leon (Scale Ref)"
+horizontal_alignment = 1
+
+[node name="NitaFrontView" type="Node2D" parent="." unique_id=1563938124 instance=ExtResource("3_fh7nr")]
+position = Vector2(450, 520)
+
+[node name="NitaFrontLabel" type="Label" parent="." unique_id=813601157]
+offset_left = 380.0
+offset_top = 540.0
+offset_right = 520.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Nita (Front View)"
+horizontal_alignment = 1
+
+[node name="NitaSideRig" type="CharacterBody2D" parent="." unique_id=322699583 instance=ExtResource("4_phm86")]
+position = Vector2(740, 520)
+script = ExtResource("5_e6jtw")
+
+[node name="NitaSideLabel" type="Label" parent="." unique_id=313121711]
+offset_left = 670.0
+offset_top = 540.0
+offset_right = 810.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Nita (Side Rig)"
+horizontal_alignment = 1
+
+[node name="NitaBackView" type="Node2D" parent="." unique_id=367198804 instance=ExtResource("6_qych2")]
+position = Vector2(1020, 520)
+
+[node name="NitaBackLabel" type="Label" parent="." unique_id=1745379167]
+offset_left = 950.0
+offset_top = 540.0
+offset_right = 1090.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Nita (Back View)"
+horizontal_alignment = 1
+
+[node name="ExpressionStatus" type="Label" parent="." unique_id=389606741]
+offset_left = 380.0
+offset_top = 575.0
+offset_right = 880.0
+offset_bottom = 605.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.6, 0.9, 0.7, 1)
+text = "Current Expression: GRIN (Signature Smirk)"

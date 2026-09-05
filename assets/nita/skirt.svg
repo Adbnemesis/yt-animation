@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="36" viewBox="0 0 76 36">
+  <!-- Nita Skirt: Asymmetrical Wrap Skirt with Emerald Chevron & Sky-Blue Undertunic -->
+  <!-- Cyan / Sky-Blue Under-Skirt Layer -->
+  <path d="M10,2 L66,2 L71,28 L5,28 Z"
+        fill="#48cae4" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+
+  <!-- Emerald Top Wrap with Tribal Chevron Hem -->
+  <path d="M12,2 L64,2 L60,18 L38,27 L16,18 Z"
+        fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+
+  <!-- Wrap Crease / Seam Line -->
+  <line x1="38" y1="2" x2="38" y2="26" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

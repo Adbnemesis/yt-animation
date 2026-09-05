@@ -1,19 +1,24 @@
-[gd_scene format=3]
+[gd_scene load_steps=3 format=3]
 
-[sub_resource type="Gradient" id="Gradient_ssyjp"]
-offsets = PackedFloat32Array(0, 0.6, 1)
-colors = PackedColorArray(1, 0.9, 0.3, 1, 1, 0.3, 0.1, 0.8, 0.8, 0.1, 0, 0)
+[ext_resource type="Texture2D" path="res://assets/vfx/vfx_flash_star_01.png" id="1_tex"]
 
-[node name="VFXHitImpact" type="CPUParticles2D" unique_id=109487887]
+[sub_resource type="Gradient" id="Gradient_hit"]
+offsets = PackedFloat32Array(0.0, 0.55, 1.0)
+colors = PackedColorArray(1.0, 0.95, 0.55, 1.0, 1.0, 0.68, 0.2, 0.9, 0.9, 0.35, 0.05, 0.0)
+
+[node name="VFXHitImpact" type="CPUParticles2D"]
 emitting = false
-lifetime = 0.28
+amount = 3
+lifetime = 0.26
 one_shot = true
-explosiveness = 0.95
+explosiveness = 1.0
+texture = ExtResource("1_tex")
 spread = 180.0
-gravity = Vector2(0, 100)
-initial_velocity_min = 120.0
-initial_velocity_max = 240.0
-scale_amount_min = 0.08
-scale_amount_max = 0.16
-color = Color(1, 0.85, 0.2, 1)
-color_ramp = SubResource("Gradient_ssyjp")
+gravity = Vector2(0, 0)
+initial_velocity_min = 0.0
+initial_velocity_max = 30.0
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+scale_amount_min = 0.16
+scale_amount_max = 0.3
+color_ramp = SubResource("Gradient_hit")

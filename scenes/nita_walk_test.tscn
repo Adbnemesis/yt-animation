@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/nita_walk_test.gd" id="1_pdmue"]
+[ext_resource type="PackedScene" path="res://scenes/actor_nita.tscn" id="2_bhivq"]
+[ext_resource type="Script" path="res://scenes/actor_nita.gd" id="3_71q36"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/actor_leon.tscn" id="4_3kpl0"]
+[ext_resource type="Script" path="res://scenes/videos/leon_elevator/actor_leon.gd" id="5_t6yb1"]
+
+[node name="NitaWalkTest" type="Node2D" unique_id=569263899]
+script = ExtResource("1_pdmue")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1754039279]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.09, 0.11, 0.15, 1)
+
+[node name="Title" type="Label" parent="." unique_id=139174725]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "NITA & LEON DUAL WALK TEST (LOCOMOTION RIG SYNC)"
+
+[node name="Subtitle" type="Label" parent="." unique_id=273914342]
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 40.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.68, 0.73, 0.82, 1)
+text = "6-Phase Classical Walk Cycle • Skirt Physics & Hip Sway • Matching Stride & Height"
+
+[node name="GroundLine" type="Line2D" parent="." unique_id=1629565284]
+points = PackedVector2Array(0, 520, 1152, 520)
+width = 3.0
+default_color = Color(0.2, 0.55, 0.85, 0.8)
+
+[node name="NitaActor" type="Node2D" parent="." unique_id=1559611991 instance=ExtResource("2_bhivq")]
+position = Vector2(250, 520)
+script = ExtResource("3_71q36")
+
+[node name="LeonActor" type="Node2D" parent="." unique_id=643051974 instance=ExtResource("4_3kpl0")]
+position = Vector2(400, 520)
+script = ExtResource("5_t6yb1")

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Nita Pupil Right v2: Big cut-paper pupil with tiny white glint (mirrored) -->
+  <g transform="matrix(-1,0,0,1,16,0)">
+    <circle cx="8" cy="8" r="5.2" fill="#1e1e2c"/>
+    <circle cx="6.2" cy="6.2" r="1.6" fill="#ffffff"/>
+  </g>
+</svg>

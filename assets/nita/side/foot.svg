@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="22" viewBox="0 0 38 22">
+  <!-- Nita Profile Foot: Bare Caramel Tan Foot with Ground Line -->
+  <g transform="translate(18, 4)">
+    <path d="M-14,0 L12,0 C16,0 18,8 14,14 L-12,14 C-16,14 -16,4 -14,0 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+    <line x1="-12" y1="12.5" x2="14" y2="12.5" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  </g>
+</svg>

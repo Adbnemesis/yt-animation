@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="24" viewBox="0 0 34 24">
+  <!-- Nita Mouth: Fierce Brawler Snarl / Roar with Sharp Fangs -->
+  <path d="M5,12 C10,6 24,6 29,12 C25,21 9,21 5,12 Z" fill="#1e1e2c"/>
+  <!-- Top Fangs -->
+  <polygon points="9,8 14,8 11.5,14" fill="#ffffff"/>
+  <polygon points="20,8 25,8 22.5,14" fill="#ffffff"/>
+  <!-- Bottom Fang -->
+  <polygon points="15,19 19,19 17,14" fill="#ffffff"/>
+</svg>

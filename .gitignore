@@ -14,5 +14,7 @@ export_presets.cfg
 /*.png
 /*.png.import
 
-# Test reports
+# Test reports and scratch
 /reports/
+/scratch/
+e

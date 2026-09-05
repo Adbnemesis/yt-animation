@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="124" viewBox="0 0 116 124">
+  <!-- Nita Side Hood: Profile Crimson Bear Cowl with Ear, 'X' Eye, Snout, Fang & Shoulder Paw -->
+  <g transform="translate(58, 96)">
+    <!-- Main Bear Hood Silhouette -->
+    <path d="M-12,-86 C-42,-86 -52,-62 -52,-28 C-52,4 -36,20 -4,20 C24,20 44,0 44,-28 C44,-62 20,-86 -12,-86 Z"
+          fill="#d93848" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+
+    <!-- Round Bear Ear -->
+    <circle cx="-16" cy="-76" r="14" fill="#d93848" stroke="#1e1e2c" stroke-width="3.2"/>
+    <circle cx="-15" cy="-75" r="7.5" fill="#a82332"/>
+
+    <!-- Back Seam Stitches -->
+    <line x1="-50" y1="-50" x2="-44" y2="-50" stroke="#1e1e2c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-51" y1="-34" x2="-45" y2="-34" stroke="#1e1e2c" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="-50" y1="-18" x2="-44" y2="-18" stroke="#1e1e2c" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Profile Bear Snout & Nose (Front Right) -->
+    <path d="M22,-52 C34,-52 46,-44 46,-36 C46,-28 36,-24 22,-24 Z"
+          fill="#eb5e6d" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+    <ellipse cx="40" cy="-38" rx="5" ry="4" fill="#1e1e2c"/>
+
+    <!-- White Bear Fang Hanging Down -->
+    <polygon points="26,-24 33,-24 29,-14" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+
+    <!-- Bear Eye 'X' Stitch (Profile) -->
+    <line x1="8" y1="-54" x2="20" y2="-42" stroke="#1e1e2c" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="20" y1="-54" x2="8" y2="-42" stroke="#1e1e2c" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Bear Paw Shoulder Scarf Drape (Lower Front) -->
+    <path d="M4,-4 C16,-4 26,4 26,14 C26,20 18,22 10,20 C4,18 2,10 4,-4 Z"
+          fill="#d93848" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+    <!-- Claws -->
+    <polygon points="24,14 28,18 22,19" fill="#1e1e2c"/>
+    <polygon points="18,19 20,24 15,23" fill="#1e1e2c"/>
+
+    <!-- Face Cavity Cutout Notch -->
+    <path d="M6,-46 C16,-46 26,-36 26,-16 L12,-10 Z"
+          fill="#6e1f28" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+  </g>
+</svg>

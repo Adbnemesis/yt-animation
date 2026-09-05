@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/actor_nita.gd" id="1_6y7qy"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_boabv"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_xsiyl"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="4_gypdw"]
+[ext_resource type="PackedScene" path="res://scenes/nita_back.tscn" id="5_mvmdj"]
+
+[node name="ActorNita" type="Node2D" unique_id=1559611991]
+script = ExtResource("1_6y7qy")
+
+[node name="SideView" type="CharacterBody2D" parent="." unique_id=322699583 instance=ExtResource("2_boabv")]
+script = ExtResource("3_xsiyl")
+
+[node name="FrontView" type="Node2D" parent="." unique_id=1563938124 instance=ExtResource("4_gypdw")]
+visible = false
+
+[node name="BackView" type="Node2D" parent="." unique_id=367198804 instance=ExtResource("5_mvmdj")]
+visible = false

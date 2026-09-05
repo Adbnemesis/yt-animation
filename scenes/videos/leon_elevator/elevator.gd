@@ -23,6 +23,8 @@ signal button_pressed(button_id: int)
 @onready var sfx_hum: AudioStreamPlayer2D = get_node_or_null("Audio/Hum")
 @onready var sfx_jolt: AudioStreamPlayer2D = get_node_or_null("Audio/Jolt")
 @onready var sfx_flicker: AudioStreamPlayer2D = get_node_or_null("Audio/Flicker")
+@onready var sfx_whoosh: AudioStreamPlayer2D = get_node_or_null("Audio/Whoosh")
+@onready var motion_streaks: Node2D = get_node_or_null("Interior/MotionStreaks")
 
 const DOOR_CLOSED_L := -75.0
 const DOOR_OPEN_L := -205.0
@@ -31,12 +33,52 @@ const DOOR_OPEN_R := 205.0
 
 var are_doors_open: bool = false
 var illuminated_buttons: Array[int] = []
+var is_moving: bool = false
+var streak_lines: Array = []
 
 func _ready() -> void:
 	if display_label:
 		display_label.text = "1"
 	if ceiling_light:
 		ceiling_light.color = Color.WHITE
+
+	# Initialize motion streaks for high-speed travel VFX
+	if motion_streaks:
+		motion_streaks.visible = false
+		for i in range(14):
+			var line = Line2D.new()
+			line.width = randf_range(1.5, 2.5)
+			line.default_color = Color(0.85, 0.95, 1.0, randf_range(0.20, 0.45))
+			var x_pos = randf_range(-140.0, 140.0)
+			var y_pos = randf_range(-220.0, 0.0)
+			var len_val = randf_range(35.0, 75.0)
+			line.points = PackedVector2Array([Vector2(x_pos, y_pos), Vector2(x_pos, y_pos + len_val)])
+			motion_streaks.add_child(line)
+			streak_lines.append({
+				"node": line,
+				"x": x_pos,
+				"y": y_pos,
+				"len": len_val,
+				"speed": randf_range(650.0, 950.0)
+			})
+
+var mechanical_travel_time: float = 0.0
+
+func _process(delta: float) -> void:
+	if is_moving:
+		mechanical_travel_time += delta
+		# Subtle mechanical travel vibration on cabin interior
+		if cabin_interior:
+			cabin_interior.position.y = sin(mechanical_travel_time * 35.0) * 0.75
+
+		# Rapid downward rush of vertical speed lines
+		for streak in streak_lines:
+			streak.y += streak.speed * delta
+			if streak.y > 0.0:
+				streak.y = -220.0 - randf_range(10.0, 40.0)
+				streak.x = randf_range(-140.0, 140.0)
+			var line: Line2D = streak.node
+			line.points = PackedVector2Array([Vector2(streak.x, streak.y), Vector2(streak.x, streak.y + streak.len)])
 
 func set_doors_visible(is_vis: bool) -> void:
 	var doors_node = get_node_or_null("Doors")
@@ -117,6 +159,11 @@ func set_lights(enabled: bool, flicker_first: bool = false) -> void:
 			ceiling_light.color = Color.WHITE if enabled else Color(0.02, 0.02, 0.03)
 
 func jolt() -> void:
+	is_moving = false
+	if motion_streaks:
+		motion_streaks.visible = false
+	if sfx_whoosh and sfx_whoosh.playing:
+		sfx_whoosh.stop()
 	if sfx_jolt:
 		sfx_jolt.play()
 	if cabin_interior:
@@ -126,9 +173,21 @@ func jolt() -> void:
 		tw.tween_property(cabin_interior, "position:y", 0.0, 0.12)
 
 func start_hum() -> void:
+	is_moving = true
+	if motion_streaks:
+		motion_streaks.visible = true
 	if sfx_hum and not sfx_hum.playing:
 		sfx_hum.play()
+	if sfx_whoosh and not sfx_whoosh.playing:
+		sfx_whoosh.play()
 
 func stop_hum() -> void:
+	is_moving = false
+	if motion_streaks:
+		motion_streaks.visible = false
+	if cabin_interior:
+		cabin_interior.position.y = 0.0
 	if sfx_hum and sfx_hum.playing:
 		sfx_hum.stop()
+	if sfx_whoosh and sfx_whoosh.playing:
+		sfx_whoosh.stop()

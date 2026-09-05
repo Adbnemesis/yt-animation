@@ -1,0 +1,119 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/nita/body/foot_L.svg" id="1_s824y"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/foot_R.svg" id="2_bd65k"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/leg_L.svg" id="3_lw05k"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/leg_R.svg" id="4_kvdos"]
+[ext_resource type="Texture2D" path="res://assets/nita/skirt.svg" id="5_fbtsp"]
+[ext_resource type="Texture2D" path="res://assets/nita/torso.svg" id="6_5m86n"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/arm_L.svg" id="7_30y4l"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/hand_L.svg" id="8_hmfau"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/arm_R.svg" id="9_yhwrm"]
+[ext_resource type="Texture2D" path="res://assets/nita/body/hand_R.svg" id="10_m42fl"]
+[ext_resource type="Texture2D" path="res://assets/nita/hood_front.svg" id="11_xst4d"]
+[ext_resource type="Script" path="res://scripts/face_controller_nita.gd" id="12_37uf5"]
+[ext_resource type="Texture2D" path="res://assets/nita/face_base.svg" id="13_7yrte"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/eye_L.svg" id="14_kkmkn"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/pupil_L.svg" id="15_t5rpe"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/eye_R.svg" id="16_y78s8"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/pupil_R.svg" id="17_k3lde"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/eyebrow_L.svg" id="18_flukl"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/eyebrow_R.svg" id="19_ajqi8"]
+[ext_resource type="Texture2D" path="res://assets/nita/face/mouth_grin.svg" id="20_312ax"]
+
+[node name="NitaFront" type="Node2D" unique_id=1563938124]
+
+[node name="Feet" type="Node2D" parent="." unique_id=958702894]
+
+[node name="FootL" type="Sprite2D" parent="Feet" unique_id=1072071167]
+position = Vector2(-14, -10)
+texture = ExtResource("1_s824y")
+
+[node name="FootR" type="Sprite2D" parent="Feet" unique_id=394661008]
+position = Vector2(14, -10)
+texture = ExtResource("2_bd65k")
+
+[node name="Legs" type="Node2D" parent="." unique_id=1128244105]
+
+[node name="LegL" type="Sprite2D" parent="Legs" unique_id=915213982]
+position = Vector2(-14, -30)
+texture = ExtResource("3_lw05k")
+
+[node name="LegR" type="Sprite2D" parent="Legs" unique_id=1185480432]
+position = Vector2(14, -30)
+texture = ExtResource("4_kvdos")
+
+[node name="Skirt" type="Sprite2D" parent="." unique_id=1058414546]
+z_index = 1
+position = Vector2(0, -42)
+texture = ExtResource("5_fbtsp")
+
+[node name="Torso" type="Sprite2D" parent="." unique_id=1529046679]
+z_index = 2
+position = Vector2(0, -68)
+texture = ExtResource("6_5m86n")
+
+[node name="ArmL" type="Node2D" parent="." unique_id=23419256]
+z_index = 2
+position = Vector2(-28, -72)
+
+[node name="Arm" type="Sprite2D" parent="ArmL" unique_id=1400589749]
+position = Vector2(0, 16)
+texture = ExtResource("7_30y4l")
+
+[node name="Hand" type="Sprite2D" parent="ArmL" unique_id=2065644159]
+position = Vector2(0, 36)
+texture = ExtResource("8_hmfau")
+
+[node name="ArmR" type="Node2D" parent="." unique_id=618182832]
+z_index = 3
+position = Vector2(28, -72)
+
+[node name="Arm" type="Sprite2D" parent="ArmR" unique_id=298019953]
+position = Vector2(0, 16)
+texture = ExtResource("9_yhwrm")
+
+[node name="Hand" type="Sprite2D" parent="ArmR" unique_id=177611977]
+position = Vector2(0, 36)
+texture = ExtResource("10_m42fl")
+
+[node name="Head" type="Node2D" parent="." unique_id=1989129779]
+z_index = 3
+position = Vector2(0, -114)
+
+[node name="Hood" type="Sprite2D" parent="Head" unique_id=1765695181]
+texture = ExtResource("11_xst4d")
+
+[node name="Face" type="Node2D" parent="Head" unique_id=1894618879]
+position = Vector2(0, 14)
+script = ExtResource("12_37uf5")
+
+[node name="FaceBase" type="Sprite2D" parent="Head/Face" unique_id=498191451]
+texture = ExtResource("13_7yrte")
+
+[node name="EyeL" type="Sprite2D" parent="Head/Face" unique_id=1231972242]
+position = Vector2(-14, -4)
+texture = ExtResource("14_kkmkn")
+
+[node name="PupilL" type="Sprite2D" parent="Head/Face/EyeL" unique_id=2006307819]
+texture = ExtResource("15_t5rpe")
+
+[node name="EyeR" type="Sprite2D" parent="Head/Face" unique_id=1815775702]
+position = Vector2(14, -4)
+texture = ExtResource("16_y78s8")
+
+[node name="PupilR" type="Sprite2D" parent="Head/Face/EyeR" unique_id=725120967]
+texture = ExtResource("17_k3lde")
+
+[node name="BrowL" type="Sprite2D" parent="Head/Face" unique_id=622601804]
+position = Vector2(-14, -14)
+texture = ExtResource("18_flukl")
+
+[node name="BrowR" type="Sprite2D" parent="Head/Face" unique_id=1291624825]
+position = Vector2(14, -14)
+texture = ExtResource("19_ajqi8")
+
+[node name="Mouth" type="Sprite2D" parent="Head/Face" unique_id=2117368964]
+z_index = 2
+position = Vector2(0, 14)
+texture = ExtResource("20_312ax")

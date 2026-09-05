@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scenes/videos/leon_elevator/actor_leon.gd" id="7_na5r7"]
 [ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/phone_notification.tscn" id="8_2o3cb"]
 [ext_resource type="Script" path="res://scenes/videos/leon_elevator/phone_notification.gd" id="9_0uovh"]
+[ext_resource type="AudioStream" path="res://assets/audio/bgm/the_complex.mp3" id="10_complex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0pg2"]
 size = Vector2(2400, 80)
@@ -45,12 +46,12 @@ script = ExtResource("5_3aavu")
 [node name="Characters" type="Node2D" parent="." unique_id=382752125]
 
 [node name="Leon1" type="Node2D" parent="Characters" unique_id=1732383906 instance=ExtResource("6_gtp70")]
-position = Vector2(-280, 520)
+position = Vector2(-280, 540)
 script = ExtResource("7_na5r7")
 
 [node name="Leon2" type="Node2D" parent="Characters" unique_id=1659765305 instance=ExtResource("6_gtp70")]
 visible = false
-position = Vector2(800, 520)
+position = Vector2(800, 518)
 script = ExtResource("7_na5r7")
 
 [node name="UI" type="Node2D" parent="." unique_id=592879883]
@@ -76,3 +77,7 @@ color = Color(0, 0, 0, 1)
 [node name="VoicePlayer" type="AudioStreamPlayer" parent="Audio" unique_id=163381334]
 
 [node name="DoorCreak" type="AudioStreamPlayer" parent="Audio" unique_id=1086891044]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=2081947265]
+stream = ExtResource("10_complex")
+volume_db = -14.0

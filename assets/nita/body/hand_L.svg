@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Nita Hand Left: Compact Chibi Caramel Cartoon Hand (Matching Leon's Scale) -->
+  <path d="M12,3 C6,3 3,7 3,13 C3,19 7,22 12,22 C17,22 21,19 21,13 C21,10 19,7 16,5 C16,7 14,9 12,9 C10.5,9 10.5,6 12,3 Z"
+        fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+  <line x1="8" y1="14" x2="16" y2="14" stroke="#874724" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

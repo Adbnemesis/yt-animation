@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Nita Profile Hand: Compact Caramel Cartoon Hand (Matching Leon's Scale) -->
+  <g transform="translate(12, 10)">
+    <circle cx="0" cy="0" r="7.5" fill="#b87349" stroke="#1e1e2c" stroke-width="2.6"/>
+    <!-- Small Thumb Nub -->
+    <path d="M4,-4 C6,-2 6,2 4,3" stroke="#1e1e2c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

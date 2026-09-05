@@ -9,11 +9,12 @@
 #   --scene <path>         Godot scene to render (default: res://scenes/walk_test.tscn)
 #   --duration <seconds>   Render duration in seconds (default: 5.0)
 #   --fps <number>         Fixed render framerate (default: 60)
+#   --4k                   Render at native 4K UHD (3840x2160) with vector crispness
 #   --output-dir <path>    Directory for rendered videos (default: renders)
 #   --output-name <name>   Base name for output video (default derived from scene + timestamp)
 #   --godot-bin <path>     Path to Godot executable (default: $GODOT_BIN or auto-detect)
 #   --format <avi|png>     Intermediate format (default: avi)
-#   --crf <number>         H.264 CRF quality, 0-51 (default: 18)
+#   --crf <number>         H.264 CRF quality, 0-51 (default: 18, or 16 for 4K)
 #   --extra-args <args>    Extra scene arguments passed to Godot
 #   --keep-intermediate    Do not delete intermediate render file
 #   --help                 Show this help message
@@ -25,13 +26,15 @@ set -euo pipefail
 SCENE="res://scenes/walk_test.tscn"
 DURATION="5.0"
 FPS="60"
+IS_4K=false
 OUTPUT_DIR="renders"
 OUTPUT_NAME=""
 GODOT_BIN="${GODOT_BIN:-}"
 FORMAT="avi"
-CRF="18"
+CRF=""
 EXTRA_ARGS=""
 KEEP_INTERMEDIATE=false
+CLEANUP_OVERRIDE=false
 
 # Auto-detect Godot Binary if not set
 if [ -z "$GODOT_BIN" ]; then
@@ -60,6 +63,10 @@ while [[ $# -gt 0 ]]; do
         --fps)
             FPS="$2"
             shift 2
+            ;;
+        --4k)
+            IS_4K=true
+            shift
             ;;
         --output-dir)
             OUTPUT_DIR="$2"
@@ -104,6 +111,15 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# Default CRF if not explicitly specified
+if [ -z "$CRF" ]; then
+    if [ "$IS_4K" = true ]; then
+        CRF="16"
+    else
+        CRF="18"
+    fi
+fi
+
 # Assign positional arguments if provided
 if [ ${#POSITIONAL_ARGS[@]} -ge 1 ]; then
     SCENE="${POSITIONAL_ARGS[0]}"
@@ -115,6 +131,13 @@ if [ ${#POSITIONAL_ARGS[@]} -ge 3 ]; then
     OUTPUT_NAME="${POSITIONAL_ARGS[2]}"
 fi
 
+# Cleanup handler for temporary files
+cleanup() {
+    if [ "$CLEANUP_OVERRIDE" = true ]; then
+        rm -f override.cfg
+    fi
+}
+trap cleanup EXIT INT TERM
 
 # Ensure FFmpeg is available
 if ! command -v ffmpeg &> /dev/null; then
@@ -141,6 +164,7 @@ echo "=================================================================="
 echo "  Source Scene:      $SCENE"
 echo "  Duration:          ${DURATION}s"
 echo "  Target Framerate:  ${FPS} FPS"
+echo "  Resolution:        $([ "$IS_4K" = true ] && echo "3840x2160 (4K UHD)" || echo "1152x648 (Default)")"
 echo "  Intermediate File: $INTERMEDIATE_FILE"
 echo "  Final MP4 Output:  $FINAL_MP4"
 echo "  Godot Binary:      $GODOT_BIN"
@@ -149,6 +173,21 @@ echo "=================================================================="
 # 1. Run Godot Movie Maker Mode
 echo -e "\n[STEP 1/2] Capturing frames via Godot Movie Maker Mode..."
 START_TIME=$(date +%s)
+
+# If 4K requested, generate temporary project override.cfg
+if [ "$IS_4K" = true ]; then
+    echo "  [INFO] Generating temporary 4K (3840x2160) display override..."
+    cat << 'EOF' > override.cfg
+[display]
+window/size/viewport_width=1152
+window/size/viewport_height=648
+window/size/window_width_override=3840
+window/size/window_height_override=2160
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
+EOF
+    CLEANUP_OVERRIDE=true
+fi
 
 # Prepare scene arguments
 CMD_ARGS=(
@@ -167,6 +206,11 @@ if [ -n "$EXTRA_ARGS" ]; then
 fi
 
 "$GODOT_BIN" "${CMD_ARGS[@]}"
+
+if [ "$CLEANUP_OVERRIDE" = true ]; then
+    rm -f override.cfg
+    CLEANUP_OVERRIDE=false
+fi
 
 if [ ! -f "$INTERMEDIATE_FILE" ]; then
     echo "[ERROR] Godot Movie Maker failed to generate intermediate file: $INTERMEDIATE_FILE" >&2
@@ -215,7 +259,7 @@ echo "  Output MP4:        $FINAL_MP4"
 echo "  File Size:         $FINAL_SIZE"
 echo "  Render Duration:   ${DURATION}s"
 echo "  Wall Clock Time:   ${TOTAL_ELAPSED}s"
-echo "  Video Specs:       H.264 / 60 FPS / YUV420p / CRF $CRF"
+echo "  Video Specs:       H.264 / $([ "$IS_4K" = true ] && echo "3840x2160 (4K)" || echo "1152x648") / 60 FPS / YUV420p / CRF $CRF"
 echo "  Audio Specs:       AAC Stereo / 48 kHz / 192 kbps"
 echo "  Web Optimization:  +faststart (moov atom at front)"
 echo "=================================================================="

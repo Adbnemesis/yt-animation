@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="54" viewBox="0 0 56 54">
+  <!-- Nita Side Face: Caramel Profile with Dark Chocolate Eye Mask & Fierce Eye -->
+  <g transform="translate(18, 36)">
+    <!-- Base Caramel Cheek -->
+    <ellipse cx="6" cy="-2" rx="14" ry="16" fill="#b87349" stroke="#1e1e2c" stroke-width="2.5"/>
+
+    <!-- Dark Auburn Hair Bangs -->
+    <path d="M-4,-22 C6,-24 16,-20 18,-12 C14,-14 6,-14 0,-10 Z" fill="#3a2015" stroke="#1e1e2c" stroke-width="2.0"/>
+
+    <!-- Dark Chocolate Eye War Paint Mask Band -->
+    <path d="M-6,-14 C2,-17 14,-15 18,-6 C14,-4 2,-4 -6,-8 Z" fill="#4a2818"/>
+
+    <!-- Fierce Angled Profile Eye -->
+    <path d="M0,-11 C4,-14 10,-13 14,-9 C11,-6 4,-6 0,-11 Z"
+          fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+    <ellipse cx="7" cy="-10" rx="2.5" ry="3.0" fill="#1e1e2c"/>
+
+    <!-- Sharp Eyebrow -->
+    <path d="M0,-16 C5,-18 11,-16 15,-13" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+
+    <!-- Cheeky Sassy Smirk with Tooth -->
+    <path d="M2,3 Q8,8 14,2" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <polygon points="6,4 10,4 8,8" fill="#ffffff"/>
+  </g>
+</svg>
