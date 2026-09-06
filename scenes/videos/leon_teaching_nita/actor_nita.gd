@@ -118,7 +118,25 @@ func set_expression(expr: String, eyes: String = "open") -> void:
 			if face.has_method("set_eye_state"):
 				face.set_eye_state(eyes)
 
+func reset_pose() -> void:
+	scale = Vector2.ONE
+	if side_view:
+		var head = side_view.find_child("head", true, false)
+		var torso = side_view.find_child("torso", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_r_low = side_view.find_child("arm_R_lower", true, false)
+		var arm_l = side_view.find_child("arm_L_upper", true, false)
+		if head: head.rotation = 0.0
+		if torso: torso.rotation = 0.0
+		if arm_r: arm_r.rotation = 0.0
+		if arm_r_low: arm_r_low.rotation = 0.0
+		if arm_l: arm_l.rotation = 0.0
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim and not anim.is_playing():
+			anim.play("idle")
+
 func trigger_attack() -> void:
+	reset_pose()
 	set_view(ViewMode.SIDE)
 	if not side_view:
 		attack_finished.emit()
@@ -140,31 +158,121 @@ func _on_side_view_attack_ended() -> void:
 			anim.play("idle")
 	attack_finished.emit()
 
+# --- ACTING BEATS ---
+
+func eager_hop() -> void:
+	# Eager student bouncing asking to be taught
+	set_expression("grin", "wide")
+	var orig_y = position.y
+	var tw = create_tween()
+	tw.tween_property(self, "position:y", orig_y - 20.0, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y, 0.10).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	tw.tween_property(self, "position:y", orig_y - 15.0, 0.10).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y, 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	await tw.finished
+
+func imitation_pose() -> void:
+	# Clumsily attempting to copy Leon's windup posture
+	set_expression("grin", "wide")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var head = side_view.find_child("head", true, false)
+		var torso = side_view.find_child("torso", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_l = side_view.find_child("arm_L_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if arm_r: tw.tween_property(arm_r, "rotation", 0.65, 0.3)
+		if arm_l: tw.tween_property(arm_l, "rotation", -0.4, 0.3)
+		if torso: tw.tween_property(torso, "rotation", -0.15, 0.3)
+		# Look sideways at Leon to see if posture looks right
+		if head: tw.tween_property(head, "rotation", 0.20, 0.3)
+
+func clumsy_fumble_attack() -> void:
+	# Over-enthusiastic swing, losing balance forward in facing direction and firing wild
+	set_expression("shocked", "wide")
+	var orig_pos = position
+	var dir = float(facing_direction)
+	var tw = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:x", orig_pos.x + dir * 20.0, 0.18)
+	tw.parallel().tween_property(self, "scale", Vector2(1.15, 0.85), 0.18)
+	trigger_attack()
+	await attack_finished
+	# Stumble settle
+	var tw_settle = create_tween()
+	tw_settle.tween_property(self, "position:x", orig_pos.x + dir * 10.0, 0.25)
+	tw_settle.parallel().tween_property(self, "scale", Vector2.ONE, 0.25)
+	await tw_settle.finished
+
+func embarrassed_shrink() -> void:
+	# Head droops, shoulders slump in shame ("I didn't get it...")
+	set_expression("hurt", "blink")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var head = side_view.find_child("head", true, false)
+		var torso = side_view.find_child("torso", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if head: tw.tween_property(head, "rotation", 0.38, 0.35)
+		if torso: tw.tween_property(torso, "rotation", 0.15, 0.35)
+		if arm_r: tw.tween_property(arm_r, "rotation", 0.1, 0.35)
+	var tw_scale = create_tween()
+	tw_scale.tween_property(self, "scale", Vector2(0.92, 0.88), 0.35).set_ease(Tween.EASE_OUT)
+
+func learning_stance() -> void:
+	# Plants feet firmly, straightens spine, aligns arm directly to dummy
+	reset_pose()
+	set_expression("grin", "open")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var head = side_view.find_child("head", true, false)
+		var torso = side_view.find_child("torso", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_r_low = side_view.find_child("arm_R_lower", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", 0.05, 0.3)
+		if head: tw.tween_property(head, "rotation", 0.0, 0.3)
+		if arm_r: tw.tween_property(arm_r, "rotation", -0.65, 0.3)
+		if arm_r_low: tw.tween_property(arm_r_low, "rotation", 0.0, 0.3)
+
 func proud_hop() -> void:
 	# Bouncy joyful hops when Leon praises her
+	reset_pose()
 	set_expression("happy", "happy")
 	var orig_y = position.y
 	var tw = create_tween()
-	tw.tween_property(self, "position:y", orig_y - 28.0, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y - 32.0, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	tw.tween_property(self, "position:y", orig_y, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
-	tw.tween_property(self, "position:y", orig_y - 20.0, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y - 24.0, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	tw.tween_property(self, "position:y", orig_y, 0.10).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	await tw.finished
 
-func embarrassed_shrink() -> void:
-	set_expression("hurt", "blink")
-	var orig_scale = scale
-	var tw = create_tween()
-	tw.tween_property(self, "scale", Vector2(0.92, 0.88), 0.2).set_ease(Tween.EASE_OUT)
-	tw.tween_interval(0.6)
-	tw.tween_property(self, "scale", orig_scale, 0.25).set_ease(Tween.EASE_IN)
+func overconfident_swagger() -> void:
+	# Puffed chest, head held high, cocky grin ("Did you see that?! Watch THIS!")
+	reset_pose()
+	set_expression("smug", "wide")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var torso = side_view.find_child("torso", true, false)
+		var head = side_view.find_child("head", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", -0.22, 0.3)
+		if head: tw.tween_property(head, "rotation", -0.18, 0.3)
+		if arm_r: tw.tween_property(arm_r, "rotation", 0.45, 0.3)
+	var tw_bob = create_tween().set_trans(Tween.TRANS_SINE).set_loops(2)
+	tw_bob.tween_property(self, "position:y", position.y - 6.0, 0.15)
+	tw_bob.tween_property(self, "position:y", position.y, 0.15)
 
 func innocent_pose() -> void:
-	# Wide innocent round-eyed look
+	# Wide innocent round-eyed look with head tilt expecting applause
 	set_expression("grin", "open")
 	if front_view:
 		set_view(ViewMode.FRONT)
 		var head = front_view.get_node_or_null("Head")
 		if head:
 			var tw = create_tween()
-			tw.tween_property(head, "rotation", -0.12, 0.3)
+			tw.tween_property(head, "rotation", -0.15, 0.3)
