@@ -79,7 +79,7 @@ width = 2.0
 default_color = Color(0.22, 0.54, 0.16, 1)
 
 [node name="TargetDummy" parent="." instance=ExtResource("3_dummy")]
-position = Vector2(740, 520)
+position = Vector2(760, 520)
 
 [node name="Props" parent="." instance=ExtResource("2_props")]
 position = Vector2(0, 520)

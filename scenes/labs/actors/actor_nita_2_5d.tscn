@@ -1,0 +1,24 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/labs/depth_actor_2_5d.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_side"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="3_front"]
+[ext_resource type="PackedScene" path="res://scenes/nita_back.tscn" id="4_back"]
+
+[node name="NitaActor25" type="Node2D"]
+script = ExtResource("1_actor")
+base_scale = 0.9
+
+[node name="Shadow" type="Polygon2D" parent="."]
+z_index = -1
+color = Color(0, 0, 0, 0.45)
+polygon = PackedVector2Array(24, 0, 20.8, 3.2, 12, 5.6, 0, 6.5, -12, 5.6, -20.8, 3.2, -24, 0, -20.8, -3.2, -12, -5.6, 0, -6.5, 12, -5.6, 20.8, -3.2)
+
+[node name="BodySide" parent="." instance=ExtResource("2_side")]
+visible = false
+
+[node name="BodyFront" parent="." instance=ExtResource("3_front")]
+visible = false
+
+[node name="BodyBack" parent="." instance=ExtResource("4_back")]
+visible = false

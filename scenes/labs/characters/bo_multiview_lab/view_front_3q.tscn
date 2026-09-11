@@ -1,0 +1,178 @@
+[gd_scene format=3]
+
+; BO — FRONT VIEW (LAB ASSET)
+; Composed from the approved Bo production front parts (read-only) using the
+; nita_back.tscn static-pose-rig pattern. Feet at origin (0,0).
+; Bow held in left hand (viewer's left), matching the approved back view.
+
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_foot_L.svg" id="1_fl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_foot_R.svg" id="2_fr"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_leg_L_lower.svg" id="3_lll"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_leg_R_lower.svg" id="4_lrl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_leg_L_upper.svg" id="5_lul"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_leg_R_upper.svg" id="6_lur"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_torso.svg" id="7_torso"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/clothing/bo_sash.svg" id="8_sash"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/equipment/bo_quiver_strap.svg" id="9_strap"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_arm_L_upper.svg" id="10_alu"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_arm_L_lower.svg" id="11_all"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_hand_L.svg" id="12_hl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_arm_R_upper.svg" id="13_aru"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_arm_R_lower.svg" id="14_arl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_hand_R.svg" id="15_hr"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/equipment/bo_bow.svg" id="16_bow"]
+[ext_resource type="Texture2D" path="res://assets/lab/characters/bo/front_3q/bo_eagle_hood_3q.svg" id="17_hood"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_face_base.svg" id="18_face"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_eye_L.svg" id="19_el"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_pupil_L.svg" id="20_pl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_eye_R.svg" id="21_er"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_pupil_R.svg" id="22_pr"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_eyebrow_L.svg" id="23_bl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_eyebrow_R.svg" id="24_br"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/face/bo_mouth_serious.svg" id="25_mouth"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_hair_side_L.svg" id="26_hsl"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/bo/body/bo_hair_side_R.svg" id="27_hsr"]
+
+[node name="BoFront3Q" type="Node2D"]
+
+[node name="Feet" type="Node2D" parent="."]
+
+[node name="FootL" type="Sprite2D" parent="Feet"]
+position = Vector2(-17, -11)
+texture = ExtResource("1_fl")
+
+[node name="FootR" type="Sprite2D" parent="Feet"]
+position = Vector2(17, -11)
+texture = ExtResource("2_fr")
+
+[node name="Legs" type="Node2D" parent="."]
+
+[node name="LegLLower" type="Sprite2D" parent="Legs"]
+position = Vector2(-15, -32)
+texture = ExtResource("3_lll")
+
+[node name="LegRLower" type="Sprite2D" parent="Legs"]
+position = Vector2(15, -32)
+texture = ExtResource("4_lrl")
+
+[node name="LegLUpper" type="Sprite2D" parent="Legs"]
+position = Vector2(-14, -56)
+texture = ExtResource("5_lul")
+
+[node name="LegRUpper" type="Sprite2D" parent="Legs"]
+position = Vector2(14, -56)
+texture = ExtResource("6_lur")
+
+[node name="Torso" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, -98)
+texture = ExtResource("7_torso")
+
+
+[node name="BowArm" type="Node2D" parent="."]
+z_index = 1
+position = Vector2(-27, -112)
+
+[node name="Upper" type="Sprite2D" parent="BowArm"]
+position = Vector2(0, 12)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("10_alu")
+
+[node name="Lower" type="Sprite2D" parent="BowArm"]
+position = Vector2(-4, 34)
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("11_all")
+
+[node name="Hand" type="Sprite2D" parent="BowArm"]
+position = Vector2(-6, 52)
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("12_hl")
+
+[node name="Bow" type="Sprite2D" parent="BowArm"]
+position = Vector2(-14, 26)
+rotation = 0.06
+texture = ExtResource("16_bow")
+
+[node name="ArmR" type="Node2D" parent="."]
+z_index = 3
+position = Vector2(30, -112)
+
+[node name="Upper" type="Sprite2D" parent="ArmR"]
+position = Vector2(0, 12)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("13_aru")
+
+[node name="Lower" type="Sprite2D" parent="ArmR"]
+position = Vector2(0, 34)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("14_arl")
+
+[node name="Hand" type="Sprite2D" parent="ArmR"]
+position = Vector2(0, 52)
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("15_hr")
+
+[node name="Head" type="Node2D" parent="."]
+z_index = 4
+position = Vector2(0, -142)
+
+[node name="Hood" type="Sprite2D" parent="Head"]
+scale = Vector2(0.95, 0.95)
+texture = ExtResource("17_hood")
+
+[node name="HairL" type="Sprite2D" parent="Head"]
+position = Vector2(-52, 44)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("26_hsl")
+
+[node name="HairR" type="Sprite2D" parent="Head"]
+position = Vector2(52, 44)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("27_hsr")
+
+[node name="Face" type="Node2D" parent="Head"]
+position = Vector2(10, 10)
+scale = Vector2(0.9, 0.9)
+
+[node name="FaceBase" type="Sprite2D" parent="Head/Face"]
+texture = ExtResource("18_face")
+
+[node name="EyeL" type="Sprite2D" parent="Head/Face"]
+position = Vector2(-9, -2)
+texture = ExtResource("19_el")
+
+[node name="PupilL" type="Sprite2D" parent="Head/Face/EyeL"]
+texture = ExtResource("20_pl")
+
+[node name="EyeR" type="Sprite2D" parent="Head/Face"]
+position = Vector2(14, -2)
+texture = ExtResource("21_er")
+
+[node name="PupilR" type="Sprite2D" parent="Head/Face/EyeR"]
+texture = ExtResource("22_pr")
+
+[node name="BrowL" type="Sprite2D" parent="Head/Face"]
+position = Vector2(-9, -14)
+texture = ExtResource("23_bl")
+
+[node name="BrowR" type="Sprite2D" parent="Head/Face"]
+position = Vector2(14, -14)
+texture = ExtResource("24_br")
+
+[node name="Mouth" type="Sprite2D" parent="Head/Face"]
+z_index = 2
+position = Vector2(6, 18)
+texture = ExtResource("25_mouth")
+
+[node name="AttackSocket" type="Marker2D" parent="."]
+position = Vector2(-27, -62)
+
+[node name="Sash" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(0, -66)
+texture = ExtResource("8_sash")
+
+[node name="QuiverStrap" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(2, -100)
+texture = ExtResource("9_strap")

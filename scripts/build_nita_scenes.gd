@@ -23,14 +23,14 @@ func build_nita_front() -> void:
 
 	var foot_l = Sprite2D.new()
 	foot_l.name = "FootL"
-	foot_l.texture = load("res://assets/nita/body/foot_L.svg")
+	foot_l.texture = load("res://assets/brawlers/nita/body/foot_L.svg")
 	foot_l.position = Vector2(-14, -10)
 	feet.add_child(foot_l)
 	foot_l.owner = root
 
 	var foot_r = Sprite2D.new()
 	foot_r.name = "FootR"
-	foot_r.texture = load("res://assets/nita/body/foot_R.svg")
+	foot_r.texture = load("res://assets/brawlers/nita/body/foot_R.svg")
 	foot_r.position = Vector2(14, -10)
 	feet.add_child(foot_r)
 	foot_r.owner = root
@@ -43,14 +43,14 @@ func build_nita_front() -> void:
 
 	var leg_l = Sprite2D.new()
 	leg_l.name = "LegL"
-	leg_l.texture = load("res://assets/nita/body/leg_L.svg")
+	leg_l.texture = load("res://assets/brawlers/nita/body/leg_L.svg")
 	leg_l.position = Vector2(-14, -30)
 	legs.add_child(leg_l)
 	leg_l.owner = root
 
 	var leg_r = Sprite2D.new()
 	leg_r.name = "LegR"
-	leg_r.texture = load("res://assets/nita/body/leg_R.svg")
+	leg_r.texture = load("res://assets/brawlers/nita/body/leg_R.svg")
 	leg_r.position = Vector2(14, -30)
 	legs.add_child(leg_r)
 	leg_r.owner = root
@@ -58,7 +58,7 @@ func build_nita_front() -> void:
 	# 3. Skirt (z_index = 1)
 	var skirt = Sprite2D.new()
 	skirt.name = "Skirt"
-	skirt.texture = load("res://assets/nita/skirt.svg")
+	skirt.texture = load("res://assets/brawlers/nita/skirt.svg")
 	skirt.position = Vector2(0, -42)
 	skirt.z_index = 1
 	root.add_child(skirt)
@@ -67,7 +67,7 @@ func build_nita_front() -> void:
 	# 4. Torso (z_index = 2)
 	var torso = Sprite2D.new()
 	torso.name = "Torso"
-	torso.texture = load("res://assets/nita/torso.svg")
+	torso.texture = load("res://assets/brawlers/nita/torso.svg")
 	torso.position = Vector2(0, -68)
 	torso.z_index = 2
 	root.add_child(torso)
@@ -83,14 +83,14 @@ func build_nita_front() -> void:
 
 	var arm_l_spr = Sprite2D.new()
 	arm_l_spr.name = "Arm"
-	arm_l_spr.texture = load("res://assets/nita/body/arm_L.svg")
+	arm_l_spr.texture = load("res://assets/brawlers/nita/body/arm_L.svg")
 	arm_l_spr.position = Vector2(0, 16)
 	arm_l.add_child(arm_l_spr)
 	arm_l_spr.owner = root
 
 	var hand_l_spr = Sprite2D.new()
 	hand_l_spr.name = "Hand"
-	hand_l_spr.texture = load("res://assets/nita/body/hand_L.svg")
+	hand_l_spr.texture = load("res://assets/brawlers/nita/body/hand_L.svg")
 	hand_l_spr.position = Vector2(0, 36)
 	arm_l.add_child(hand_l_spr)
 	hand_l_spr.owner = root
@@ -105,14 +105,14 @@ func build_nita_front() -> void:
 
 	var arm_r_spr = Sprite2D.new()
 	arm_r_spr.name = "Arm"
-	arm_r_spr.texture = load("res://assets/nita/body/arm_R.svg")
+	arm_r_spr.texture = load("res://assets/brawlers/nita/body/arm_R.svg")
 	arm_r_spr.position = Vector2(0, 16)
 	arm_r.add_child(arm_r_spr)
 	arm_r_spr.owner = root
 
 	var hand_r_spr = Sprite2D.new()
 	hand_r_spr.name = "Hand"
-	hand_r_spr.texture = load("res://assets/nita/body/hand_R.svg")
+	hand_r_spr.texture = load("res://assets/brawlers/nita/body/hand_R.svg")
 	hand_r_spr.position = Vector2(0, 36)
 	arm_r.add_child(hand_r_spr)
 	hand_r_spr.owner = root
@@ -127,7 +127,7 @@ func build_nita_front() -> void:
 
 	var hood = Sprite2D.new()
 	hood.name = "Hood"
-	hood.texture = load("res://assets/nita/hood_front.svg")
+	hood.texture = load("res://assets/brawlers/nita/hood_front.svg")
 	head.add_child(hood)
 	hood.owner = root
 
@@ -141,53 +141,53 @@ func build_nita_front() -> void:
 
 	var face_base = Sprite2D.new()
 	face_base.name = "FaceBase"
-	face_base.texture = load("res://assets/nita/face_base.svg")
+	face_base.texture = load("res://assets/brawlers/nita/face_base.svg")
 	face.add_child(face_base)
 	face_base.owner = root
 
 	var eye_l = Sprite2D.new()
 	eye_l.name = "EyeL"
-	eye_l.texture = load("res://assets/nita/face/eye_L.svg")
+	eye_l.texture = load("res://assets/brawlers/nita/face/eye_L.svg")
 	eye_l.position = Vector2(-14, -4)
 	face.add_child(eye_l)
 	eye_l.owner = root
 
 	var pupil_l = Sprite2D.new()
 	pupil_l.name = "PupilL"
-	pupil_l.texture = load("res://assets/nita/face/pupil_L.svg")
+	pupil_l.texture = load("res://assets/brawlers/nita/face/pupil_L.svg")
 	eye_l.add_child(pupil_l)
 	pupil_l.owner = root
 
 	var eye_r = Sprite2D.new()
 	eye_r.name = "EyeR"
-	eye_r.texture = load("res://assets/nita/face/eye_R.svg")
+	eye_r.texture = load("res://assets/brawlers/nita/face/eye_R.svg")
 	eye_r.position = Vector2(14, -4)
 	face.add_child(eye_r)
 	eye_r.owner = root
 
 	var pupil_r = Sprite2D.new()
 	pupil_r.name = "PupilR"
-	pupil_r.texture = load("res://assets/nita/face/pupil_R.svg")
+	pupil_r.texture = load("res://assets/brawlers/nita/face/pupil_R.svg")
 	eye_r.add_child(pupil_r)
 	pupil_r.owner = root
 
 	var brow_l = Sprite2D.new()
 	brow_l.name = "BrowL"
-	brow_l.texture = load("res://assets/nita/face/eyebrow_L.svg")
+	brow_l.texture = load("res://assets/brawlers/nita/face/eyebrow_L.svg")
 	brow_l.position = Vector2(-14, -14)
 	face.add_child(brow_l)
 	brow_l.owner = root
 
 	var brow_r = Sprite2D.new()
 	brow_r.name = "BrowR"
-	brow_r.texture = load("res://assets/nita/face/eyebrow_R.svg")
+	brow_r.texture = load("res://assets/brawlers/nita/face/eyebrow_R.svg")
 	brow_r.position = Vector2(14, -14)
 	face.add_child(brow_r)
 	brow_r.owner = root
 
 	var mouth = Sprite2D.new()
 	mouth.name = "Mouth"
-	mouth.texture = load("res://assets/nita/face/mouth_grin.svg")
+	mouth.texture = load("res://assets/brawlers/nita/face/mouth_grin.svg")
 	mouth.position = Vector2(0, 14)
 	mouth.z_index = 2
 	face.add_child(mouth)
@@ -211,14 +211,14 @@ func build_nita_back() -> void:
 
 	var foot_l = Sprite2D.new()
 	foot_l.name = "FootL"
-	foot_l.texture = load("res://assets/nita/body/foot_L.svg")
+	foot_l.texture = load("res://assets/brawlers/nita/body/foot_L.svg")
 	foot_l.position = Vector2(-14, -10)
 	feet.add_child(foot_l)
 	foot_l.owner = root
 
 	var foot_r = Sprite2D.new()
 	foot_r.name = "FootR"
-	foot_r.texture = load("res://assets/nita/body/foot_R.svg")
+	foot_r.texture = load("res://assets/brawlers/nita/body/foot_R.svg")
 	foot_r.position = Vector2(14, -10)
 	feet.add_child(foot_r)
 	foot_r.owner = root
@@ -231,14 +231,14 @@ func build_nita_back() -> void:
 
 	var leg_l = Sprite2D.new()
 	leg_l.name = "LegL"
-	leg_l.texture = load("res://assets/nita/body/leg_L.svg")
+	leg_l.texture = load("res://assets/brawlers/nita/body/leg_L.svg")
 	leg_l.position = Vector2(-14, -30)
 	legs.add_child(leg_l)
 	leg_l.owner = root
 
 	var leg_r = Sprite2D.new()
 	leg_r.name = "LegR"
-	leg_r.texture = load("res://assets/nita/body/leg_R.svg")
+	leg_r.texture = load("res://assets/brawlers/nita/body/leg_R.svg")
 	leg_r.position = Vector2(14, -30)
 	legs.add_child(leg_r)
 	leg_r.owner = root
@@ -246,7 +246,7 @@ func build_nita_back() -> void:
 	# 3. Skirt
 	var skirt = Sprite2D.new()
 	skirt.name = "Skirt"
-	skirt.texture = load("res://assets/nita/skirt.svg")
+	skirt.texture = load("res://assets/brawlers/nita/skirt.svg")
 	skirt.position = Vector2(0, -42)
 	skirt.z_index = 1
 	root.add_child(skirt)
@@ -255,7 +255,7 @@ func build_nita_back() -> void:
 	# 4. Torso Back
 	var torso = Sprite2D.new()
 	torso.name = "Torso"
-	torso.texture = load("res://assets/nita/torso_back.svg")
+	torso.texture = load("res://assets/brawlers/nita/torso_back.svg")
 	torso.position = Vector2(0, -68)
 	torso.z_index = 2
 	root.add_child(torso)
@@ -264,7 +264,7 @@ func build_nita_back() -> void:
 	# 5. Head Back
 	var head = Sprite2D.new()
 	head.name = "Head"
-	head.texture = load("res://assets/nita/hood_back.svg")
+	head.texture = load("res://assets/brawlers/nita/hood_back.svg")
 	head.position = Vector2(0, -114)
 	head.z_index = 3
 	root.add_child(head)
@@ -280,14 +280,14 @@ func build_nita_back() -> void:
 
 	var arm_l_spr = Sprite2D.new()
 	arm_l_spr.name = "Arm"
-	arm_l_spr.texture = load("res://assets/nita/body/arm_L.svg")
+	arm_l_spr.texture = load("res://assets/brawlers/nita/body/arm_L.svg")
 	arm_l_spr.position = Vector2(0, 16)
 	arm_l.add_child(arm_l_spr)
 	arm_l_spr.owner = root
 
 	var hand_l_spr = Sprite2D.new()
 	hand_l_spr.name = "Hand"
-	hand_l_spr.texture = load("res://assets/nita/body/hand_L.svg")
+	hand_l_spr.texture = load("res://assets/brawlers/nita/body/hand_L.svg")
 	hand_l_spr.position = Vector2(0, 36)
 	arm_l.add_child(hand_l_spr)
 	hand_l_spr.owner = root
@@ -302,14 +302,14 @@ func build_nita_back() -> void:
 
 	var arm_r_spr = Sprite2D.new()
 	arm_r_spr.name = "Arm"
-	arm_r_spr.texture = load("res://assets/nita/body/arm_R.svg")
+	arm_r_spr.texture = load("res://assets/brawlers/nita/body/arm_R.svg")
 	arm_r_spr.position = Vector2(0, 16)
 	arm_r.add_child(arm_r_spr)
 	arm_r_spr.owner = root
 
 	var hand_r_spr = Sprite2D.new()
 	hand_r_spr.name = "Hand"
-	hand_r_spr.texture = load("res://assets/nita/body/hand_R.svg")
+	hand_r_spr.texture = load("res://assets/brawlers/nita/body/hand_R.svg")
 	hand_r_spr.position = Vector2(0, 36)
 	arm_r.add_child(hand_r_spr)
 	hand_r_spr.owner = root
@@ -351,16 +351,16 @@ func build_nita_side() -> void:
 	skel.owner = root
 
 	# Side Profile Textures
-	var tex_hood = load("res://assets/nita/side/hood.svg")
-	var tex_face = load("res://assets/nita/side/face.svg")
-	var tex_torso = load("res://assets/nita/side/torso.svg")
-	var tex_skirt = load("res://assets/nita/side/skirt.svg")
-	var tex_leg_upper = load("res://assets/nita/side/leg_upper.svg")
-	var tex_leg_lower = load("res://assets/nita/side/leg_lower.svg")
-	var tex_foot = load("res://assets/nita/side/foot.svg")
-	var tex_arm_upper = load("res://assets/nita/side/arm_upper.svg")
-	var tex_arm_lower = load("res://assets/nita/side/arm_lower.svg")
-	var tex_hand = load("res://assets/nita/side/hand.svg")
+	var tex_hood = load("res://assets/brawlers/nita/side/hood.svg")
+	var tex_face = load("res://assets/brawlers/nita/side/face.svg")
+	var tex_torso = load("res://assets/brawlers/nita/side/torso.svg")
+	var tex_skirt = load("res://assets/brawlers/nita/side/skirt.svg")
+	var tex_leg_upper = load("res://assets/brawlers/nita/side/leg_upper.svg")
+	var tex_leg_lower = load("res://assets/brawlers/nita/side/leg_lower.svg")
+	var tex_foot = load("res://assets/brawlers/nita/side/foot.svg")
+	var tex_arm_upper = load("res://assets/brawlers/nita/side/arm_upper.svg")
+	var tex_arm_lower = load("res://assets/brawlers/nita/side/arm_lower.svg")
+	var tex_hand = load("res://assets/brawlers/nita/side/hand.svg")
 
 	var create_bone = func(b_name: String, rest_pos: Vector2, parent: Node, is_leaf: bool = false) -> Bone2D:
 		var b = Bone2D.new()

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="120" viewBox="0 0 70 120">
+  <!-- Bo Side Quiver: Mounted on Back with 4 Cyan Arrows, Collar & Eagle Head -->
+  <g transform="translate(30, 52) rotate(-22)">
+    <g transform="translate(0, -18)">
+      <path d="M-8,-16 L-3,-44 L1,-16 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="-3" y1="-44" x2="-3" y2="-16" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M-1,-18 L5,-50 L10,-18 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="5" y1="-50" x2="5" y2="-18" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M7,-16 L13,-42 L17,-16 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="13" y1="-42" x2="13" y2="-16" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M14,-14 L20,-36 L23,-14 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="20" y1="-36" x2="20" y2="-14" stroke="#1e1e2c" stroke-width="1.4"/>
+    </g>
+
+    <rect x="-8" y="-18" width="34" height="15" rx="3" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.2"/>
+    <path d="M8,-15 C5,-15 4,-11 8,-7 C12,-11 11,-15 8,-15 Z" fill="#1f3160"/>
+
+    <g transform="translate(-16, -6)">
+      <path d="M10,0 C0,2 -4,12 2,18 C8,24 16,20 18,14 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+      <path d="M2,18 C-6,24 -12,20 -14,14 C-10,10 -2,8 2,18 Z" fill="#ffb703" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+      <circle cx="6" cy="8" r="1.8" fill="#1e1e2c"/>
+    </g>
+
+    <path d="M-6,-3 L22,-3 L18,52 L-2,52 Z" fill="#252b3e" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="4" y1="-3" x2="2" y2="52" stroke="#181d2a" stroke-width="3.0"/>
+    <path d="M-2,52 L18,52 L16,60 L0,60 Z" fill="#151928" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="132" viewBox="-66 -212 136 132">
+  <!-- BO — BACK VIEW HEAD (LAB ASSET, extracted from approved bo_view_back.svg reference) -->
+  <!-- Attach point: neck base at (0,-84) in body space => this SVG's origin is the full-body
+       feet-origin; draw head group at its natural back-view position so scene composition
+       can shift/rotate the head for the 3/4 view. -->
+  <!-- 8. DARK NAVY HAIR AT BASE OF SKULL (Chunky Rounded Silhouette Resting on Back) -->
+  <g transform="translate(0,-123)">
+    <path d="M-40,-2 C-46,14 -36,28 0,28 C36,28 46,14 40,-2 C32,16 20,22 0,22 C-20,22 -32,16 -40,-2 Z"
+          fill="#1f2438" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M-34,2 C-38,16 -24,24 -16,18 C-8,24 8,24 16,18 C24,24 38,16 34,2"
+          fill="#1f2438" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+  </g>
+  <!-- 9. WHITE EAGLE COWL (Back View with Profile Beak Peeking Left) -->
+  <g transform="translate(0,-155)">
+    <!-- ORANGE FEATHER CREST (Projecting Up & Back from Crown) -->
+    <g transform="translate(14,-38)">
+      <path d="M-2,8 C4,-12 14,-16 22,-6 C20,2 12,4 8,8 C18,10 20,22 12,26 C6,26 0,18 -2,8 Z"
+            fill="#ff7b00" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <path d="M-8,10 C-4,-6 4,-8 10,-2 C8,4 2,6 0,10 C8,12 8,22 2,24 C-2,24 -6,18 -8,10 Z"
+            fill="#ff9500" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+    </g>
+    <!-- Hooked Yellow Eagle Beak Peeking on Left Edge -->
+    <g transform="translate(-40,2)">
+      <path d="M10,-6 C2,-4 -6,6 -12,16 C-16,26 -12,36 -4,42 C-4,32 2,24 8,18 Z"
+            fill="#ffd166" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M-12,16 C-8,26 -4,32 -4,42 C-8,36 -10,28 -12,16 Z" fill="#ffb703"/>
+    </g>
+    <!-- Fierce Eagle Brow Curve Visible on Left Edge -->
+    <path d="M-34,-4 C-40,4 -42,14 -36,22" stroke="#1e1e2c" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <!-- Main White Eagle Cowl Dome -->
+    <path d="M0,-42 C-34,-42 -44,-16 -44,14 C-44,38 -28,46 0,46 C28,46 44,38 44,14 C44,-16 34,-42 0,-42 Z"
+          fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+    <!-- Soft Cool Grey Cel Shadow on Lower Cowl Rim -->
+    <path d="M-38,18 C-28,40 -16,44 0,44 C16,44 28,40 38,18 C30,34 16,38 0,38 C-16,38 -30,34 -38,18 Z"
+          fill="#dce1e6"/>
+    <!-- Rear Center Cowl Seam -->
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#dce1e6" stroke-width="2.6"/>
+  </g>
+</svg>

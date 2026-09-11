@@ -1,0 +1,79 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/thing_they_opened/creature.gd" id="1_creature"]
+[ext_resource type="Texture2D" path="res://assets/architecture/arch_stone_block_large_01.png" id="2_stone"]
+[ext_resource type="Texture2D" path="res://assets/architecture/arch_stone_block_tall_01.png" id="3_stone_tall"]
+[ext_resource type="Texture2D" path="res://assets/architecture/arch_stone_block_wide_01.png" id="4_stone_wide"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hit"]
+size = Vector2(140, 180)
+
+[node name="Creature" type="Node2D"]
+script = ExtResource("1_creature")
+
+[node name="ContactShadow" type="Polygon2D" parent="."]
+position = Vector2(0, -1)
+z_index = -3
+color = Color(0, 0, 0, 0.42)
+polygon = PackedVector2Array(62, 0, 53.6, 7.5, 31, 13, 0, 15, -31, 13, -53.6, 7.5, -62, 0, -53.6, -7.5, -31, -13, 0, -15, 31, -13, 53.6, -7.5)
+
+[node name="Body" type="Node2D" parent="."]
+
+; Main body mass — dark imposing silhouette
+[node name="Torso" type="Sprite2D" parent="Body"]
+position = Vector2(0, -80)
+scale = Vector2(2.2, 2.5)
+modulate = Color(0.15, 0.12, 0.2, 1)
+texture = ExtResource("2_stone")
+
+; Shoulders / width
+[node name="ShoulderL" type="Sprite2D" parent="Body"]
+position = Vector2(-50, -100)
+scale = Vector2(1.2, 1.0)
+modulate = Color(0.18, 0.14, 0.22, 1)
+texture = ExtResource("3_stone_tall")
+
+[node name="ShoulderR" type="Sprite2D" parent="Body"]
+position = Vector2(50, -100)
+scale = Vector2(1.2, 1.0)
+modulate = Color(0.18, 0.14, 0.22, 1)
+texture = ExtResource("3_stone_tall")
+
+; Head region
+[node name="Head" type="Sprite2D" parent="Body"]
+position = Vector2(0, -145)
+scale = Vector2(1.4, 1.2)
+modulate = Color(0.12, 0.10, 0.18, 1)
+texture = ExtResource("4_stone_wide")
+
+; Glowing eyes
+[node name="EyeL" type="ColorRect" parent="Body"]
+visible = false
+offset_left = -22.0
+offset_top = -155.0
+offset_right = -8.0
+offset_bottom = -143.0
+color = Color(1.0, 0.25, 0.1, 1)
+
+[node name="EyeR" type="ColorRect" parent="Body"]
+visible = false
+offset_left = 8.0
+offset_top = -155.0
+offset_right = 22.0
+offset_bottom = -143.0
+color = Color(1.0, 0.25, 0.1, 1)
+
+; Lower body / base
+[node name="Base" type="Sprite2D" parent="Body"]
+position = Vector2(0, -20)
+scale = Vector2(2.0, 1.0)
+modulate = Color(0.14, 0.11, 0.19, 1)
+texture = ExtResource("4_stone_wide")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, -80)
+shape = SubResource("RectangleShape2D_hit")

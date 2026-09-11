@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+; BO — MULTIVIEW LAB ACTOR (LAB)
+
+[ext_resource type="Script" path="res://scripts/labs/cinematic_actor.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/labs/characters/bo_multiview_lab/bo_multiview.tscn" id="2_model"]
+
+[node name="BoMultiviewLab" type="Node2D"]
+script = ExtResource("1_actor")
+display_name = "Bo"
+
+[node name="Shadow" type="Polygon2D" parent="."]
+z_index = -1
+modulate = Color(0, 0, 0, 0.42)
+polygon = PackedVector2Array(-32, 2, 32, 2, 36, 12, -36, 12)
+
+[node name="Model" parent="." instance=ExtResource("2_model")]

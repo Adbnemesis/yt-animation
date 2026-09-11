@@ -189,10 +189,14 @@ EOF
     CLEANUP_OVERRIDE=true
 fi
 
+# Calculate total frame count for Movie Maker
+TOTAL_FRAMES=$(python3 -c "import math; print(int(math.ceil(float('$DURATION') * float('$FPS'))))")
+
 # Prepare scene arguments
 CMD_ARGS=(
     "--write-movie" "$INTERMEDIATE_FILE"
     "--fixed-fps" "$FPS"
+    "--quit-after" "$TOTAL_FRAMES"
     "--always-on-top"
     "--path" "."
     "$SCENE"

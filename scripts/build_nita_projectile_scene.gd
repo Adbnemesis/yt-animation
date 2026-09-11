@@ -46,7 +46,7 @@ func _init() -> void:
 	# Shockwave Sprite (centered at y = -36 so SVG ground line y=80 aligns with local y=0)
 	var sprite = Sprite2D.new()
 	sprite.name = "ShockwaveSprite"
-	var tex = load("res://assets/nita/projectile/shockwave_rupture.svg")
+	var tex = load("res://assets/brawlers/nita/projectile/shockwave_rupture.svg")
 	sprite.texture = tex
 	sprite.position = Vector2(0, -36)
 	visuals.add_child(sprite)

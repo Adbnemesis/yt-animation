@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="74" viewBox="0 0 84 74">
+  <!-- Bo Side Torso: Broad Caramel Chest, Open Emerald Vest, Quiver Harness & Maroon Sash -->
+  <g transform="translate(18, 12)">
+    <!-- Broad Caramel Tan Muscular Chest Profile (52 units deep) -->
+    <path d="M-8,6 C-8,6 16,-2 34,-2 C46,-2 54,10 52,26 C50,40 42,48 30,50 L-8,50 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.6" stroke-linejoin="round"/>
+
+    <!-- Emerald Green Vest (Open front, covering back and shoulder) -->
+    <path d="M-8,4 C-8,4 10,-2 22,-2 C20,12 16,24 8,34 C2,42 -4,46 -8,50 Z"
+          fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <!-- Vest Cel Shadow on Back Curve -->
+    <path d="M-8,4 C-4,16 -6,36 -8,50 L-12,50 L-12,4 Z" fill="#05a87d"/>
+
+    <!-- Pectoral Muscle Definition -->
+    <path d="M12,12 C24,12 34,16 40,26 C36,34 28,36 18,34" stroke="#8f4f2a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M18,34 C16,42 20,48 26,50" stroke="#8f4f2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+    <!-- Leather Quiver Harness Strap (Diagonal across chest) -->
+    <line x1="2" y1="0" x2="38" y2="42" stroke="#4a2e1b" stroke-width="5.2" stroke-linecap="round"/>
+    <line x1="2" y1="0" x2="38" y2="42" stroke="#1e1e2c" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 3"/>
+
+    <!-- Maroon Sash at Waist -->
+    <rect x="-10" y="44" width="46" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+    <line x1="-10" y1="50" x2="36" y2="50" stroke="#1e1e2c" stroke-width="2.0"/>
+  </g>
+</svg>

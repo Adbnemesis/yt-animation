@@ -70,10 +70,10 @@ func test_brawler_locomotion_states() -> void:
 
 	# 5. Jump
 	brawler.jump()
-	await runner.simulate_frames(2)
+	await runner.simulate_frames(4)
 	var state_anticip = BrawlerMovementController.State.JUMP_ANTICIPATION
 	assert_that(brawler.movement_controller.current_state).is_equal(state_anticip)
-	await runner.simulate_frames(10)
+	await runner.simulate_frames(25)
 	var state_air = BrawlerMovementController.State.JUMP_AIRBORNE
 	assert_that(brawler.movement_controller.current_state).is_equal(state_air)
 	assert_that(brawler.velocity.y).is_less(0.0)
@@ -125,7 +125,8 @@ func test_brawler_hit_and_knockback() -> void:
 	var state_kb = BrawlerMovementController.State.KNOCKBACK
 	assert_that(brawler.movement_controller.current_state).is_equal(state_kb)
 
-	await runner.simulate_frames(35)
+	# Recover to idle (knockback duration is 0.40s)
+	await runner.simulate_frames(65)
 	var state_idle = BrawlerMovementController.State.IDLE
 	assert_that(brawler.movement_controller.current_state).is_equal(state_idle)
 

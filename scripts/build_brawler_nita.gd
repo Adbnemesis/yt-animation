@@ -270,47 +270,47 @@ func _add_face_sprites(face_node: Node2D, new_owner: Node) -> void:
 	# Create the sprite nodes that FaceControllerBase._ensure_nodes() looks for
 	var eye_l = Sprite2D.new()
 	eye_l.name = "EyeL"
-	eye_l.texture = load("res://assets/nita/face/eye_L.svg")
+	eye_l.texture = load("res://assets/brawlers/nita/face/eye_L.svg")
 	eye_l.position = Vector2(-6, -4)
 	face_node.add_child(eye_l)
 	eye_l.owner = new_owner
 
 	var pupil_l = Sprite2D.new()
 	pupil_l.name = "PupilL"
-	pupil_l.texture = load("res://assets/nita/face/pupil_L.svg")
+	pupil_l.texture = load("res://assets/brawlers/nita/face/pupil_L.svg")
 	eye_l.add_child(pupil_l)
 	pupil_l.owner = new_owner
 
 	var eye_r = Sprite2D.new()
 	eye_r.name = "EyeR"
-	eye_r.texture = load("res://assets/nita/face/eye_R.svg")
+	eye_r.texture = load("res://assets/brawlers/nita/face/eye_R.svg")
 	eye_r.position = Vector2(6, -4)
 	face_node.add_child(eye_r)
 	eye_r.owner = new_owner
 
 	var pupil_r = Sprite2D.new()
 	pupil_r.name = "PupilR"
-	pupil_r.texture = load("res://assets/nita/face/pupil_R.svg")
+	pupil_r.texture = load("res://assets/brawlers/nita/face/pupil_R.svg")
 	eye_r.add_child(pupil_r)
 	pupil_r.owner = new_owner
 
 	var brow_l = Sprite2D.new()
 	brow_l.name = "BrowL"
-	brow_l.texture = load("res://assets/nita/face/eyebrow_L.svg")
+	brow_l.texture = load("res://assets/brawlers/nita/face/eyebrow_L.svg")
 	brow_l.position = Vector2(-6, -10)
 	face_node.add_child(brow_l)
 	brow_l.owner = new_owner
 
 	var brow_r = Sprite2D.new()
 	brow_r.name = "BrowR"
-	brow_r.texture = load("res://assets/nita/face/eyebrow_R.svg")
+	brow_r.texture = load("res://assets/brawlers/nita/face/eyebrow_R.svg")
 	brow_r.position = Vector2(6, -10)
 	face_node.add_child(brow_r)
 	brow_r.owner = new_owner
 
 	var mouth_sprite = Sprite2D.new()
 	mouth_sprite.name = "Mouth"
-	mouth_sprite.texture = load("res://assets/nita/face/mouth_grin.svg")
+	mouth_sprite.texture = load("res://assets/brawlers/nita/face/mouth_grin.svg")
 	mouth_sprite.position = Vector2(0, 4)
 	face_node.add_child(mouth_sprite)
 	mouth_sprite.owner = new_owner

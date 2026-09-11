@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/thing_they_opened/actor_nita.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/nita_side.tscn" id="2_side"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="3_ctrl"]
+[ext_resource type="PackedScene" path="res://scenes/nita_projectile.tscn" id="4_proj"]
+
+[node name="ActorNita" type="Node2D"]
+script = ExtResource("1_actor")
+
+[node name="ContactShadow" type="Polygon2D" parent="."]
+z_index = -3
+color = Color(0, 0, 0, 0.35)
+polygon = PackedVector2Array(24, 0, 20.5, 3.5, 12, 6.1, 0, 7, -12, 6.1, -20.5, 3.5, -24, 0, -20.5, -3.5, -12, -6.1, 0, -7, 12, -6.1, 20.5, -3.5)
+
+[node name="SideView" parent="." instance=ExtResource("2_side")]
+script = ExtResource("3_ctrl")
+character_name = "nita"
+projectile_scene = ExtResource("4_proj")
+projectiles_per_attack = 1
+projectile_burst_interval = 0.0
+projectile_spread_angles = Array[float]([0.0])

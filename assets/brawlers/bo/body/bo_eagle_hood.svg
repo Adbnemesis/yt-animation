@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="124" viewBox="0 0 136 124">
+  <!-- White Eagle Dome -->
+  <path d="M68,6 C38,6 20,28 20,62 C20,92 38,108 68,108 C98,108 116,92 116,62 C116,28 98,6 68,6 Z"
+        fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Eagle Eyes on Forehead Dome -->
+  <g transform="translate(36, 26)">
+    <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+    <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(80, 26)">
+    <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+    <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+  <!-- Hooked Yellow Beak -->
+  <path d="M52,22 C52,16 58,14 68,14 C78,14 84,16 84,22 C84,38 78,54 68,60 C58,54 52,38 52,22 Z"
+        fill="#ffd166" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+  <line x1="68" y1="14" x2="68" y2="60" stroke="#e09f24" stroke-width="2.0"/>
+  <!-- Face Opening Recess -->
+  <ellipse cx="68" cy="78" rx="36" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+</svg>

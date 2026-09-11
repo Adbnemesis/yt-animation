@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" viewBox="0 0 30 36">
-  <!-- Nita Lower Arm Right: Brown Skin Forearm Tube (mirrored) -->
-  <g transform="matrix(-1,0,0,1,30,0)">
-    <path d="M15,4 C8,4 4,9 4,17 L5,29 C5,33 9,35 15,35 C21,35 25,33 25,29 L26,17 C26,9 22,4 15,4 Z"
-          fill="#a5683f" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
-  </g>
-</svg>

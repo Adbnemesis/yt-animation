@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="32" viewBox="0 0 26 32">
-  <!-- Nita Eye Angry Right v2: Big White Oval with Angled Dark Upper Lid (mirrored) -->
-  <g transform="matrix(-1,0,0,1,26,0)">
-    <ellipse cx="13" cy="15" rx="9.5" ry="11" fill="#ffffff" stroke="#1e1e2c" stroke-width="3.2"/>
-    <path d="M2,-4 L24,3 L24,-5 L2,-5 Z" fill="#1e1e2c"/>
-  </g>
-</svg>

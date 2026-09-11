@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/thing_they_opened/staging_test.gd" id="1_stage"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/facility.tscn" id="2_facility"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_leon.tscn" id="3_leon"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_nita.tscn" id="4_nita"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_bo.tscn" id="5_bo"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_warning_01.png" id="6_crate_warn"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_01.png" id="7_crate_sm"]
+
+[node name="StagingTest" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_stage")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(430, 430)
+
+[node name="Environment" parent="." instance=ExtResource("2_facility")]
+
+[node name="Leon" parent="." instance=ExtResource("3_leon")]
+position = Vector2(620, 575)
+
+[node name="Nita" parent="." instance=ExtResource("4_nita")]
+position = Vector2(460, 530)
+
+[node name="Bo" parent="." instance=ExtResource("5_bo")]
+position = Vector2(240, 492)
+
+[node name="CrateMidCorridor" type="Sprite2D" parent="."]
+position = Vector2(700, 518)
+scale = Vector2(1.15, 1.15)
+modulate = Color(0.8, 0.75, 0.9, 1)
+texture = ExtResource("7_crate_sm")
+
+[node name="CrateFgEscape" type="Sprite2D" parent="."]
+position = Vector2(120, 560)
+scale = Vector2(2.4, 2.4)
+modulate = Color(0.85, 0.82, 0.95, 1)
+texture = ExtResource("6_crate_warn")

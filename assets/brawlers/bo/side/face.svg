@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="-58 -48 128 120">
+  <!-- Bo Side Complete Face: Chiseled Warrior Profile with Single Focused Eye & Stoic Mouth -->
+  <g transform="translate(8, 8)">
+    <path d="M0,6 C14,6 26,10 30,22 C34,36 30,48 18,54 C10,56 0,52 -2,44 C-4,30 -2,16 0,6 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+    <path d="M0,6 C12,12 26,14 28,24 C20,22 10,20 0,22 Z" fill="#8f4f2a"/>
+    <!-- Intense Focused Archer Eye (Single Eye) -->
+    <polygon points="12,24 26,28 18,31" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="19" cy="27.5" r="2.2" fill="#1e1e2c"/>
+    <!-- Stoic Set Mouth -->
+    <path d="M12,42 L24,40" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M4,46 L18,54" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#181a20"/>
+  <text x="400" y="48" fill="#ffd166" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">TRIO PRODUCTION STYLE VALIDATION: LEON ↔ NITA ↔ BO</text>
+  <text x="400" y="74" fill="#a0aab8" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">Identical #1e1e2c Outlines • Shared Proportion Philosophy • Harmonized Cel-Palette • 100% Shared 2D Universe</text>
+
+  <!-- Ground Shadows -->
+  <ellipse cx="150" cy="610" rx="76" ry="14" fill="#101216"/>
+  <ellipse cx="400" cy="610" rx="76" ry="14" fill="#101216"/>
+  <ellipse cx="650" cy="610" rx="80" ry="14" fill="#101216"/>
+
+  <!-- Dividers -->
+  <line x1="275" y1="100" x2="275" y2="660" stroke="#2a2f3a" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="525" y1="100" x2="525" y2="660" stroke="#2a2f3a" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- 1. LEON (x = 150) -->
+  <g transform="translate(150, 420) scale(1.7)">
+    <g transform="translate(-24, 70)">
+      <polygon points="-5,-4 15,-4 17,10 -7,10" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <line x1="-7" y1="10" x2="17" y2="10" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(24, 70)">
+      <polygon points="-15,-4 5,-4 7,10 -17,10" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <line x1="-17" y1="10" x2="7" y2="10" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+    <rect x="-21" y="55" width="16" height="15" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+    <rect x="5" y="55" width="16" height="15" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+    <path d="M-24,30 L-2,30 L-1,56 L-26,56 Z" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M2,30 L24,30 L26,56 L1,56 Z" fill="#1f3160" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <g transform="translate(-38, -25)">
+      <path d="M12,4 C8,4 6,14 6,28 C6,46 12,54 20,54 L56,54 C64,54 70,46 70,28 C70,14 68,4 64,4 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+      <line x1="38" y1="4" x2="38" y2="54" stroke="#1e1e2c" stroke-width="2.5"/>
+      <path d="M22,32 L54,32 L58,54 L18,54 Z" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <rect x="35" y="16" width="6" height="12" rx="2" fill="#ced4da" stroke="#1e1e2c" stroke-width="2.0"/>
+    </g>
+    <g transform="translate(-36, -24)">
+      <path d="M15,4 C8,4 4,9 4,16 L5,30 C5,34 9,36 15,36 C21,36 25,34 25,30 L26,16 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+      <circle cx="14" cy="40" r="8" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+    <g transform="translate(14, -24)">
+      <path d="M15,4 C8,4 4,9 4,16 L5,30 C5,34 9,36 15,36 C21,36 25,34 25,30 L26,16 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.2"/>
+      <circle cx="14" cy="40" r="8" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+    </g>
+    <g transform="translate(-64, -108)">
+      <circle cx="24" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+      <circle cx="104" cy="38" r="16" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5"/>
+      <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z" fill="#38b000" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M54,6 C58,6 59,32 58,52 L70,52 C69,32 70,6 74,6 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.5"/>
+      <circle cx="28" cy="40" r="14" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.5"/>
+      <circle cx="28" cy="40" r="10" fill="#0077b6"/>
+      <line x1="22" y1="34" x2="34" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="34" y1="34" x2="22" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+      <circle cx="100" cy="40" r="14" fill="#1e90ff" stroke="#1e1e2c" stroke-width="3.5"/>
+      <circle cx="100" cy="40" r="10" fill="#0077b6"/>
+      <line x1="94" y1="34" x2="106" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="106" y1="34" x2="94" y2="46" stroke="#1e1e2c" stroke-width="3.2" stroke-linecap="round"/>
+      <ellipse cx="64" cy="74" rx="36" ry="32" fill="#1a2512" stroke="#1e1e2c" stroke-width="3.5"/>
+      <g transform="translate(28, 48)">
+        <ellipse cx="36" cy="26" rx="32" ry="24" fill="#b87349"/>
+        <path d="M26,30 Q36,36 46,30" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round" fill="none"/>
+        <line x1="42" y1="31" x2="54" y2="40" stroke="#ffffff" stroke-width="3.0" stroke-linecap="round"/>
+        <circle cx="43" cy="32" r="5" fill="#e63946" stroke="#1e1e2c" stroke-width="2.0"/>
+      </g>
+    </g>
+  </g>
+  <text x="150" y="675" fill="#ffd166" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">LEON (REFERENCE A)</text>
+
+  <!-- 2. NITA (x = 400) -->
+  <g transform="translate(400, 410) scale(1.7)">
+    <g transform="translate(-32, 70)"><path d="M4,4 L22,4 C25,4 27,9 27,13 L27,17 L2,17 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/></g>
+    <g transform="translate(8, 70)"><path d="M26,4 L8,4 C5,4 3,9 3,13 L3,17 L28,17 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/></g>
+    <rect x="-26" y="44" width="20" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+    <rect x="6" y="44" width="20" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+    <g transform="translate(-38, 20)">
+      <path d="M10,2 L66,2 L71,28 L5,28 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="3.2"/>
+      <path d="M12,2 L64,2 L60,18 L38,27 L16,18 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.2"/>
+    </g>
+    <g transform="translate(-38, -32)">
+      <path d="M14,4 C10,4 8,14 8,28 C8,46 14,54 20,54 L56,54 C62,54 68,46 68,28 C68,14 66,4 62,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+      <circle cx="38" cy="27" r="8" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.5"/>
+      <rect x="14" y="44" width="48" height="10" rx="2" fill="#4a2e1b" stroke="#1e1e2c" stroke-width="3.0"/>
+    </g>
+    <g transform="translate(-40, -30)"><path d="M15,4 C9,4 5,9 5,16 L6,30 C6,34 10,36 15,36 C20,36 24,34 24,30 L25,16 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/></g>
+    <g transform="translate(15, -30)"><path d="M15,4 C9,4 5,9 5,16 L6,30 C6,34 10,36 15,36 C20,36 24,34 24,30 L25,16 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/></g>
+    <g transform="translate(-64, -114)">
+      <circle cx="26" cy="34" r="16" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+      <circle cx="102" cy="34" r="16" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+      <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+      <line x1="26" y1="24" x2="42" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="42" y1="24" x2="26" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="86" y1="24" x2="102" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+      <line x1="102" y1="24" x2="86" y2="40" stroke="#1e1e2c" stroke-width="4.2" stroke-linecap="round"/>
+      <ellipse cx="64" cy="48" rx="25" ry="15" fill="#eb5e6d" stroke="#1e1e2c" stroke-width="3.2"/>
+      <path d="M55,43 C55,38 60,36 64,36 C68,36 73,38 73,43 C73,49 68,52 64,52 Z" fill="#1e1e2c"/>
+      <ellipse cx="64" cy="78" rx="36" ry="30" fill="#6e1f28" stroke="#1e1e2c" stroke-width="3.5"/>
+      <g transform="translate(26, 48)">
+        <ellipse cx="38" cy="34" rx="34" ry="30" fill="#b87349"/>
+        <path d="M10,24 C14,12 24,6 38,6 C52,6 62,12 66,24 Z" fill="#3a2015"/>
+        <path d="M6,32 C6,23 18,21 38,21 C58,21 70,23 70,32 Z" fill="#4a2818"/>
+        <g transform="translate(10, 22)">
+          <path d="M4,15 C8,4 18,3 24,6 C22,17 12,21 4,15 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.6"/>
+          <ellipse cx="14" cy="11" rx="4.5" ry="5.5" fill="#1e1e2c"/>
+        </g>
+        <g transform="translate(42, 22)">
+          <path d="M24,15 C20,4 10,3 4,6 C6,17 16,21 24,15 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.6"/>
+          <ellipse cx="12" cy="11" rx="4.5" ry="5.5" fill="#1e1e2c"/>
+        </g>
+        <path d="M28,48 Q38,54 48,48" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      </g>
+    </g>
+  </g>
+  <text x="400" y="675" fill="#ffd166" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">NITA (REFERENCE B)</text>
+
+  <!-- 3. BO (x = 650) -->
+  
+    <g transform="translate(650, 410) scale(1.7)">
+      <!-- 1. Bare Tan Feet -->
+      <g transform="translate(-28, 70)">
+        <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 C2,10 2,4 4,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="10" y1="18" x2="10" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="18" y1="18" x2="18" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(6, 70)">
+        <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 C28,10 28,4 26,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="20" y1="18" x2="20" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="12" y1="18" x2="12" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+
+      <!-- 2. Maroon Trousers Pelvis & Legs (Grounded, organic brawler build) -->
+      <path d="M-26,42 L26,42 L24,70 L4,70 L2,54 L-2,54 L-4,70 L-24,70 Z"
+            fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <line x1="0" y1="42" x2="0" y2="54" stroke="#1e1e2c" stroke-width="2.2"/>
+
+      <!-- 3. Torso: Emerald Green Tunic + Maroon Sash -->
+      <g transform="translate(-36, -26)">
+        <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z"
+              fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M26,4 Q36,16 46,4 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="2.5"/>
+        <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+        <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        <line x1="8" y1="50" x2="64" y2="50" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 4. Left Arm & Hand Holding Recurve Bow -->
+      <g transform="translate(-40, -24)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 C26,10 22,4 16,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <g transform="translate(3, 34)">
+          <path d="M12,3 C6,3 3,7 3,13 C3,19 7,22 12,22 C17,22 21,19 21,13 C21,10 19,7 16,5 C16,7 14,9 12,9 C10.5,9 10.5,6 12,3 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+        </g>
+        <!-- Bow -->
+        <g transform="translate(-24, -20) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z"
+                fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+        </g>
+      </g>
+
+      <!-- 5. Right Arm with Talon Bracer -->
+      <g transform="translate(18, -24)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 C26,10 22,4 16,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+        <g transform="translate(3, 34)">
+          <path d="M12,3 C18,3 21,7 21,13 C21,19 17,22 12,22 C7,22 3,19 3,13 C3,10 5,7 8,5 C8,7 10,9 12,9 C13.5,9 13.5,6 12,3 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <!-- 6. Dark Navy Hair Framing Cheeks (Chunky & Bold like reference) -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z"
+              fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z"
+              fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      </g>
+
+      <!-- 7. Head & Eagle Hood -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z"
+              fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        
+        <!-- Eagle Eyes on Brow Dome -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+
+        <!-- Dark Cavity Opening -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+
+        <!-- Tan Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+
+          <!-- Eyes (Authentic white cut-paper warrior eye shapes) -->
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+          <!-- Stoic Set Mouth -->
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z"
+                fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="650" y="675" fill="#ffd166" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">BO (PRODUCTION ASSET)</text>
+</svg>

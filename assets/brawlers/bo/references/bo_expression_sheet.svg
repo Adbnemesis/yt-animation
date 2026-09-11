@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#181a20"/>
+  <text x="400" y="38" fill="#ffd166" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">BO — EXPRESSION &amp; EYE STATE MATRIX</text>
+  <text x="400" y="58" fill="#a0a8b4" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">Authentic Brawl Stars Character Identity • 10 Core Expressions • 6 Modular Animation-Ready Eye States</text>
+
+  <defs>
+    <!-- Reusable Mini Bo Head Base (Centered at 0, 0) -->
+    <g id="mini-bo-head">
+      <!-- White Eagle Dome -->
+      <path d="M0,-48 C-28,-48 -44,-26 -44,8 C-44,38 -26,52 0,52 C26,52 44,38 44,8 C44,-26 28,-48 0,-48 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <!-- Eagle Eyes on Brow -->
+      <g transform="translate(-30, -28)">
+        <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <circle cx="10" cy="13" r="2.0" fill="#1e1e2c"/>
+        <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(12, -28)">
+        <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <circle cx="10" cy="13" r="2.0" fill="#1e1e2c"/>
+        <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <!-- Dark Face Cavity -->
+      <ellipse cx="0" cy="20" rx="30" ry="24" fill="#7a4222" stroke="#1e1e2c" stroke-width="2.8"/>
+      <!-- Tan Face Disc -->
+      <path d="M-24,-4 C-24,-14 -14,-16 0,-16 C14,-16 24,-14 24,-4 C24,12 20,28 12,34 C6,38 0,38 -6,38 C-14,34 -24,20 -24,-4 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+      <!-- Hooked Yellow Beak -->
+      <path d="M-10,-32 C-10,-38 -6,-40 0,-40 C6,-40 10,-38 10,-32 C10,-18 7, -2 0,4 C-7,-2 -10,-18 -10,-32 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+      <line x1="0" y1="-40" x2="0" y2="4" stroke="#e09f24" stroke-width="1.6"/>
+    </g>
+  </defs>
+
+  <!-- ROW 1 (y = 140): NEUTRAL, HAPPY, ANGRY, SAD, SHOCKED -->
+  <!-- 1. NEUTRAL -->
+  <g transform="translate(75, 140) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <g transform="translate(-16, 0)"><path d="M2,10 C5,3 12,2 15,5 C13,13 7,14 2,10 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/></g>
+    <g transform="translate(2, 0)"><path d="M15,10 C12,3 5,2 2,5 C4,13 10,14 15,10 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/></g>
+    <line x1="-8" y1="24" x2="8" y2="24" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <text x="75" y="218" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">NEUTRAL</text>
+
+  <!-- 2. HAPPY -->
+  <g transform="translate(235, 140) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <path d="M-16,8 Q-10,0 -4,8" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M4,8 Q10,0 16,8" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M-8,22 Q0,30 8,22 Z" fill="#eb5e6d" stroke="#1e1e2c" stroke-width="2.2"/>
+  </g>
+  <text x="235" y="218" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">HAPPY</text>
+
+  <!-- 3. ANGRY -->
+  <g transform="translate(400, 140) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <path d="M-16,4 L-4,8 L-6,14 L-16,11 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="-9" cy="9" r="2.0" fill="#1e1e2c"/>
+    <path d="M16,4 L4,8 L6,14 L16,11 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="9" cy="9" r="2.0" fill="#1e1e2c"/>
+    <rect x="-8" y="22" width="16" height="5" rx="1.5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+  </g>
+  <text x="400" y="218" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ANGRY</text>
+
+  <!-- 4. SAD -->
+  <g transform="translate(565, 140) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <ellipse cx="-10" cy="6" rx="4" ry="5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <ellipse cx="10" cy="6" rx="4" ry="5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="-10" cy="7" r="2.2" fill="#1e1e2c"/>
+    <circle cx="10" cy="7" r="2.2" fill="#1e1e2c"/>
+    <path d="M-8,25 Q0,19 8,25" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="565" y="218" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SAD</text>
+
+  <!-- 5. SHOCKED -->
+  <g transform="translate(725, 140) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <circle cx="-10" cy="6" r="6" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2"/>
+    <circle cx="10" cy="6" r="6" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2"/>
+    <circle cx="-10" cy="6" r="2.2" fill="#1e1e2c"/>
+    <circle cx="10" cy="6" r="2.2" fill="#1e1e2c"/>
+    <ellipse cx="0" cy="24" rx="4.5" ry="6" fill="#1e1e2c"/>
+  </g>
+  <text x="725" y="218" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SHOCKED</text>
+
+  <!-- ROW 2 (y = 295): SCARED, HURT, CONFUSED, SMUG, SERIOUS -->
+  <!-- 6. SCARED -->
+  <g transform="translate(75, 295) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <circle cx="-10" cy="6" r="5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="10" cy="6" r="5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="-10" cy="6" r="1.5" fill="#1e1e2c"/>
+    <circle cx="10" cy="6" r="1.5" fill="#1e1e2c"/>
+    <ellipse cx="0" cy="24" rx="4" ry="3.5" fill="#1e1e2c"/>
+  </g>
+  <text x="75" y="373" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SCARED</text>
+
+  <!-- 7. HURT -->
+  <g transform="translate(235, 295) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <path d="M-15,3 L-8,7 L-15,11" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M15,3 L8,7 L15,11" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <path d="M-9,24 L-5,21 L0,25 L5,21 L9,24" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="235" y="373" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">HURT</text>
+
+  <!-- 8. CONFUSED -->
+  <g transform="translate(400, 295) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <circle cx="-10" cy="5" r="5.5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="-10" cy="5" r="2.0" fill="#1e1e2c"/>
+    <ellipse cx="10" cy="7" rx="3.5" ry="4" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="10" cy="7" r="1.8" fill="#1e1e2c"/>
+    <path d="M-16,-2 Q-10,-8 -4,-2" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M4,-4 Q10,-2 16,-4" stroke="#1e1e2c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M-7,25 Q0,20 7,23" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="400" y="373" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">CONFUSED</text>
+
+  <!-- 9. SMUG -->
+  <g transform="translate(565, 295) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <path d="M-15,8 Q-9,2 -3,8" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+    <ellipse cx="10" cy="6" rx="4" ry="4.5" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="10" cy="6" r="2.0" fill="#1e1e2c"/>
+    <path d="M-6,25 Q2,26 8,20" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="565" y="373" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SMUG</text>
+
+  <!-- 10. SERIOUS -->
+  <g transform="translate(725, 295) scale(1.08)">
+    <use href="#mini-bo-head"/>
+    <line x1="-16" y1="2" x2="-4" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+    <line x1="4" y1="4" x2="16" y2="2" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+    <g transform="translate(-16, 2)"><path d="M2,10 C5,3 12,2 15,5 C13,13 7,14 2,10 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/></g>
+    <g transform="translate(2, 2)"><path d="M15,10 C12,3 5,2 2,5 C4,13 10,14 15,10 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/></g>
+    <line x1="-10" y1="24" x2="10" y2="24" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+  <text x="725" y="373" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SERIOUS</text>
+
+  <!-- BOTTOM CARD: 6 MODULAR EYE STATE PRESETS -->
+  <rect x="30" y="430" width="740" height="330" rx="14" fill="#121418" stroke="#2a2f3a" stroke-width="1.5"/>
+  <text x="400" y="468" fill="#ffd166" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">6 MODULAR EYE STATE PRESETS (GODOT ANIMATION-READY)</text>
+  <text x="400" y="490" fill="#a0a8b4" font-family="sans-serif" font-size="11" text-anchor="middle">Sprite2D / Texture Swapping Presets • Shared Standard Matrix with Leon &amp; Nita</text>
+
+  <!-- 1. Neutral Eye Preset -->
+  <g transform="translate(85, 600) scale(1.9)">
+    <ellipse cx="0" cy="0" rx="8" ry="11" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="0" cy="0" r="4.5" fill="#1e1e2c"/>
+  </g>
+  <text x="85" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">NEUTRAL</text>
+
+  <!-- 2. Blink Eye Preset -->
+  <g transform="translate(210, 600) scale(1.9)">
+    <path d="M-10,0 Q0,7 10,0" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="210" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">BLINK</text>
+
+  <!-- 3. Wide Eye Preset -->
+  <g transform="translate(335, 600) scale(1.9)">
+    <circle cx="0" cy="0" r="12" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="0" cy="0" r="4.5" fill="#1e1e2c"/>
+  </g>
+  <text x="335" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">WIDE</text>
+
+  <!-- 4. Angry Eye Preset -->
+  <g transform="translate(465, 600) scale(1.9)">
+    <path d="M-10,-6 L10,0 L8,9 L-10,5 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="2" cy="1" r="3.5" fill="#1e1e2c"/>
+  </g>
+  <text x="465" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ANGRY</text>
+
+  <!-- 5. Happy Eye Preset -->
+  <g transform="translate(590, 600) scale(1.9)">
+    <path d="M-10,3 Q0,-6 10,3" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="590" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">HAPPY</text>
+    <g transform="translate(715, 600) scale(1.9)">
+    <line x1="-10" y1="0" x2="10" y2="0" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+  </g>
+  <text x="715" y="670" fill="#a0aab8" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">CLOSED</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="152" height="222" viewBox="-80 -218 152 222">
+  <!-- BO — BACK VIEW BODY (LAB ASSET, extracted from approved bo_view_back.svg reference) -->
+  <!-- Feet/ground at y=0. Head drawn by bo_back_head.svg (keeps head-turn separable for 3/4). -->
+  <!-- 1. BARE TAN FEET (Back View: Wide Grounded Stance, Heels & Achilles Tendon) -->
+  <g transform="translate(-28,-19)">
+    <path d="M2,4 L24,4 C27,4 28,9 28,15 L28,19 L0,19 L0,14 C0,8 1,4 2,4 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <line x1="14" y1="4" x2="14" y2="13" stroke="#7a4222" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="8" y1="19" x2="20" y2="19" stroke="#7a4222" stroke-width="1.8"/>
+  </g>
+  <g transform="translate(6,-19)">
+    <path d="M24,4 L2,4 C-1,4 0,9 0,15 L0,19 L28,19 L28,14 C28,8 27,4 24,4 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <line x1="14" y1="4" x2="14" y2="13" stroke="#7a4222" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="8" y1="19" x2="20" y2="19" stroke="#7a4222" stroke-width="1.8"/>
+  </g>
+  <!-- 2. MAROON TROUSERS (Wide Heroic A-Frame, Rear Center Seam, Muscular Calves) -->
+  <path d="M-30,-49 L30,-49 L28,-17 L8,-17 L4,-33 L-4,-33 L-8,-17 L-28,-17 Z"
+        fill="#7a2828" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <line x1="0" y1="-49" x2="0" y2="-33" stroke="#1e1e2c" stroke-width="2.4"/>
+  <path d="M-22,-45 C-26,-35 -24,-25 -20,-17" stroke="#5e1d1d" stroke-width="2.4" fill="none"/>
+  <path d="M22,-45 C26,-35 24,-25 20,-17" stroke="#5e1d1d" stroke-width="2.4" fill="none"/>
+  <!-- 3. RECURVE BOW IN LEFT HAND (Viewer's Left, Arched Alongside Body) -->
+  <g transform="translate(-56,-139) scale(0.76)">
+    <line x1="26" y1="8" x2="26" y2="160" stroke="#ced4da" stroke-width="2.4"/>
+    <path d="M26,8 C6,28 2,56 10,84 C2,112 6,140 26,160 C14,142 10,114 18,84 C10,54 14,26 26,8 Z"
+          fill="#a0522d" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+    <rect x="8" y="70" width="16" height="28" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+    <line x1="8" y1="78" x2="24" y2="78" stroke="#1060c0" stroke-width="1.8"/>
+    <line x1="8" y1="86" x2="24" y2="86" stroke="#1060c0" stroke-width="1.8"/>
+    <path d="M20,8 L30,-4 L34,6 L40,0 L36,12 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M20,160 L30,172 L34,162 L40,168 L36,156 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+  <!-- 4. TORSO: BROAD MUSCULAR BACK & SLEEVELESS EMERALD VEST -->
+  <path d="M-40,-101 C-44,-81 -40,-63 -32,-49 L32,-49 C40,-63 44,-81 40,-101 C34,-111 18,-115 0,-115 C-18,-115 -34,-111 -40,-101 Z"
+        fill="#b87349" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M-38,-95 C-34,-81 -34,-67 -30,-57" stroke="#8f4f2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M38,-95 C34,-81 34,-67 30,-57" stroke="#8f4f2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M-28,-103 C-26,-91 -28,-73 -24,-49 L24,-49 C28,-73 26,-91 28,-103 C20,-107 10,-109 0,-109 C-10,-109 -20,-107 -28,-103 Z"
+        fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <line x1="0" y1="-107" x2="0" y2="-49" stroke="#05a87d" stroke-width="2.4"/>
+  <path d="M-26,-101 C-24,-81 -26,-63 -22,-49 L-16,-49 C-20,-63 -18,-81 -20,-101 Z" fill="#05a87d" opacity="0.6"/>
+  <!-- Maroon Waistband Sash -->
+  <rect x="-30" y="-49" width="60" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+  <line x1="-30" y1="-43" x2="30" y2="-43" stroke="#1e1e2c" stroke-width="2.0"/>
+
+  <!-- 5. LEFT ARM (Holding Recurve Bow at Left) -->
+  <g transform="translate(-36,-105)">
+    <path d="M8,2 C-2,4 -10,12 -12,22 C-12,32 -6,38 2,38 C10,38 14,30 16,20 C16,8 12,2 8,2 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M-10,22 L-16,14 L-8,8 L-2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+    <g transform="translate(-16,8)">
+      <circle cx="4" cy="6" r="8.5" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+      <circle cx="4" cy="6" r="3.5" fill="#1e1e2c" opacity="0.15"/>
+      <polygon points="10,2 14,6 10,8" fill="#1e1e2c"/>
+      <polygon points="8,10 12,13 7,14" fill="#1e1e2c"/>
+    </g>
+  </g>
+  <!-- 6. RIGHT ARM WITH ARCHER TALON BRACER (Viewer's Right, Relaxed at Side) -->
+  <g transform="translate(32,-105)">
+    <path d="M2,2 C12,2 18,10 18,22 C18,34 12,44 4,46 C-2,46 -6,38 -6,28 C-6,14 -2,2 2,2 Z"
+          fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M14,14 C12,6 8,2 2,2" stroke="#8f4f2a" stroke-width="2.0" fill="none" stroke-linecap="round"/>
+    <path d="M-2,26 L16,26 L14,44 L-4,42 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+    <circle cx="6" cy="34" r="3.5" fill="#00b4d8" stroke="#1e1e2c" stroke-width="1.6"/>
+    <circle cx="4" cy="48" r="8" fill="#b87349" stroke="#1e1e2c" stroke-width="2.6"/>
+    <line x1="1" y1="52" x2="1" y2="46" stroke="#7a4222" stroke-width="1.8"/>
+    <line x1="5" y1="53" x2="5" y2="46" stroke="#7a4222" stroke-width="1.8"/>
+    <line x1="9" y1="51" x2="9" y2="46" stroke="#7a4222" stroke-width="1.8"/>
+  </g>
+  <!-- 7. DIAGONAL BACK QUIVER (Upper Right Shoulder, Harness Strap Across Back) -->
+  <g transform="translate(24,-95) rotate(24)">
+    <line x1="-58" y1="0" x2="20" y2="0" stroke="#4a2e1b" stroke-width="5.0" stroke-linecap="round"/>
+    <line x1="-58" y1="0" x2="20" y2="0" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+    <g transform="translate(0,-22)">
+      <path d="M-8,-20 L-3,-46 L1,-20 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="-3" y1="-46" x2="-3" y2="-20" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M-1,-22 L5,-52 L10,-22 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="5" y1="-52" x2="5" y2="-22" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M7,-20 L13,-44 L17,-20 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="13" y1="-44" x2="13" y2="-20" stroke="#1e1e2c" stroke-width="1.4"/>
+      <path d="M14,-18 L19,-38 L23,-18 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+      <line x1="19" y1="-38" x2="19" y2="-18" stroke="#1e1e2c" stroke-width="1.4"/>
+    </g>
+    <rect x="-6" y="-22" width="28" height="16" rx="3" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.2"/>
+    <path d="M8,-18 C5,-18 4,-14 8,-10 C12,-14 11,-18 8,-18 Z" fill="#1f3160"/>
+    <g transform="translate(-16,-14)">
+      <path d="M8,-2 C-2,0 -6,8 0,14 C6,20 12,16 14,10 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M0,14 C-6,18 -12,16 -14,10 C-10,8 -4,6 0,14 Z" fill="#ffb703" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+      <circle cx="4" cy="6" r="1.8" fill="#1e1e2c"/>
+    </g>
+    <path d="M-4,-6 L20,-6 L16,64 L-2,64 Z" fill="#252b3e" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+    <line x1="4" y1="-6" x2="2" y2="64" stroke="#181d2a" stroke-width="3.0"/>
+    <path d="M-2,64 L16,64 L14,72 L0,72 Z" fill="#151928" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+  </g>
+</svg>

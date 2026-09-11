@@ -1,3 +1,10 @@
+# System and cache files
+.DS_Store
+**/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+
 # Godot 4+ specific ignores
 .godot/
 /android/
@@ -7,6 +14,7 @@ export_presets.cfg
 *.mp4
 *.avi
 *.mkv
+*.mov
 /renders/
 /tools/.venv/
 
@@ -17,4 +25,3 @@ export_presets.cfg
 # Test reports and scratch
 /reports/
 /scratch/
-e

@@ -13,26 +13,26 @@ class_name FaceController
 
 # Standard Leon Cut-Paper Textures
 var mouth_textures := {
-	"neutral": preload("res://assets/leon/mouth_neutral.svg"),
-	"happy": preload("res://assets/leon/mouth_smile.svg"),
-	"angry": preload("res://assets/leon/mouth_angry.svg"),
-	"sad": preload("res://assets/leon/mouth_sad.svg"),
-	"shocked": preload("res://assets/leon/mouth_shocked.svg"),
-	"scared": preload("res://assets/leon/mouth_scared.svg"),
-	"hurt": preload("res://assets/leon/mouth_hurt.svg"),
-	"confused": preload("res://assets/leon/mouth_confused.svg"),
-	"smug": preload("res://assets/leon/mouth_smug.svg"),
-	"laughing": preload("res://assets/leon/mouth_laughing.svg")
+	"neutral": preload("res://assets/brawlers/leon/mouth_neutral.svg"),
+	"happy": preload("res://assets/brawlers/leon/mouth_smile.svg"),
+	"angry": preload("res://assets/brawlers/leon/mouth_angry.svg"),
+	"sad": preload("res://assets/brawlers/leon/mouth_sad.svg"),
+	"shocked": preload("res://assets/brawlers/leon/mouth_shocked.svg"),
+	"scared": preload("res://assets/brawlers/leon/mouth_scared.svg"),
+	"hurt": preload("res://assets/brawlers/leon/mouth_hurt.svg"),
+	"confused": preload("res://assets/brawlers/leon/mouth_confused.svg"),
+	"smug": preload("res://assets/brawlers/leon/mouth_smug.svg"),
+	"laughing": preload("res://assets/brawlers/leon/mouth_laughing.svg")
 }
 
 var eye_textures := {
-	"open": preload("res://assets/leon/eye_L.svg"),
-	"blink": preload("res://assets/leon/eyes_blink.svg"),
-	"closed": preload("res://assets/leon/eyes_blink.svg"),
-	"happy": preload("res://assets/leon/eyes_happy.svg"),
-	"wide": preload("res://assets/leon/eyes_wide.svg"),
-	"angry": preload("res://assets/leon/eyes_angry.svg"),
-	"scared": preload("res://assets/leon/eyes_scared.svg")
+	"open": preload("res://assets/brawlers/leon/eye_L.svg"),
+	"blink": preload("res://assets/brawlers/leon/eyes_blink.svg"),
+	"closed": preload("res://assets/brawlers/leon/eyes_blink.svg"),
+	"happy": preload("res://assets/brawlers/leon/eyes_happy.svg"),
+	"wide": preload("res://assets/brawlers/leon/eyes_wide.svg"),
+	"angry": preload("res://assets/brawlers/leon/eyes_angry.svg"),
+	"scared": preload("res://assets/brawlers/leon/eyes_scared.svg")
 }
 
 @export_enum("neutral", "happy", "angry", "sad", "shocked", "scared", "hurt", "confused", "smug", "laughing") var expression: String = "neutral":

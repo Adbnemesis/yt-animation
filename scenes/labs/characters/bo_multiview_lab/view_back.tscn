@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+; BO — BACK VIEW (LAB ASSET)
+; Extracted from the approved bo_view_back.svg reference art, split into body
+; + separable head (so the head can turn for the 3/4 view). Feet at origin.
+
+[ext_resource type="Texture2D" path="res://assets/lab/characters/bo/back/bo_back_body.svg" id="1_body"]
+[ext_resource type="Texture2D" path="res://assets/lab/characters/bo/back/bo_back_head.svg" id="2_head"]
+
+[node name="BoBack" type="Node2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(-4, -107)
+texture = ExtResource("1_body")
+
+[node name="Head" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(0, -84)
+
+[node name="HeadSprite" type="Sprite2D" parent="Head"]
+position = Vector2(2, -62)
+texture = ExtResource("2_head")
+
+[node name="AttackSocket" type="Marker2D" parent="."]
+position = Vector2(-44, -75)

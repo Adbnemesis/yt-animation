@@ -1,0 +1,125 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/bo_combat_test.gd" id="1_boharness"]
+[ext_resource type="PackedScene" path="res://scenes/target_dummy.tscn" id="2_dummy"]
+[ext_resource type="Script" path="res://scripts/target_dummy.gd" id="3_dummygd"]
+[ext_resource type="PackedScene" path="res://scenes/brawler_bo.tscn" id="4_bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(1800, 80)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.06, 0.08, 0.12, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.24, 0.35, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="BoCombatTestHarness" type="Node2D"]
+script = ExtResource("1_boharness")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.09, 0.11, 0.15, 1)
+
+[node name="Horizon" type="Line2D" parent="."]
+points = PackedVector2Array(0, 360, 1152, 360)
+width = 1.5
+default_color = Color(0.14, 0.17, 0.22, 1)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(576, 560)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="GroundVisual" type="ColorRect" parent="Ground"]
+offset_left = -900.0
+offset_top = -40.0
+offset_right = 900.0
+offset_bottom = 160.0
+color = Color(0.14, 0.17, 0.22, 1)
+
+[node name="GroundTopStrip" type="ColorRect" parent="Ground"]
+offset_left = -900.0
+offset_top = -40.0
+offset_right = 900.0
+offset_bottom = -36.0
+color = Color(0.15, 0.65, 0.85, 1)
+
+[node name="GroundLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 520, 1152, 520)
+width = 1.0
+default_color = Color(0, 0.71, 0.85, 0.6)
+
+[node name="TargetDummy" type="Area2D" parent="." groups=["hit_receiver"] instance=ExtResource("2_dummy")]
+position = Vector2(780, 520)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("3_dummygd")
+
+[node name="Bo" parent="." instance=ExtResource("4_bo")]
+position = Vector2(380, 520)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Header" type="VBoxContainer" parent="UI"]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 24.0
+offset_bottom = 16.0
+
+[node name="LblTitle" type="Label" parent="UI/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
+text = "BO 2D PUPPET — PRODUCTION COMBAT STAGE 1 (BASIC ATTACK & ARROW)"
+
+[node name="LblSubtitle" type="Label" parent="UI/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.6, 0.68, 0.78, 1)
+text = "Walk • Run • Jump • BO_BASIC_ATTACK (3-Arrow Volley) • Arrow Projectile Collision • Ground y=520"
+
+[node name="LblInstructions" type="Label" parent="UI/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.75, 0.82, 0.9, 1)
+text = "1. Standing Demo  2. Walk Demo  3. Run Demo  4. Directional Demo  5. Interactive   A/D Move  SHIFT Run  SPACE Jump  J Attack  R Reset  T Line"
+
+[node name="InfoPanel" type="PanelContainer" parent="UI"]
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 620.0
+offset_bottom = 186.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="UI/InfoPanel"]
+layout_mode = 2
+
+[node name="LblMode" type="Label" parent="UI/InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+text = "MODE: Interactive (A/D: Move, SHIFT: Run, SPACE: Jump, J: Attack)"
+
+[node name="LblStats" type="Label" parent="UI/InfoPanel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.85, 0.88, 0.95, 1)
+text = "BO STATE: IDLE | ANIM: none | FACING: +1 (RIGHT)
+PROJECTILES ACTIVE: 0 | LAST EVENT: None | LAST HIT: None | TARGET HP: 1000 / 1000
+ARROW SPEED: 620 px/s | VOLLEY: 3 arrows | RANGE: 520 px | VEL: (0.0, 0.0) px/s"

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="124" viewBox="0 0 136 124">
+  <!-- BO — EAGLE HOOD 3/4 VIEW (LAB ASSET, derived from approved bo_eagle_hood.svg) -->
+  <!-- Same dome silhouette + palette; features shifted right = head turned to viewer's right. -->
+  <!-- White Eagle Dome (identical silhouette to front) -->
+  <path d="M68,6 C38,6 20,28 20,62 C20,92 38,108 68,108 C98,108 116,92 116,62 C116,28 98,6 68,6 Z"
+        fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Far-side eagle eye emblem (viewer's left, compressed by perspective) -->
+  <g transform="translate(24, 24) scale(0.8)">
+    <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+    <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+  <!-- Near-side eagle eye emblem (viewer's right, larger and closer to dome edge) -->
+  <g transform="translate(84, 22)">
+    <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+    <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+  </g>
+  <!-- Dome centre seam curves toward the turn -->
+  <path d="M62,6 C68,10 74,16 76,24" stroke="#dce1e6" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <!-- Hooked Yellow Beak (shifted right, slight 3/4 rotation) -->
+  <g transform="translate(12, 0) rotate(6, 68, 30)">
+    <path d="M52,22 C52,16 58,14 68,14 C78,14 84,16 84,22 C84,38 78,54 68,60 C58,54 52,38 52,22 Z"
+          fill="#ffd166" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M68,14 L68,60" stroke="#e09f24" stroke-width="2.0" transform="translate(4,0)"/>
+  </g>
+  <!-- Beak shadow cast onto dome (deeper on far side) -->
+  <path d="M56,26 C54,36 56,46 62,54 C60,44 60,34 62,26 Z" fill="#dce1e6"/>
+  <!-- Face Opening Recess (shifted right to cx=78) -->
+  <ellipse cx="78" cy="78" rx="32" ry="27" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+  <!-- Far cheek rim inside recess -->
+  <path d="M52,68 C50,78 52,88 58,94" stroke="#1e1e2c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -27,6 +27,10 @@ extends Resource
 @export var damage_per_projectile: float = 25.0
 @export var projectile_speed: float = 650.0
 @export var projectile_range: float = 550.0
+# When true, projectiles are spawned by the attack animation's PROJECTILE_SPAWN
+# event (exact release frame) instead of the ability timer. Preserves legacy
+# timer-driven behavior when false (default).
+@export var animation_driven_projectiles: bool = false
 
 @export_group("Super Ability")
 @export var super_duration: float = 5.0

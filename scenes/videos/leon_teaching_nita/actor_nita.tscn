@@ -11,6 +11,7 @@ script = ExtResource("1_actor")
 
 [node name="SideView" parent="." instance=ExtResource("2_side")]
 script = ExtResource("3_ctrl")
+character_name = "nita"
 projectile_scene = ExtResource("4_proj")
 projectiles_per_attack = 1
 projectile_burst_interval = 0.0

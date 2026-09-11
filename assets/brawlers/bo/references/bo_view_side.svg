@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#181a20"/>
+  <text x="400" y="48" fill="#ffd166" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">BO — SIDE VIEW (PRODUCTION ASSET)</text>
+  <text x="400" y="74" fill="#a0aab8" font-family="system-ui, -apple-system, sans-serif" font-size="13" text-anchor="middle">Broad Muscular Archer Build • Hooked Eagle Beak • Planted Combat Stance • Diagonal Quiver</text>
+  <ellipse cx="400" cy="710" rx="145" ry="20" fill="#101216"/>
+
+  <g transform="translate(360, 440) scale(2.35)">
+    <!-- 1. RECURVE BOW (Held Forward in Archer Grip) -->
+    <g transform="translate(48, -42) scale(0.75)">
+      <!-- Bowstring -->
+      <line x1="26" y1="4" x2="26" y2="160" stroke="#ced4da" stroke-width="2.4"/>
+      <!-- Curved Wooden Limbs -->
+      <path d="M26,4 C6,24 2,54 10,82 C2,110 6,140 26,160 C14,142 10,114 18,82 C10,50 14,22 26,4 Z"
+            fill="#a0522d" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+      <!-- Blue Wrapped Center Grip -->
+      <rect x="6" y="68" width="16" height="30" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+      <line x1="6" y1="76" x2="22" y2="76" stroke="#1060c0" stroke-width="1.8"/>
+      <line x1="6" y1="84" x2="22" y2="84" stroke="#1060c0" stroke-width="1.8"/>
+      <line x1="6" y1="92" x2="22" y2="92" stroke="#1060c0" stroke-width="1.8"/>
+      <!-- Upper Talon Tip -->
+      <path d="M20,4 L30,-8 L34,2 L40,-4 L36,8 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+      <!-- Lower Talon Tip -->
+      <path d="M20,160 L30,172 L34,162 L40,168 L36,156 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+    </g>
+
+    <!-- 2. FAR LEFT ARM (Reaching Forward Gripping Bow) -->
+    <g transform="translate(14, -14)">
+      <path d="M4,0 C14,-2 26,2 34,10 C40,16 42,24 38,28 C32,32 24,28 18,22 C12,16 4,10 0,6 Z"
+            fill="#a15e37" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <!-- Hand on Bow Grip -->
+      <circle cx="38" cy="20" r="7.5" fill="#a15e37" stroke="#1e1e2c" stroke-width="2.6"/>
+    </g>
+
+    <!-- 3. REAR LEG & FOOT (Stepped Back in Athletic Archer Stance) -->
+    <g>
+      <!-- Rear Bare Tan Foot -->
+      <g transform="translate(-38, 68)">
+        <path d="M2,6 L32,6 C38,6 40,11 40,16 L40,19 L0,19 L0,14 C0,8 1,6 2,6 Z"
+              fill="#9e5d36" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="28" y1="19" x2="28" y2="13" stroke="#683418" stroke-width="2.0" stroke-linecap="round"/>
+        <line x1="35" y1="19" x2="35" y2="14" stroke="#683418" stroke-width="2.0" stroke-linecap="round"/>
+      </g>
+      <!-- Rear Maroon Leg (Deep, muscular, bent knee) -->
+      <path d="M-22,36 L6,36 L0,70 L-32,70 C-34,58 -30,46 -22,36 Z"
+            fill="#5e1d1d" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <path d="M-8,36 L-6,52 L-14,70" stroke="#3d1212" stroke-width="2.4" fill="none"/>
+    </g>
+
+    <!-- 4. BACK QUIVER & ARROWS (Mounted on Upper Back, Ending at Waist Sash) -->
+    <g transform="translate(-24, -26) rotate(-22)">
+      <!-- Cyan Arrow Fan (4 Fletched Arrows Rising Behind Head) -->
+      <g transform="translate(0, -18)">
+        <path d="M-8,-16 L-3,-44 L1,-16 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <line x1="-3" y1="-44" x2="-3" y2="-16" stroke="#1e1e2c" stroke-width="1.4"/>
+
+        <path d="M-1,-18 L5,-50 L10,-18 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <line x1="5" y1="-50" x2="5" y2="-18" stroke="#1e1e2c" stroke-width="1.4"/>
+
+        <path d="M7,-16 L13,-42 L17,-16 Z" fill="#00b4d8" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <line x1="13" y1="-42" x2="13" y2="-16" stroke="#1e1e2c" stroke-width="1.4"/>
+
+        <path d="M14,-14 L20,-36 L23,-14 Z" fill="#48cae4" stroke="#1e1e2c" stroke-width="2.0" stroke-linejoin="round"/>
+        <line x1="20" y1="-36" x2="20" y2="-14" stroke="#1e1e2c" stroke-width="1.4"/>
+      </g>
+
+      <!-- White Quiver Collar with Teardrop Icon -->
+      <rect x="-8" y="-18" width="34" height="15" rx="3" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.2"/>
+      <path d="M8,-15 C5,-15 4,-11 8,-7 C12,-11 11,-15 8,-15 Z" fill="#1f3160"/>
+
+      <!-- Yellow Eagle Head Mounted on Quiver (Pointing Backwards as in Ref 1) -->
+      <g transform="translate(-16, -6)">
+        <path d="M10,0 C0,2 -4,12 2,18 C8,24 16,20 18,14 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+        <path d="M2,18 C-6,24 -12,20 -14,14 C-10,10 -2,8 2,18 Z" fill="#ffb703" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+        <circle cx="6" cy="8" r="1.8" fill="#1e1e2c"/>
+      </g>
+
+      <!-- Navy Quiver Main Cylinder Body (Cleanly terminating at waist) -->
+      <path d="M-6,-3 L22,-3 L18,52 L-2,52 Z" fill="#252b3e" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+      <line x1="4" y1="-3" x2="2" y2="52" stroke="#181d2a" stroke-width="3.0"/>
+
+      <!-- Quiver Base Cap at Waist -->
+      <path d="M-2,52 L18,52 L16,60 L0,60 Z" fill="#151928" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+    </g>
+
+    <!-- 5. DARK NAVY HAIR (Tucked Neatly Along Back of Neck) -->
+    <g transform="translate(-16, -56)">
+      <path d="M-4,0 C-16,16 -14,36 -4,50 C0,48 2,38 0,26 C-2,14 0,4 2,0 Z"
+            fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <path d="M-6,20 C-10,32 -8,44 -2,48 C-2,42 -4,32 -4,20 Z" fill="#151928"/>
+    </g>
+
+    <!-- 6. TORSO: BROAD BARREL CHEST & EMERALD VEST -->
+    <g transform="translate(-16, -24)">
+      <!-- Broad Caramel Tan Muscular Chest Profile (52 units deep!) -->
+      <path d="M-8,6 C-8,6 16,-2 34,-2 C46,-2 54,10 52,26 C50,40 42,48 30,50 L-8,50 Z"
+            fill="#b87349" stroke="#1e1e2c" stroke-width="3.6" stroke-linejoin="round"/>
+
+      <!-- Emerald Green Vest (Open front, covering back and shoulder) -->
+      <path d="M-8,4 C-8,4 10,-2 22,-2 C20,12 16,24 8,34 C2,42 -4,46 -8,50 Z"
+            fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <!-- Vest Cel Shadow on Back Curve -->
+      <path d="M-8,4 C-4,16 -6,36 -8,50 L-12,50 L-12,4 Z" fill="#05a87d"/>
+
+      <!-- Pectoral Muscle Definition -->
+      <path d="M12,12 C24,12 34,16 40,26 C36,34 28,36 18,34" stroke="#8f4f2a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M18,34 C16,42 20,48 26,50" stroke="#8f4f2a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+      <!-- Leather Quiver Harness Strap (Diagonal across chest) -->
+      <line x1="2" y1="0" x2="38" y2="42" stroke="#4a2e1b" stroke-width="5.2" stroke-linecap="round"/>
+      <line x1="2" y1="0" x2="38" y2="42" stroke="#1e1e2c" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3 3"/>
+
+      <!-- Maroon Sash at Waist -->
+      <rect x="-10" y="44" width="46" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+      <line x1="-10" y1="50" x2="36" y2="50" stroke="#1e1e2c" stroke-width="2.0"/>
+    </g>
+
+    <!-- 7. FRONT LEG & FOOT (Stepped Forward, Bearing Weight in Combat Stance) -->
+    <g>
+      <!-- Front Bare Tan Foot -->
+      <g transform="translate(4, 68)">
+        <path d="M4,6 L38,6 C44,6 46,11 46,16 L46,19 L2,19 L0,14 C0,8 2,6 4,6 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="32" y1="19" x2="32" y2="13" stroke="#7a4222" stroke-width="2.0" stroke-linecap="round"/>
+        <line x1="40" y1="19" x2="40" y2="14" stroke="#7a4222" stroke-width="2.0" stroke-linecap="round"/>
+      </g>
+      <!-- Front Maroon Leg (Muscular thigh, knee thrust forward) -->
+      <path d="M-8,34 L26,34 C36,46 38,58 32,70 L4,70 C4,60 2,48 -8,34 Z"
+            fill="#7a2828" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+      <path d="M26,34 C32,48 30,60 24,70" stroke="#5e1d1d" stroke-width="2.6" fill="none"/>
+      <path d="M16,46 Q26,52 22,58" stroke="#1e1e2c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- 8. HEAD: EAGLE COWL, ORANGE CREST, HOOKED BEAK & PROFILE FACE -->
+    <g transform="translate(-6, -100)">
+      <!-- ORANGE FEATHER CREST (Top-Rear of Cowl, pointing back/up) -->
+      <g transform="translate(-24, -28)">
+        <path d="M-4,4 C-14,-6 -24,-4 -28,6 C-24,12 -16,12 -12,16 C-22,20 -24,30 -16,34 C-10,34 -4,24 2,18 Z"
+              fill="#ff7b00" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+        <path d="M2,18 C-4,10 -8,4 -4,4 Z" fill="#e66e00"/>
+      </g>
+
+      <!-- White Eagle Cowl Dome -->
+      <path d="M-22,-36 C-4,-42 26,-42 40,-26 C52,-10 50,16 42,38 C28,48 4,50 -14,46 C-34,40 -38,14 -38,-12 C-38,-28 -32,-34 -22,-36 Z"
+            fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+      <!-- Soft Cool Grey Cel Shadow on Back/Under of Cowl -->
+      <path d="M-22,-34 C-32,-20 -34,14 -12,44 C-28,38 -34,20 -34,-10 Z" fill="#dce1e6"/>
+
+      <!-- Caramel Tan Face Base Profile (Chiseled warrior features) -->
+      <g transform="translate(8, 8)">
+        <path d="M0,6 C14,6 26,10 30,22 C34,36 30,48 18,54 C10,56 0,52 -2,44 C-4,30 -2,16 0,6 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+        <!-- Deep Brow Shadow Arch -->
+        <path d="M0,6 C12,12 26,14 28,24 C20,22 10,20 0,22 Z" fill="#8f4f2a"/>
+        <!-- Intense Focused Archer Eye -->
+        <polygon points="12,24 26,28 18,31" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+        <circle cx="19" cy="27.5" r="2.2" fill="#1e1e2c"/>
+        <!-- Stoic Set Mouth -->
+        <path d="M12,42 L24,40" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        <!-- Chiseled Jawline -->
+        <path d="M4,46 L18,54" stroke="#1e1e2c" stroke-width="2.4" stroke-linecap="round"/>
+      </g>
+
+      <!-- Eagle Eye on Cowl Brow (Fierce & Menacing) -->
+      <g transform="translate(6, -20)">
+        <!-- Heavy Black Eagle Brow Contour -->
+        <path d="M-6,10 L16,4 L30,14" stroke="#1e1e2c" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Golden Iris -->
+        <path d="M0,12 C8,8 20,8 26,14 C20,19 8,19 0,12 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2"/>
+        <!-- Sharp Black Pupil -->
+        <circle cx="14" cy="13.5" r="3.4" fill="#1e1e2c"/>
+        <circle cx="15.5" cy="12" r="1.1" fill="#ffffff"/>
+      </g>
+
+      <!-- PROUD HOOKED YELLOW EAGLE BEAK (Sharp forward & downward curve) -->
+      <g transform="translate(26, -16)">
+        <path d="M-2,6 C16,4 32,12 40,26 C44,36 40,50 28,62 C26,50 20,40 8,36 C2,34 -4,30 -6,28 Z"
+              fill="#ffd166" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+        <!-- Under-Beak Deep Amber Shadow -->
+        <path d="M8,36 C22,40 26,50 28,62 C22,54 16,46 6,42 Z" fill="#ffb703"/>
+        <!-- Nostril Slit -->
+        <ellipse cx="16" cy="22" rx="3.5" ry="1.6" transform="rotate(-18 16 22)" fill="#1e1e2c"/>
+      </g>
+    </g>
+
+    <!-- 9. NEAR RIGHT ARM (Muscular Bicep, Archer Talon Bracer, Clenched Fist) -->
+    <g transform="translate(4, -18)">
+      <!-- Massive Deltoid Muscle Cap on Shoulder -->
+      <path d="M-4,0 C10,-4 24,0 28,12 C30,22 22,28 12,26 C4,24 -2,16 -4,0 Z"
+            fill="#c48055" stroke="#1e1e2c" stroke-width="3.4" stroke-linejoin="round"/>
+
+      <!-- Muscular Bicep & Forearm -->
+      <path d="M6,16 C16,14 26,20 26,32 C26,44 18,52 8,50 C0,48 -2,38 2,24 Z"
+            fill="#b87349" stroke="#1e1e2c" stroke-width="3.4" stroke-linejoin="round"/>
+
+      <!-- White Archer Talon Bracer on Forearm -->
+      <path d="M2,30 L22,32 L18,48 L0,46 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+      <!-- Black Claws on Bracer -->
+      <polygon points="16,36 24,37 18,42" fill="#1e1e2c"/>
+      <circle cx="8" cy="38" r="3.0" fill="#00b4d8" stroke="#1e1e2c" stroke-width="1.6"/>
+
+      <!-- Clenched Archer Fist -->
+      <circle cx="8" cy="54" r="8.5" fill="#b87349" stroke="#1e1e2c" stroke-width="2.8"/>
+      <line x1="5" y1="58" x2="5" y2="52" stroke="#7a4222" stroke-width="1.8"/>
+      <line x1="9" y1="59" x2="9" y2="52" stroke="#7a4222" stroke-width="1.8"/>
+    </g>
+  </g>
+</svg>

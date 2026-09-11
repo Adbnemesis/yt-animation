@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="0 0 128 120">
+  <!-- NITA — BEAR HOOD 3/4 VIEW (LAB ASSET, derived from approved nita hood_front.svg) -->
+  <!-- Same silhouette + palette; muzzle/eyes shifted right = head turned to viewer's right. -->
+  <!-- Bear Ears (left ear full + near, right ear compressed at the far edge) -->
+  <circle cx="30" cy="34" r="16" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+  <circle cx="31" cy="35" r="9" fill="#a82332"/>
+  <ellipse cx="100" cy="36" rx="12" ry="14" fill="#d93848" stroke="#1e1e2c" stroke-width="3.5"/>
+  <ellipse cx="99" cy="37" rx="6" ry="8" fill="#a82332"/>
+  <!-- Main Bear Hood Outer Silhouette (identical to front) -->
+  <path d="M64,6 C30,6 12,28 12,64 C12,94 32,114 64,114 C96,114 116,94 116,64 C116,28 98,6 64,6 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- Forehead seam + stitches (shifted toward the turn) -->
+  <line x1="52" y1="8" x2="56" y2="34" stroke="#a82332" stroke-width="2.2"/>
+  <line x1="46" y1="12" x2="60" y2="12" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  <line x1="45" y1="20" x2="61" y2="20" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  <line x1="46" y1="28" x2="60" y2="28" stroke="#1e1e2c" stroke-width="3.0" stroke-linecap="round"/>
+  <!-- Far bear eye X-stitch (viewer's left, compressed near centre) -->
+  <line x1="34" y1="26" x2="46" y2="38" stroke="#1e1e2c" stroke-width="3.6" stroke-linecap="round"/>
+  <line x1="46" y1="26" x2="34" y2="38" stroke="#1e1e2c" stroke-width="3.6" stroke-linecap="round"/>
+  <!-- Near bear eye X-stitch (viewer's right, bold, toward edge) -->
+  <line x1="88" y1="24" x2="104" y2="40" stroke="#1e1e2c" stroke-width="4.6" stroke-linecap="round"/>
+  <line x1="104" y1="24" x2="88" y2="40" stroke="#1e1e2c" stroke-width="4.6" stroke-linecap="round"/>
+  <!-- Bear Muzzle / Snout Pad (shifted right) -->
+  <ellipse cx="76" cy="48" rx="23" ry="14" fill="#eb5e6d" stroke="#1e1e2c" stroke-width="3.2"/>
+  <!-- Bear Nose (shifted right) -->
+  <path d="M68,43 C68,38 73,36 77,36 C81,36 86,38 86,43 C86,49 81,52 77,52 C73,52 68,49 68,43 Z"
+        fill="#1e1e2c"/>
+  <circle cx="74" cy="46" r="1.3" fill="#3a3f47"/>
+  <circle cx="80" cy="46" r="1.3" fill="#3a3f47"/>
+  <!-- Face Cavity Cutout Hole (shifted right to cx=76) -->
+  <ellipse cx="76" cy="78" rx="33" ry="29" fill="#6e1f28" stroke="#1e1e2c" stroke-width="3.5"/>
+  <!-- Far cheek rim inside cavity -->
+  <path d="M50,70 C47,78 48,88 53,94" stroke="#1e1e2c" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Bear Fangs (shifted toward centre-left over the brow) -->
+  <path d="M52,57 L59,57 L55.5,67 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M76,56 L83,56 L79.5,66 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Left Shoulder Bear Paw (full, near side) -->
+  <path d="M12,82 C6,88 8,98 16,102 C24,106 30,100 30,92 C30,84 20,80 12,82 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+  <polygon points="12,94 7,98 13,99" fill="#1e1e2c"/>
+  <polygon points="17,99 14,104 20,103" fill="#1e1e2c"/>
+  <polygon points="23,101 23,106 27,103" fill="#1e1e2c"/>
+  <!-- Right Shoulder Bear Paw (partially turned away, compressed) -->
+  <path d="M116,84 C121,89 119,97 112,101 C105,104 100,99 100,92 C100,85 109,82 116,84 Z"
+        fill="#d93848" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+  <polygon points="115,95 119,98 114,99" fill="#1e1e2c"/>
+  <polygon points="110,99 112,103 107,102" fill="#1e1e2c"/>
+</svg>

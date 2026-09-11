@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="-58 -48 128 120">
+  <!-- Bo Side Hair: Dark Navy Tucked Along Back of Neck -->
+  <g transform="translate(-16, -12)">
+    <path d="M-4,0 C-16,16 -14,36 -4,50 C0,48 2,38 0,26 C-2,14 0,4 2,0 Z"
+          fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+    <path d="M-6,20 C-10,32 -8,44 -2,48 C-2,42 -4,32 -4,20 Z" fill="#151928"/>
+  </g>
+</svg>

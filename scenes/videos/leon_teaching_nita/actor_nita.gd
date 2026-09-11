@@ -142,6 +142,10 @@ func trigger_attack() -> void:
 		attack_finished.emit()
 		return
 
+	# Ground dust puff under feet on attack release
+	if has_node("/root/VFXManager"):
+		get_node("/root/VFXManager").spawn_vfx("DUST_PUFF", global_position + Vector2(0, -6))
+
 	side_view.position = Vector2.ZERO
 	side_view.set_physics_process(true)
 	side_view.trigger_attack()
@@ -159,6 +163,59 @@ func _on_side_view_attack_ended() -> void:
 	attack_finished.emit()
 
 # --- ACTING BEATS ---
+
+func anticipation_aim() -> void:
+	# Concentrated focus: leans forward, eyes squint with determination, steady arm
+	reset_pose()
+	set_expression("angry", "open")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var torso = side_view.find_child("torso", true, false)
+		var head = side_view.find_child("head", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", 0.15, 0.25)
+		if head: tw.tween_property(head, "rotation", 0.05, 0.25)
+		if arm_r: tw.tween_property(arm_r, "rotation", -0.85, 0.25)
+	var tw_squash = create_tween()
+	tw_squash.tween_property(self, "scale", Vector2(1.05, 0.95), 0.25)
+
+func fidget_embarrassed() -> void:
+	# Toe shuffle, subtle head wobble, sheepish peek at Leon
+	set_expression("hurt", "blink")
+	if side_view:
+		var head = side_view.find_child("head", true, false)
+		if head:
+			var tw = create_tween().set_trans(Tween.TRANS_SINE)
+			tw.tween_property(head, "rotation", 0.42, 0.2)
+			tw.tween_property(head, "rotation", 0.25, 0.2)
+			tw.tween_property(head, "rotation", 0.38, 0.2)
+			await tw.finished
+	set_expression("hurt", "open")
+
+func reckless_windup() -> void:
+	# Big over-exaggerated windup with confident foot stomp
+	set_expression("grin", "wide")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var torso = side_view.find_child("torso", true, false)
+		var head = side_view.find_child("head", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", -0.3, 0.18)
+		if head: tw.tween_property(head, "rotation", -0.2, 0.18)
+		if arm_r: tw.tween_property(arm_r, "rotation", 1.1, 0.18)
+	var tw_bob = create_tween()
+	tw_bob.tween_property(self, "position:y", position.y - 12.0, 0.1)
+	tw_bob.tween_property(self, "position:y", position.y, 0.08)
+	await tw_bob.finished
+
+func follow_through_settle() -> void:
+	reset_pose()
+	var tw = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "scale", Vector2.ONE, 0.2)
 
 func eager_hop() -> void:
 	# Eager student bouncing asking to be taught
@@ -189,19 +246,15 @@ func imitation_pose() -> void:
 		if head: tw.tween_property(head, "rotation", 0.20, 0.3)
 
 func clumsy_fumble_attack() -> void:
-	# Over-enthusiastic swing, losing balance forward in facing direction and firing wild
+	# Over-enthusiastic swing, losing balance forward with squash & stretch and firing wild
 	set_expression("shocked", "wide")
-	var orig_pos = position
-	var dir = float(facing_direction)
 	var tw = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tw.tween_property(self, "position:x", orig_pos.x + dir * 20.0, 0.18)
-	tw.parallel().tween_property(self, "scale", Vector2(1.15, 0.85), 0.18)
+	tw.tween_property(self, "scale", Vector2(1.18, 0.82), 0.18)
 	trigger_attack()
 	await attack_finished
 	# Stumble settle
-	var tw_settle = create_tween()
-	tw_settle.tween_property(self, "position:x", orig_pos.x + dir * 10.0, 0.25)
-	tw_settle.parallel().tween_property(self, "scale", Vector2.ONE, 0.25)
+	var tw_settle = create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw_settle.tween_property(self, "scale", Vector2.ONE, 0.25)
 	await tw_settle.finished
 
 func embarrassed_shrink() -> void:
@@ -276,3 +329,119 @@ func innocent_pose() -> void:
 		if head:
 			var tw = create_tween()
 			tw.tween_property(head, "rotation", -0.15, 0.3)
+
+func confident_aim() -> void:
+	# Rapid, confident aim for Target 2: quick lean forward, sharp eyes, firm forward arm
+	reset_pose()
+	set_expression("angry", "open")
+	if side_view:
+		var anim = side_view.find_child("AnimPlayer", true, false)
+		if anim: anim.stop()
+		var torso = side_view.find_child("torso", true, false)
+		var head = side_view.find_child("head", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_r_low = side_view.find_child("arm_R_lower", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", 0.18, 0.18)
+		if head: tw.tween_property(head, "rotation", 0.08, 0.18)
+		if arm_r: tw.tween_property(arm_r, "rotation", -0.9, 0.18)
+		if arm_r_low: tw.tween_property(arm_r_low, "rotation", 0.0, 0.18)
+
+func swagger_spin() -> void:
+	# Playful boastful spin and head flick
+	reset_pose()
+	set_expression("grin", "wide")
+	var orig_facing = facing_direction
+	set_facing(-orig_facing)
+	var tw = create_tween().set_trans(Tween.TRANS_SINE)
+	tw.tween_property(self, "position:y", position.y - 16.0, 0.14).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", position.y, 0.12).set_ease(Tween.EASE_IN)
+	await tw.finished
+	set_facing(orig_facing)
+	overconfident_swagger()
+
+func innocent_blink_loop() -> void:
+	# Subtle double-blink while holding innocent pose (deterministic tweens)
+	var tw = create_tween()
+	tw.tween_callback(func(): set_expression("grin", "blink"))
+	tw.tween_interval(0.12)
+	tw.tween_callback(func(): set_expression("grin", "open"))
+	tw.tween_interval(0.18)
+	tw.tween_callback(func(): set_expression("grin", "blink"))
+	tw.tween_interval(0.12)
+	tw.tween_callback(func(): set_expression("grin", "open"))
+
+func shadow_punch_excited() -> void:
+	# Excited shadow-boxing punches in the air ("Teach me, I'm ready!")
+	reset_pose()
+	set_expression("grin", "wide")
+	if side_view:
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_l = side_view.find_child("arm_L_upper", true, false)
+		var tw = create_tween().set_trans(Tween.TRANS_QUAD)
+		# Punch right
+		if arm_r:
+			tw.tween_property(arm_r, "rotation", -1.2, 0.12)
+			tw.tween_property(arm_r, "rotation", 0.0, 0.10)
+		# Punch left
+		if arm_l:
+			tw.tween_property(arm_l, "rotation", -1.2, 0.12)
+			tw.tween_property(arm_l, "rotation", 0.0, 0.10)
+	var tw_hop = create_tween()
+	tw_hop.tween_property(self, "position:y", position.y - 12.0, 0.12)
+	tw_hop.tween_property(self, "position:y", position.y, 0.10)
+
+func check_feet_alignment() -> void:
+	# Looks down at feet, adjusts front foot, looks up with confident smile
+	if side_view:
+		var head = side_view.find_child("head", true, false)
+		var tw = create_tween().set_trans(Tween.TRANS_QUAD)
+		if head:
+			# Look down
+			tw.tween_property(head, "rotation", 0.45, 0.25)
+			tw.tween_interval(0.35)
+			# Look back up to dummy target
+			tw.tween_property(head, "rotation", 0.0, 0.22)
+	var tw_step = create_tween()
+	tw_step.tween_interval(0.2)
+	tw_step.tween_property(self, "scale", Vector2(1.08, 0.94), 0.15)
+	tw_step.tween_property(self, "scale", Vector2.ONE, 0.15)
+
+func focused_deep_breath() -> void:
+	# Takes a steady deep breath, shoulders rise and settle, eyes narrow in laser focus
+	reset_pose()
+	set_expression("angry", "open")
+	var tw = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	tw.tween_property(self, "scale", Vector2(0.96, 1.06), 0.35)
+	tw.tween_property(self, "scale", Vector2.ONE, 0.30)
+
+func double_high_hop() -> void:
+	# Two big celebratory hops with both arms raised
+	reset_pose()
+	set_expression("happy", "happy")
+	if side_view:
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var arm_l = side_view.find_child("arm_L_upper", true, false)
+		if arm_r: arm_r.rotation = -1.6
+		if arm_l: arm_l.rotation = -1.5
+	var orig_y = position.y
+	var tw = create_tween()
+	tw.tween_property(self, "position:y", orig_y - 28.0, 0.14).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	tw.tween_property(self, "position:y", orig_y - 22.0, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "position:y", orig_y, 0.10).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	await tw.finished
+
+func boastful_chest_puff() -> void:
+	# Puffs chest, leans back, proud cocky grin
+	set_expression("smug", "wide")
+	if side_view:
+		var torso = side_view.find_child("torso", true, false)
+		var head = side_view.find_child("head", true, false)
+		var arm_r = side_view.find_child("arm_R_upper", true, false)
+		var tw = create_tween().set_parallel(true).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		if torso: tw.tween_property(torso, "rotation", -0.28, 0.25)
+		if head: tw.tween_property(head, "rotation", -0.22, 0.25)
+		if arm_r: tw.tween_property(arm_r, "rotation", 0.5, 0.25)
+	var tw_puff = create_tween()
+	tw_puff.tween_property(self, "scale", Vector2(1.10, 1.05), 0.25)

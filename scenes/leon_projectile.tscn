@@ -1,7 +1,7 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://scripts/leon_projectile.gd" id="1_66igb"]
-[ext_resource type="Texture2D" path="res://assets/leon/projectile/spinner_blade.svg" id="2_c3fo0"]
+[ext_resource type="Texture2D" path="res://assets/brawlers/leon/projectile/spinner_blade.svg" id="2_c3fo0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_te20p"]
 

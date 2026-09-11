@@ -48,6 +48,7 @@ const STATE_NAMES := {
 @export var gravity: float = 1200.0
 @export var acceleration: float = 1800.0
 @export var friction: float = 2000.0
+@export var character_name: String = ""
 @export var projectile_scene: PackedScene = preload("res://scenes/leon_projectile.tscn")
 @export var projectiles_per_attack: int = 4
 @export var projectile_burst_interval: float = 0.030
@@ -55,6 +56,15 @@ const STATE_NAMES := {
 @export var super_duration: float = 5.0
 
 var attack_burst_count: int = 0
+
+func get_character_id() -> String:
+	if not character_name.is_empty():
+		return character_name.to_lower()
+	if scene_file_path.to_lower().contains("nita") or (get_parent() and get_parent().name.to_lower().contains("nita")):
+		return "nita"
+	if scene_file_path.to_lower().contains("leon") or (get_parent() and get_parent().name.to_lower().contains("leon")):
+		return "leon"
+	return "leon"
 
 # --- Super Ability Layer ---
 enum SuperState { NONE, SUPER_START, SUPER_ACTIVE, SUPER_END }
@@ -585,7 +595,7 @@ func _on_anim_attack_release() -> void:
 	attack_has_released = true
 	_apply_state_face("angry")
 	attack_released.emit()
-	attack_event.emit("ATTACK_RELEASE", {"time": state_timer})
+	attack_event.emit("ATTACK_RELEASE", {"time": state_timer, "character": get_character_id()})
 
 func _on_anim_projectile_spawn() -> void:
 	if current_state != State.ATTACK:
@@ -614,7 +624,8 @@ func _spawn_burst_projectile(blade_idx: int) -> void:
 		"position": spawn_pos,
 		"direction": facing_direction,
 		"blade_index": blade_idx,
-		"time": state_timer
+		"time": state_timer,
+		"character": get_character_id()
 	})
 	_spawn_projectile_object(spawn_pos, shoot_dir)
 

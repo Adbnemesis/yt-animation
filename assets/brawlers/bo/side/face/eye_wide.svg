@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="-58 -48 128 120">
+  <!-- Bo Profile Eye: Wide Alert -->
+  <g transform="translate(8, 8)">
+    <polygon points="11,22 27,26 18,32" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.0"/>
+    <circle cx="19" cy="27" r="2.8" fill="#1e1e2c"/>
+    <circle cx="20.2" cy="25.8" r="0.9" fill="#ffffff"/>
+  </g>
+</svg>

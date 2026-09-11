@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+; LEON — MULTIVIEW LAB ACTOR (LAB)
+; World-space actor: camera-projected feet, contact shadow, multiview model.
+
+[ext_resource type="Script" path="res://scripts/labs/cinematic_actor.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/labs/characters/leon_multiview_lab/leon_multiview.tscn" id="2_model"]
+
+[sub_resource type="Curve" id="Curve_shadow"]
+_data = [Vector2(0, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.2), 0.0, 0.0, 0, 0]
+
+[node name="LeonMultiviewLab" type="Node2D"]
+script = ExtResource("1_actor")
+display_name = "Leon"
+
+[node name="Shadow" type="Polygon2D" parent="."]
+z_index = -1
+modulate = Color(0, 0, 0, 0.42)
+polygon = PackedVector2Array(-30, 2, 30, 2, 34, 12, -34, 12)
+
+[node name="Model" parent="." instance=ExtResource("2_model")]

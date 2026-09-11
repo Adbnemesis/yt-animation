@@ -13,31 +13,31 @@ class_name FaceControllerNita
 
 # Nita Authentic Cut-Paper Textures
 var mouth_textures := {
-	"neutral": preload("res://assets/nita/face/mouth_neutral.svg"),
-	"grin": preload("res://assets/nita/face/mouth_grin.svg"),
-	"happy": preload("res://assets/nita/face/mouth_happy.svg"),
-	"angry": preload("res://assets/nita/face/mouth_angry.svg"),
-	"shocked": preload("res://assets/nita/face/mouth_shocked.svg"),
-	"hurt": preload("res://assets/nita/face/mouth_hurt.svg"),
-	"smug": preload("res://assets/nita/face/mouth_grin.svg")
+	"neutral": preload("res://assets/brawlers/nita/face/mouth_neutral.svg"),
+	"grin": preload("res://assets/brawlers/nita/face/mouth_grin.svg"),
+	"happy": preload("res://assets/brawlers/nita/face/mouth_happy.svg"),
+	"angry": preload("res://assets/brawlers/nita/face/mouth_angry.svg"),
+	"shocked": preload("res://assets/brawlers/nita/face/mouth_shocked.svg"),
+	"hurt": preload("res://assets/brawlers/nita/face/mouth_hurt.svg"),
+	"smug": preload("res://assets/brawlers/nita/face/mouth_grin.svg")
 }
 
 var eye_textures_l := {
-	"open": preload("res://assets/nita/face/eye_L.svg"),
-	"blink": preload("res://assets/nita/face/eyes_blink.svg"),
-	"closed": preload("res://assets/nita/face/eyes_blink.svg"),
-	"happy": preload("res://assets/nita/face/eyes_happy.svg"),
-	"wide": preload("res://assets/nita/face/eyes_wide.svg"),
-	"angry": preload("res://assets/nita/face/eyes_angry.svg")
+	"open": preload("res://assets/brawlers/nita/face/eye_L.svg"),
+	"blink": preload("res://assets/brawlers/nita/face/eyes_blink.svg"),
+	"closed": preload("res://assets/brawlers/nita/face/eyes_blink.svg"),
+	"happy": preload("res://assets/brawlers/nita/face/eyes_happy.svg"),
+	"wide": preload("res://assets/brawlers/nita/face/eyes_wide.svg"),
+	"angry": preload("res://assets/brawlers/nita/face/eyes_angry.svg")
 }
 
 var eye_textures_r := {
-	"open": preload("res://assets/nita/face/eye_R.svg"),
-	"blink": preload("res://assets/nita/face/eyes_blink.svg"),
-	"closed": preload("res://assets/nita/face/eyes_blink.svg"),
-	"happy": preload("res://assets/nita/face/eyes_happy.svg"),
-	"wide": preload("res://assets/nita/face/eyes_wide.svg"),
-	"angry": preload("res://assets/nita/face/eyes_angry.svg")
+	"open": preload("res://assets/brawlers/nita/face/eye_R.svg"),
+	"blink": preload("res://assets/brawlers/nita/face/eyes_blink.svg"),
+	"closed": preload("res://assets/brawlers/nita/face/eyes_blink.svg"),
+	"happy": preload("res://assets/brawlers/nita/face/eyes_happy.svg"),
+	"wide": preload("res://assets/brawlers/nita/face/eyes_wide.svg"),
+	"angry": preload("res://assets/brawlers/nita/face/eyes_angry.svg")
 }
 
 @export_enum("neutral", "grin", "happy", "angry", "shocked", "hurt", "smug") var expression: String = "grin":

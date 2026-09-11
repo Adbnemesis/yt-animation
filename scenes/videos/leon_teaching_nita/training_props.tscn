@@ -1,16 +1,26 @@
 [gd_scene format=3]
 
 [ext_resource type="Script" path="res://scenes/videos/leon_teaching_nita/destructible_props.gd" id="1_props"]
-[ext_resource type="Texture2D" path="res://assets/props/prop_crate_01.png" id="2_crate1"]
-[ext_resource type="Texture2D" path="res://assets/props/prop_crate_02.png" id="3_crate2"]
-[ext_resource type="Texture2D" path="res://assets/props/prop_sign_01.png" id="4_sign"]
-[ext_resource type="Texture2D" path="res://assets/nature/nat_bush_round_01.png" id="5_bush"]
+[ext_resource type="Script" path="res://scenes/videos/leon_teaching_nita/prop_hit_receiver.gd" id="2_receiver"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_01.png" id="3_crate1"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_02.png" id="4_crate2"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_sign_01.png" id="5_sign"]
+[ext_resource type="Texture2D" path="res://assets/nature/nat_bush_round_01.png" id="6_bush"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_panel_wood_sq_01.png" id="7_panel"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_plank_tall_01.png" id="8_plank"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_small_01.png" id="9_smallcrate"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crates"]
 size = Vector2(80, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sign"]
 size = Vector2(40, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_target1"]
+size = Vector2(36, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_target2"]
+size = Vector2(44, 52)
 
 [node name="TrainingProps" type="Node2D"]
 script = ExtResource("1_props")
@@ -22,42 +32,63 @@ z_index = -1
 modulate = Color(0.26, 0.58, 0.22, 0.95)
 position = Vector2(640, -14)
 scale = Vector2(0.45, 0.45)
-texture = ExtResource("5_bush")
+texture = ExtResource("6_bush")
 
 [node name="Bush2" type="Sprite2D" parent="Bushes"]
 modulate = Color(0.22, 0.52, 0.18, 0.95)
 position = Vector2(1000, -16)
 scale = Vector2(0.55, 0.55)
-texture = ExtResource("5_bush")
+texture = ExtResource("6_bush")
 
-[node name="CrateStack" type="Area2D" parent="." groups=["hit_receiver"]]
-position = Vector2(920, 0)
+[node name="PracticeTarget1" type="Area2D" parent="." groups=["hit_receiver"]]
+visible = false
+position = Vector2(580, 0)
 collision_layer = 4
 collision_mask = 8
+script = ExtResource("2_receiver")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrateStack"]
-position = Vector2(0, -40)
-shape = SubResource("RectangleShape2D_crates")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PracticeTarget1"]
+position = Vector2(0, -34)
+shape = SubResource("RectangleShape2D_target1")
+disabled = true
 
-[node name="CrateBottomL" type="Sprite2D" parent="CrateStack"]
-position = Vector2(-18, -18)
+[node name="Post" type="Sprite2D" parent="PracticeTarget1"]
+position = Vector2(0, -20)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_plank")
+
+[node name="TargetBoard" type="Sprite2D" parent="PracticeTarget1"]
+position = Vector2(0, -46)
 scale = Vector2(0.65, 0.65)
-texture = ExtResource("2_crate1")
+texture = ExtResource("7_panel")
 
-[node name="CrateBottomR" type="Sprite2D" parent="CrateStack"]
-position = Vector2(20, -18)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("3_crate2")
+[node name="PracticeTarget2" type="Area2D" parent="." groups=["hit_receiver"]]
+visible = false
+position = Vector2(670, 0)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("2_receiver")
 
-[node name="CrateTop" type="Sprite2D" parent="CrateStack"]
-position = Vector2(0, -52)
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("2_crate1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PracticeTarget2"]
+position = Vector2(0, -26)
+shape = SubResource("RectangleShape2D_target2")
+disabled = true
+
+[node name="Stand" type="Sprite2D" parent="PracticeTarget2"]
+position = Vector2(0, -14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_crate2")
+
+[node name="TopCrate" type="Sprite2D" parent="PracticeTarget2"]
+position = Vector2(0, -38)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_smallcrate")
 
 [node name="TrainingSign" type="Area2D" parent="." groups=["hit_receiver"]]
-position = Vector2(840, 0)
+position = Vector2(850, 0)
 collision_layer = 4
 collision_mask = 8
+script = ExtResource("2_receiver")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrainingSign"]
 position = Vector2(0, -35)
@@ -66,6 +97,31 @@ shape = SubResource("RectangleShape2D_sign")
 [node name="SignSprite" type="Sprite2D" parent="TrainingSign"]
 position = Vector2(0, -36)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_sign")
+texture = ExtResource("5_sign")
+
+[node name="CrateStack" type="Area2D" parent="." groups=["hit_receiver"]]
+position = Vector2(930, 0)
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("2_receiver")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrateStack"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_crates")
+
+[node name="CrateBottomL" type="Sprite2D" parent="CrateStack"]
+position = Vector2(-18, -18)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_crate1")
+
+[node name="CrateBottomR" type="Sprite2D" parent="CrateStack"]
+position = Vector2(20, -18)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_crate2")
+
+[node name="CrateTop" type="Sprite2D" parent="CrateStack"]
+position = Vector2(0, -52)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_crate1")
 
 [node name="DebrisContainer" type="Node2D" parent="."]

@@ -3733,93 +3733,1359 @@
   ],
   "brawler_assets": {
     "meta": {
-      "note": "Production character art for Brawlers. Leon lives in assets/leon/ (pre-catalog). Nita appended below in the same catalog system — no duplicate catalog created.",
-      "style_benchmark": "assets/leon/ (approved reference implementation)",
+      "note": "Production character vector cutout artwork for Brawlers. All characters share identical #1e1e2c outline weights, flat cel-fills, oversized-head/compact-body ratio, and ball-and-socket rotating joints.",
+      "style_benchmark": "Shared 2D vector cutout pipeline (Leon, Nita, Bo)",
       "outline_color": "#1e1e2c",
       "outline_weights": "3.5 body / 3.2 face-hood / 2.5-3.0 secondary / 1.8-2.6 detail",
       "color_treatment": "flat fills only, no gradients, no painterly shading"
     },
+    "leon": {
+      "character": "Leon (chameleon-hood brawler)",
+      "stage": "PRODUCTION ASSET & RIGGED \u2014 full animation sets, multi-view rigs, projectiles, audio sync",
+      "source": "In-house original SVG artwork",
+      "license": "Original in-house work \u2014 commercial use permitted, no attribution required",
+      "format": "SVG",
+      "color_palette": {
+        "outline": "#1e1e2c",
+        "hood_green": "#38b000",
+        "hood_stripe_yellow": "#ffd166",
+        "button_blue": "#1e90ff",
+        "button_dark_blue": "#0077b6",
+        "hood_cavity": "#1a2512",
+        "skin_tan": "#c47d48",
+        "shorts_navy": "#1f3160",
+        "lollipop_red": "#e63946"
+      },
+      "parts": [
+        {
+          "name": "hood.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "chameleon hood front view with buttons and stripe",
+          "animation_role": "headwear front"
+        },
+        {
+          "name": "hood_back.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "chameleon hood rear view",
+          "animation_role": "headwear back"
+        },
+        {
+          "name": "hood_side.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "chameleon hood side profile",
+          "animation_role": "headwear side"
+        },
+        {
+          "name": "hood_34.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "chameleon hood 3/4 perspective",
+          "animation_role": "headwear 3/4"
+        },
+        {
+          "name": "face_base.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "face base disc + shadow arch",
+          "animation_role": "face base"
+        },
+        {
+          "name": "torso_jacket.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "green jacket with zipper & blue hem",
+          "animation_role": "torso front"
+        },
+        {
+          "name": "torso_back.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "green jacket back view",
+          "animation_role": "torso back"
+        },
+        {
+          "name": "tail.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "curled chameleon tail",
+          "animation_role": "tail / secondary motion"
+        },
+        {
+          "name": "arm_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left upper/lower arm",
+          "animation_role": "arm L"
+        },
+        {
+          "name": "arm_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right upper/lower arm",
+          "animation_role": "arm R"
+        },
+        {
+          "name": "hand_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left blue mitten hand",
+          "animation_role": "hand L"
+        },
+        {
+          "name": "hand_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right blue mitten hand",
+          "animation_role": "hand R"
+        },
+        {
+          "name": "leg_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left navy shorts leg",
+          "animation_role": "leg L"
+        },
+        {
+          "name": "leg_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right navy shorts leg",
+          "animation_role": "leg R"
+        },
+        {
+          "name": "foot_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left tan foot",
+          "animation_role": "foot L"
+        },
+        {
+          "name": "foot_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right tan foot",
+          "animation_role": "foot R"
+        },
+        {
+          "name": "eye_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left eye sclera",
+          "animation_role": "eye base L"
+        },
+        {
+          "name": "eye_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right eye sclera",
+          "animation_role": "eye base R"
+        },
+        {
+          "name": "pupil_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left pupil",
+          "animation_role": "pupil L"
+        },
+        {
+          "name": "pupil_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right pupil",
+          "animation_role": "pupil R"
+        },
+        {
+          "name": "eyebrow_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left eyebrow",
+          "animation_role": "brow L"
+        },
+        {
+          "name": "eyebrow_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right eyebrow",
+          "animation_role": "brow R"
+        },
+        {
+          "name": "eyes_blink.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: blink / closed",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "eyes_happy.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: happy",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "eyes_wide.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: wide",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "eyes_angry.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: angry",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "eyes_scared.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: scared",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "mouth_neutral.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: neutral with lollipop",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_smile.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: happy smile",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_angry.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: angry grit",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_sad.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: sad frown",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_shocked.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: shocked oval",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_scared.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: scared small oval",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_hurt.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: hurt wince",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_confused.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: confused squiggle",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_smug.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: smug smirk",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_open.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: open shouting",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_laughing.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: laughing teeth",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "mouth_surprised.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: surprised O",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "side/hood.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile hood",
+          "animation_role": "side hood"
+        },
+        {
+          "name": "side/face.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile face and lollipop",
+          "animation_role": "side face"
+        },
+        {
+          "name": "side/torso.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile torso jacket",
+          "animation_role": "side torso"
+        },
+        {
+          "name": "side/tail.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile tail",
+          "animation_role": "side tail"
+        },
+        {
+          "name": "side/arm_upper.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile upper arm",
+          "animation_role": "side arm upper"
+        },
+        {
+          "name": "side/arm_lower.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile lower arm",
+          "animation_role": "side arm lower"
+        },
+        {
+          "name": "side/hand.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile mitten hand",
+          "animation_role": "side hand"
+        },
+        {
+          "name": "side/leg_upper.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile upper leg",
+          "animation_role": "side leg upper"
+        },
+        {
+          "name": "side/leg_lower.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile lower leg",
+          "animation_role": "side leg lower"
+        },
+        {
+          "name": "side/foot.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile foot",
+          "animation_role": "side foot"
+        },
+        {
+          "name": "projectile/spinner_blade.svg",
+          "category": "projectile",
+          "format": "SVG",
+          "purpose": "Leon primary attack ninja spinner star",
+          "animation_role": "projectile"
+        }
+      ],
+      "root_path": "assets/brawlers/leon/",
+      "reference_sheets": [
+        {
+          "name": "references/leon_model_sheet.png",
+          "purpose": "4K UHD master model sheet (Front View, Side Rig, Back View, Nita Scale Reference) from Godot production engine",
+          "format": "PNG (4K UHD 3840x2160)"
+        },
+        {
+          "name": "references/leon_view_front.png",
+          "purpose": "4K front view production puppet portrait (leon_front.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/leon_view_side.png",
+          "purpose": "4K side view locomotion rig portrait (leon.tscn / leon_side.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/leon_view_back.png",
+          "purpose": "4K back view production puppet portrait (leon_back.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/leon_expression_sheet.png",
+          "purpose": "4K 10-state expression matrix (neutral, happy, angry, sad, shocked, scared, hurt, confused, smug, laughing) on front rig",
+          "format": "PNG (4K UHD 3840x2160)"
+        },
+        {
+          "name": "references/LEON_STYLE_NOTES.md",
+          "purpose": "style specification, palette catalog, puppet rig index, and Godot animation references",
+          "format": "Markdown"
+        }
+      ]
+    },
     "nita": {
       "character": "Nita (bear-hood brawler)",
-      "stage": "ART ASSET PACKAGE ONLY — no rig, no animation, no bear, no attack, no Super yet",
-      "source": "In-house original SVG artwork, style-locked to approved Leon production art; character identity from provided Nita reference image",
-      "license": "Original in-house work — commercial use permitted, no attribution required",
+      "stage": "PRODUCTION ASSET & RIGGED \u2014 full animation sets, multi-view rigs, shockwave attack, audio sync",
+      "source": "In-house original SVG artwork",
+      "license": "Original in-house work \u2014 commercial use permitted, no attribution required",
+      "format": "SVG",
+      "color_palette": {
+        "outline": "#1e1e2c",
+        "hood_red": "#d93848",
+        "ears_dark_red": "#a82332",
+        "snout_salmon": "#eb5e6d",
+        "hood_cavity": "#6e1f28",
+        "skin_tan": "#b87349",
+        "hair_dark": "#3a2015",
+        "war_paint": "#4a2818",
+        "tunic_green": "#06d6a0",
+        "skirt_cyan": "#48cae4",
+        "leggings_maroon": "#7a2828",
+        "pendant_blue": "#00b4d8",
+        "belt_brown": "#4a2e1b"
+      },
+      "parts": [
+        {
+          "name": "hood_front.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "bear cowl with ears, stitches, snout pad, and fangs",
+          "animation_role": "headwear front"
+        },
+        {
+          "name": "hood_back.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "bear cowl back view",
+          "animation_role": "headwear back"
+        },
+        {
+          "name": "face_base.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "tan face base disc with war paint mask & bangs",
+          "animation_role": "face base"
+        },
+        {
+          "name": "torso.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "emerald tunic with shoulder drapes, paw pendant & belt",
+          "animation_role": "torso front"
+        },
+        {
+          "name": "torso_back.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "emerald tunic back view",
+          "animation_role": "torso back"
+        },
+        {
+          "name": "skirt.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "cyan undertunic with emerald chevron wrap skirt",
+          "animation_role": "skirt / waist"
+        },
+        {
+          "name": "body/arm_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left bare sleeveless tan arm",
+          "animation_role": "arm L"
+        },
+        {
+          "name": "body/arm_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right bare sleeveless tan arm",
+          "animation_role": "arm R"
+        },
+        {
+          "name": "body/hand_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left bare tan cartoon hand",
+          "animation_role": "hand L"
+        },
+        {
+          "name": "body/hand_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right bare tan cartoon hand",
+          "animation_role": "hand R"
+        },
+        {
+          "name": "body/leg_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left maroon legging leg",
+          "animation_role": "leg L"
+        },
+        {
+          "name": "body/leg_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right maroon legging leg",
+          "animation_role": "leg R"
+        },
+        {
+          "name": "body/foot_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "left bare tan foot",
+          "animation_role": "foot L"
+        },
+        {
+          "name": "body/foot_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "purpose": "right bare tan foot",
+          "animation_role": "foot R"
+        },
+        {
+          "name": "face/eye_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left white eye sclera",
+          "animation_role": "eye base L"
+        },
+        {
+          "name": "face/eye_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right white eye sclera",
+          "animation_role": "eye base R"
+        },
+        {
+          "name": "face/pupil_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left pupil",
+          "animation_role": "pupil L"
+        },
+        {
+          "name": "face/pupil_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right pupil",
+          "animation_role": "pupil R"
+        },
+        {
+          "name": "face/eyebrow_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "left eyebrow",
+          "animation_role": "brow L"
+        },
+        {
+          "name": "face/eyebrow_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "right eyebrow",
+          "animation_role": "brow R"
+        },
+        {
+          "name": "face/eyes_blink.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: blink / closed",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/eyes_happy.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: happy",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/eyes_wide.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: wide",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/eyes_angry.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "eye state: angry",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/mouth_neutral.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: neutral",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/mouth_grin.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: confident grin",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/mouth_happy.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: happy smile",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/mouth_angry.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: angry snarl",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/mouth_shocked.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: shocked oval",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/mouth_hurt.svg",
+          "category": "face",
+          "format": "SVG",
+          "purpose": "mouth: hurt wince",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "side/hood.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile bear hood",
+          "animation_role": "side hood"
+        },
+        {
+          "name": "side/face.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile face with war paint",
+          "animation_role": "side face"
+        },
+        {
+          "name": "side/torso.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile emerald tunic",
+          "animation_role": "side torso"
+        },
+        {
+          "name": "side/skirt.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile wrap skirt",
+          "animation_role": "side skirt"
+        },
+        {
+          "name": "side/arm_upper.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile upper arm",
+          "animation_role": "side arm upper"
+        },
+        {
+          "name": "side/arm_lower.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile lower arm",
+          "animation_role": "side arm lower"
+        },
+        {
+          "name": "side/hand.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile hand",
+          "animation_role": "side hand"
+        },
+        {
+          "name": "side/leg_upper.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile upper leg",
+          "animation_role": "side leg upper"
+        },
+        {
+          "name": "side/leg_lower.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile lower leg",
+          "animation_role": "side leg lower"
+        },
+        {
+          "name": "side/foot.svg",
+          "category": "side",
+          "format": "SVG",
+          "purpose": "side profile foot",
+          "animation_role": "side foot"
+        },
+        {
+          "name": "projectile/shockwave_rupture.svg",
+          "category": "projectile",
+          "format": "SVG",
+          "purpose": "Nita primary attack ground shockwave",
+          "animation_role": "projectile"
+        }
+      ],
+      "qc": {
+        "style_vs_leon": "PASS \u2014 same #1e1e2c outline weights, flat fills, no gradients, same facial primitives, 1:1 scale parity",
+        "identity": "PASS \u2014 bear hood + round ears + X-stitches + snout pad + fangs + emerald tunic + cyan skirt + paw pendant",
+        "views_consistency": "PASS \u2014 proportions locked across front, 3/4, and side views",
+        "part_separation": "PASS \u2014 modular SVGs across front, side, and face controllers with ball-and-socket rotating joints",
+        "silhouette": "PASS \u2014 distinct from Leon, same oversized-head / compact-body construction philosophy"
+      },
+      "root_path": "assets/brawlers/nita/",
+      "reference_sheets": [
+        {
+          "name": "references/nita_model_sheet.png",
+          "purpose": "4K UHD master model sheet (Front View, Side Rig, Back View, Leon Scale Reference) from Godot production engine",
+          "format": "PNG (4K UHD 3840x2160)"
+        },
+        {
+          "name": "references/nita_view_front.png",
+          "purpose": "4K front view production puppet portrait (nita_front.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/nita_view_side.png",
+          "purpose": "4K side view locomotion rig portrait (nita_side.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/nita_view_back.png",
+          "purpose": "4K back view production puppet portrait (nita_back.tscn)",
+          "format": "PNG"
+        },
+        {
+          "name": "references/nita_expression_sheet.png",
+          "purpose": "4K 6-state expression matrix (grin, happy, angry, shocked, hurt, neutral) on front rig",
+          "format": "PNG (4K UHD 3840x2160)"
+        },
+        {
+          "name": "references/NITA_STYLE_NOTES.md",
+          "purpose": "style specification, palette catalog, puppet rig index, and Godot animation references",
+          "format": "Markdown"
+        }
+      ]
+    },
+    "bo": {
+      "character": "Bo (eagle-hood archer brawler)",
+      "stage": "ART ASSET PACKAGE ONLY \u2014 no rig, no animation, no bow projectile, no Super mine, no VFX, no video yet",
+      "source": "In-house original SVG artwork, style-locked to approved Leon and Nita production art; character identity from provided Bo reference image",
+      "license": "Original in-house work \u2014 commercial use permitted, no attribution required",
       "format": "SVG (Godot 4.7 imports SVG natively; rasterize to PNG only if needed)",
       "color_palette": {
         "outline": "#1e1e2c",
-        "hood_red": "#e04646",
-        "hood_cavity": "#6e2323",
-        "skin": "#a5683f",
-        "navy_snout_cuffs": "#1f3160",
-        "top_green": "#2eb872",
-        "skirt_cyan": "#6ec9e0",
-        "hair_auburn": "#74403a",
-        "leggings_maroon": "#7c3a34",
-        "pendant_blue": "#6ec6ff",
-        "mouth_red": "#eb4d4b"
+        "white_cowl": "#f8f9fa",
+        "cowl_cavity": "#2a2d34",
+        "skin_tan": "#a86d47",
+        "eagle_beak_gold": "#f4a261",
+        "beak_highlight": "#ffd166",
+        "emerald_tunic": "#06d6a0",
+        "maroon_pants_sash": "#7a2828",
+        "dark_sash_trim": "#541b1b",
+        "quiver_navy": "#1f3160",
+        "bow_wood": "#3d261d",
+        "bow_grip_blue": "#00b4d8",
+        "fletching_cyan": "#48cae4",
+        "arrow_shaft_gold": "#ffd166",
+        "white_eyes": "#ffffff"
       },
       "parts": [
-        {"name": "body/nita_face_base.svg", "category": "body", "format": "SVG", "resolution": "76x68", "transparent": true, "purpose": "face disc + hood shadow arch", "pivot": "head center", "source": "in-house, style-locked to Leon", "animation_role": "face base"},
-        {"name": "body/nita_hood_front.svg", "category": "body", "format": "SVG", "resolution": "132x128", "transparent": true, "purpose": "bear hood + ears + X-stitches + snout bridge + face cavity (front)", "pivot": "head center", "source": "in-house", "animation_role": "headwear main"},
-        {"name": "body/nita_hood_snout.svg", "category": "body", "format": "SVG", "resolution": "40x32", "transparent": true, "purpose": "big dark muzzle overlay (signature)", "pivot": "center", "source": "in-house", "animation_role": "headwear overlay"},
-        {"name": "body/nita_hair_back.svg", "category": "body", "format": "SVG", "resolution": "64x44", "transparent": true, "purpose": "back hair mass (3/4 + side views)", "pivot": "top center", "source": "in-house", "animation_role": "secondary motion"},
-        {"name": "body/nita_hair_L.svg", "category": "body", "format": "SVG", "resolution": "22x34", "transparent": true, "purpose": "left cheek hair strand", "pivot": "top", "source": "in-house", "animation_role": "secondary motion"},
-        {"name": "body/nita_hair_R.svg", "category": "body", "format": "SVG", "resolution": "22x34", "transparent": true, "purpose": "right cheek hair strand", "pivot": "top", "source": "in-house", "animation_role": "secondary motion"},
-        {"name": "body/nita_torso.svg", "category": "body", "format": "SVG", "resolution": "72x56", "transparent": true, "purpose": "emerald tank top", "pivot": "neck base", "source": "in-house", "animation_role": "torso"},
-        {"name": "clothing/nita_skirt.svg", "category": "clothing", "format": "SVG", "resolution": "80x44", "transparent": true, "purpose": "cyan asymmetric hem skirt", "pivot": "waist center", "source": "in-house", "animation_role": "clothing layer / secondary motion"},
-        {"name": "body/nita_arm_L_upper.svg", "category": "body", "format": "SVG", "resolution": "34x38", "transparent": true, "purpose": "left puff sleeve", "pivot": "shoulder (17,4)", "source": "in-house", "animation_role": "arm L upper"},
-        {"name": "body/nita_arm_R_upper.svg", "category": "body", "format": "SVG", "resolution": "34x38", "transparent": true, "purpose": "right puff sleeve", "pivot": "shoulder (17,4)", "source": "in-house", "animation_role": "arm R upper"},
-        {"name": "body/nita_arm_L_lower.svg", "category": "body", "format": "SVG", "resolution": "30x36", "transparent": true, "purpose": "left skin forearm", "pivot": "elbow (15,4)", "source": "in-house", "animation_role": "arm L lower"},
-        {"name": "body/nita_arm_R_lower.svg", "category": "body", "format": "SVG", "resolution": "30x36", "transparent": true, "purpose": "right skin forearm", "pivot": "elbow (15,4)", "source": "in-house", "animation_role": "arm R lower"},
-        {"name": "body/nita_hand_L.svg", "category": "body", "format": "SVG", "resolution": "30x32", "transparent": true, "purpose": "left skin mitten + navy cuff", "pivot": "wrist (15,2)", "source": "in-house", "animation_role": "hand L"},
-        {"name": "body/nita_hand_R.svg", "category": "body", "format": "SVG", "resolution": "30x32", "transparent": true, "purpose": "right skin mitten + navy cuff", "pivot": "wrist (15,2)", "source": "in-house", "animation_role": "hand R"},
-        {"name": "body/nita_leg_L_upper.svg", "category": "body", "format": "SVG", "resolution": "30x30", "transparent": true, "purpose": "left thigh (maroon legging)", "pivot": "hip (15,4)", "source": "in-house", "animation_role": "leg L upper"},
-        {"name": "body/nita_leg_R_upper.svg", "category": "body", "format": "SVG", "resolution": "30x30", "transparent": true, "purpose": "right thigh", "pivot": "hip (15,4)", "source": "in-house", "animation_role": "leg R upper"},
-        {"name": "body/nita_leg_L_lower.svg", "category": "body", "format": "SVG", "resolution": "28x28", "transparent": true, "purpose": "left shin", "pivot": "knee (14,4)", "source": "in-house", "animation_role": "leg L lower"},
-        {"name": "body/nita_leg_R_lower.svg", "category": "body", "format": "SVG", "resolution": "28x28", "transparent": true, "purpose": "right shin", "pivot": "knee (14,4)", "source": "in-house", "animation_role": "leg R lower"},
-        {"name": "body/nita_foot_L.svg", "category": "body", "format": "SVG", "resolution": "36x24", "transparent": true, "purpose": "left barefoot", "pivot": "ankle (6,4)", "source": "in-house", "animation_role": "foot L"},
-        {"name": "body/nita_foot_R.svg", "category": "body", "format": "SVG", "resolution": "36x24", "transparent": true, "purpose": "right barefoot", "pivot": "ankle (6,4)", "source": "in-house", "animation_role": "foot R"},
-        {"name": "accessories/nita_necklace.svg", "category": "accessories", "format": "SVG", "resolution": "44x40", "transparent": true, "purpose": "paw-print pendant necklace (signature accessory)", "pivot": "cord top", "source": "in-house", "animation_role": "accessory / secondary motion"},
-        {"name": "face/nita_eye_L.svg", "category": "face", "format": "SVG", "resolution": "24x28", "transparent": true, "purpose": "eye sclera left (neutral)", "pivot": "center", "source": "in-house", "animation_role": "eye base L"},
-        {"name": "face/nita_eye_R.svg", "category": "face", "format": "SVG", "resolution": "24x28", "transparent": true, "purpose": "eye sclera right (neutral)", "pivot": "center", "source": "in-house", "animation_role": "eye base R"},
-        {"name": "face/nita_pupil_L.svg", "category": "face", "format": "SVG", "resolution": "11x11", "transparent": true, "purpose": "pupil left", "pivot": "center", "source": "in-house", "animation_role": "pupil L"},
-        {"name": "face/nita_pupil_R.svg", "category": "face", "format": "SVG", "resolution": "11x11", "transparent": true, "purpose": "pupil right", "pivot": "center", "source": "in-house", "animation_role": "pupil R"},
-        {"name": "face/nita_eyebrow_L.svg", "category": "face", "format": "SVG", "resolution": "24x9", "transparent": true, "purpose": "brow left", "pivot": "center", "source": "in-house", "animation_role": "brow L"},
-        {"name": "face/nita_eyebrow_R.svg", "category": "face", "format": "SVG", "resolution": "24x9", "transparent": true, "purpose": "brow right", "pivot": "center", "source": "in-house", "animation_role": "brow R"},
-        {"name": "face/nita_eye_blink.svg", "category": "face", "format": "SVG", "resolution": "24x10", "transparent": true, "purpose": "eye state: blink / closed", "pivot": "center", "source": "in-house", "animation_role": "eye state swap"},
-        {"name": "face/nita_eye_happy.svg", "category": "face", "format": "SVG", "resolution": "24x26", "transparent": true, "purpose": "eye state: happy (^^ crescent)", "pivot": "center", "source": "in-house", "animation_role": "eye state swap"},
-        {"name": "face/nita_eye_wide.svg", "category": "face", "format": "SVG", "resolution": "26x32", "transparent": true, "purpose": "eye state: wide (shocked/scared)", "pivot": "center", "source": "in-house", "animation_role": "eye state swap"},
-        {"name": "face/nita_eye_angry_L.svg", "category": "face", "format": "SVG", "resolution": "26x24", "transparent": true, "purpose": "eye state: angry left", "pivot": "center", "source": "in-house", "animation_role": "eye state swap"},
-        {"name": "face/nita_eye_angry_R.svg", "category": "face", "format": "SVG", "resolution": "26x24", "transparent": true, "purpose": "eye state: angry right", "pivot": "center", "source": "in-house", "animation_role": "eye state swap"},
-        {"name": "face/nita_mouth_neutral.svg", "category": "face", "format": "SVG", "resolution": "26x10", "transparent": true, "purpose": "mouth: neutral", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_happy.svg", "category": "face", "format": "SVG", "resolution": "34x20", "transparent": true, "purpose": "mouth: happy open smile + teeth", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_angry.svg", "category": "face", "format": "SVG", "resolution": "32x18", "transparent": true, "purpose": "mouth: angry snarl", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_sad.svg", "category": "face", "format": "SVG", "resolution": "28x14", "transparent": true, "purpose": "mouth: sad frown", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_shocked.svg", "category": "face", "format": "SVG", "resolution": "24x26", "transparent": true, "purpose": "mouth: shocked oval", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_scared.svg", "category": "face", "format": "SVG", "resolution": "26x18", "transparent": true, "purpose": "mouth: scared small oval", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_hurt.svg", "category": "face", "format": "SVG", "resolution": "30x16", "transparent": true, "purpose": "mouth: hurt grit line", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_confused.svg", "category": "face", "format": "SVG", "resolution": "30x14", "transparent": true, "purpose": "mouth: confused squiggle", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"},
-        {"name": "face/nita_mouth_smug.svg", "category": "face", "format": "SVG", "resolution": "30x16", "transparent": true, "purpose": "mouth: smug smirk", "pivot": "center", "source": "in-house", "animation_role": "mouth swap"
-        }]
-      ,
+        {
+          "name": "body/bo_face_base.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "76x72",
+          "transparent": true,
+          "purpose": "tan face base + shadow arch",
+          "pivot": "head center",
+          "source": "in-house, style-locked to Leon & Nita",
+          "animation_role": "face base"
+        },
+        {
+          "name": "body/bo_eagle_hood.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "136x148",
+          "transparent": true,
+          "purpose": "white eagle cowl + brow feathers + stylized black eagle eyes",
+          "pivot": "head center",
+          "source": "in-house",
+          "animation_role": "headwear main"
+        },
+        {
+          "name": "body/bo_eagle_beak.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x60",
+          "transparent": true,
+          "purpose": "golden curved eagle beak",
+          "pivot": "top center",
+          "source": "in-house",
+          "animation_role": "headwear overlay"
+        },
+        {
+          "name": "body/bo_hair_side_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "24x44",
+          "transparent": true,
+          "purpose": "left dark navy braided lock",
+          "pivot": "top",
+          "source": "in-house",
+          "animation_role": "secondary motion"
+        },
+        {
+          "name": "body/bo_hair_side_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "24x44",
+          "transparent": true,
+          "purpose": "right dark navy braided lock",
+          "pivot": "top",
+          "source": "in-house",
+          "animation_role": "secondary motion"
+        },
+        {
+          "name": "body/bo_hair_braid_back.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x68",
+          "transparent": true,
+          "purpose": "rear hair braid (side/rear views)",
+          "pivot": "top center",
+          "source": "in-house",
+          "animation_role": "secondary motion"
+        },
+        {
+          "name": "body/bo_torso.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "80x64",
+          "transparent": true,
+          "purpose": "emerald green sleeveless tunic",
+          "pivot": "neck base",
+          "source": "in-house",
+          "animation_role": "torso"
+        },
+        {
+          "name": "clothing/bo_sash.svg",
+          "category": "clothing",
+          "format": "SVG",
+          "resolution": "84x24",
+          "transparent": true,
+          "purpose": "maroon tribal waist sash",
+          "pivot": "waist center",
+          "source": "in-house",
+          "animation_role": "clothing overlay"
+        },
+        {
+          "name": "clothing/bo_bracer.svg",
+          "category": "clothing",
+          "format": "SVG",
+          "resolution": "30x28",
+          "transparent": true,
+          "purpose": "white wrist bracer with turquoise gem",
+          "pivot": "wrist",
+          "source": "in-house",
+          "animation_role": "clothing / arm accessory"
+        },
+        {
+          "name": "body/bo_arm_L_upper.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x38",
+          "transparent": true,
+          "purpose": "left upper muscular arm (tan)",
+          "pivot": "shoulder (16,4)",
+          "source": "in-house",
+          "animation_role": "arm L upper"
+        },
+        {
+          "name": "body/bo_arm_R_upper.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x38",
+          "transparent": true,
+          "purpose": "right upper muscular arm (tan)",
+          "pivot": "shoulder (16,4)",
+          "source": "in-house",
+          "animation_role": "arm R upper"
+        },
+        {
+          "name": "body/bo_arm_L_lower.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x36",
+          "transparent": true,
+          "purpose": "left forearm (tan)",
+          "pivot": "elbow (15,4)",
+          "source": "in-house",
+          "animation_role": "arm L lower"
+        },
+        {
+          "name": "body/bo_arm_R_lower.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x36",
+          "transparent": true,
+          "purpose": "right forearm with archer bracer",
+          "pivot": "elbow (15,4)",
+          "source": "in-house",
+          "animation_role": "arm R lower"
+        },
+        {
+          "name": "body/bo_hand_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x30",
+          "transparent": true,
+          "purpose": "left bow grip hand (tan)",
+          "pivot": "wrist (15,2)",
+          "source": "in-house",
+          "animation_role": "hand L"
+        },
+        {
+          "name": "body/bo_hand_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x30",
+          "transparent": true,
+          "purpose": "right arrow nock hand (tan)",
+          "pivot": "wrist (15,2)",
+          "source": "in-house",
+          "animation_role": "hand R"
+        },
+        {
+          "name": "body/bo_leg_L_upper.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x36",
+          "transparent": true,
+          "purpose": "left maroon warrior trousers thigh",
+          "pivot": "hip (16,4)",
+          "source": "in-house",
+          "animation_role": "leg L upper"
+        },
+        {
+          "name": "body/bo_leg_R_upper.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "32x36",
+          "transparent": true,
+          "purpose": "right maroon warrior trousers thigh",
+          "pivot": "hip (16,4)",
+          "source": "in-house",
+          "animation_role": "leg R upper"
+        },
+        {
+          "name": "body/bo_leg_L_lower.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x30",
+          "transparent": true,
+          "purpose": "left lower trouser leg",
+          "pivot": "knee (15,4)",
+          "source": "in-house",
+          "animation_role": "leg L lower"
+        },
+        {
+          "name": "body/bo_leg_R_lower.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "30x30",
+          "transparent": true,
+          "purpose": "right lower trouser leg",
+          "pivot": "knee (15,4)",
+          "source": "in-house",
+          "animation_role": "leg R lower"
+        },
+        {
+          "name": "body/bo_foot_L.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "38x26",
+          "transparent": true,
+          "purpose": "left bare tan foot",
+          "pivot": "ankle (8,4)",
+          "source": "in-house",
+          "animation_role": "foot L"
+        },
+        {
+          "name": "body/bo_foot_R.svg",
+          "category": "body",
+          "format": "SVG",
+          "resolution": "38x26",
+          "transparent": true,
+          "purpose": "right bare tan foot",
+          "pivot": "ankle (8,4)",
+          "source": "in-house",
+          "animation_role": "foot R"
+        },
+        {
+          "name": "equipment/bo_bow.svg",
+          "category": "equipment",
+          "format": "SVG",
+          "resolution": "46x120",
+          "transparent": true,
+          "purpose": "recurve bow with cyan grip & white tips",
+          "pivot": "grip center (14,60)",
+          "source": "in-house",
+          "animation_role": "weapon / primary prop"
+        },
+        {
+          "name": "equipment/bo_arrow.svg",
+          "category": "equipment",
+          "format": "SVG",
+          "resolution": "90x24",
+          "transparent": true,
+          "purpose": "golden arrow with cyan eagle fletching",
+          "pivot": "nock (8,12)",
+          "source": "in-house",
+          "animation_role": "projectile / equipment"
+        },
+        {
+          "name": "equipment/bo_quiver.svg",
+          "category": "equipment",
+          "format": "SVG",
+          "resolution": "36x84",
+          "transparent": true,
+          "purpose": "navy back quiver with 3 arrows",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "equipment / back prop"
+        },
+        {
+          "name": "equipment/bo_quiver_strap.svg",
+          "category": "equipment",
+          "format": "SVG",
+          "resolution": "64x54",
+          "transparent": true,
+          "purpose": "leather chest strap with brass studs",
+          "pivot": "chest center",
+          "source": "in-house",
+          "animation_role": "equipment overlay"
+        },
+        {
+          "name": "face/bo_eye_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x24",
+          "transparent": true,
+          "purpose": "stylized angled white warrior eye left",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye base L"
+        },
+        {
+          "name": "face/bo_eye_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x24",
+          "transparent": true,
+          "purpose": "stylized angled white warrior eye right",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye base R"
+        },
+        {
+          "name": "face/bo_pupil_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "12x12",
+          "transparent": true,
+          "purpose": "pupil left (optional)",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "pupil L"
+        },
+        {
+          "name": "face/bo_pupil_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "12x12",
+          "transparent": true,
+          "purpose": "pupil right (optional)",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "pupil R"
+        },
+        {
+          "name": "face/bo_eyebrow_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x10",
+          "transparent": true,
+          "purpose": "left stoic eyebrow",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "brow L"
+        },
+        {
+          "name": "face/bo_eyebrow_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x10",
+          "transparent": true,
+          "purpose": "right stoic eyebrow",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "brow R"
+        },
+        {
+          "name": "face/bo_eye_blink.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x10",
+          "transparent": true,
+          "purpose": "eye state: blink / relaxed closed",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_eye_happy.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x16",
+          "transparent": true,
+          "purpose": "eye state: happy (^ crescent)",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_eye_wide.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x28",
+          "transparent": true,
+          "purpose": "eye state: wide (alert/shocked)",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_eye_angry_L.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x24",
+          "transparent": true,
+          "purpose": "eye state: sharp combat left",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_eye_angry_R.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x24",
+          "transparent": true,
+          "purpose": "eye state: sharp combat right",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_eye_closed.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x8",
+          "transparent": true,
+          "purpose": "eye state: solemn straight closed line",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "eye state swap"
+        },
+        {
+          "name": "face/bo_mouth_neutral.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "28x10",
+          "transparent": true,
+          "purpose": "mouth: stoic straight line",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_happy.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "32x16",
+          "transparent": true,
+          "purpose": "mouth: proud warrior smile",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_angry.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "30x16",
+          "transparent": true,
+          "purpose": "mouth: focused battle grit",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_sad.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "28x14",
+          "transparent": true,
+          "purpose": "mouth: subdued frown",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_shocked.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "24x26",
+          "transparent": true,
+          "purpose": "mouth: shocked oval",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_scared.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "26x18",
+          "transparent": true,
+          "purpose": "mouth: alarmed oval",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_hurt.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "30x16",
+          "transparent": true,
+          "purpose": "mouth: wincing grit line",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_confused.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "30x14",
+          "transparent": true,
+          "purpose": "mouth: quizzical squiggle",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_smug.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "28x14",
+          "transparent": true,
+          "purpose": "mouth: confident smirk",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        },
+        {
+          "name": "face/bo_mouth_serious.svg",
+          "category": "face",
+          "format": "SVG",
+          "resolution": "32x10",
+          "transparent": true,
+          "purpose": "mouth: intense concentrated clamp",
+          "pivot": "center",
+          "source": "in-house",
+          "animation_role": "mouth swap"
+        }
+      ],
       "reference_sheets": [
-        {"name": "references/nita_view_front.svg", "purpose": "front view model sheet (head ≈ 55%)", "pivot_origin": "hip center"},
-        {"name": "references/nita_view_three_quarter.svg", "purpose": "3/4 view model sheet", "pivot_origin": "hip center"},
-        {"name": "references/nita_view_side.svg", "purpose": "side view model sheet (facing right)", "pivot_origin": "hip center"},
-        {"name": "references/nita_expression_sheet.svg", "purpose": "9 expressions + 4 eye states", "pivot_origin": "n/a"},
-        {"name": "references/nita_pose_sheet.svg", "purpose": "10 key action poses (reference only)", "pivot_origin": "n/a"},
-        {"name": "references/nita_silhouette_test.svg", "purpose": "Leon vs Nita silhouette distinctness check", "pivot_origin": "n/a"},
-        {"name": "references/nita_leon_style_comparison.svg", "purpose": "side-by-side style consistency test vs approved Leon render", "pivot_origin": "n/a"},
-        {"name": "references/NITA_STYLE_NOTES.md", "purpose": "style spec, pivot plan, QC results", "pivot_origin": "n/a"}
+        {
+          "name": "references/bo_view_front.svg",
+          "purpose": "front view master model sheet (head ≈ 48%)",
+          "pivot_origin": "hip center"
+        },
+        {
+          "name": "references/bo_view_side.svg",
+          "purpose": "side view master model sheet (broad muscular archer build, combat stance)",
+          "pivot_origin": "hip center"
+        },
+        {
+          "name": "references/bo_view_back.svg",
+          "purpose": "back view master model sheet matching official reference (orange crest, diagonal quiver with beak, recurve bow)",
+          "pivot_origin": "hip center"
+        },
+        {
+          "name": "references/bo_expression_sheet.svg",
+          "purpose": "10 core expressions + 6 modular eye presets",
+          "pivot_origin": "n/a"
+        },
+        {
+          "name": "references/bo_pose_sheet.svg",
+          "purpose": "10 fully articulated key action poses",
+          "pivot_origin": "n/a"
+        },
+        {
+          "name": "references/bo_three_character_style_sheet.svg",
+          "purpose": "Leon vs Nita vs Bo trio validation sheet",
+          "pivot_origin": "n/a"
+        },
+        {
+          "name": "references/bo_silhouette_test.svg",
+          "purpose": "black silhouette readability check (0.1s recognition)",
+          "pivot_origin": "n/a"
+        },
+        {
+          "name": "references/BO_STYLE_NOTES.md",
+          "purpose": "style specification, palette catalog, pivot index, Godot rigging guidelines",
+          "pivot_origin": "n/a"
+        }
       ],
       "qc": {
-        "style_vs_leon": "PASS — same #1e1e2c outline weights, flat fills, no gradients, same facial primitives, comparable detail level",
-        "identity": "PASS — bear hood + round ears + X-stitches + navy muzzle snout + cyan skirt + paw pendant preserved from reference",
-        "views_consistency": "PASS — proportions locked across front / 3/4 / side",
-        "part_separation": "PASS — 41 swappable parts, all transparent SVG, pivots documented in parts[]",
-        "silhouette": "PASS — distinct from Leon, same oversized-head / compact-body construction philosophy",
-        "style_rule": "When in doubt, asset matches LEON visual language — intentionally simple, never more detailed than Leon"
-      }
+        "style_vs_leon_and_nita": "PASS \u2014 identical #1e1e2c outline weights, flat cel-fills, zero gradients, oversized-head/compact-body construction, shared 2D universe unity",
+        "identity": "PASS \u2014 white eagle cowl, curved yellow beak, dark navy braided hair, emerald tunic, maroon sash and trousers, recurve bow with cyan grip, back quiver",
+        "views_consistency": "PASS \u2014 proportions, joint lines, and silhouette locked across front, 3/4, and side views",
+        "part_separation": "PASS \u2014 47 modular SVG parts across body, face, clothing, and equipment, all transparent with documented ball-and-socket pivots",
+        "silhouette": "PASS \u2014 distinct silhouette instantly identifiable within 0.1s against Leon and Nita",
+        "style_rule": "Unified trio standard \u2014 same paper-cutout vector language, never over-detailed, production-ready for Godot 2D cutout rigging"
+      },
+      "root_path": "assets/brawlers/bo/"
     }
   }
 }

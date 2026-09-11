@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+; LEON — MULTIVIEW CONTROLLER (LAB)
+; Five views: production front rig, new 3/4, production side rig (animated),
+; new back 3/4, production back rig. All feet-origin; controller picks one.
+
+[ext_resource type="Script" path="res://scripts/labs/multiview_controller.gd" id="1_ctrl"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="2_front"]
+[ext_resource type="PackedScene" path="res://scenes/labs/characters/leon_multiview_lab/view_front_3q.tscn" id="3_front3q"]
+[ext_resource type="PackedScene" path="res://scenes/leon_side.tscn" id="4_side"]
+[ext_resource type="PackedScene" path="res://scenes/labs/characters/leon_multiview_lab/view_back_3q.tscn" id="5_back3q"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_back.tscn" id="6_back"]
+
+[node name="LeonMultiview" type="Node2D"]
+script = ExtResource("1_ctrl")
+
+[node name="ViewFront" parent="." instance=ExtResource("2_front")]
+
+[node name="ViewFront3Q" parent="." instance=ExtResource("3_front3q")]
+
+[node name="ViewSide" parent="." instance=ExtResource("4_side")]
+
+[node name="ViewBack3Q" parent="." instance=ExtResource("5_back3q")]
+
+[node name="ViewBack" parent="." instance=ExtResource("6_back")]

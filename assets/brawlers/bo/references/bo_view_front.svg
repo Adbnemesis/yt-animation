@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#181a20"/>
+  <text x="400" y="55" fill="#ffd166" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">BO — FRONT VIEW (PRODUCTION ASSET)</text>
+  <text x="400" y="85" fill="#a0aab8" font-family="system-ui, -apple-system, sans-serif" font-size="14" text-anchor="middle">Authentic Brawl Stars Character Identity • 100% Locked to Leon &amp; Nita Paper-Cutout Art Style</text>
+  <ellipse cx="400" cy="710" rx="110" ry="18" fill="#101216"/>
+  
+    <g transform="translate(400, 410) scale(2.6)">
+      <!-- 1. Bare Tan Feet -->
+      <g transform="translate(-28, 70)">
+        <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 C2,10 2,4 4,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="10" y1="18" x2="10" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="18" y1="18" x2="18" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(6, 70)">
+        <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 C28,10 28,4 26,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <line x1="20" y1="18" x2="20" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="12" y1="18" x2="12" y2="13" stroke="#7a4222" stroke-width="1.8" stroke-linecap="round"/>
+      </g>
+
+      <!-- 2. Maroon Trousers Pelvis & Legs (Grounded, organic brawler build) -->
+      <path d="M-26,42 L26,42 L24,70 L4,70 L2,54 L-2,54 L-4,70 L-24,70 Z"
+            fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      <line x1="0" y1="42" x2="0" y2="54" stroke="#1e1e2c" stroke-width="2.2"/>
+
+      <!-- 3. Torso: Emerald Green Tunic + Maroon Sash -->
+      <g transform="translate(-36, -26)">
+        <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z"
+              fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <path d="M26,4 Q36,16 46,4 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="2.5"/>
+        <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+        <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+        <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        <line x1="8" y1="50" x2="64" y2="50" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 4. Left Arm & Hand Holding Recurve Bow -->
+      <g transform="translate(-40, -24)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 C26,10 22,4 16,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <g transform="translate(3, 34)">
+          <path d="M12,3 C6,3 3,7 3,13 C3,19 7,22 12,22 C17,22 21,19 21,13 C21,10 19,7 16,5 C16,7 14,9 12,9 C10.5,9 10.5,6 12,3 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+        </g>
+        <!-- Bow -->
+        <g transform="translate(-24, -20) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z"
+                fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+        </g>
+      </g>
+
+      <!-- 5. Right Arm with Talon Bracer -->
+      <g transform="translate(18, -24)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 C26,10 22,4 16,4 Z"
+              fill="#b87349" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6" stroke-linejoin="round"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+        <g transform="translate(3, 34)">
+          <path d="M12,3 C18,3 21,7 21,13 C21,19 17,22 12,22 C7,22 3,19 3,13 C3,10 5,7 8,5 C8,7 10,9 12,9 C13.5,9 13.5,6 12,3 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="2.8" stroke-linejoin="round"/>
+        </g>
+      </g>
+
+      <!-- 6. Dark Navy Hair Framing Cheeks (Chunky & Bold like reference) -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z"
+              fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z"
+              fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2" stroke-linejoin="round"/>
+      </g>
+
+      <!-- 7. Head & Eagle Hood -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z"
+              fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        
+        <!-- Eagle Eyes on Brow Dome -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+
+        <!-- Dark Cavity Opening -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+
+        <!-- Tan Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z"
+                fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+
+          <!-- Eyes (Authentic white cut-paper warrior eye shapes) -->
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+
+          <!-- Stoic Set Mouth -->
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z"
+                fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+</svg>

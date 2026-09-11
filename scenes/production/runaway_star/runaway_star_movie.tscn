@@ -1,0 +1,203 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scenes/production/runaway_star/runaway_star_director.gd" id="1_director"]
+[ext_resource type="Script" path="res://scripts/labs/cinematic_camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/leon_movie_character.gd" id="3_leon"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/runaway_star_actor.gd" id="4_star"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/glowing_circle.gd" id="5_circle"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/simple_2d5_prop.gd" id="6_prop"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_cloud_01.png" id="7_cloud1"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_cloud_02.png" id="8_cloud2"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_cloud_03.png" id="9_cloud3"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_hill_small_01.png" id="10_hill"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/speed_lines_overlay.gd" id="11_speedlines"]
+[ext_resource type="Script" path="res://scenes/production/runaway_star/detached_shadow.gd" id="12_detached_shadow"]
+
+[node name="RunawayStarMovie" type="Node2D"]
+script = ExtResource("1_director")
+
+[node name="Sky" type="ColorRect" parent="."]
+z_index = -2100
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 1400.0
+offset_bottom = 900.0
+color = Color(0.42, 0.74, 0.98, 1)
+
+[node name="Cloud1" type="Sprite2D" parent="."]
+z_index = -2050
+position = Vector2(240, 130)
+scale = Vector2(1.8, 1.8)
+modulate = Color(1, 1, 1, 0.85)
+texture = ExtResource("7_cloud1")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+z_index = -2050
+position = Vector2(880, 100)
+scale = Vector2(1.6, 1.6)
+modulate = Color(1, 1, 1, 0.8)
+texture = ExtResource("8_cloud2")
+
+[node name="Cloud3" type="Sprite2D" parent="."]
+z_index = -2050
+position = Vector2(540, 190)
+scale = Vector2(1.3, 1.3)
+modulate = Color(1, 1, 1, 0.7)
+texture = ExtResource("9_cloud3")
+
+[node name="Hills" type="Node2D" parent="."]
+z_index = -2010
+
+[node name="Hill1" type="Sprite2D" parent="Hills"]
+position = Vector2(180, 340)
+scale = Vector2(5.5, 1.4)
+modulate = Color(0.24, 0.52, 0.32, 0.85)
+texture = ExtResource("10_hill")
+
+[node name="Hill2" type="Sprite2D" parent="Hills"]
+position = Vector2(576, 335)
+scale = Vector2(7, 1.5)
+modulate = Color(0.22, 0.48, 0.3, 0.9)
+texture = ExtResource("10_hill")
+
+[node name="Hill3" type="Sprite2D" parent="Hills"]
+position = Vector2(980, 340)
+scale = Vector2(5.5, 1.35)
+modulate = Color(0.24, 0.52, 0.32, 0.85)
+texture = ExtResource("10_hill")
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -2000
+offset_left = -200.0
+offset_top = 340.0
+offset_right = 1400.0
+offset_bottom = 900.0
+color = Color(0.27, 0.66, 0.31, 1)
+
+[node name="HorizonLine" type="Line2D" parent="."]
+z_index = -1990
+points = PackedVector2Array(-200, 340, 1400, 340)
+width = 2.5
+default_color = Color(0.18, 0.48, 0.22, 0.85)
+
+[node name="CinematicCamera" type="Node2D" parent="."]
+script = ExtResource("2_camera")
+cam_z = -220.0
+cam_height = 145.0
+focal = 520.0
+horizon_y = 340.0
+screen_center_x = 576.0
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Rock1" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "rock"
+world_pos = Vector2(-280, 260)
+prop_height = 36.0
+
+[node name="Rock2" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "rock"
+world_pos = Vector2(340, 300)
+prop_height = 42.0
+
+[node name="Sign" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "sign"
+world_pos = Vector2(-160, 480)
+prop_height = 55.0
+
+[node name="Post" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "post"
+world_pos = Vector2(380, 180)
+prop_height = 50.0
+
+[node name="Bush1" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "bush"
+world_pos = Vector2(-320, 380)
+prop_height = 32.0
+
+[node name="Bush2" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "bush"
+world_pos = Vector2(300, 440)
+prop_height = 28.0
+
+[node name="Flower1" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "flower"
+world_pos = Vector2(-220, 180)
+prop_height = 18.0
+
+[node name="Flower2" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "flower"
+world_pos = Vector2(240, 340)
+prop_height = 16.0
+
+[node name="Flower3" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "flower"
+world_pos = Vector2(-60, 280)
+prop_height = 20.0
+
+[node name="RockFG" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "rock"
+world_pos = Vector2(200, 35)
+prop_height = 46.0
+
+[node name="GrassFG1" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "grass"
+world_pos = Vector2(-150, 45)
+prop_height = 34.0
+
+[node name="GrassFG2" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "grass"
+world_pos = Vector2(90, 50)
+prop_height = 32.0
+
+[node name="BushFG" type="Node2D" parent="Props"]
+script = ExtResource("6_prop")
+prop_type = "bush"
+world_pos = Vector2(360, 40)
+prop_height = 38.0
+
+[node name="GlowingCircle" type="Node2D" parent="."]
+script = ExtResource("5_circle")
+
+[node name="RunawayStar" type="Node2D" parent="."]
+script = ExtResource("4_star")
+
+[node name="DetachedShadow" type="Node2D" parent="."]
+script = ExtResource("12_detached_shadow")
+
+[node name="LeonCharacter" type="Node2D" parent="."]
+script = ExtResource("3_leon")
+
+[node name="ViewSlot" type="Node2D" parent="LeonCharacter"]
+
+[node name="GroundShadow" type="Polygon2D" parent="LeonCharacter"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SpeedLines" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("11_speedlines")
+
+[node name="FadeOverlay" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

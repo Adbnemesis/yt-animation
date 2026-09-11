@@ -1,0 +1,160 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/leon_expression_showcase.gd" id="1_n80f0"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="2_20toi"]
+
+[node name="LeonExpressionShowcase" type="Node2D" unique_id=878507862]
+script = ExtResource("1_n80f0")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1146175188]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.08, 0.09, 0.12, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1664061803]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "BRAWL STARS — LEON EXPRESSION MATRIX (AUTHENTIC RIG)"
+
+[node name="Subtitle" type="Label" parent="." unique_id=1741818807]
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 40.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.68, 0.73, 0.82, 1)
+text = "Authentic Cut-Paper Facial Swaps on Production Front Rig • In-Engine Texture Assets"
+
+[node name="Leon_neutral" type="Node2D" parent="." unique_id=1565680508 instance=ExtResource("2_20toi")]
+position = Vector2(150, 300)
+
+[node name="Label_neutral" type="Label" parent="." unique_id=1855127454]
+offset_left = 50.0
+offset_top = 320.0
+offset_right = 250.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "NEUTRAL"
+horizontal_alignment = 1
+
+[node name="Leon_happy" type="Node2D" parent="." unique_id=868879873 instance=ExtResource("2_20toi")]
+position = Vector2(395, 300)
+
+[node name="Label_happy" type="Label" parent="." unique_id=1888192420]
+offset_left = 295.0
+offset_top = 320.0
+offset_right = 495.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "HAPPY"
+horizontal_alignment = 1
+
+[node name="Leon_angry" type="Node2D" parent="." unique_id=1904181754 instance=ExtResource("2_20toi")]
+position = Vector2(640, 300)
+
+[node name="Label_angry" type="Label" parent="." unique_id=777680458]
+offset_left = 540.0
+offset_top = 320.0
+offset_right = 740.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "ANGRY"
+horizontal_alignment = 1
+
+[node name="Leon_sad" type="Node2D" parent="." unique_id=2024965759 instance=ExtResource("2_20toi")]
+position = Vector2(885, 300)
+
+[node name="Label_sad" type="Label" parent="." unique_id=1525856034]
+offset_left = 785.0
+offset_top = 320.0
+offset_right = 985.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "SAD"
+horizontal_alignment = 1
+
+[node name="Leon_shocked" type="Node2D" parent="." unique_id=1653209707 instance=ExtResource("2_20toi")]
+position = Vector2(1130, 300)
+
+[node name="Label_shocked" type="Label" parent="." unique_id=1967382955]
+offset_left = 1030.0
+offset_top = 320.0
+offset_right = 1230.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "SHOCKED"
+horizontal_alignment = 1
+
+[node name="Leon_scared" type="Node2D" parent="." unique_id=798611491 instance=ExtResource("2_20toi")]
+position = Vector2(150, 560)
+
+[node name="Label_scared" type="Label" parent="." unique_id=1429981160]
+offset_left = 50.0
+offset_top = 580.0
+offset_right = 250.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "SCARED"
+horizontal_alignment = 1
+
+[node name="Leon_hurt" type="Node2D" parent="." unique_id=1731310839 instance=ExtResource("2_20toi")]
+position = Vector2(395, 560)
+
+[node name="Label_hurt" type="Label" parent="." unique_id=914677479]
+offset_left = 295.0
+offset_top = 580.0
+offset_right = 495.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "HURT"
+horizontal_alignment = 1
+
+[node name="Leon_confused" type="Node2D" parent="." unique_id=280989390 instance=ExtResource("2_20toi")]
+position = Vector2(640, 560)
+
+[node name="Label_confused" type="Label" parent="." unique_id=136669898]
+offset_left = 540.0
+offset_top = 580.0
+offset_right = 740.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "CONFUSED"
+horizontal_alignment = 1
+
+[node name="Leon_smug" type="Node2D" parent="." unique_id=1782175330 instance=ExtResource("2_20toi")]
+position = Vector2(885, 560)
+
+[node name="Label_smug" type="Label" parent="." unique_id=564832425]
+offset_left = 785.0
+offset_top = 580.0
+offset_right = 985.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "SMUG"
+horizontal_alignment = 1
+
+[node name="Leon_laughing" type="Node2D" parent="." unique_id=1683195067 instance=ExtResource("2_20toi")]
+position = Vector2(1130, 560)
+
+[node name="Label_laughing" type="Label" parent="." unique_id=670914813]
+offset_left = 1030.0
+offset_top = 580.0
+offset_right = 1230.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "LAUGHING"
+horizontal_alignment = 1

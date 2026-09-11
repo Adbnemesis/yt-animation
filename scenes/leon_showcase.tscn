@@ -1,14 +1,101 @@
 [gd_scene format=3]
 
-[ext_resource type="Texture2D" path="res://assets/leon/sheets/leon_master_model_sheet.svg" id="1_rs1ph"]
+[ext_resource type="Script" path="res://scripts/leon_showcase.gd" id="1_eo4mv"]
+[ext_resource type="PackedScene" path="res://scenes/nita_front.tscn" id="2_vtyie"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="3_c7ewf"]
+[ext_resource type="PackedScene" path="res://scenes/leon.tscn" id="4_p56jo"]
+[ext_resource type="Script" path="res://scripts/character_controller.gd" id="5_nh52f"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_back.tscn" id="6_v3f2d"]
 
-[node name="LeonShowcase" type="Node2D" unique_id=1073349354]
+[node name="LeonShowcase" type="Node2D" unique_id=1426098535]
+script = ExtResource("1_eo4mv")
 
-[node name="Background" type="ColorRect" parent="." unique_id=2060510943]
+[node name="Background" type="ColorRect" parent="." unique_id=994422693]
 offset_right = 1280.0
-offset_bottom = 840.0
+offset_bottom = 720.0
 color = Color(0.08, 0.09, 0.12, 1)
 
-[node name="MasterSheetSprite" type="Sprite2D" parent="." unique_id=2084583532]
-texture = ExtResource("1_rs1ph")
-centered = false
+[node name="Title" type="Label" parent="." unique_id=1365553094]
+offset_left = 40.0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "BRAWL STARS — LEON CHAMELEON (AUTHENTIC PRODUCTION RIG)"
+
+[node name="Subtitle" type="Label" parent="." unique_id=422189420]
+offset_left = 40.0
+offset_top = 65.0
+offset_right = 40.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+theme_override_colors/font_color = Color(0.68, 0.73, 0.82, 1)
+text = "Chameleon Cowl (Cross-Stitch Button Eyes, Yellow Crest) • Lollipop • Multi-View Rigs • Exact 1:1 Scale Parity"
+
+[node name="GroundLine" type="Line2D" parent="." unique_id=1957512231]
+points = PackedVector2Array(40, 520, 1240, 520)
+width = 3.0
+default_color = Color(0.2, 0.22, 0.28, 1)
+
+[node name="NitaReference" type="Node2D" parent="." unique_id=751721369 instance=ExtResource("2_vtyie")]
+position = Vector2(180, 520)
+
+[node name="NitaLabel" type="Label" parent="." unique_id=21750695]
+offset_left = 110.0
+offset_top = 540.0
+offset_right = 250.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.75, 0.85, 1)
+text = "Nita (Scale Ref)"
+horizontal_alignment = 1
+
+[node name="LeonFrontView" type="Node2D" parent="." unique_id=1725528404 instance=ExtResource("3_c7ewf")]
+position = Vector2(450, 520)
+
+[node name="LeonFrontLabel" type="Label" parent="." unique_id=1806017446]
+offset_left = 380.0
+offset_top = 540.0
+offset_right = 520.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Leon (Front View)"
+horizontal_alignment = 1
+
+[node name="LeonSideRig" type="CharacterBody2D" parent="." unique_id=362457594 instance=ExtResource("4_p56jo")]
+position = Vector2(740, 520)
+script = ExtResource("5_nh52f")
+
+[node name="LeonSideLabel" type="Label" parent="." unique_id=570772243]
+offset_left = 670.0
+offset_top = 540.0
+offset_right = 810.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Leon (Side Rig)"
+horizontal_alignment = 1
+
+[node name="LeonBackView" type="Node2D" parent="." unique_id=1563280941 instance=ExtResource("6_v3f2d")]
+position = Vector2(1020, 520)
+
+[node name="LeonBackLabel" type="Label" parent="." unique_id=1100005148]
+offset_left = 950.0
+offset_top = 540.0
+offset_right = 1090.0
+offset_bottom = 570.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 0.82, 0.4, 1)
+text = "Leon (Back View)"
+horizontal_alignment = 1
+
+[node name="ExpressionStatus" type="Label" parent="." unique_id=974464625]
+offset_left = 380.0
+offset_top = 575.0
+offset_right = 880.0
+offset_bottom = 605.0
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.6, 0.9, 0.7, 1)
+text = "Current Expression: NEUTRAL (1/10)"

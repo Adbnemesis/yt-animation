@@ -69,6 +69,14 @@ func _ensure_components() -> void:
 	if ability_controller and marker_projectile_spawn:
 		ability_controller.set_projectile_spawn(marker_projectile_spawn)
 
+	# Prefer a rig-attached attack socket (e.g. Bo's bow-hand
+	# ProjectileSpawnPoint) so projectiles follow the weapon during animation.
+	# Falls back to the body-attached VFX marker above.
+	if ability_controller:
+		var rig_socket := find_child("ProjectileSpawnPoint", true, false) as Marker2D
+		if rig_socket:
+			ability_controller.set_projectile_spawn(rig_socket)
+
 	if movement_controller and config:
 		movement_controller.config = config
 	if ability_controller and config:
@@ -86,6 +94,8 @@ func _bind_component_signals() -> void:
 				movement_controller.change_state(BrawlerMovementController.State.ATTACK)
 			if animation_controller:
 				animation_controller.play_state_animation("ATTACK")
+			if face_controller:
+				face_controller.set_expression("serious")
 		)
 		ability_controller.projectile_spawned.connect(func(pos: Vector2, dir: Vector2):
 			_emit_event(BrawlerEvents.EVENT_PROJECTILE_SPAWN, {"position": pos, "direction": dir})
@@ -140,6 +150,60 @@ func _has_physics_space() -> bool:
 		return false
 	var w2d = vp.find_world_2d()
 	return w2d != null and w2d.space.is_valid()
+
+
+# --- Deterministic Animation Event Handlers (animation-driven combat) ---
+# Called by attack animation method-call tracks (e.g. BO_BASIC_ATTACK).
+# Only active for configs with animation_driven_projectiles enabled (Bo);
+# configs using the legacy timer-driven burst are unaffected.
+
+func _can_process_attack_anim_event() -> bool:
+	if not (config and config.animation_driven_projectiles):
+		return false
+	if not ability_controller or not ability_controller.is_attacking:
+		return false
+	if not movement_controller \
+			or movement_controller.current_state != BrawlerMovementController.State.ATTACK:
+		return false
+	return true
+
+
+func _on_anim_attack_start() -> void:
+	if not _can_process_attack_anim_event():
+		return
+	if face_controller:
+		face_controller.set_expression("serious")
+
+
+func _on_anim_attack_release() -> void:
+	if not _can_process_attack_anim_event():
+		return
+	_emit_event(BrawlerEvents.EVENT_ATTACK_RELEASE)
+	if face_controller:
+		face_controller.set_expression("smug")
+
+
+func _on_anim_projectile_spawn() -> void:
+	if not _can_process_attack_anim_event():
+		return
+	if ability_controller:
+		ability_controller.spawn_attack_burst()
+
+
+func _on_anim_attack_follow_through() -> void:
+	if not _can_process_attack_anim_event():
+		return
+	_emit_event(BrawlerEvents.EVENT_ATTACK_FOLLOW_THROUGH)
+
+
+func _on_anim_attack_end() -> void:
+	if not _can_process_attack_anim_event():
+		return
+	# ATTACK_END event itself is emitted by the ability controller timer when
+	# the attack finishes; here we only close the facial progression.
+	if face_controller:
+		face_controller.set_expression("neutral")
+
 
 # --- Public Gameplay Controls ---
 
@@ -213,18 +277,22 @@ func _on_facing_changed(direction: int) -> void:
 	if visuals:
 		visuals.scale.x = direction
 
+func get_character_id() -> String:
+	if config and not config.character_name.is_empty():
+		return config.character_name.to_lower()
+	return "brawler"
+
 func _emit_event(event_name: String, data: Dictionary = {}) -> void:
 	game_event_emitted.emit(event_name, data)
 
 	# Audio routing
 	if config and config.audio_event_map.has(event_name):
-		var sound_id = config.audio_event_map[event_name]
 		if is_inside_tree() and get_tree().root.has_node("AudioManager"):
 			var am = get_tree().root.get_node("AudioManager")
-			if am.has_method("play_sfx"):
-				am.play_sfx(sound_id)
-			elif am.has_method("trigger_event"):
-				am.trigger_event(event_name)
+			if am.has_method("trigger_event"):
+				# Character-aware routing ensures each brawler plays its own
+				# approved SFX (never another character's).
+				am.trigger_event(event_name, {"character": get_character_id()})
 
 	# VFX routing
 	if config and config.vfx_event_map.has(event_name):

@@ -2,7 +2,13 @@ class_name TeachingStoryDirector
 extends Node2D
 
 # Master Story Director: "Leon Tries to Teach Nita How to Fight"
-# Orchestrates the ~68-second narrative short deterministically frame-by-frame.
+# Full 61.5-second continuous cartoon performance matching Brawl Stars BGM track.
+# Features:
+# - Natural 0.3s–0.8s reaction beats and active micro-acting (zero dead pauses)
+# - The Challenge sequence: progressive targets, expanding character arc
+# - 100% Authoritative Projectile Causality (destruction triggered on collision, not timer)
+# - Expressive camera language (two-shot, coaching medium, punch-ins, wide chaos)
+# - Fully readable with audio muted
 
 const TeachingActorLeonClass = preload("res://scenes/videos/leon_teaching_nita/actor_leon.gd")
 const TeachingActorNitaClass = preload("res://scenes/videos/leon_teaching_nita/actor_nita.gd")
@@ -103,6 +109,22 @@ func wait_sec(seconds: float) -> void:
 		else:
 			await RenderingServer.frame_post_draw
 
+# Deterministic wait for a collision signal with timeout fallback
+func wait_for_signal_or_timeout(sig: Signal, timeout: float) -> void:
+	var completed = [false]
+	var cb = func(_a = null, _b = null): completed[0] = true
+	sig.connect(cb, CONNECT_ONE_SHOT)
+	var total_frames = int(round(timeout * 60.0))
+	for i in range(total_frames):
+		if completed[0]:
+			break
+		if DisplayServer.get_name() == "headless" and not OS.has_feature("movie"):
+			await get_tree().process_frame
+		else:
+			await RenderingServer.frame_post_draw
+	if not completed[0] and sig.is_connected(cb):
+		sig.disconnect(cb)
+
 func _play_sfx(stream: AudioStream, vol_db: float = 0.0) -> void:
 	if sfx_player and stream:
 		sfx_player.stream = stream
@@ -141,296 +163,428 @@ func _camera_shake(intensity: float = 8.0, duration: float = 0.3) -> void:
 
 func _execute_story_sequence() -> void:
 	# =========================================================================
-	# SHOT 1: Leon's Warmup & Demonstration (0.0s – 7.0s)
+	# SHOT 1: Leon's Warmup & Demonstration (~0.0s – 7.2s)
 	# =========================================================================
-	print("[STORY] Shot 1: Leon's Solo Practice & Demonstration")
+	print("[STORY @ %.2fs] Shot 1: Leon's Demonstration & Warmup" % elapsed_story_time)
 	if bgm_player:
+		bgm_player.volume_db = -11.0
 		bgm_player.play()
 
-	_camera_pan_zoom(Vector2(500, 420), Vector2(1.0, 1.0), 0.1)
+	_camera_pan_zoom(Vector2(440, 420), Vector2(1.05, 1.05), 0.1)
 	leon.position = Vector2(280, 520)
 	leon.set_facing(1)
 	leon.demonstration_stance()
-	await wait_sec(1.4)
+	await wait_sec(1.0)
 
-	# Leon hop warm-up
+	# Leon hop warm-up with squash & stretch
 	_play_sfx(sfx_jump, -4.0)
 	var tw_hop = create_tween()
 	tw_hop.tween_property(leon, "position:y", 485.0, 0.18).set_ease(Tween.EASE_OUT)
 	tw_hop.tween_property(leon, "position:y", 520.0, 0.16).set_ease(Tween.EASE_IN)
 	await tw_hop.finished
 	_play_sfx(sfx_land, -4.0)
-	await wait_sec(1.0)
+	if has_node("/root/VFXManager"):
+		get_node("/root/VFXManager").spawn_vfx("DUST_PUFF", leon.global_position)
+	await wait_sec(0.5)
 
-	# Leon voice & attack demonstration
+	# Leon voice callout & anticipation windup
 	_play_leon_vo(vo_leon_yeah)
-	await wait_sec(0.8)
+	leon.anticipation_windup()
+	await wait_sec(0.6)
 
-	print("[STORY] Leon demonstrates 4-blade spinner attack on dummy")
+	# Leon attack demonstration: 4 spinner blades at target dummy at X=740
+	print("[STORY @ %.2fs] Leon demonstrates 4-blade spinner attack on dummy" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(500, 420), Vector2(1.0, 1.0), 0.6)
 	leon.set_expression("angry", "angry")
 	leon.trigger_attack()
 	await leon.attack_finished
+	await wait_sec(0.6)
+
+	# Recoil settling & smug follow-through
+	leon.follow_through_settle()
 	await wait_sec(0.8)
 
-	# Leon checks his work, satisfied smirk
-	leon.set_expression("smug", "happy")
-	leon.demonstration_stance()
-	await wait_sec(1.8)
+	# Smug teacher folded arms & foot tap waiting for student
+	leon.cross_arms_tap_foot()
+	await wait_sec(1.2)
 
 	# =========================================================================
-	# SHOT 2: Nita Arrives & Asks for Training (7.0s – 14.0s)
+	# SHOT 2: Nita Arrives & Asks to Learn (~7.2s – 13.8s)
 	# =========================================================================
-	print("[STORY] Shot 2: Nita Arrives & Asks to Learn")
-	_camera_pan_zoom(Vector2(380, 420), Vector2(1.05, 1.05), 1.0)
-	nita.walk_to(140.0, 160.0)
+	print("[STORY @ %.2fs] Shot 2: Nita Arrives & Asks to Learn" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(320, 420), Vector2(1.04, 1.04), 0.8)
+	nita.walk_to(140.0, 170.0)
 	await nita.walk_finished
-	await wait_sec(0.4)
+	await wait_sec(0.3)
 
-	# Nita eager request & hops
+	# Nita eager greeting and bouncy hops
 	_play_nita_vo(vo_nita_eager)
 	nita.eager_hop()
+	await wait_sec(0.5)
+
+	# Nita excited shadow-punching: "I'm ready! Teach me!"
+	nita.shadow_punch_excited()
 	await wait_sec(0.8)
 
-	# Leon turns to face Nita
+	# Leon turns with cocky older-brother grin
 	print("[STORY] Leon acknowledges student with cocky confidence")
 	leon.set_facing(-1)
 	leon.set_expression("smug", "open")
-	await wait_sec(0.8)
 	_play_leon_vo(vo_leon_start)
+	await wait_sec(0.55)
 
-	# Leon gestures towards the target dummy
-	leon.point_gesture(1.2)
+	# Leon points firmly towards target dummy
+	leon.point_gesture(1.0)
 	leon.turn_head_to_student(true)
-	await wait_sec(1.8)
+	await wait_sec(0.9)
+
+	# Reaction beat: Nita follows gesture to dummy, then turns back to Leon nodding eagerly
+	nita.set_facing(1)
+	await wait_sec(0.55)
+	nita.set_facing(-1)
+	nita.set_expression("grin", "open")
+	await wait_sec(0.6)
 
 	# =========================================================================
-	# SHOT 3: Leon Shows Stance & Nita Imitates (14.0s – 21.0s)
+	# SHOT 3: Stance Demonstration & Imitation (~13.8s – 20.8s)
 	# =========================================================================
-	print("[STORY] Shot 3: Leon Demonstrates Stance; Nita Imitates")
-	_camera_pan_zoom(Vector2(440, 420), Vector2(1.0, 1.0), 0.8)
-	# Leon moves to his teacher observation spot on the left
+	print("[STORY @ %.2fs] Shot 3: Leon Demonstrates Stance; Nita Imitates" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(420, 420), Vector2(1.0, 1.0), 0.8)
+	# Leon moves to teacher observation mark on left at X=220
 	leon.set_facing(1)
-	leon.walk_to(220.0, 130.0)
+	leon.walk_to(220.0, 140.0)
 	await leon.walk_finished
 	await wait_sec(0.3)
 
 	# Leon demonstrates proper windup pose
 	leon.demonstration_stance()
-	await wait_sec(0.8)
 	leon.turn_head_to_student(true)
-	await wait_sec(0.6)
 
-	# Nita runs up to the student firing mark at X=390 (170px away from Leon!)
-	nita.walk_to(390.0, 150.0)
+	# Nita runs up to student firing line at X=420 (200px separation from Leon!)
+	nita.walk_to(420.0, 160.0)
 	await nita.walk_finished
 	await wait_sec(0.4)
 
 	# Nita awkwardly copies Leon's stance!
-	print("[STORY] Nita attempts to imitate Leon's stance")
+	print("[STORY @ %.2fs] Nita attempts to imitate Leon's stance" % elapsed_story_time)
 	nita.imitation_pose()
-	await wait_sec(1.8)
+	await wait_sec(1.0)
 
-	# Leon gives an approving head nod: "Go for it!"
+	# Nita checks feet alignment and adjusts posture
+	nita.check_feet_alignment()
+	await wait_sec(1.1)
+
+	# Leon nods encouragingly: "Looking good, now take your shot!"
 	leon.turn_head_to_student(true)
-	await wait_sec(1.2)
+	await wait_sec(0.9)
 
 	# =========================================================================
-	# SHOT 4: Nita's Clumsy Fumble & Leon's Disbelief (21.0s – 30.0s)
+	# SHOT 4: Nita's Clumsy Fumble & Leon's Panic (~20.8s – 28.5s)
 	# =========================================================================
-	print("[STORY] Shot 4: Nita's Clumsy Fumble & Near Miss")
-	_camera_pan_zoom(Vector2(380, 410), Vector2(1.06, 1.06), 0.8)
+	print("[STORY @ %.2fs] Shot 4: Nita's Clumsy Fumble & Near Miss" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(340, 410), Vector2(1.12, 1.12), 0.7)
 
-	# Nita turns around to show off to Leon and fires toward the left!
+	# Nita turns around to show off to Leon and fires shockwave backwards (left)!
 	nita.set_facing(-1)
-	await wait_sec(0.4)
+	await wait_sec(0.6)
 
-	# Nita over-swings wildly, stumbles forward towards Leon, and fires shockwave!
-	print("[STORY] Nita fumbles attack towards Leon!")
+	# Nita clumsy fumble attack towards Leon
+	print("[STORY @ %.2fs] Nita fumbles attack towards Leon!" % elapsed_story_time)
 	nita.clumsy_fumble_attack()
-	await wait_sec(0.24)
+	await wait_sec(0.28)
 
-	# Leon at X=220 emergency panic jumps as fissure passes beneath him!
-	print("[STORY] Leon panic jump!")
+	# Leon at X=220 emergency panic jumps as shockwave passes harmlessly beneath him!
+	print("[STORY @ %.2fs] Leon panic jump!" % elapsed_story_time)
 	_play_leon_vo(vo_leon_gasp)
 	_play_sfx(sfx_jump, 2.0)
 	leon.trigger_panic_jump()
-	await wait_sec(0.65)
+	await wait_sec(0.7)
 	_play_sfx(sfx_land, 1.0)
+	if has_node("/root/VFXManager"):
+		get_node("/root/VFXManager").spawn_vfx("DUST_PUFF", leon.global_position)
 	await wait_sec(0.6)
 
-	# Nita turns around, sees the dummy is completely untouched, looks down at dirt
+	# Nita turns around, realizes dummy is untouched, shrinks in embarrassment
 	nita.set_facing(1)
-	await wait_sec(0.4)
+	await wait_sec(0.5)
 	nita.set_facing(-1)
-	print("[STORY] Nita realizes mistake and shrinks in embarrassment")
+	print("[STORY @ %.2fs] Nita realizes mistake and shrinks in embarrassment" % elapsed_story_time)
 	_play_nita_vo(vo_nita_oops)
 	nita.embarrassed_shrink()
-	await wait_sec(0.8)
+	nita.fidget_embarrassed()
+	await wait_sec(0.9)
 
-	# Leon at X=220 stares deadpan across the 160px gap: "Seriously?!"
-	print("[STORY] Leon deadpan disbelief reaction across the gap")
+	# Leon at X=220 stares deadpan across the 200px gap: "Seriously?!"
+	print("[STORY @ %.2fs] Leon deadpan disbelief reaction across the gap" % elapsed_story_time)
 	leon.set_facing(1)
 	leon.disbelief_react()
-	await wait_sec(2.4)
+	leon.head_shake_disbelief()
+	await wait_sec(1.0)
+
+	# Leon brushes off hoodie in relief
+	leon.dust_off_hoodie()
+	await wait_sec(1.0)
 
 	# =========================================================================
-	# SHOT 5: Leon Patiently Coaches Stance & Aim (30.0s – 37.5s)
+	# SHOT 5: Patient Coaching & Proper Alignment (~28.5s – 36.2s)
 	# =========================================================================
-	print("[STORY] Shot 5: Leon Patiently Coaches Stance & Aim")
-	_camera_pan_zoom(Vector2(400, 410), Vector2(1.1, 1.1), 0.8)
-	# Leon walks up beside Nita's left shoulder (X=310, 80px away from Nita at X=390)
+	print("[STORY @ %.2fs] Shot 5: Leon Patiently Coaches Stance & Aim" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(360, 410), Vector2(1.10, 1.10), 0.8)
+	# Leon steps forward to X=250 (170px away from Nita at X=420)
 	leon.reset_pose()
-	leon.walk_to(310.0, 130.0)
+	leon.walk_to(250.0, 140.0)
 	await leon.walk_finished
-	await wait_sec(0.4)
+	await wait_sec(0.35)
 
 	# Leon points firmly at the dummy bullseye and coaches
 	_play_leon_vo(vo_leon_teach)
 	leon.set_facing(1)
 	leon.coaching_demonstration()
-	await wait_sec(1.6)
+	await wait_sec(1.3)
 
 	# Nita watches, plants feet firmly, aligns arm to dummy
-	print("[STORY] Nita learns: plants feet and aligns arm to dummy")
+	print("[STORY @ %.2fs] Nita learns: plants feet and aligns arm to dummy" % elapsed_story_time)
 	nita.set_facing(1)
 	nita.learning_stance()
-	await wait_sec(1.4)
+	await wait_sec(1.2)
 
-	# Leon steps back to X=210 to give her the entire field
-	leon.walk_to(210.0, 130.0)
+	# Leon steps back to X=210 to clear the shooting lane
+	leon.walk_to(210.0, 140.0)
 	await leon.walk_finished
 	leon.set_facing(1)
 	leon.set_expression("neutral", "open")
-	await wait_sec(0.8)
+	await wait_sec(0.5)
+
+	# Nita takes a focused breath to center herself
+	nita.focused_deep_breath()
+	await wait_sec(1.0)
 
 	# =========================================================================
-	# SHOT 6: Nita Focuses, Hits Dummy & Leon's Pride (37.5s – 46.5s)
+	# SHOT 6: First Success — Focused Hit on Dummy (~36.2s – 44.5s)
 	# =========================================================================
-	print("[STORY] Shot 6: Nita Focused Clean Hit on Dummy")
-	_camera_pan_zoom(Vector2(490, 420), Vector2(1.0, 1.0), 0.8)
-	nita.set_expression("grin", "open")
-	await wait_sec(0.8)
+	print("[STORY @ %.2fs] Shot 6: Nita Focused Clean Hit on Dummy" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(490, 420), Vector2(1.02, 1.02), 0.7)
 
-	# Nita executes smooth, focused attack from X=390 to dummy at X=710!
-	print("[STORY] Nita fires clean shockwave at target dummy!")
-	nita.trigger_attack()
+	# Nita prepares with focused anticipation
+	nita.anticipation_aim()
 	await wait_sec(0.7)
 
-	# DIRECT HIT! Dummy impacts and shakes
-	_play_sfx(sfx_crash, 1.5)
+	# Nita executes smooth, focused attack from X=420 to dummy at X=740!
+	print("[STORY @ %.2fs] Nita fires clean shockwave at target dummy!" % elapsed_story_time)
+	nita.trigger_attack()
+
+	# AUTHORITATIVE COLLISION: Await real projectile impact on Target Dummy!
+	if target_dummy:
+		await wait_for_signal_or_timeout(target_dummy.hit_received, 1.2)
+
+	# DIRECT HIT CONFIRMED!
+	_play_sfx(sfx_crash, 1.2)
 	_camera_shake(7.0, 0.28)
-	await wait_sec(0.8)
+	await wait_sec(0.5)
+
+	# Punch in on reactions
+	_camera_pan_zoom(Vector2(360, 415), Vector2(1.14, 1.14), 0.6)
 
 	# Leon at X=210 genuine proud approval
-	print("[STORY] Leon surprised & proud")
+	print("[STORY @ %.2fs] Leon surprised & proud" % elapsed_story_time)
 	_play_leon_vo(vo_leon_yeah)
 	leon.proud_approval()
-	await wait_sec(1.2)
+	await wait_sec(1.0)
 
-	# Nita turns to Leon at X=210 and bursts into joy!
-	print("[STORY] Nita celebrates with proud hops")
+	# Nita turns to Leon at X=210 and bursts into joyful celebration!
+	print("[STORY @ %.2fs] Nita celebrates with proud hops" % elapsed_story_time)
 	_play_nita_vo(vo_nita_cheer)
 	nita.set_facing(-1)
 	nita.proud_hop()
-	await wait_sec(2.2)
+	await wait_sec(0.6)
+
+	# Mutual celebration: Leon fist-pump, Nita double high hop
+	leon.celebrate_student_hit()
+	nita.double_high_hop()
+	await wait_sec(1.3)
 
 	# =========================================================================
-	# SHOT 7: Reckless Overconfidence & 3-Beat Chaos (46.5s – 55.5s)
+	# SHOT 7: THE CHALLENGE — PROGRESSIVE TARGETS (~44.5s – 54.0s)
 	# =========================================================================
-	print("[STORY] Shot 7: Nita Overconfident Swagger & Chaos")
-	_camera_pan_zoom(Vector2(520, 420), Vector2(0.96, 0.96), 0.8)
+	print("[STORY @ %.2fs] Shot 7: The Challenge — Progressive Targets" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(510, 420), Vector2(0.95, 0.95), 0.7)
 
-	# Nita shifts to cocky, overconfident swagger at X=390
-	_play_nita_vo(vo_nita_stronger)
-	nita.overconfident_swagger()
-	await wait_sec(1.4)
-
-	# Leon at X=210 realizes she's about to go crazy: frantic warning!
-	print("[STORY] Leon alarmed: 'Wait, stop!'")
-	_play_leon_vo(vo_leon_no)
-	leon.warning_gesture()
+	# Leon realizes Nita has real talent; establishes controlled practice challenge!
+	leon.set_facing(1)
+	_play_leon_vo(vo_leon_start)
+	leon.challenge_setup_gesture()
+	if props:
+		props.setup_challenge_targets()
 	await wait_sec(1.2)
 
-	# Nita turns and unleashes rapid chaos!
+	# Challenge Target 1 (Careful Aim at X=580)
+	print("[STORY @ %.2fs] Challenge Target 1: Nita carefully aims at practice board" % elapsed_story_time)
+	nita.set_facing(1)
+	nita.anticipation_aim()
+	await wait_sec(0.6)
+	nita.trigger_attack()
+
+	# Authoritative wait for projectile to reach and shatter Target 1
+	if props:
+		await wait_for_signal_or_timeout(props.target_1_destroyed, 1.1)
+	_play_sfx(sfx_crash, 1.5)
+	_camera_shake(6.0, 0.25)
+	await wait_sec(0.5)
+
+	# Leon approves of Target 1 hit with celebratory gesture
+	leon.celebrate_student_hit()
+	await wait_sec(0.8)
+
+	# Challenge Target 2 (Confident Rapid Hit at X=670)
+	print("[STORY @ %.2fs] Challenge Target 2: Nita fires confidently at second target" % elapsed_story_time)
+	nita.confident_aim()
+	await wait_sec(0.4)
+	nita.trigger_attack()
+
+	# Authoritative wait for projectile to reach and shatter Target 2
+	if props:
+		await wait_for_signal_or_timeout(props.target_2_destroyed, 1.2)
+	_play_sfx(sfx_crash, 1.8)
+	_camera_shake(7.5, 0.28)
+	await wait_sec(0.6)
+
+	# Leon is visibly blown away: "Whoa, she's actually really good!"
+	print("[STORY @ %.2fs] Leon is visibly impressed by Nita's second hit" % elapsed_story_time)
+	leon.escalating_impressed()
+	await wait_sec(1.2)
+
+	# Attitude Shift: Nita gets cocky, does a boastful spin and swagger!
+	print("[STORY @ %.2fs] Nita becomes overconfident and swaggers" % elapsed_story_time)
+	_play_nita_vo(vo_nita_stronger)
+	nita.swagger_spin()
+	await wait_sec(0.8)
+	nita.boastful_chest_puff()
+	await wait_sec(1.2)
+
+	# Leon spots her reckless attitude; his smile turns to concern: "Wait, hold on..."
+	print("[STORY @ %.2fs] Leon notices Nita's cocky attitude with growing concern" % elapsed_story_time)
+	leon.concerned_hesitation()
+	await wait_sec(1.0)
+
+	# =========================================================================
+	# SHOT 8: Overconfidence, Ignored Warning & Chaos Unleashed (~54.0s – 61.5s)
+	# =========================================================================
+	print("[STORY @ %.2fs] Shot 8: Chaos Unleashed Across Training Ground" % elapsed_story_time)
+	if props:
+		props.arm_chaos()
+
+	# Leon gives frantic warning
+	print("[STORY @ %.2fs] Leon alarmed: 'Wait, stop!'" % elapsed_story_time)
+	_play_leon_vo(vo_leon_no)
+	leon.warning_gesture()
+	await wait_sec(0.7)
+
+	# Camera pulls out to wide overview of the entire destruction zone
+	_camera_pan_zoom(Vector2(530, 420), Vector2(0.90, 0.90), 0.7)
+
+	# Nita ignores him, turns, and unleashes 3-beat rapid chaos!
 	nita.set_facing(1)
 
-	# Chaos Beat 1: Crate stack at X=865 destroyed
-	print("[STORY] Blast 1: Crate stack destroyed into wood debris!")
+	# Chaos Beat 1: Target Dummy launched into orbit!
+	print("[STORY @ %.2fs] Blast 1: Target Dummy blast launched into orbit!" % elapsed_story_time)
+	if props and target_dummy:
+		props.arm_dummy_launch(target_dummy)
+	nita.reckless_windup()
 	nita.set_expression("angry", "angry")
 	nita.trigger_attack()
-	await wait_sec(0.7)
-	if props:
-		props.destroy_crates()
-	_play_sfx(sfx_crash, 3.0)
-	_camera_shake(10.0, 0.35)
-	leon.cower_gesture()
-	await wait_sec(0.8)
 
-	# Chaos Beat 2: Training sign at X=790 snapped
-	print("[STORY] Blast 2: Training sign snapped in half!")
-	nita.trigger_attack()
-	await wait_sec(0.65)
+	# Authoritative wait for projectile collision to launch the dummy
 	if props:
-		props.destroy_sign()
+		await wait_for_signal_or_timeout(props.dummy_launched, 1.1)
+	_play_sfx(sfx_crash, 3.5)
+	_camera_shake(12.0, 0.4)
+	await wait_sec(0.5)
+
+	# Quick horror reaction beat: Leon gasps in panic while Nita laughs maniacally
+	leon.warning_gesture()
+	nita.set_expression("grin", "wide")
+	await wait_sec(0.6)
+
+	# Chaos Beat 2: Training sign at X=850 snapped in half!
+	print("[STORY @ %.2fs] Blast 2: Training sign snapped in half!" % elapsed_story_time)
+	nita.reckless_windup()
+	nita.trigger_attack()
+
+	# Authoritative wait for projectile collision with training sign
+	if props:
+		await wait_for_signal_or_timeout(props.sign_destroyed, 1.2)
 	_play_sfx(sfx_crash, 2.5)
-	_camera_shake(9.0, 0.3)
-	await wait_sec(0.8)
+	_camera_shake(10.0, 0.32)
+	await wait_sec(0.6)
 
-	# Chaos Beat 3: Point-blank dummy launch into space!
-	print("[STORY] Blast 3: Dummy launched into orbit!")
-	nita.walk_to(640.0, 220.0)
+	# Chaos Beat 3: Point-blank Crate Stack destroyed into wood debris!
+	print("[STORY @ %.2fs] Blast 3: Crate stack destroyed into wood debris!" % elapsed_story_time)
+	nita.walk_to(760.0, 260.0)
 	await nita.walk_finished
+	nita.reckless_windup()
 	nita.trigger_attack()
-	await wait_sec(0.6)
-	if props and target_dummy:
-		props.launch_dummy(target_dummy)
+
+	# Authoritative wait for projectile collision with crate stack
+	if props:
+		await wait_for_signal_or_timeout(props.crates_destroyed, 1.1)
 	_play_sfx(sfx_crash, 4.5)
-	_camera_shake(14.0, 0.45)
-	await wait_sec(1.6)
+	_camera_shake(15.0, 0.45)
+	leon.cower_gesture()
+	await wait_sec(1.2)
 
 	# =========================================================================
-	# SHOT 8: Aftermath & Comedic Facepalm (55.5s – 61.5s)
+	# SHOT 9: Aftermath & Comedic Facepalm (~61.5s – 68.0s)
 	# =========================================================================
-	print("[STORY] Shot 8: Aftermath & Comedic Facepalm")
-	_camera_pan_zoom(Vector2(360, 410), Vector2(1.12, 1.12), 0.8)
-	await wait_sec(0.6)
+	print("[STORY @ %.2fs] Shot 9: Aftermath, Innocent Grin & Comedic Facepalm" % elapsed_story_time)
+	_camera_pan_zoom(Vector2(350, 415), Vector2(1.10, 1.10), 0.8)
+	await wait_sec(0.4)
 
-	# Nita walks back to X=390 (170px away from Leon at X=220!)
-	nita.walk_to(390.0, 160.0)
+	# Nita walks back to X=420 (200px+ separation from Leon at X=210!)
+	nita.walk_to(420.0, 160.0)
 	await nita.walk_finished
 	nita.set_facing(-1)
 	nita.innocent_pose()
 	await wait_sec(0.6)
 
-	# Leon at X=220 looks at the empty smoking space on the right
+	# Leon at X=210 looks at the empty smoking space where everything stood
 	leon.reset_pose()
 	leon.set_facing(1)
 	leon.set_expression("shocked", "wide")
-	await wait_sec(1.2)
+	await wait_sec(0.8)
+
+	# Lingering smoke rises from the ruins
+	if props:
+		props.spawn_lingering_smoke(Vector2(850, 480))
+		props.spawn_lingering_smoke(Vector2(930, 480))
+
+	# A small dust puff falls in the quiet aftermath
+	_play_sfx(sfx_land, -6.0)
+	if has_node("/root/VFXManager"):
+		get_node("/root/VFXManager").spawn_vfx("DUST_PUFF", Vector2(760, 520))
+	await wait_sec(0.8)
 
 	# Leon turns slowly to look at Nita
 	leon.set_facing(-1)
 	await wait_sec(0.6)
 
-	# Nita blinks innocently expecting praise
-	nita.set_expression("grin", "blink")
-	await wait_sec(0.25)
-	nita.set_expression("grin", "open")
-	await wait_sec(0.6)
+	# Nita double-blinks with an innocent goofy smile
+	nita.innocent_blink_loop()
+	await wait_sec(0.8)
 
-	# Leon facepalms in deep exhausted regret across the gap
-	print("[STORY] Leon facepalms in disbelief: 'What have I done...'")
+	# Leon facepalms in deep exhausted regret: "I created a monster..."
+	print("[STORY] Leon facepalms in regret: 'What have I done...'")
 	leon.facepalm_gesture()
-	await wait_sec(1.8)
+	await wait_sec(2.0)
 
 	# Smooth fade to black synchronized with BGM conclusion
 	print("[STORY] Cut to black")
 	if blackout_rect:
 		var tw_fade = create_tween()
-		tw_fade.tween_property(blackout_rect, "modulate:a", 1.0, 0.7)
+		tw_fade.tween_property(blackout_rect, "modulate:a", 1.0, 0.9)
 		await tw_fade.finished
 
-	await wait_sec(0.3)
+	await wait_sec(0.4)
 	story_completed.emit()
-	print("[STORY] Story sequence finished!")
+	print("[STORY] Story sequence finished successfully!")
 	get_tree().quit()
+

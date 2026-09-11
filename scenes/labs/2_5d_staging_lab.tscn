@@ -1,0 +1,174 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/labs/staging_lab_2_5d.gd" id="1_lab"]
+[ext_resource type="PackedScene" path="res://scenes/labs/actors/actor_leon_2_5d.tscn" id="2_leon"]
+[ext_resource type="PackedScene" path="res://scenes/labs/actors/actor_nita_2_5d.tscn" id="3_nita"]
+[ext_resource type="PackedScene" path="res://scenes/labs/actors/actor_bo_2_5d.tscn" id="4_bo"]
+[ext_resource type="PackedScene" path="res://scenes/target_dummy.tscn" id="5_dummy"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_hill_small_01.png" id="6_hill_small"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_hill_large_01.png" id="7_hill_large"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_01.png" id="8_crate"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_warning_01.png" id="9_crate_warn"]
+[ext_resource type="Texture2D" path="res://assets/architecture/arch_metal_frame_large_01.png" id="10_frame"]
+[ext_resource type="Texture2D" path="res://assets/architecture/arch_metal_panel_wide_01.png" id="11_wall"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(90, 220)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.05, 0.06, 0.09, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.25, 0.35, 0.8)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Lab2_5D" type="Node2D"]
+script = ExtResource("1_lab")
+
+[node name="BG" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Sky" type="ColorRect" parent="BG"]
+offset_right = 1400.0
+offset_bottom = 800.0
+color = Color(0.07, 0.09, 0.14, 1)
+
+[node name="HillFar" type="Sprite2D" parent="BG"]
+position = Vector2(576, 330)
+scale = Vector2(2.2, 2.2)
+modulate = Color(0.35, 0.4, 0.55, 1)
+texture = ExtResource("6_hill_small")
+
+[node name="HillNear" type="Sprite2D" parent="BG"]
+position = Vector2(576, 400)
+scale = Vector2(2.6, 2.6)
+modulate = Color(0.24, 0.3, 0.45, 1)
+texture = ExtResource("7_hill_large")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="GroundVisual" type="ColorRect" parent="World"]
+offset_left = -300.0
+offset_top = 560.0
+offset_right = 1700.0
+offset_bottom = 760.0
+color = Color(0.16, 0.15, 0.21, 1)
+
+[node name="GroundLineNear" type="Line2D" parent="World"]
+points = PackedVector2Array(-300, 640, 1700, 640)
+width = 2.0
+default_color = Color(0.3, 0.34, 0.44, 1)
+
+[node name="GroundLineFar" type="Line2D" parent="World"]
+points = PackedVector2Array(-300, 556, 1700, 556)
+width = 1.2
+default_color = Color(0.22, 0.26, 0.34, 0.7)
+
+[node name="Stage" type="Node2D" parent="World"]
+y_sort_enabled = true
+
+[node name="LeonA" parent="World/Stage" instance=ExtResource("2_leon")]
+position = Vector2(300, 625)
+
+[node name="LeonB" parent="World/Stage" instance=ExtResource("2_leon")]
+position = Vector2(540, 600)
+
+[node name="LeonC" parent="World/Stage" instance=ExtResource("2_leon")]
+position = Vector2(810, 570)
+
+[node name="Nita" parent="World/Stage" instance=ExtResource("3_nita")]
+position = Vector2(460, 600)
+
+[node name="Bo" parent="World/Stage" instance=ExtResource("4_bo")]
+position = Vector2(200, 570)
+
+[node name="CrateNear" type="Sprite2D" parent="World/Stage"]
+position = Vector2(820, 628)
+scale = Vector2(0.93, 0.93)
+texture = ExtResource("8_crate")
+
+[node name="CrateMid" type="Sprite2D" parent="World/Stage"]
+position = Vector2(420, 605)
+scale = Vector2(0.84, 0.84)
+texture = ExtResource("9_crate_warn")
+
+[node name="Pillar" type="Sprite2D" parent="World/Stage"]
+position = Vector2(180, 606)
+scale = Vector2(0.85, 1.6)
+modulate = Color(0.3, 0.34, 0.44, 1)
+texture = ExtResource("10_frame")
+
+[node name="WallBack" type="StaticBody2D" parent="World/Stage"]
+position = Vector2(250, 560)
+
+[node name="WallCol" type="CollisionShape2D" parent="World/Stage/WallBack"]
+position = Vector2(0, -70)
+shape = SubResource("RectangleShape2D_wall")
+collision_layer = 2
+
+[node name="WallVisual" type="Sprite2D" parent="World/Stage/WallBack"]
+position = Vector2(0, -100)
+scale = Vector2(0.7, 0.7)
+modulate = Color(0.4, 0.44, 0.55, 0.95)
+texture = ExtResource("11_wall")
+
+[node name="DummyNear" parent="World/Stage" instance=ExtResource("5_dummy")]
+position = Vector2(900, 633)
+scale = Vector2(0.93, 0.93)
+
+[node name="DummyMid" parent="World/Stage" instance=ExtResource("5_dummy")]
+position = Vector2(760, 600)
+scale = Vector2(0.84, 0.84)
+
+[node name="DummyFar" parent="World/Stage" instance=ExtResource("5_dummy")]
+position = Vector2(560, 568)
+scale = Vector2(0.73, 0.73)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 430)
+zoom = Vector2(1.0, 1.0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 520.0
+offset_bottom = 130.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel"]
+layout_mode = 2
+
+[node name="LblTitle" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "2.5D STAGING LAB (EXPERIMENTAL — do not ship)"
+
+[node name="LblMode" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+text = "VIEW: SIDE | MODE: experimental"
+
+[node name="LblDemo" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.85, 0.88, 0.95, 1)
+text = "TEST: depth triangle"
+
+[node name="LblKeys" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(0.7, 0.78, 0.88, 1)
+text = "1-4: Views | F: Nita rig | V: A/B | Space: auto | R: dummies"

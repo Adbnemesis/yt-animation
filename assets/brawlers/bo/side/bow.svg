@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="170" viewBox="-20 -85 46 170">
+  <!-- Bo Side Recurve Bow: Grip at origin (0,0), limbs curve above and below -->
+  <g>
+    <!-- Bowstring -->
+    <line x1="12" y1="-76" x2="12" y2="80" stroke="#ced4da" stroke-width="2.4"/>
+    <!-- Curved Wooden Limbs -->
+    <path d="M12,-76 C-8,-56 -12,-26 -4,2 C-12,30 -8,60 12,80 C0,62 -4,34 4,2 C-4,-30 0,-58 12,-76 Z"
+          fill="#a0522d" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+    <!-- Blue Wrapped Center Grip -->
+    <rect x="-8" y="-15" width="16" height="30" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+    <line x1="-8" y1="-7" x2="8" y2="-7" stroke="#1060c0" stroke-width="1.8"/>
+    <line x1="-8" y1="1" x2="8" y2="1" stroke="#1060c0" stroke-width="1.8"/>
+    <line x1="-8" y1="9" x2="8" y2="9" stroke="#1060c0" stroke-width="1.8"/>
+    <!-- Upper Talon Tip -->
+    <path d="M6,-76 L16,-88 L20,-78 L26,-84 L22,-72 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+    <!-- Lower Talon Tip -->
+    <path d="M6,80 L16,92 L20,82 L26,88 L22,76 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+  </g>
+</svg>

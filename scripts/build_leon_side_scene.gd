@@ -34,16 +34,16 @@ func _init() -> void:
 	skel.owner = root
 
 	# Textures Preload
-	var tex_hood = load("res://assets/leon/side/hood.svg")
-	var tex_face = load("res://assets/leon/side/face.svg")
-	var tex_torso = load("res://assets/leon/side/torso.svg")
-	var tex_tail = load("res://assets/leon/side/tail.svg")
-	var tex_leg_upper = load("res://assets/leon/side/leg_upper.svg")
-	var tex_leg_lower = load("res://assets/leon/side/leg_lower.svg")
-	var tex_foot = load("res://assets/leon/side/foot.svg")
-	var tex_arm_upper = load("res://assets/leon/side/arm_upper.svg")
-	var tex_arm_lower = load("res://assets/leon/side/arm_lower.svg")
-	var tex_hand = load("res://assets/leon/side/hand.svg")
+	var tex_hood = load("res://assets/brawlers/leon/side/hood.svg")
+	var tex_face = load("res://assets/brawlers/leon/side/face.svg")
+	var tex_torso = load("res://assets/brawlers/leon/side/torso.svg")
+	var tex_tail = load("res://assets/brawlers/leon/side/tail.svg")
+	var tex_leg_upper = load("res://assets/brawlers/leon/side/leg_upper.svg")
+	var tex_leg_lower = load("res://assets/brawlers/leon/side/leg_lower.svg")
+	var tex_foot = load("res://assets/brawlers/leon/side/foot.svg")
+	var tex_arm_upper = load("res://assets/brawlers/leon/side/arm_upper.svg")
+	var tex_arm_lower = load("res://assets/brawlers/leon/side/arm_lower.svg")
+	var tex_hand = load("res://assets/brawlers/leon/side/hand.svg")
 
 	var create_bone = func(b_name: String, rest_pos: Vector2, parent: Node, is_leaf: bool = false) -> Bone2D:
 		var b = Bone2D.new()

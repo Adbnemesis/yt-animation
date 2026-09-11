@@ -41,7 +41,7 @@ func _init() -> void:
 
 	var sprite = Sprite2D.new()
 	sprite.name = "BladeSprite"
-	var tex = load("res://assets/leon/projectile/spinner_blade.svg")
+	var tex = load("res://assets/brawlers/leon/projectile/spinner_blade.svg")
 	sprite.texture = tex
 	visuals.add_child(sprite)
 	sprite.owner = root

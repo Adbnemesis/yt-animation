@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="-58 -48 128 120">
+  <!-- Bo Side Beak: Proud Hooked Yellow Eagle Beak aligned to Cowl -->
+  <g transform="translate(26, -16)">
+    <path d="M-2,6 C16,4 32,12 40,26 C44,36 40,50 28,62 C26,50 20,40 8,36 C2,34 -4,30 -6,28 Z"
+          fill="#ffd166" stroke="#1e1e2c" stroke-width="3.8" stroke-linejoin="round"/>
+    <!-- Under-Beak Deep Amber Shadow -->
+    <path d="M8,36 C22,40 26,50 28,62 C22,54 16,46 6,42 Z" fill="#ffb703"/>
+    <!-- Nostril Slit -->
+    <ellipse cx="16" cy="22" rx="3.5" ry="1.6" transform="rotate(-18 16 22)" fill="#1e1e2c"/>
+  </g>
+</svg>

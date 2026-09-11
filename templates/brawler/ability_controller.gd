@@ -27,6 +27,9 @@ var is_attacking: bool = false
 var attack_timer: float = 0.0
 var burst_projectiles_remaining: int = 0
 var burst_timer: float = 0.0
+# Animation-driven configs: set when the PROJECTILE_SPAWN animation event
+# fires the first arrow; remaining arrows continue on the burst interval.
+var burst_started: bool = false
 
 var super_state: SuperState = SuperState.NONE
 var super_timer: float = 0.0
@@ -48,6 +51,7 @@ func attack() -> bool:
 	attack_timer = 0.0
 	burst_projectiles_remaining = config.projectiles_per_burst if config else 1
 	burst_timer = 0.0
+	burst_started = false
 
 	attack_started.emit()
 	return true
@@ -80,18 +84,41 @@ func _step_attack(delta: float) -> void:
 
 	attack_timer += delta
 
-	# Process projectile burst
-	if burst_projectiles_remaining > 0:
-		burst_timer -= delta
-		if burst_timer <= 0.0:
-			_spawn_next_burst_projectile()
-			var interval = config.burst_interval if config else 0.030
-			burst_timer = interval
+	# Projectile burst handling.
+	if config and config.animation_driven_projectiles:
+		# Animation-driven: the first arrow fires at the PROJECTILE_SPAWN
+		# animation event (via spawn_attack_burst); the remaining arrows are
+		# released on the burst interval as a staggered volley.
+		if burst_started and burst_projectiles_remaining > 0:
+			burst_timer -= delta
+			if burst_timer <= 0.0:
+				_spawn_next_burst_projectile()
+				burst_timer = config.burst_interval if config else 0.030
+	else:
+		# Legacy timer-driven burst (starts immediately on the ability timer).
+		if burst_projectiles_remaining > 0:
+			burst_timer -= delta
+			if burst_timer <= 0.0:
+				_spawn_next_burst_projectile()
+				var interval = config.burst_interval if config else 0.030
+				burst_timer = interval
 
 	var duration = config.attack_duration if config else 0.36
 	if attack_timer >= duration:
 		is_attacking = false
 		attack_ended.emit()
+
+# Fire the first projectile of the burst immediately (called from the attack
+# animation's PROJECTILE_SPAWN event, i.e. the exact release frame). The
+# remaining projectiles are released staggered on the burst interval.
+# Idempotent within one attack.
+func spawn_attack_burst() -> void:
+	if not is_attacking or burst_started:
+		return
+	burst_started = true
+	if burst_projectiles_remaining > 0:
+		_spawn_next_burst_projectile()
+		burst_timer = config.burst_interval if config else 0.030
 
 func _spawn_next_burst_projectile() -> void:
 	if not config or not config.projectile_scene:

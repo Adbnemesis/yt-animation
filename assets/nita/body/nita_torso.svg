@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="72" height="56" viewBox="0 0 72 56">
-  <!-- Nita Torso: Emerald Tank Top with Skin Neckline Notch -->
-  <path d="M16,6 C9,6 5,16 5,30 C5,46 13,52 24,52 L48,52 C59,52 67,46 67,30 C67,16 63,6 56,6 Z"
-        fill="#2eb872" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
-  <!-- Neckline Notch (skin showing above tank collar) -->
-  <path d="M28,6 Q36,16 44,6 Z" fill="#a5683f" stroke="#1e1e2c" stroke-width="2.5" stroke-linejoin="round"/>
-</svg>

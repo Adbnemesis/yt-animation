@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+; NITA — MULTIVIEW LAB ACTOR (LAB)
+
+[ext_resource type="Script" path="res://scripts/labs/cinematic_actor.gd" id="1_actor"]
+[ext_resource type="PackedScene" path="res://scenes/labs/characters/nita_multiview_lab/nita_multiview.tscn" id="2_model"]
+
+[node name="NitaMultiviewLab" type="Node2D"]
+script = ExtResource("1_actor")
+display_name = "Nita"
+
+[node name="Shadow" type="Polygon2D" parent="."]
+z_index = -1
+modulate = Color(0, 0, 0, 0.42)
+polygon = PackedVector2Array(-28, 2, 28, 2, 32, 12, -32, 12)
+
+[node name="Model" parent="." instance=ExtResource("2_model")]

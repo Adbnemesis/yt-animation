@@ -27,7 +27,7 @@ Completed and verified systems:
 
 | System | Location | Status |
 |---|---|---|
-| Leon artwork (paper-cutout SVG parts) | `assets/leon/` | complete |
+| Leon artwork (paper-cutout SVG parts) | `assets/brawlers/leon/` | complete |
 | Leon Skeleton2D rig + AnimPlayer animations | `scenes/leon.tscn` | complete |
 | Locomotion (idle/walk/run/stop/turn) | `scripts/character_controller.gd` | complete |
 | Jump / fall / land | `scripts/character_controller.gd` | complete |
@@ -42,6 +42,8 @@ Completed and verified systems:
 | Video render pipeline | `tools/render_video.sh` (Movie Maker + FFmpeg) | working |
 | Starter asset library | `assets/` + `assets/asset_catalog.json` | complete |
 | Reusable Brawler Template | `templates/brawler/` | implemented, unit-tested; **not yet used by a second shipped character** |
+| Experimental 2D/2.5D staging lab | `scenes/labs/2_5d_staging_lab.tscn` + `docs/2_5D_STAGING_LAB.md` | experiment complete, isolated — production does not depend on it |
+| Multi-view cinematic lab v2 | `scenes/labs/cinematic_2_5d_lab.tscn` + `docs/CINEMATIC_2_5D_LAB.md`, `docs/MULTIVIEW_CHARACTER_SYSTEM.md` | experiment complete, isolated — adds multi-view Leon/Nita/Bo — production untouched |
 
 ---
 
@@ -142,7 +144,7 @@ The project deliberately uses a **controlled 2D puppet system** (rig + state mac
 
 | Content | Location |
 |---|---|
-| Character parts / rigs / expressions | `assets/<brawler>/` (currently `assets/leon/`, incl. `side/`, `projectile/`, `sheets/`) |
+| Character parts / rigs / expressions | `assets/<brawler>/` (currently `assets/brawlers/leon/`, incl. `side/`, `projectile/`, `sheets/`) |
 | Backgrounds / parallax | `assets/backgrounds/` |
 | Modular terrain pieces | `assets/environments/` |
 | Foreground layers | `assets/foreground/` |
@@ -254,6 +256,8 @@ gdUnit4 v6.2.1, suites in `tests/`:
 | Suite | Covers |
 |---|---|
 | `test_leon_state_smoke.gd` | Real Leon locomotion regression: `IDLE → WALK → STOP → IDLE` via simulated input |
+| `test_bo_brawler.gd` | Bo integration: rig, sockets, locomotion, expressions, hit/knockback/death |
+| `test_bo_attack.gd` | Bo basic attack: event sequence, 3-arrow volley, both directions, projectile causality (arrow reaches target before hit), one hit per arrow, attack-while-moving, repeated attacks |
 | `test_phantom_camera.gd` | Camera follow/zoom/priority switching |
 | `test_vfx_events.gd` | Event-driven VFX triggering via `VFXManager` |
 | `test_brawler_template.gd` | Brawler Template (base/config/face controller) |

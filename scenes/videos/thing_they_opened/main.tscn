@@ -1,0 +1,90 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/videos/thing_they_opened/story_director.gd" id="1_director"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/facility.tscn" id="2_facility"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_leon.tscn" id="3_leon"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_nita.tscn" id="4_nita"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/actor_bo.tscn" id="5_bo"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/security_machine.tscn" id="6_machine"]
+[ext_resource type="PackedScene" path="res://scenes/videos/thing_they_opened/creature.tscn" id="7_creature"]
+[ext_resource type="AudioStream" path="res://assets/audio/bgm/brawlcade_ingame_02.ogg" id="8_bgm"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_warning_01.png" id="9_crate_warn"]
+[ext_resource type="Texture2D" path="res://assets/props/prop_crate_01.png" id="10_crate_sm"]
+
+[node name="ThingTheyOpenedMain" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_director")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(500, 400)
+
+[node name="Environment" parent="." instance=ExtResource("2_facility")]
+
+[node name="Leon" parent="." instance=ExtResource("3_leon")]
+position = Vector2(380, 565)
+
+[node name="Nita" parent="." instance=ExtResource("4_nita")]
+position = Vector2(270, 535)
+
+[node name="Bo" parent="." instance=ExtResource("5_bo")]
+position = Vector2(160, 490)
+
+[node name="SecurityMachine" parent="." instance=ExtResource("6_machine")]
+position = Vector2(850, 530)
+
+[node name="Creature" parent="." instance=ExtResource("7_creature")]
+position = Vector2(1050, 510)
+visible = false
+
+; Y-sorted floor crates — direct children so they interleave with characters/enemies
+[node name="CrateWarning" type="Sprite2D" parent="."]
+position = Vector2(180, 512)
+texture = ExtResource("9_crate_warn")
+
+[node name="CrateSmall" type="Sprite2D" parent="."]
+position = Vector2(212, 494)
+texture = ExtResource("10_crate_sm")
+
+[node name="CrateMidCorridor" type="Sprite2D" parent="."]
+position = Vector2(700, 518)
+scale = Vector2(1.15, 1.15)
+modulate = Color(0.8, 0.75, 0.9, 1)
+texture = ExtResource("10_crate_sm")
+
+[node name="CrateMidDeep" type="Sprite2D" parent="."]
+position = Vector2(1180, 500)
+scale = Vector2(1.0, 1.0)
+modulate = Color(0.7, 0.66, 0.8, 1)
+texture = ExtResource("9_crate_warn")
+
+[node name="UI" type="Node2D" parent="."]
+
+[node name="BlackoutOverlay" type="CanvasLayer" parent="UI"]
+layer = 50
+
+[node name="ColorRect" type="ColorRect" parent="UI/BlackoutOverlay"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource("8_bgm")
+volume_db = -11.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="SFXPlayer2" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="AmbientPlayer" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="VoiceLeon" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="VoiceNita" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="VoiceBo" type="AudioStreamPlayer" parent="Audio"]

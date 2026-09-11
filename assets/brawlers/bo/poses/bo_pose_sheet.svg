@@ -1,0 +1,1058 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <rect width="800" height="800" fill="#181a20"/>
+  <text x="400" y="36" fill="#ffd166" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">BO — KEY ACTION POSES (ASSET &amp; ANIMATION REFERENCE)</text>
+  <text x="400" y="56" fill="#a0a8b4" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">Neutral • Walk • Run • Jump • Atk Anticipation • Attack (Release) • Follow-Through • Hit • Knockback • Landing</text>
+
+  <!-- ROW 1 (y = 200): NEUTRAL, WALK, RUN, JUMP, ATK ANTICIPATION -->
+  <!-- 1. NEUTRAL -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="75" cy="295" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(75, 200) scale(0.92) rotate(0)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(0, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(0, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(0, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(0) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(0, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="75" y="325" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">NEUTRAL</text>
+
+  <!-- 2. WALK -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="235" cy="295" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(235, 200) scale(0.92) rotate(0)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(-20, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(22, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(15, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(10) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-15, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="235" y="325" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">WALK</text>
+
+  <!-- 3. RUN -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="400" cy="295" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(400, 200) scale(0.92) rotate(12)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(-36, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(38, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(-22, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(-15) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(25, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="400" y="325" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">RUN</text>
+
+  <!-- 4. JUMP -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="565" cy="295" rx="24" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(565, 178) scale(0.92) rotate(0)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(-22, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(22, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(-25, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(-20) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-25, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="565" y="325" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">JUMP</text>
+
+  <!-- 5. ATK ANTICIPATION -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="725" cy="295" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(725, 200) scale(0.92) rotate(4)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(0, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(0, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(45, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(30) scale(0.65)">
+          <path d="M28,14 L80,70 L28,126" stroke="#ced4da" stroke-width="2.6" fill="none"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+          <g transform="translate(24, 70)">
+            <line x1="-36" y1="0" x2="60" y2="0" stroke="#a0522d" stroke-width="3.6"/>
+            <polygon points="-46,0 -34,-6 -34,6" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.0"/>
+            <polygon points="60,0 50,-7 52,0" fill="#00b4d8"/>
+            <polygon points="60,0 50,7 52,0" fill="#00b4d8"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-35, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="725" y="325" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ATK ANTICIPATION</text>
+
+  <!-- ROW 2 (y = 530): ATTACK, FOLLOW-THROUGH, HIT REACTION, KNOCKBACK, LANDING -->
+  <!-- 6. ATTACK (RELEASE) -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="75" cy="625" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(75, 530) scale(0.92) rotate(0)">
+      
+          <g transform="translate(32, -8)">
+            <line x1="0" y1="0" x2="48" y2="0" stroke="#a0522d" stroke-width="3.6"/>
+            <polygon points="56,0 44,-6 44,6" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.0"/>
+            <polygon points="2,0 -8,-7 -4,0" fill="#00b4d8"/>
+            <polygon points="2,0 -8,7 -4,0" fill="#00b4d8"/>
+            <line x1="-24" y1="0" x2="-8" y2="0" stroke="#00b4d8" stroke-width="2.0" stroke-dasharray="4 4"/>
+          </g>
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(0, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(0, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(50, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(35) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-10, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="75" y="655" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">ATTACK (RELEASE)</text>
+
+  <!-- 7. FOLLOW-THROUGH -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="235" cy="625" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(235, 530) scale(0.92) rotate(3)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(0, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(0, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(20, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(15) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-15, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="235" y="655" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">FOLLOW-THROUGH</text>
+
+  <!-- 8. HIT REACTION -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="400" cy="625" rx="44" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(400, 530) scale(0.92) rotate(-14)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(0, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(0, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(-20, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(-25) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(25, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <path d="M14,20 L22,24 L14,28" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <path d="M54,20 L46,24 L54,28" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <path d="M26,44 L30,41 L34,45 L38,41 L42,44" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="400" y="655" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">HIT REACTION</text>
+
+  <!-- 9. KNOCKBACK -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="565" cy="625" rx="24" ry="8" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(565, 508) scale(0.92) rotate(-26)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(30, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(15, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 1.0)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(-35, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(-30) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(40, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <path d="M14,20 L22,24 L14,28" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <path d="M54,20 L46,24 L54,28" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <path d="M26,44 L30,41 L34,45 L38,41 L42,44" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="565" y="655" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">KNOCKBACK</text>
+
+  <!-- 10. LANDING (CROUCH) -->
+  
+    <!-- Ground Shadow -->
+    <ellipse cx="725" cy="625" rx="52" ry="10" fill="#101216"/>
+
+    <!-- Bo Main Group -->
+    <g transform="translate(725, 545) scale(0.92) rotate(0)">
+      
+      <!-- 1. Left Leg & Foot -->
+      <g transform="rotate(24, -10, 42)">
+        <rect x="-24" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-28, 68)">
+          <path d="M4,4 L24,4 C27,4 29,9 29,14 L29,18 L2,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 2. Right Leg & Foot -->
+      <g transform="rotate(-24, 10, 42)">
+        <rect x="6" y="42" width="18" height="28" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(6, 68)">
+          <path d="M26,4 L6,4 C3,4 1,9 1,14 L1,18 L28,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        </g>
+      </g>
+
+      <!-- 3. Pelvis Trousers Base -->
+      <path d="M-24,40 L24,40 L22,54 L-22,54 Z" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+
+      <!-- 4. Torso with Green Tunic & Maroon Sash -->
+      <g transform="scale(1, 0.85)">
+        <g transform="translate(-36, -26)">
+          <path d="M12,4 C8,4 6,14 6,28 C6,48 12,56 20,56 L52,56 C60,56 66,48 66,28 C66,14 64,4 60,4 Z" fill="#06d6a0" stroke="#1e1e2c" stroke-width="3.5"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#4a2e1b" stroke-width="4.0" stroke-linecap="round"/>
+          <line x1="12" y1="8" x2="56" y2="48" stroke="#1e1e2c" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="3 3"/>
+          <rect x="8" y="44" width="56" height="12" rx="2" fill="#7a2828" stroke="#1e1e2c" stroke-width="3.0"/>
+        </g>
+      </g>
+
+      <!-- 5. Left Arm with Recurve Bow -->
+      <g transform="translate(-38, -20) rotate(30, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <g transform="translate(-24, -10) rotate(45) scale(0.65)">
+          <line x1="28" y1="14" x2="28" y2="126" stroke="#ced4da" stroke-width="2.2"/>
+          <path d="M28,14 C12,30 8,50 14,70 C8,90 12,110 28,126 C18,112 14,92 20,70 C14,48 18,28 28,14 Z" fill="#a0522d" stroke="#1e1e2c" stroke-width="3.5"/>
+          <rect x="12" y="58" width="14" height="24" rx="2" fill="#1e90ff" stroke="#1e1e2c" stroke-width="2.8"/>
+          <path d="M22,14 L30,4 L34,12 L38,6 L36,16 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          <path d="M22,126 L30,136 L34,128 L38,134 L36,124 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.2"/>
+          
+        </g>
+      </g>
+
+      <!-- 6. Right Arm with Talon Bracer -->
+      <g transform="translate(16, -20) rotate(-20, 0, 0)">
+        <path d="M16,4 C10,4 6,10 6,18 L7,34 C7,38 11,40 16,40 C21,40 25,38 25,34 L26,18 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.2"/>
+        <path d="M5,18 L27,18 L28,34 C28,37 22,39 16,39 C10,39 4,37 4,34 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="2.6"/>
+        <circle cx="16" cy="27" r="4.5" fill="#06d6a0" stroke="#1e1e2c" stroke-width="1.8"/>
+      </g>
+
+      <!-- 7. Hair Locks Framing Face -->
+      <g transform="translate(-44, -58)">
+        <path d="M16,4 C10,4 4,14 4,30 C4,46 10,58 14,60 C18,60 22,50 22,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+      <g transform="translate(16, -58)">
+        <path d="M10,4 C16,4 22,14 22,30 C22,46 16,58 12,60 C8,60 4,50 4,38 Z" fill="#1f2438" stroke="#1e1e2c" stroke-width="3.2"/>
+      </g>
+
+      <!-- 8. Head, Eagle Hood & Face -->
+      <g transform="translate(-60, -112)">
+        <!-- White Eagle Dome -->
+        <path d="M60,6 C32,6 16,28 16,62 C16,92 34,106 60,106 C86,106 104,92 104,62 C104,28 88,6 60,6 Z" fill="#f8f9fa" stroke="#1e1e2c" stroke-width="3.5" stroke-linejoin="round"/>
+        <!-- Eagle Eyes on Hood Brow -->
+        <g transform="translate(30, 26)">
+          <path d="M2,14 L18,8 L16,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="0" y1="10" x2="20" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(74, 26)">
+          <path d="M18,14 L2,8 L4,18 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="10" cy="13" r="2.2" fill="#1e1e2c"/>
+          <line x1="20" y1="10" x2="0" y2="4" stroke="#1e1e2c" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        <!-- Dark Cavity -->
+        <ellipse cx="60" cy="74" rx="34" ry="28" fill="#7a4222" stroke="#1e1e2c" stroke-width="3.2"/>
+        <!-- Face Disc -->
+        <g transform="translate(26, 44)">
+          <path d="M6,14 C6,4 16,2 34,2 C52,2 62,4 62,14 C62,30 58,48 48,56 C42,60 38,60 34,60 C30,60 26,60 20,56 C10,48 6,30 6,14 Z" fill="#b87349" stroke="#1e1e2c" stroke-width="3.0" stroke-linejoin="round"/>
+          
+          <g transform="translate(12, 18)">
+            <path d="M2,12 C6,4 14,3 18,6 C16,15 8,17 2,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M12,16 C16,12 22,11 28,14" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <g transform="translate(38, 18)">
+            <path d="M18,12 C14,4 6,3 2,6 C4,15 12,17 18,12 Z" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.4" stroke-linejoin="round"/>
+          </g>
+          <path d="M38,14 C44,11 50,12 54,16" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          <path d="M27,44 L41,44" stroke="#1e1e2c" stroke-width="2.8" stroke-linecap="round"/>
+        </g>
+        <!-- Hooked Yellow Beak -->
+        <g transform="translate(46, 20)">
+          <path d="M2,8 C2,2 6,0 14,0 C22,0 26,2 26,8 C26,22 22,40 14,46 C6,40 2,22 2,8 Z" fill="#ffd166" stroke="#1e1e2c" stroke-width="3.0"/>
+          <line x1="14" y1="0" x2="14" y2="46" stroke="#e09f24" stroke-width="1.8"/>
+        </g>
+      </g>
+    </g>
+  <text x="725" y="655" fill="#ffd166" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">LANDING (CROUCH)</text>
+</svg>

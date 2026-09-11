@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="BrawlerConfig" format=3]
+
+[ext_resource type="Script" path="res://templates/brawler/brawler_config.gd" id="1_cfg"]
+[ext_resource type="PackedScene" path="res://scenes/bo_projectile.tscn" id="2_proj"]
+
+[resource]
+script = ExtResource("1_cfg")
+character_name = "Bo"
+character_id = "brawler_bo"
+walk_speed = 150.0
+run_speed = 280.0
+jump_velocity = -440.0
+gravity = 1200.0
+acceleration = 1700.0
+friction = 1900.0
+max_health = 1400.0
+knockback_resistance = 0.9
+attack_duration = 0.5
+animation_driven_projectiles = true
+projectiles_per_burst = 3
+burst_interval = 0.05
+spread_angles = Array[float]([-0.04, 0.0, 0.04])
+damage_per_projectile = 40.0
+projectile_speed = 620.0
+projectile_range = 520.0
+projectile_scene = ExtResource("2_proj")
+super_duration = 0.0
+super_type = "mines"
+audio_event_map = {
+"ATTACK_START": "bo_reload_01",
+"ATTACK_RELEASE": "bo_atk_01",
+"CHARACTER_HIT": "bo_hurt_vo_01",
+"DEATH": "bo_die_vo_01",
+"JUMP": "springboard_jump_01",
+"LAND": "princess_land_01",
+"PROJECTILE_SPAWN": "bo_atk_01"
+}
+vfx_event_map = {
+"HIT": "HIT_IMPACT",
+"LAND": "DUST_PUFF"
+}

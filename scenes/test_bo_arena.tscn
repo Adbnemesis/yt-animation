@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/brawler_bo.tscn" id="1_bo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(1400, 80)
+
+[node name="TestBoArena" type="Node2D"]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(576, 560)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="BrawlerBo" parent="." instance=ExtResource("1_bo")]
+position = Vector2(576, 520)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)

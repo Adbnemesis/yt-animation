@@ -1,0 +1,113 @@
+[gd_scene format=3]
+
+; ============================================================================
+; LEON — FRONT VIEW COMPLETE ANIMATION & 2.5D SPATIAL LAB
+; ============================================================================
+
+[ext_resource type="Script" path="res://scripts/labs/leon_front_view_lab.gd" id="1_lab"]
+[ext_resource type="Script" path="res://scripts/labs/cinematic_camera.gd" id="2_cam"]
+[ext_resource type="PackedScene" path="res://scenes/videos/leon_elevator/leon_front.tscn" id="3_leon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.06, 0.08, 0.12, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25, 0.35, 0.50, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="LeonFrontViewLab" type="Node2D"]
+script = ExtResource("1_lab")
+
+[node name="Sky" type="ColorRect" parent="."]
+z_index = -2200
+offset_right = 1200.0
+offset_bottom = 340.0
+color = Color(0.42, 0.68, 0.9, 1)
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -2100
+offset_top = 340.0
+offset_right = 1200.0
+offset_bottom = 720.0
+color = Color(0.28, 0.58, 0.22, 1)
+
+[node name="HorizonLine" type="Line2D" parent="."]
+z_index = -2090
+points = PackedVector2Array(0, 340, 1200, 340)
+width = 2.0
+default_color = Color(0.18, 0.42, 0.16, 0.9)
+
+[node name="CameraRig" type="Node2D" parent="."]
+script = ExtResource("2_cam")
+cam_z = -260.0
+cam_height = 150.0
+focal = 520.0
+horizon_y = 340.0
+screen_center_x = 576.0
+
+[node name="ActorRoot" type="Node2D" parent="."]
+
+[node name="Shadow" type="Polygon2D" parent="ActorRoot"]
+z_index = -1
+color = Color(0.08, 0.12, 0.08, 0.42)
+polygon = PackedVector2Array(-28, -2, 28, -2, 32, 6, -32, 6)
+
+[node name="LeonFront" parent="ActorRoot" instance=ExtResource("3_leon")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 720.0
+offset_bottom = 166.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="LblTitle" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "LEON — FRONT VIEW COMPLETE ANIMATION & 2.5D SPATIAL TEST"
+
+[node name="LblStep" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "1/14: Initializing Front View Foundation..."
+
+[node name="LblState" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.95, 0.55, 1)
+theme_override_font_sizes/font_size = 12
+text = "STATE: IDLE | SUPER: NONE | ANIM: idle"
+
+[node name="LblCoords" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.92, 0.98, 1)
+theme_override_font_sizes/font_size = 11
+text = "WORLD X: 0.0 | Y (Elev): 0.0 | DEPTH: 220.0 | APPARENT SCALE: 1.000x"
+
+[node name="LblCombat" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.6, 0.3, 1)
+theme_override_font_sizes/font_size = 11
+text = "TARGET DUMMY HP: 1000 / 1000 | HITS: 0"
+
+[node name="LblControls" type="Label" parent="UI/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.75, 0.85, 1)
+theme_override_font_sizes/font_size = 10
+text = "WASD/Arrows: Move X/Depth | Space: Jump | F: Attack | E: Super | H: Hit | Enter: Re-run Full Matrix"

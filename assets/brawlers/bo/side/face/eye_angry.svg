@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="120" viewBox="-58 -48 128 120">
+  <!-- Bo Profile Eye: Fierce / Combat -->
+  <g transform="translate(8, 8)">
+    <polygon points="12,26 27,27 18,31" fill="#ffffff" stroke="#1e1e2c" stroke-width="2.2"/>
+    <circle cx="19" cy="28.2" r="2.0" fill="#1e1e2c"/>
+  </g>
+</svg>
